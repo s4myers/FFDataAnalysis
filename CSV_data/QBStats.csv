@@ -1,4 +1,4 @@
-WK, Game Date, Opp, Result, G, GS, Comp, Att, Pct, Yds, Avg, TD, Int, Sck, SckY, Rate, Att, Yds, Avg, TD, FUM, Lost, 
+WK,Game Date,Opp,Result,G,GS,Comp,Att,Pct,PYds,Avg,PTD,Int,Sck,SckY,Rate,Att,RYds,Avg,RTD,FUM,Lost,Player,Year
 1,09/07,@TB,W 20-14,1,1,24,34,70.6,230,6.8,2,0,1,9,108.7,3,10,3.3,0,1,0, Derek Anderson,2014
 2,09/14,DET,W 24-7,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--, Derek Anderson,2014
 3,09/21,PIT,L 19-37,1,0,5,6,83.3,80,13.3,1,0,0,0,158.3,--,--,--,--,--,--, Derek Anderson,2014
