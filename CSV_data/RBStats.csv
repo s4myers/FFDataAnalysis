@@ -1,4 +1,4 @@
-WK,Game Date,Opp,Result,G,GS,Att,Yds,Avg,Lng,TD,Rec,Yds,Avg,Lng,TD,FUM,Lost,,
+WK,Game Date,Opp,Result,G,GS,RushAtt,RushYds,RushAvg,RushLng,RushTD,Rec,RecYds,RecAvg,RecLng,RecTD,FUM,Lost,Player,Year
 1,7-Sep,@PIT,L 27-30,1,1,1,2,2,2,0,--,--,--,--,--,--,--, Ray Agnew,2014
 2,14-Sep,NO,W 26-24,1,1,--,--,--,--,--,0,0,--,--,0,--,--, Ray Agnew,2014
 3,21-Sep,BAL,L 21-23,1,1,1,0,0,0,0,--,--,--,--,--,--,--, Ray Agnew,2014
