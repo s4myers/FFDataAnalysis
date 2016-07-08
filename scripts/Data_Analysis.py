@@ -299,7 +299,8 @@ class Player(object):
 
     def ppg_var(self,year):
         """
-        Returns the variance in weekly points per game for a given year
+        Returns a tuple of the variance in weekly points per game for a given year
+        and also the weeks of games played
 
         Keyword Arguments:
         year - the year as a string
@@ -308,7 +309,7 @@ class Player(object):
         week_list = self.stats[year].keys()
         week_variance = []
         if week_list == []:
-            return 0.00 #the player didn't play this year
+            return ("Did Not Play in {}".format(year),0) #the player didn't play this year
         average = self.ppg_average(year)
         for week in week_list:
             if self.stats[year][week]["Game Date"] == "Bye":
@@ -318,9 +319,9 @@ class Player(object):
             else:
                 week_variance += [(self.week_points(week,year) - average)**2]
         if week_variance == []:
-            return 0.00
+            return ("Empty List",0)
         else:
-            return np.average(week_variance)
+            return (np.average(week_variance),len(week_variance))
 
     def field_ratio(self,field1,field2,year,weeks=["all_weeks"]):
         """
