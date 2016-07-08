@@ -54,7 +54,7 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
         class_list = [QuarterBack(player) for player in player_list]
     elif pos == "RB":
         class_list = [RunningBack(player) for player in player_list]    
-    elif pos == "wR":
+    elif pos == "WR":
         class_list = [WideReceiver(player) for player in player_list]
     elif pos == "TE":
         class_list = [TightEnd(player) for player in player_list]
