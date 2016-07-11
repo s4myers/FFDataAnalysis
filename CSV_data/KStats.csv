@@ -1,4 +1,4 @@
-WK,Game Date,Opp,Result,G,GS,Blk,Lng,FG Att,FGM,Pct,XPM,XP Att,Pct,Blk,KO,Avg,TB,Ret,Avg,,
+WK,Game Date,Opp,Result,G,GS,FGBlk,FGLng,FGAtt,FGM,FGPct,XPM,XPAtt,XPPct,XPBlk,KO,KOAvg,TB,Ret,RetAvg,Player,Year
 1,7-Sep,SF,L 17-28,1,0,0,29,1,1,100,2,2,100,0,4,52,3,0,--, Dan Bailey,2014
 2,14-Sep,@TEN,W 26-10,1,0,0,51,4,4,100,2,2,100,0,7,63.1,2,5,13.6, Dan Bailey,2014
 3,21-Sep,@STL,W 34-31,1,0,0,40,2,2,100,4,4,100,0,7,67,5,2,26.5, Dan Bailey,2014

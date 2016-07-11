@@ -33,6 +33,30 @@ def generate_player_list(pos):
                 continue
     return name_list
 
+def generate_class_list(pos,player_list):
+	"""
+    Create a list of all avaiable players at a desired position
+
+    Keyword Arguments:
+    pos - the position enter as a string; e.g. "QB", "RB", etc.
+
+    """
+    if pos == "QB":
+        class_list [QuarterBack(player) for player in player_list]
+    elif pos == "RB":
+        class_list = [RunningBack(player) for player in player_list]    
+    elif pos == "WR":
+        class_list = [WideReceiver(player) for player in player_list]
+    elif pos == "TE":
+        class_list = [TightEnd(player) for player in player_list]
+    elif pos == "K":
+    	class_list = [Kicker(player) for player in player_list]   
+    else:
+        return "Not a proper posistion"
+    return class_list    
+
+
+
 def correlation(pos,year_list,var1,var2="PPG",plot=False):
     """
     Determines the correlation of the variables var1 and var2 for a given year.
@@ -50,16 +74,7 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
 
     player_list = generate_player_list(pos)
 
-    if pos == "QB":
-        class_list = [QuarterBack(player) for player in player_list]
-    elif pos == "RB":
-        class_list = [RunningBack(player) for player in player_list]    
-    elif pos == "WR":
-        class_list = [WideReceiver(player) for player in player_list]
-    elif pos == "TE":
-        class_list = [TightEnd(player) for player in player_list]
-    else:
-        return "Not a proper posistion"
+    class_list = generate_class_list(pos,player_list)
     
     #Generate variable list
     for year in year_list:
@@ -110,19 +125,12 @@ def points_against(pos_list):
     temp_dict = {}
 
     for pos in pos_list:
+        
         temp_dict[pos]={}
+        
         player_list = generate_player_list(pos)
 
-        if pos == "QB":
-            class_list = [QuarterBack(player) for player in player_list]
-        elif pos == "RB":
-            class_list = [RunningBack(player) for player in player_list]    
-        elif pos == "WR":
-            class_list = [WideReceiver(player) for player in player_list]
-        elif pos == "TE":
-            class_list = [TightEnd(player) for player in player_list]
-        else:
-            return "Not a proper posistion"
+        class_list = generate_class_list(pos,player_list)
 
         for year in YEAR_LIST:
             temp_dict[pos][year]={team:0.0 for team in TEAM_LIST}
@@ -374,3 +382,12 @@ class TightEnd(Player):
                   "Rec","RecYds","RecAvg","RecLng","RecTD","FUM","Lost"]
     scoring_field_names = ["RushYds","RushTD","Rec","RecYds","RecTD","Lost"]
     csv_file_name = "TEStats.csv"
+
+class Kicker(Player):
+    """ Kickers are people too """
+
+    abbr = "K"
+    field_names =["FGBlk","FGLng","FGAtt","FGM","XPM","XPAtt","XPBlk","KO",
+                  "KOAvg","TB","Ret","RetAvg"]
+    scoring_field_names = ["FGM"]
+    csv_file_name = "KStats.csv"    
