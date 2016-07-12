@@ -11,7 +11,7 @@ TEAM_LIST =["BUF","MIA","NE","NYJ","BAL","CIN","CLE","PIT","HOU","IND","JAC",
            
 YEAR_LIST = ["2010","2011","2012","2013","2014"]
 
-WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10"
+WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10",
              "11","12","13","14","15","16","17"]
 
 
@@ -34,7 +34,7 @@ def generate_player_list(pos):
     return name_list
 
 def generate_class_list(pos,player_list):
-	"""
+    """
     Create a list of all avaiable players at a desired position
 
     Keyword Arguments:
@@ -42,7 +42,7 @@ def generate_class_list(pos,player_list):
 
     """
     if pos == "QB":
-        class_list [QuarterBack(player) for player in player_list]
+        class_list = [QuarterBack(player) for player in player_list]
     elif pos == "RB":
         class_list = [RunningBack(player) for player in player_list]    
     elif pos == "WR":
@@ -50,7 +50,7 @@ def generate_class_list(pos,player_list):
     elif pos == "TE":
         class_list = [TightEnd(player) for player in player_list]
     elif pos == "K":
-    	class_list = [Kicker(player) for player in player_list]   
+        class_list = [Kicker(player) for player in player_list]   
     else:
         return "Not a proper posistion"
     return class_list    
@@ -393,13 +393,13 @@ class Kicker(Player):
     csv_file_name = "KStats.csv"
 
 class Defense(Player):
-	""" Defensive Matchup """
-	abbr = "DEF"
-	field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt",
-	               "PassYds","PassTD","FGAtt","FGM","Home","Rival","Score"]
+    """ Defensive Matchup """
+    abbr = "DEF"
+    field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt",
+                   "PassYds","PassTD","FGAtt","FGM","Home","Rival","Score"]
 
-	def __init__(self,name):
+    def __init__(self,name):
         self.name = name
         self.csv_path = os.path.join(MAIN_DIR,self.csv_file_name)
-        self.stats = {year:{week:{} for week in WEEK_LIST} for year in YEAR_LIST}
+        self.stats = {year:{week:{field:"" for field in field } for week in WEEK_LIST} for year in YEAR_LIST}
         
