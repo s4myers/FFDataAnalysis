@@ -34,7 +34,7 @@ def generate_player_list(pos):
     return name_list
 
 def generate_class_list(pos,player_list):
-	"""
+    """
     Create a list of all avaiable players at a desired position
 
     Keyword Arguments:
@@ -42,7 +42,7 @@ def generate_class_list(pos,player_list):
 
     """
     if pos == "QB":
-        class_list [QuarterBack(player) for player in player_list]
+        class_list = [QuarterBack(player) for player in player_list]
     elif pos == "RB":
         class_list = [RunningBack(player) for player in player_list]    
     elif pos == "WR":
@@ -50,7 +50,7 @@ def generate_class_list(pos,player_list):
     elif pos == "TE":
         class_list = [TightEnd(player) for player in player_list]
     elif pos == "K":
-    	class_list = [Kicker(player) for player in player_list]   
+        class_list = [Kicker(player) for player in player_list]   
     else:
         return "Not a proper posistion"
     return class_list    
