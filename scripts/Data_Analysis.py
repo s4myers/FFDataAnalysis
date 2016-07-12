@@ -390,4 +390,16 @@ class Kicker(Player):
     field_names =["FGBlk","FGLng","FGAtt","FGM","XPM","XPAtt","XPBlk","KO",
                   "KOAvg","TB","Ret","RetAvg"]
     scoring_field_names = ["FGM"]
-    csv_file_name = "KStats.csv"    
+    csv_file_name = "KStats.csv"
+
+class Defense(Player):
+	""" Defensive Matchup """
+	abbr = "DEF"
+	field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt",
+	               "PassYds","PassTD","FGAtt","FGM","Home","Rival","Score"]
+
+	def __init__(self,name):
+        self.name = name
+        self.csv_path = os.path.join(MAIN_DIR,self.csv_file_name)
+        self.stats = {year:{week:{} for week in WEEK_LIST} for year in YEAR_LIST}
+        
