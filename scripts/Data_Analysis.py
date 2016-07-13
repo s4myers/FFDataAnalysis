@@ -14,6 +14,32 @@ YEAR_LIST = ["2010","2011","2012","2013","2014"]
 WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10",
              "11","12","13","14","15","16","17"]
 
+POS_LIST = ["QB","RB","WR","TE","K"]
+
+
+def find_opponents(team,week,year):
+    """
+    Find all the players who participated in a game. Returns a tuple
+    of the players name and position.
+
+    Keyword Arguments:
+    team - city abbreviation as a string
+    week - the week as a string
+    year - the year as a string
+
+    """
+    opponent_list = []
+    for pos in POS_LIST:
+        csv_file_name = pos+"Stats.csv"
+        csv_path = os.path.join(MAIN_DIR,csv_file_name)
+        with open(csv_path) as csv_file:
+            reader = csv.DictReader(csv_file)
+            for row in reader:
+                if (row["Year"]==year and row["WK"]==week and team in row["Opp"]):
+                    opponent_list +=[(row["Player"],pos)]
+
+    return opponent_list                
+
 
 def generate_player_list(pos):
     """
@@ -390,4 +416,44 @@ class Kicker(Player):
     field_names =["FGBlk","FGLng","FGAtt","FGM","XPM","XPAtt","XPBlk","KO",
                   "KOAvg","TB","Ret","RetAvg"]
     scoring_field_names = ["FGM"]
-    csv_file_name = "KStats.csv"    
+    csv_file_name = "KStats.csv"
+
+class Defense(Player):
+    """ Defensive Matchup """
+    abbr = "DEF"
+    field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt",
+                   "PassYds","PassTD","FGBlk","FGAtt","FGM","Home","Rival","Score"]
+
+    def __init__(self,name):
+        self.name = name
+        self.csv_path = os.path.join(MAIN_DIR,self.csv_file_name)
+        self.stats = {year:{week:{field:0.0 for field in self.field_names} for week in WEEK_LIST} for year in YEAR_LIST}
+        for year in YEAR_LIST:
+            for week in WEEK_LIST:
+                opponent_list = find_opponents(self.name,week,year)
+                #this creates a list of player classes of the opponents
+                opponent_class_list = []
+                
+                for (player,pos) in opponent_list:
+                    opponent_class_list += generate_class_list(pos,[player])
+
+                for player in opponent_class_list:
+                    for field in self.field_names:
+                        if field in player.field_names:
+                            val = player.stats[year][week][field]
+                            if val == "--":
+                                continue
+                            else:
+                                self.stats[year][week][field] += float(val)
+
+
+                self.stats[year][week]["Players"] = opponent_list
+                
+                if '@' in player.stats[year][week]["Opp"]:
+                    self.stats[year][week]["Home"] = True
+                else:
+                    self.stats[year][week]["Home"] = False
+
+
+
+
