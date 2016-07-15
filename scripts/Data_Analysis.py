@@ -3,7 +3,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-MAIN_DIR = "/home/sean/Projects/FFDataAnalysis/CSV_data"  
+CSV_DIR = "../CSV_data"
 
 TEAM_LIST =["BUF","MIA","NE","NYJ","BAL","CIN","CLE","PIT","HOU","IND","JAC",
             "TEN","DEN","KC","OAK","SD","DAL","NYG","PHI","WAS","CHI","DET",
@@ -31,7 +31,7 @@ def find_opponents(team,week,year):
     opponent_list = []
     for pos in POS_LIST:
         csv_file_name = pos+"Stats.csv"
-        csv_path = os.path.join(MAIN_DIR,csv_file_name)
+        csv_path = os.path.join(CSV_DIR,csv_file_name)
         with open(csv_path) as csv_file:
             reader = csv.DictReader(csv_file)
             for row in reader:
@@ -50,7 +50,8 @@ def generate_player_list(pos):
 
     """
     name_list =[]
-    with open("/home/sean/Projects/FFDataAnalysis/CSV_data/AllPlayers.csv") as csv_file:
+    csv_path = os.path.join(CSV_DIR,"AllPlayers.csv")
+    with open(csv_path) as csv_file:
         reader = csv.reader(csv_file)
         for row in reader:
             if row[0]==pos and row[1] not in name_list:
@@ -193,7 +194,7 @@ class Player(object):
 
     def __init__(self,name):
         self.name = name
-        self.csv_path = os.path.join(MAIN_DIR,self.csv_file_name)
+        self.csv_path = os.path.join(CSV_DIR,self.csv_file_name)
         self.stats = {year:{} for year in YEAR_LIST}
         with open(self.csv_path) as csv_file:
             reader = csv.DictReader(csv_file)
@@ -426,7 +427,7 @@ class Defense(Player):
 
     def __init__(self,name):
         self.name = name
-        self.csv_path = os.path.join(MAIN_DIR,self.csv_file_name)
+        self.csv_path = os.path.join(CSV_DIR,self.csv_file_name)
         self.stats = {year:{week:{field:0.0 for field in self.field_names} for week in WEEK_LIST} for year in YEAR_LIST}
         for year in YEAR_LIST:
             for week in WEEK_LIST:
@@ -453,7 +454,3 @@ class Defense(Player):
                     self.stats[year][week]["Home"] = True
                 else:
                     self.stats[year][week]["Home"] = False
-
-
-
-
