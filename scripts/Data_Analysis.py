@@ -2,8 +2,10 @@ import csv
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+from numbers import Number
 
-CSV_DIR = "../CSV_data"
+CSV_DIR = "../CSV_data/"
+#CSV_DIR = "C:/Users/justin/Documents/GitHub/FFDataAnalysis/CSV_data/"
 
 TEAM_LIST =["BUF","MIA","NE","NYJ","BAL","CIN","CLE","PIT","HOU","IND","JAC",
             "TEN","DEN","KC","OAK","SD","DAL","NYG","PHI","WAS","CHI","DET",
@@ -60,6 +62,7 @@ def generate_player_list(pos):
                 continue
     return name_list
 
+
 def generate_class_list(pos,player_list):
     """
     Create a list of all avaiable players at a desired position
@@ -81,7 +84,6 @@ def generate_class_list(pos,player_list):
     else:
         return "Not a proper posistion"
     return class_list    
-
 
 
 def correlation(pos,year_list,var1,var2="PPG",plot=False):
@@ -205,7 +207,8 @@ class Player(object):
 
     def generate_array_stats(self,field,year):
         """
-        Creates an array of float values of a particular field for a requested year. Each item is the value for a given week.
+        Creates an array of float values of a particular field for a requested year.
+        Each item is the value for a given week.
         Byes and games where the player did not participate are not included. 
 
         Keyword Arguments:
@@ -291,6 +294,27 @@ class Player(object):
         else:   
             return std
 
+    def breakout_games(self, year, multiplier):
+        """
+        Returns a list of games that a player outperformed their average.
+
+        Keyword Arguments:
+        year - the year of interest as a string
+        multiplier - threshold for 'breakout' games
+            i.e. 1.5 = 50% more than their average
+                 2.0 = 2x their average
+        """
+        ppg_avg = self.ppg_average(year)
+        print "Average PPG: " + str(ppg_avg)
+        breakout_games = []
+        for week in range(1,18):
+            points = self.week_points(str(week), year)
+            if isinstance(points, Number) & (points > ppg_avg * multiplier):
+                print str(week) + " " + str(points)
+                breakout_games.append(str(week))
+        return breakout_games
+
+
     def week_points(self,week,year):
         try:
             week_dict = self.stats[year][week]
@@ -373,7 +397,6 @@ class Player(object):
 
         return np.round(field1_total/field2_total,2)
 
-
 class QuarterBack(Player):
     """ Quarter back position """
 
@@ -454,3 +477,4 @@ class Defense(Player):
                     self.stats[year][week]["Home"] = True
                 else:
                     self.stats[year][week]["Home"] = False
+
