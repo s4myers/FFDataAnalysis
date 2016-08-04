@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from numbers import Number
 
-CSV_DIR = "../CSV_data/"
-#CSV_DIR = "C:/Users/justin/Documents/GitHub/FFDataAnalysis/CSV_data/"
+#CSV_DIR = "../CSV_data/"
+CSV_DIR = "C:/Users/justin/Documents/GitHub/FFDataAnalysis/CSV_data/"
 
 TEAM_LIST =["BUF","MIA","NE","NYJ","BAL","CIN","CLE","PIT","HOU","IND","JAC",
             "TEN","DEN","KC","OAK","SD","DAL","NYG","PHI","WAS","CHI","DET",

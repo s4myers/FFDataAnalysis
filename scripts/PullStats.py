@@ -3,42 +3,53 @@
 
 from bs4 import BeautifulSoup, SoupStrainer
 import urllib2 as ul
+from string import printable
 import re
 
 abbr = {'quarterback': 'QB', 'runningback': 'RB', 'widereceiver': 'WR', 'tightend': 'TE', 'kicker': 'K'}
+qb_fields = "WK,Game Date,Opp,Result,G,GS,Comp,PassAtt,Pct,PassYds,Avg,PassTD,Int,Sck,SckY,Rate,RushAtt,RushYds,Avg,RushTD,FUM,Lost,Player,Year"
+rb_fields = "WK,Game Date,Opp,Result,G,GS,RushAtt,RushYds,RushAvg,RushLng,RushTD,Rec,RecYds,RecAvg,RecLng,RecTD,FUM,Lost,Player,Year"
+wr_fields = "WK,Game Date,Opp,Result,G,GS,Rec,RecYds,RecAvg,RecLng,RecTD,RushAtt,RushYds,RushAvg,RushLng,RushTD,FUM,Lost,Player,Year"
+te_fields = "WK,Game Date,Opp,Result,G,GS,Rec,RecYds,RecAvg,RecLng,RecTD,RushAtt,RushYds,RushAvg,RushLng,RushTD,FUM,Lost,Player,Year"
+k_fields = "WK,Game Date,Opp,Result,G,GS,FGBlk,FGLng,FGAtt,FGM,FGPct,XPM,XPAtt,XPPct,XPBlk,KO,KOAvg,TB,Ret,RetAvg,Player,Year"
+pos_fields_dict = {'QB': qb_fields, 'RB': rb_fields, 'WR': wr_fields, 'TE': te_fields, 'K': k_fields}
 titlesPulled = False
-def main():
 
+
+def main():
     positions = ["quarterback", "runningback", "widereceiver", "tightend", "kicker"]
     for i in range(len(positions)):
         for j in range(6):
             pullList(positions[i], j+1, abbr[positions[i]])
+            global titlesPulled
+            titlesPulled = False
 
-def pullList(tempPosition, tempPage, tempPositionAbbr):
+def pullList(tempPosition, tempPage, pos):
 
-    urlTemp = "http://www.nfl.com/players/search?category=position&playerType=current&conference=ALL&d-447263-p=%s&filter=%s&conferenceAbbr=null" % (tempPage, tempPosition)
+    url = "http://www.nfl.com/players/search?category=position&playerType=current&conference=ALL&d-447263-p=%s&filter=%s&conferenceAbbr=null" % (tempPage, tempPosition)
 
     try:
-        readPage = ul.urlopen(urlTemp).read()
-        soup = BeautifulSoup(readPage, "html")
+        readPage = ul.urlopen(url).read()
+        soup = BeautifulSoup(readPage, "html.parser")
         links = soup.findAll('a', href=re.compile('^/player/'))
 
         for i in range(len(links)):
             textLine = str(links[i])
             splitText1 = textLine.split('"')
-            year = 2014
-            numYears = 5
+            year = 2015
+            numYears = 6
             for j in range(numYears):
                 yearTemp = year - j
                 link = "http://www.nfl.com" + splitText1[1].rstrip('profile') + "gamelogs?season=%s" % str(yearTemp)
                 nameLastFirst = splitText1[2].lstrip('>').rstrip('</a>')
                 names = nameLastFirst.split(',')
-                nameFirstLast = names[1] + " " + names[0]
+                nameFirstLast = names[1].lstrip() + " " + names[0]
                 outputLine = abbr[tempPosition], ',', nameFirstLast, ',', link, '\n'
-                with open("./Output/PlayerList.csv", "a") as text_file:
+                print nameFirstLast + str(yearTemp)
+                with open("../CSV_data/PlayerList2.csv", "a") as text_file:
                     text_file.writelines(outputLine)
                 text_file.close()
-                pullStats(link, nameFirstLast, yearTemp, tempPositionAbbr)
+                pull_game_stats(link, nameFirstLast, yearTemp, pos)
 
     except IOError, e:
         print 'Failed to open url'
@@ -50,26 +61,36 @@ def pullList(tempPosition, tempPage, tempPositionAbbr):
             print e.reason
             return False
 
-def pullStats(urlTemp, nameTemp, yearTemp, tempPositionAbbr):
-    try:
-        print tempPositionAbbr
-        readPage = ul.urlopen(urlTemp).read()
-        soup = BeautifulSoup(readPage, "html")
-        file_path = "./Output/" + tempPositionAbbr + "Stats.csv"
+def pull_game_stats(url, player_name, yearTemp, pos):
+    """
+    This function is accessed by the pullList() function.
+    It iterates through Game Log pages, pulls stats, and writes to csv file.
 
-        # pull the stat titles
+    :param url: URL to 'Game Log'
+    :param player_name: player name
+    :param yearTemp: year
+    :param pos:
+    :return: writes to output csv files
+    """
+    try:
+        readPage = ul.urlopen(url).read()
+        soup = BeautifulSoup(readPage, "html.parser")
+        file_path = "../CSV_data/" + pos + "Stats.csv"
+
+        # pull Field names
         statTitle = soup.find("tr", {"class" : "player-table-key"}).findAll("td")
         numColumns = len(statTitle)
         global titlesPulled
         if (titlesPulled == False):
-            for i in range(len(statTitle)):
-                outputLine = statTitle[i].text, ", "
-                with open(file_path, "a") as text_file:
-                    text_file.writelines(outputLine)
-                text_file.close()
-        titlesPulled = True
+            outputLine = pos_fields_dict[pos]
+            #for i in range(len(statTitle)):
+            #    outputLine = statTitle[i].text, ", "
+            with open(file_path, "a") as text_file:
+                text_file.writelines(outputLine)
+            text_file.close()
+            titlesPulled = True
 
-        # pull the stats
+        # pull the statistics
         table = soup.findAll("table", {"class":"data-table1"})
         regularSeason = table[1]
         for i in range(len(regularSeason)):
@@ -77,26 +98,26 @@ def pullStats(urlTemp, nameTemp, yearTemp, tempPositionAbbr):
         body1 = body[0]
         rows = body1.findAll("tr")
         rowsList = []
-
         for i in range(len(rows)):
             if len(rows[i]) > 2:
                 rowsList.append(rows[i])
         del rowsList[len(rowsList)-1]
 
+        # write statistics to csv
         for j in range(len(rowsList)):
             tempRow = rowsList[j]
             cells = tempRow.findAll("td")
-
             output = "\n"
-            for i in range(numColumns):
+            for i in range(numColumns): # for each field, append to output string
                 tempCell = str(cells[i]).lstrip("<td>").rstrip("</td>").replace('\t', "").replace('\r', "").replace('\n', "").replace(" ", "")
-                output = output + re.sub('<[^>]+>', '', tempCell) + ","
+                cell = re.sub('<[^>]+>', '', tempCell)
+                cell = re.sub("[^{}]+".format(printable), "", cell)
+                output = output + cell + ","
                 if (tempCell == 'Bye'):
                     for i in range(numColumns-2):
                         output = output + ","
                     break
-            output = output + nameTemp + "," + str(yearTemp)
-            print output
+            output = output + player_name + "," + str(yearTemp)
             with open(file_path, "a") as text_file:
                 text_file.writelines(output)
             text_file.close()
@@ -119,4 +140,6 @@ def pullStats(urlTemp, nameTemp, yearTemp, tempPositionAbbr):
         print 'No regular season data.'
         return False
 
-main()
+
+if __name__ == "__main__":
+    main()
