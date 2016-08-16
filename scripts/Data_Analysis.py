@@ -4,14 +4,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from numbers import Number
 
-#CSV_DIR = "../CSV_data/"
-CSV_DIR = "C:/Users/justin/Documents/GitHub/FFDataAnalysis/CSV_data/"
+CSV_DIR = "../CSV_data/"
+#CSV_DIR = "C:/Users/justin/Documents/GitHub/FFDataAnalysis/CSV_data/"
 
 TEAM_LIST =["BUF","MIA","NE","NYJ","BAL","CIN","CLE","PIT","HOU","IND","JAC",
             "TEN","DEN","KC","OAK","SD","DAL","NYG","PHI","WAS","CHI","DET",
             "GB","MIN","ATL","CAR","NO","TB","ARI","STL","SF","SEA"]
            
-YEAR_LIST = ["2010","2011","2012","2013","2014"]
+YEAR_LIST = ["2010","2011","2012","2013","2014","2015"]
 
 WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10",
              "11","12","13","14","15","16","17"]
@@ -54,10 +54,10 @@ def generate_player_list(pos):
     name_list =[]
     csv_path = os.path.join(CSV_DIR,"AllPlayers.csv")
     with open(csv_path) as csv_file:
-        reader = csv.reader(csv_file)
+        reader = csv.reader(csv_file,skipinitialspace=True)
         for row in reader:
             if row[0]==pos and row[1] not in name_list:
-                name_list+=[row[1]]
+                name_list.append(row[1])
             else:
                 continue
     return name_list
@@ -197,13 +197,15 @@ class Player(object):
     def __init__(self,name):
         self.name = name
         self.csv_path = os.path.join(CSV_DIR,self.csv_file_name)
-        self.stats = {year:{} for year in YEAR_LIST}
+        self.stats = {year:{week:{} for week in WEEK_LIST} for year in YEAR_LIST}
         with open(self.csv_path) as csv_file:
             reader = csv.DictReader(csv_file)
             for year in YEAR_LIST:
                 for row in reader:
                     if row["Player"]== self.name:
-                        self.stats[row["Year"]][row["WK"]]=row
+                        w = row["WK"]
+                        y = row["Year"]
+                        self.stats[y][w]=row
 
     def generate_array_stats(self,field,year):
         """
@@ -446,7 +448,7 @@ class Defense(Player):
     """ Defensive Matchup """
     abbr = "DEF"
     field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt",
-                   "PassYds","PassTD","FGBlk","FGAtt","FGM","Home","Rival","Score"]
+                   "PassYds","PassTD","FGBlk","FGAtt","FGM","Home","Won","Score"]
 
     def __init__(self,name):
         self.name = name
@@ -472,9 +474,17 @@ class Defense(Player):
 
 
                 self.stats[year][week]["Players"] = opponent_list
-                
+
                 if '@' in player.stats[year][week]["Opp"]:
                     self.stats[year][week]["Home"] = True
                 else:
                     self.stats[year][week]["Home"] = False
 
+                #result = player.stats[year][week]["Result"]  
+                #if 'L' in result:
+                #    self.stats[year][week]["Won"] = True
+                #else:
+                #    self.stats[year][week]["Won"] = False
+
+                #score = result[1:].split('-')[1]+'-'+result[1:].split('-')[0]
+                #self.stats[year][week]["Score"] = score

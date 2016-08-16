@@ -7,7 +7,7 @@ from string import printable
 import re
 
 abbr = {'quarterback': 'QB', 'runningback': 'RB', 'widereceiver': 'WR', 'tightend': 'TE', 'kicker': 'K'}
-qb_fields = "WK,Game Date,Opp,Result,G,GS,Comp,PassAtt,Pct,PassYds,Avg,PassTD,Int,Sck,SckY,Rate,RushAtt,RushYds,Avg,RushTD,FUM,Lost,Player,Year"
+qb_fields = "WK,Game Date,Opp,Result,G,GS,Comp,PassAtt,Pct,PassYds,PassAvg,PassTD,Int,Sck,SckY,Rate,RushAtt,RushYds,RushAvg,RushTD,FUM,Lost,Player,Year"
 rb_fields = "WK,Game Date,Opp,Result,G,GS,RushAtt,RushYds,RushAvg,RushLng,RushTD,Rec,RecYds,RecAvg,RecLng,RecTD,FUM,Lost,Player,Year"
 wr_fields = "WK,Game Date,Opp,Result,G,GS,Rec,RecYds,RecAvg,RecLng,RecTD,RushAtt,RushYds,RushAvg,RushLng,RushTD,FUM,Lost,Player,Year"
 te_fields = "WK,Game Date,Opp,Result,G,GS,Rec,RecYds,RecAvg,RecLng,RecTD,RushAtt,RushYds,RushAvg,RushLng,RushTD,FUM,Lost,Player,Year"

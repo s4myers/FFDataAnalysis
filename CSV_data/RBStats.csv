@@ -2429,7 +2429,7 @@ WK,Game Date,Opp,Result,G,GS,RushAtt,RushYds,RushAvg,RushLng,RushTD,Rec,RecYds,R
 12,11/29,@JAC,W31-25,1,0,14,60,4.3,14,0,5,20,4.0,16,0,--,--,Melvin Gordon,2015
 13,12/06,DEN,L3-17,1,1,12,55,4.6,21,0,1,8,8.0,8,0,2,1,Melvin Gordon,2015
 14,12/13,@KC,L3-10,1,1,14,35,2.5,10,0,4,28,7.0,15,0,--,--,Melvin Gordon,2015
-15,12/20,MIA,W30-14,1,1,15,41,2.7,10,0,1,6,6.0,6,0,--,--,Melvin Gordon,2015WK,Game Date,Opp,Result,G,GS,RushAtt,RushYds,RushAvg,RushLng,RushTD,Rec,RecYds,RecAvg,RecLng,RecTD,FUM,Lost,Player,Year
+15,12/20,MIA,W30-14,1,1,15,41,2.7,10,0,1,6,6.0,6,0,--,--,Melvin Gordon,2015
 1,09/13,@BUF,L14-27,1,1,8,31,3.9,9,0,2,0,0.0,2,0,--,--,Frank Gore,2015
 2,09/21,NYJ,L7-20,1,1,15,57,3.8,18,0,1,4,4.0,4,0,1,1,Frank Gore,2015
 3,09/27,@TEN,W35-33,1,1,14,86,6.1,25,2,1,8,8.0,8,0,--,--,Frank Gore,2015
@@ -4970,7 +4970,7 @@ WK,Game Date,Opp,Result,G,GS,RushAtt,RushYds,RushAvg,RushLng,RushTD,Rec,RecYds,R
 14,12/09,BAL,W31-28,1,1,23,129,5.6,29,1,0,0,--,--,0,1,1,Alfred Morris,2012
 15,12/16,@CLE,W38-21,1,1,27,87,3.2,11,2,2,6,3.0,4,0,--,--,Alfred Morris,2012
 16,12/23,@PHI,W27-20,1,1,22,91,4.1,14,1,1,17,17.0,17,0,--,--,Alfred Morris,2012
-17,12/30,DAL,W28-18,1,1,33,200,6.1,32T,3,2,12,6.0,7,0,--,--,Alfred Morris,2012WK,Game Date,Opp,Result,G,GS,RushAtt,RushYds,RushAvg,RushLng,RushTD,Rec,RecYds,RecAvg,RecLng,RecTD,FUM,Lost,Player,Year
+17,12/30,DAL,W28-18,1,1,33,200,6.1,32T,3,2,12,6.0,7,0,--,--,Alfred Morris,2012
 2,09/20,@JAC,L20-23,1,0,--,--,--,--,--,--,--,--,--,--,--,--,Raheem Mostert,2015
 3,09/27,BUF,L14-41,0,0,--,--,--,--,--,--,--,--,--,--,--,--,Raheem Mostert,2015
 4,10/04,NYJ,L14-27,0,0,--,--,--,--,--,--,--,--,--,--,--,--,Raheem Mostert,2015
@@ -7605,7 +7605,7 @@ WK,Game Date,Opp,Result,G,GS,RushAtt,RushYds,RushAvg,RushLng,RushTD,Rec,RecYds,R
 4,09/29,@HOU,W23-20,0,0,--,--,--,--,--,--,--,--,--,--,--,--,Spencer Ware,2013
 5,10/06,@IND,L28-34,0,0,--,--,--,--,--,--,--,--,--,--,--,--,Spencer Ware,2013
 6,10/13,TEN,W20-13,0,0,--,--,--,--,--,--,--,--,--,--,--,--,Spencer Ware,2013
-7,10/17,@ARI,W34-22,0,0,--,--,--,--,--,--,--,--,--,--,--,--,Spencer Ware,2013WK,Game Date,Opp,Result,G,GS,RushAtt,RushYds,RushAvg,RushLng,RushTD,Rec,RecYds,RecAvg,RecLng,RecTD,FUM,Lost,Player,Year
+7,10/17,@ARI,W34-22,0,0,--,--,--,--,--,--,--,--,--,--,--,--,Spencer Ware,2013
 1,09/13,@JAC,W20-9,0,0,--,--,--,--,--,--,--,--,--,--,--,--,Brandon Wegher,2015
 2,09/20,HOU,W24-17,0,0,--,--,--,--,--,--,--,--,--,--,--,--,Brandon Wegher,2015
 3,09/27,NO,W27-22,0,0,--,--,--,--,--,--,--,--,--,--,--,--,Brandon Wegher,2015

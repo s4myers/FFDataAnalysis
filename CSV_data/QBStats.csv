@@ -1,4 +1,4 @@
-WK,Game Date,Opp,Result,G,GS,Comp,PassAtt,Pct,PassYds,Avg,PassTD,Int,Sck,SckY,Rate,RushAtt,RushYds,Avg,RushTD,FUM,Lost,Player,Year
+WK,Game Date,Opp,Result,G,GS,Comp,PassAtt,Pct,PassYds,PassAvg,PassTD,Int,Sck,SckY,Rate,RushAtt,RushYds,RushAvg,RushTD,FUM,Lost,Player,Year
 1,09/13,@JAC,W20-9,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--,Derek Anderson,2015
 2,09/20,HOU,W24-17,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--,Derek Anderson,2015
 3,09/27,NO,W27-22,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--,Derek Anderson,2015
@@ -3533,7 +3533,7 @@ WK,Game Date,Opp,Result,G,GS,Comp,PassAtt,Pct,PassYds,Avg,PassTD,Int,Sck,SckY,Ra
 14,12/07,NYG,L7-36,1,1,14,24,58.3,125,5.2,0,1,5,33,55.0,1,-1,-1.0,0,2,1,Zach Mettenberger,2014
 15,12/14,NYJ,L11-16,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--,Zach Mettenberger,2014
 16,12/18,@JAC,L13-21,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--,Zach Mettenberger,2014
-17,12/28,IND,L10-27,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--,Zach Mettenberger,2014WK,Game Date,Opp,Result,G,GS,Comp,PassAtt,Pct,PassYds,Avg,PassTD,Int,Sck,SckY,Rate,RushAtt,RushYds,Avg,RushTD,FUM,Lost,Player,Year
+17,12/28,IND,L10-27,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--,Zach Mettenberger,2014
 3,09/27,ATL,L28-39,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--,Kellen Moore,2015
 4,10/04,@NO,L20-26,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--,Kellen Moore,2015
 5,10/11,NE,L6-30,0,0,--,--,--,--,--,--,--,--,--,0.0,--,--,--,--,--,--,Kellen Moore,2015
