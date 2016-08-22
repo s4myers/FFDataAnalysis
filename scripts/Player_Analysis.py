@@ -494,6 +494,8 @@ class Defense(Player):
         for year in YEAR_LIST:
             for week in WEEK_LIST:
                 opponent_list = find_opponents(self.name,week,year)
+                if len(opponent_list) == 0:
+                    continue
                 #this creates a list of player classes of the opponents
                 opponent_class_list = []
                 
@@ -517,11 +519,11 @@ class Defense(Player):
                 else:
                     self.stats[year][week]["Home"] = False
 
-                #result = player.stats[year][week]["Result"]  
-                #if 'L' in result:
-                #    self.stats[year][week]["Won"] = True
-                #else:
-                #    self.stats[year][week]["Won"] = False
+                result = player.stats[year][week]["Result"]  
+                if 'L' in result:
+                    self.stats[year][week]["Won"] = True
+                else:
+                    self.stats[year][week]["Won"] = False
 
-                #score = result[1:].split('-')[1]+'-'+result[1:].split('-')[0]
-                #self.stats[year][week]["Score"] = score
+                score = result[1:].split('-')[1]+'-'+result[1:].split('-')[0]
+                self.stats[year][week]["Score"] = score
