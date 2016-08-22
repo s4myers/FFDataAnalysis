@@ -83,7 +83,44 @@ def generate_class_list(pos,player_list):
         class_list = [Kicker(player) for player in player_list]   
     else:
         return "Not a proper posistion"
-    return class_list    
+    return class_list
+
+def generate_rookies(pos_list):
+    """
+    Find all the rookies by position and year.  Using
+    these players we create and the average rookie profile
+    
+    Keyword Arguments:
+    pos_list - a list of positions
+    """
+    Rookies = {pos:{year:[] for year in YEAR_LIST[1:]} for pos in pos_list}
+    base_year = YEAR_LIST[0]
+    for pos in pos_list:
+        csv_name = pos+"Stats.csv"
+        csv_path = os.path.join(CSV_DIR,csv_name)
+        old_name = ''
+        old_year = ''
+        with open(csv_path) as csv_file:
+            reader = csv.DictReader(csv_file)
+            for row in reader:
+                new_name = row["Player"]
+                new_year = row["Year"]
+                if new_name == old_name and new_year == old_year:
+                    continue
+                elif new_name == old_name and new_year != old_year:
+                    old_year = row["Year"]
+                elif new_name != old_name and old_year == base_year:
+                    old_name = row["Player"]
+                    old_year = row["Year"]
+                    continue
+                elif old_name == '':
+                    old_name = row["Player"]
+                    old_year = row["Year"]
+                else:
+                    Rookies[pos][old_year].append(old_name)
+                    old_name = row["Player"]
+                    old_year = row["Year"]
+    return Rookies
 
 
 def correlation(pos,year_list,var1,var2="PPG",plot=False):
