@@ -80,7 +80,9 @@ def generate_class_list(pos,player_list):
     elif pos == "TE":
         class_list = [TightEnd(player) for player in player_list]
     elif pos == "K":
-        class_list = [Kicker(player) for player in player_list]   
+        class_list = [Kicker(player) for player in player_list]  
+    elif pos == "DEF":
+        class_list = [Defense(player) for player in player_list]
     else:
         return "Not a proper posistion"
     return class_list
@@ -181,7 +183,7 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
     return r_list
 
 
-def points_against(pos_list):
+def points_allowed(pos_list):
     """
     Generate a nested dictionary of all the for poinst allowed to positions by team.
 
@@ -237,12 +239,12 @@ class Player(object):
         self.stats = {year:{week:{} for week in WEEK_LIST} for year in YEAR_LIST}
         with open(self.csv_path) as csv_file:
             reader = csv.DictReader(csv_file)
-            for year in YEAR_LIST:
-                for row in reader:
-                    if row["Player"]== self.name:
-                        w = row["WK"]
-                        y = row["Year"]
-                        self.stats[y][w]=row
+            for row in reader:
+                if row["Player"]==self.name:
+                    week = row["WK"]
+                    year = row["Year"]
+                    self.stats[year][week]=row
+
 
     def generate_array_stats(self,field,year):
         """
@@ -358,9 +360,12 @@ class Player(object):
         try:
             week_dict = self.stats[year][week]
         except KeyError:
-            return "No Data"    
-        if self.stats[year][week]["Game Date"]=="Bye":
-            return "Bye"
+            return "No Data"
+        try:      
+            if self.stats[year][week]["Game Date"]=="Bye":
+                return "Bye"
+        except KeyError:
+            return "No Data"        
 
         points = 0.0
         for field in self.scoring_field_names:
@@ -489,41 +494,43 @@ class Defense(Player):
 
     def __init__(self,name):
         self.name = name
-        self.csv_path = os.path.join(CSV_DIR,self.csv_file_name)
-        self.stats = {year:{week:{field:0.0 for field in self.field_names} for week in WEEK_LIST} for year in YEAR_LIST}
-        for year in YEAR_LIST:
-            for week in WEEK_LIST:
-                opponent_list = find_opponents(self.name,week,year)
-                if len(opponent_list) == 0:
-                    continue
-                #this creates a list of player classes of the opponents
-                opponent_class_list = []
-                
-                for (player,pos) in opponent_list:
-                    opponent_class_list += generate_class_list(pos,[player])
+        self.stats = {year:{week:{"Players":[],"Home":[],"Won":[],"Score":[],
+                    "RushAtt":0.0,"RushYds":0.0,"RushTD":0.0,
+                    "PassAtt":0.0,"PassYds":0.0,"PassTD":0.0,
+                    "FGBlk":0.0,"FGAtt":0.0,"FGM":0.0}
+               for week in WEEK_LIST} for year in YEAR_LIST}
 
-                for player in opponent_class_list:
-                    for field in self.field_names:
-                        if field in player.field_names:
-                            val = player.stats[year][week][field]
-                            if val == "--":
+        for pos in POS_LIST:
+            csv_path = os.path.join(CSV_DIR,pos+"Stats.csv")
+            with open(csv_path) as csv_file:
+                reader = csv.DictReader(csv_file)
+                temp_field = reader.fieldnames
+                fields = [x for x in temp_field if x in self.field_names]
+                for row in reader:
+                    opponent = row["Opp"]
+                    if self.name in opponent and opponent != "":
+                        year = row["Year"]
+                        week = row["WK"]
+                        player = row["Player"]
+                        for field in fields:
+                            value = row[field]
+                            if value == "--":
                                 continue
-                            else:
-                                self.stats[year][week][field] += float(val)
+                            else:    
+                                self.stats[year][week][field]+=float(value)
+                
+                        self.stats[year][week]["Players"].append((player,pos))
+                
+                        if '@' in opponent:
+                            self.stats[year][week]["Home"] = True
+                        else:
+                            self.stats[year][week]["Home"] = False
+                        result = row["Result"] 
+                
+                        if 'L' in result:
+                            self.stats[year][week]["Won"] = True
+                        else:
+                            self.stats[year][week]["Won"] = False
 
-
-                self.stats[year][week]["Players"] = opponent_list
-
-                if '@' in player.stats[year][week]["Opp"]:
-                    self.stats[year][week]["Home"] = True
-                else:
-                    self.stats[year][week]["Home"] = False
-
-                result = player.stats[year][week]["Result"]  
-                if 'L' in result:
-                    self.stats[year][week]["Won"] = True
-                else:
-                    self.stats[year][week]["Won"] = False
-
-                score = result[1:].split('-')[1]+'-'+result[1:].split('-')[0]
-                self.stats[year][week]["Score"] = score
+                        score = (result[1:].split('-')[1] +'-'+result[1:].split('-')[0])
+                        self.stats[year][week]["Score"] = score
