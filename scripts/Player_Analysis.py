@@ -244,6 +244,11 @@ class Player(object):
                     week = row["WK"]
                     year = row["Year"]
                     self.stats[year][week]=row
+        # removes years without data
+        for year in YEAR_LIST:
+            if self.stats[year]['1'] == {}:
+                del self.stats[year]
+
 
 
     def generate_array_stats(self,field,year):
@@ -280,12 +285,16 @@ class Player(object):
 
         """
         tot = 0.0
+        try:
+            self.stats[year]
+        except KeyError:
+            return "No Data this year"    
         if field not in self.field_names:
             print ("Not a valid field. Please choice from: \n%s"
                    % self.field_names)
             return
         elif type(weeks)!=list or [type(item)!=str for item in weeks]==[True for i in range(len(weeks))]:
-            print "Not a valid argument for weeks, it must be a list of strings or left blank for the entire season"
+            print "Not a valid argument for weeks"
             return
         elif weeks == ["all_weeks"]:
             week_list = self.stats[year].keys()
@@ -312,6 +321,10 @@ class Player(object):
         year - the year of interest as a string
 
         """
+        try:
+            week_dict = self.stats[year][week]
+        except KeyError:
+            return "No Data"
         ary = self.generate_array_stats(field,year)
         avg = np.average(ary)
         if np.isnan(avg):
@@ -328,6 +341,10 @@ class Player(object):
         year - the year of interest as a string
         
         """
+        try:
+            week_dict = self.stats[year][week]
+        except KeyError:
+            return "No Data"
         ary = self.generate_array_stats(field,year)
         std = np.std(ary)
         if np.isnan(std):
@@ -384,10 +401,11 @@ class Player(object):
         year - the year as a string
         
         """
-        week_list = self.stats[year].keys()
-        week_totals = []
-        if week_list == []:
-            return 0.00
+        try:
+            week_list = self.stats[year].keys()
+        except KeyError:
+            return ("Did Not Play in {}".format(year),0)
+
         for week in week_list:
                 if self.stats[year][week]["Game Date"] == "Bye":
                     continue
@@ -409,10 +427,11 @@ class Player(object):
         year - the year as a string
 
         """
-        week_list = self.stats[year].keys()
-        week_variance = []
-        if week_list == []:
+        try:
+            week_list = self.stats[year].keys()
+        except KeyError:
             return ("Did Not Play in {}".format(year),0) #the player didn't play this year
+        
         average = self.ppg_average(year)
         for week in week_list:
             if self.stats[year][week]["Game Date"] == "Bye":
@@ -439,7 +458,10 @@ class Player(object):
         field1_total = self.total(field1,year,weeks)
         field2_total = self.total(field2,year,weeks)
 
-        return np.round(field1_total/field2_total,2)
+        if type(field1_total) == str or type(field1_total) == str:
+            return "no data this year"
+        else:
+            return np.round(field1_total/field2_total,2)
 
 class QuarterBack(Player):
     """ Quarter back position """
