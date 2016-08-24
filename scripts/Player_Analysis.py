@@ -231,7 +231,7 @@ class Player(object):
     csv_file_name = ""
     fantasy_point_multiplers = {"PassYds":0.04,"PassTD":4.0,"RecYds":0.1,
                                 "RecTD":6.0,"Rec":0.5,"RushYds":0.1,
-                                "RushTD":6.0,"Int":-2.0,"Lost":-2.0}
+                                "RushTD":6.0,"FGM":3.0,"XPM":1.0,"Int":-2.0,"Lost":-2.0}
 
     def __init__(self,name):
         self.name = name
@@ -244,10 +244,14 @@ class Player(object):
                     week = row["WK"]
                     year = row["Year"]
                     self.stats[year][week]=row
-        # removes years without data
+        # removes years and weeks without data
         for year in YEAR_LIST:
-            if self.stats[year]['1'] == {}:
+            for week in WEEK_LIST:
+                if self.stats[year][week] == {}:
+                    del self.stats[year][week]
+            if self.stats[year] == {}:
                 del self.stats[year]
+
 
 
 
@@ -401,18 +405,20 @@ class Player(object):
         year - the year as a string
         
         """
+        week_totals = []
         try:
             week_list = self.stats[year].keys()
         except KeyError:
-            return ("Did Not Play in {}".format(year),0)
+            # did not play this year
+            return 0.0
 
         for week in week_list:
-                if self.stats[year][week]["Game Date"] == "Bye":
-                    continue
-                elif self.stats[year][week]['G'] != '1':
-                    continue
-                else:
-                    week_totals += [self.week_points(week,year)]
+            if self.stats[year][week]["Game Date"] == "Bye":
+                continue
+            elif self.stats[year][week]['G'] != '1':
+                continue
+            else:
+                week_totals += [self.week_points(week,year)]
         if week_totals == []:
             return 0.00
         else:   
@@ -505,7 +511,7 @@ class Kicker(Player):
     abbr = "K"
     field_names =["FGBlk","FGLng","FGAtt","FGM","XPM","XPAtt","XPBlk","KO",
                   "KOAvg","TB","Ret","RetAvg"]
-    scoring_field_names = ["FGM"]
+    scoring_field_names = ["FGM","XPM"]
     csv_file_name = "KStats.csv"
 
 class Defense(Player):
