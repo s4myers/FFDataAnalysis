@@ -439,6 +439,7 @@ class Player(object):
             return ("Did Not Play in {}".format(year),0) #the player didn't play this year
         
         average = self.ppg_average(year)
+        week_variance = []
         for week in week_list:
             if self.stats[year][week]["Game Date"] == "Bye":
                 continue
