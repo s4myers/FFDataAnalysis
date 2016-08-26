@@ -2,10 +2,12 @@ import csv
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+import pickle
 from numbers import Number
 
 CSV_DIR = "../CSV_data/"
 #CSV_DIR = "C:/Users/justin/Documents/GitHub/FFDataAnalysis/CSV_data/"
+PICKLE_DIR = "../pickle_files/"
 
 TEAM_LIST =["BUF","MIA","NE","NYJ","BAL","CIN","CLE","PIT","HOU","IND","JAC",
             "TEN","DEN","KC","OAK","SD","DAL","NYG","PHI","WAS","CHI","DET",
@@ -236,21 +238,28 @@ class Player(object):
     def __init__(self,name):
         self.name = name
         self.csv_path = os.path.join(CSV_DIR,self.csv_file_name)
-        self.stats = {year:{week:{} for week in WEEK_LIST} for year in YEAR_LIST}
-        with open(self.csv_path) as csv_file:
-            reader = csv.DictReader(csv_file)
-            for row in reader:
-                if row["Player"]==self.name:
-                    week = row["WK"]
-                    year = row["Year"]
-                    self.stats[year][week]=row
-        # removes years and weeks without data
-        for year in YEAR_LIST:
-            for week in WEEK_LIST:
-                if self.stats[year][week] == {}:
-                    del self.stats[year][week]
-            if self.stats[year] == {}:
-                del self.stats[year]
+        self.pickle_file_name = self.name+".p"
+        self.pickle_path = os.path.join(PICKLE_DIR,self.abbr,self.pickle_file_name)
+        try:
+            self.stats = pickle.load(open(self.pickle_path,"rb"))
+        except IOError:
+            self.stats = {year:{week:{} for week in WEEK_LIST} for year in YEAR_LIST}
+            with open(self.csv_path) as csv_file:
+                reader = csv.DictReader(csv_file)
+                for row in reader:
+                    if row["Player"]==self.name:
+                        week = row["WK"]
+                        year = row["Year"]
+                        self.stats[year][week]=row
+            # removes years and weeks without data
+            for year in YEAR_LIST:
+                for week in WEEK_LIST:
+                    if self.stats[year][week] == {}:
+                        del self.stats[year][week]
+                if self.stats[year] == {}:
+                    del self.stats[year]
+
+            pickle.dump(self.stats,open(self.pickle_path,"wb"))
 
 
 
@@ -523,43 +532,50 @@ class Defense(Player):
 
     def __init__(self,name):
         self.name = name
-        self.stats = {year:{week:{"Players":[],"Home":[],"Won":[],"Score":[],
-                    "RushAtt":0.0,"RushYds":0.0,"RushTD":0.0,
-                    "PassAtt":0.0,"PassYds":0.0,"PassTD":0.0,
-                    "FGBlk":0.0,"FGAtt":0.0,"FGM":0.0}
-               for week in WEEK_LIST} for year in YEAR_LIST}
+        self.pickle_file_name = self.name+".p"
+        self.pickle_path = os.path.join(PICKLE_DIR,self.abbr,self.pickle_file_name)
+        try:
+            pickle.load(open(self.pickle_path,"rb"))
+        except IOError:
+            self.stats = {year:{week:{"Players":[],"Home":[],"Won":[],"Score":[],
+                          "RushAtt":0.0,"RushYds":0.0,"RushTD":0.0,
+                          "PassAtt":0.0,"PassYds":0.0,"PassTD":0.0,
+                          "FGBlk":0.0,"FGAtt":0.0,"FGM":0.0}
+                            for week in WEEK_LIST} 
+                            for year in YEAR_LIST}
+            for pos in POS_LIST:
+                csv_path = os.path.join(CSV_DIR,pos+"Stats.csv")
+                with open(csv_path) as csv_file:
+                    reader = csv.DictReader(csv_file)
+                    temp_field = reader.fieldnames
+                    fields = [x for x in temp_field if x in self.field_names]
+                    for row in reader:
+                        opponent = row["Opp"]
+                        if self.name in opponent and opponent != "":
+                            year = row["Year"]
+                            week = row["WK"]
+                            player = row["Player"]
+                            for field in fields:
+                                value = row[field]
+                                if value == "--":
+                                    continue
+                                else:    
+                                    self.stats[year][week][field]+=float(value)
+            
+                            self.stats[year][week]["Players"].append((player,pos))
+            
+                            if '@' in opponent:
+                                self.stats[year][week]["Home"] = True
+                            else:
+                                self.stats[year][week]["Home"] = False
+                        
+                            result = row["Result"] 
+                
+                            if 'L' in result:
+                                self.stats[year][week]["Won"] = True
+                            else:
+                                self.stats[year][week]["Won"] = False
 
-        for pos in POS_LIST:
-            csv_path = os.path.join(CSV_DIR,pos+"Stats.csv")
-            with open(csv_path) as csv_file:
-                reader = csv.DictReader(csv_file)
-                temp_field = reader.fieldnames
-                fields = [x for x in temp_field if x in self.field_names]
-                for row in reader:
-                    opponent = row["Opp"]
-                    if self.name in opponent and opponent != "":
-                        year = row["Year"]
-                        week = row["WK"]
-                        player = row["Player"]
-                        for field in fields:
-                            value = row[field]
-                            if value == "--":
-                                continue
-                            else:    
-                                self.stats[year][week][field]+=float(value)
-                
-                        self.stats[year][week]["Players"].append((player,pos))
-                
-                        if '@' in opponent:
-                            self.stats[year][week]["Home"] = True
-                        else:
-                            self.stats[year][week]["Home"] = False
-                        result = row["Result"] 
-                
-                        if 'L' in result:
-                            self.stats[year][week]["Won"] = True
-                        else:
-                            self.stats[year][week]["Won"] = False
-
-                        score = (result[1:].split('-')[1] +'-'+result[1:].split('-')[0])
-                        self.stats[year][week]["Score"] = score
+                            score = (result[1:].split('-')[1] +'-'+result[1:].split('-')[0])
+                            self.stats[year][week]["Score"] = score
+            pickle.dump(self.stats,open(self.pickle_path,"wb"))                
