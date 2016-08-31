@@ -1,6 +1,6 @@
 import sys
 sys.path.append("~/Projects/FFDataAnalysis/scripts/")
-from Player_Analysis import *
+from PlayerAnalysis import *
 import scipy.stats as stats
 
 
