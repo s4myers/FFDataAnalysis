@@ -171,25 +171,33 @@ class Player(object):
         else:   
             return std
 
-    def breakout_games(self, year, multiplier):
+    def outlier_games(self, year, threshold):
         """
         Returns a list of games that a player outperformed their average.
 
         Keyword Arguments:
         year - the year of interest as a string
-        multiplier - threshold for 'breakout' games
-            i.e. 1.5 = 50% more than their average
-                 2.0 = 2x their average
+        threshold - the percent difference from average
+            i.e. .5   = 50 percent more than average
+                 -.25 = 25 percent less than average
         """
         ppg_avg = self.ppg_average(year)
         print "Average PPG: " + str(ppg_avg)
-        breakout_games = []
+        outlier_games = []
         for week in range(1,18):
             points = self.week_points(str(week), year)
-            if isinstance(points, Number) & (points > ppg_avg * multiplier):
+            try:
+                diff = (points - ppg_avg)/ppg_avg
+            except TypeError:
+                continue
+            if diff < 0 and diff < threshold and threshold < 0:
                 print str(week) + " " + str(points)
-                breakout_games.append(str(week))
-        return breakout_games
+                outlier_games.append(str(week))
+            elif diff > 0 and diff > threshold and threshold > 0:
+                print str(week) + " " + str(points)
+                outlier_games.append(str(week))
+
+        return outlier_games
 
 
     def week_points(self,week,year):
