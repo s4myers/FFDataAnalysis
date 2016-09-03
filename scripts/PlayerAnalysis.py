@@ -21,10 +21,6 @@ WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10",
 POS_LIST = ["QB","RB","WR","TE","K"]
                 
 
-
-
-
-
 class Player(object):
     """
     An active roster player to research for your fantasy lineup.
@@ -209,16 +205,60 @@ class Player(object):
             if self.stats[year][week]["Game Date"]=="Bye":
                 return "Bye"
         except KeyError:
-            return "No Data"        
+            return "No Data"
 
-        points = 0.0
-        for field in self.scoring_field_names:
-            if self.stats[year][week][field] != "--":
-                points += (float(self.stats[year][week][field])*
-                           self.fantasy_point_multiplers[field])
+        #scoring currently doesn't include kick returns or defensive TDs
+        if self.name in TEAM_LIST:
+            score = d.stats[year][week]["Score"]
+            opp_score = float(score.split("-")[1])
+            TD = d.stats[year][week]["PassTD"] + d.stats[year][week]["RushTD"]
+            FGM = d.stats[year][week]["FGM"]
+            FGB = d.stats[year][week]["FGBlk"]
+            XPM = d.stats[year][week]["XPM"]
+            XPB = d.stats[year][week]["XPBlk"]
+            sacks = d.stats[year][week]["Sck"]
+
+            points_from_offense = 6*TD + 3*FGM +XPM
+
+            if points_from_offense == 0:
+                base_points = 10.0
+            elif points_from_offense < 7:
+                base_points = 7.0
+            elif points_from_offense < 14:
+                base_points = 4.0
+            elif points_from_offense < 21:
+                base_points = 1.0
+            elif points_from_offense < 28:
+                base_points = 0.0
+            elif points_from_offense < 35:
+                base_points = -1.0
             else:
-                continue
-        return points
+                base_points = -4.0
+
+            turnovers = 0.0
+            turnover_fields = ["Int","Lost"]
+            p = [i for i in d.stats[year][week]["Players"]]
+            for (player,pos) in p:
+                a = generate_class_list(pos,[player])[0]
+                for b in turnover_fields:
+                    try:
+                        turnovers += float(a.stats[year][week][b])
+                    except (KeyError, ValueError):
+                        continue
+            
+            blocks = XPB + FGB
+            points = base_points + 2*blocks + sacks + 2*turnovers
+            return points
+
+        else:
+            points = 0.0
+            for field in self.scoring_field_names:
+                if self.stats[year][week][field] != "--":
+                    points += (float(self.stats[year][week][field])*
+                           self.fantasy_point_multiplers[field])
+                else:
+                    continue
+            return points
 
     
     def total_points(self,year):
@@ -371,7 +411,8 @@ class Defense(Player):
     """ Defensive Matchup """
     abbr = "DEF"
     field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt",
-                   "PassYds","PassTD","FGBlk","FGAtt","FGM","Home","Won","Score"]
+                   "PassYds","PassTD","FGBlk","FGAtt","FGM","XPM","XPBlk","Sck",
+                   "Home","Won","Score"]
 
     def __init__(self,name):
         self.name = name
@@ -383,7 +424,7 @@ class Defense(Player):
             self.stats = {year:{week:{"Players":[],"Home":[],"Won":[],"Score":[],
                           "RushAtt":0.0,"RushYds":0.0,"RushTD":0.0,
                           "PassAtt":0.0,"PassYds":0.0,"PassTD":0.0,
-                          "FGBlk":0.0,"FGAtt":0.0,"FGM":0.0}
+                          "FGBlk":0.0,"FGAtt":0.0,"FGM":0.0,"XPM":0.0,"XPBlk":0.0,"Sck":0.0}
                             for week in WEEK_LIST} 
                             for year in YEAR_LIST}
             for pos in POS_LIST:
