@@ -63,11 +63,15 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
     return r_list
 
 
-def past_points_allowed():
+def past_points_allowed(rookies = False):
     """
     Generate a nested dictionary of all the for past points allowed to positions by team.
     """
-    pickle_path = os.path.join(PICKLE_DIR,"PastPointsAllowed.p")
+    if rookies:
+        pickle_path = os.path.join(PICKLE_DIR,"PastPointsAllowedRookies.p")
+        rookie_dict = generate_rookies(POS_LIST)
+    else:    
+        pickle_path = os.path.join(PICKLE_DIR,"PastPointsAllowed.p")
     try:
         temp_dict = pickle.load(open(pickle_path,"rb"))
     except IOError:
@@ -77,11 +81,15 @@ def past_points_allowed():
         #print temp_dict
 
         for pos in POS_LIST:
+            if rookies:
+                player_list = []
+                for y in rookie_dict[pos].keys():
+                    player_list+=rookie_dict[pos][y]
+                class_list = generate_class_list(pos,player_list)
+            else:    
+                player_list = generate_player_list(pos)
+                class_list = generate_class_list(pos,player_list)
             
-            player_list = generate_player_list(pos)
-
-            class_list = generate_class_list(pos,player_list)
-
             for year in YEAR_LIST:
                 for player in class_list:
                     for week in WEEK_LIST:
@@ -94,7 +102,7 @@ def past_points_allowed():
                             if '@' in team:
                                 team = team[1:]
                             temp_dict[year][pos][team] += points
-        pickle.dump(temp_dict,open(pickle_path,"wb"))
+            pickle.dump(temp_dict,open(pickle_path,"wb"))
 
     return temp_dict
 

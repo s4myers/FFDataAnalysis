@@ -1,4 +1,9 @@
 scripts/*.pyc
 notebooks/*
-pickle_files/*
+pickle_files/DEF/*
+pickle_files/K/*
+pickle_files/QB/*
+pickle_files/RB/*
+pickle_files/TE/*
+pickle_files/WR/*
 
