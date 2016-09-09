@@ -19,8 +19,51 @@ WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10",
              "11","12","13","14","15","16","17"]
 
 POS_LIST = ["QB","RB","WR","TE","K"]
-                
 
+SALARIES = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"dksalaries.p"),"rb"))
+POINTS_ALLOWED = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"PastPointsAllowed.p"),"rb"))
+POINTS_ALLOWED_ROOKIES = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"PastPointsAllowedRookies.p"),"rb"))
+ROOKIE_AVERAGE = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"RookieAverage.p"),"rb"))
+LAST_YEAR = "2015"
+
+TEAM_NAME_DICT = {
+ 'Broncos':'DEN',
+ 'Vikings':'MIN',
+ 'Bears':'CHI',
+ 'Falcons':'ATL',
+ 'Saints':'NO',
+ 'Chargers':'SD',
+ 'Raiders':'OAK',
+ 'Lions':'DET',
+ 'Browns':'CLE',
+ 'Eagles':'PHI',
+ 'Steelers':'PIT',
+ 'Giants':'NYG',
+ 'Buccaneers':'TB',
+ 'Cardinals':'ARI',
+ 'Bengals':'CIN',
+ 'Chiefs':'KC',
+ 'Jaguars':'JAC',
+ 'Seahawks':'SEA',
+ 'Jets':'NYJ',
+ 'Ravens':'BAL',
+ 'Colts':'IND',
+ 'Packers':'GB',
+ 'Dolphins':'MIA',
+ 'Rams':'STL',
+ 'Bills':'BUF',
+ 'Panthers':'CAR',
+ 'Texans':'HOU',
+ '49ers':'SF',
+ 'Patriots':'NE',
+ 'Cowboys':'DAL',
+ 'Titans':'TEN',
+ 'Redskins':'WAS'}
+                
 class Player(object):
     """
     An active roster player to research for your fantasy lineup.
