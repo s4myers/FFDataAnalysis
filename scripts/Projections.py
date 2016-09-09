@@ -1,7 +1,7 @@
 import sys
 sys.path.append("~/Projects/FFDataAnalysis/scripts/")
 from PlayerAnalysis import *
-import scipy.stats as stats
+
 
 def correlation(pos,year_list,var1,var2="PPG",plot=False):
     """
@@ -310,15 +310,16 @@ def player_score(player):
     Keyword Arguments:
     player - the player as a class object
     """
+    last_year = YEAR_LIST[-2]
     pos = player.abbr
     name = player.name
     opp = SALARIES[pos][name][1]
-    past_ppg = player.ppg_average(LAST_YEAR)
+    past_ppg = player.ppg_average(last_year)
     if past_ppg == 0.0:
-        past_allowed = POINTS_ALLOWED_ROOKIES[LAST_YEAR][pos][opp]/16
-        past_ppg = ROOKIE_AVERAGE["PPG"][LAST_YEAR][pos]
+        past_allowed = POINTS_ALLOWED_ROOKIES[last_year][pos][opp]/16
+        past_ppg = ROOKIE_AVERAGE["PPG"][last_year][pos]
     else:
-        past_allowed = POINTS_ALLOWED[LAST_YEAR][pos][opp]/16
+        past_allowed = POINTS_ALLOWED[last_year][pos][opp]/16
     score = (past_ppg + past_allowed)/2
     return score
 

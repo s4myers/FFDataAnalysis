@@ -1,5 +1,7 @@
 import csv
 import os
+import datetime
+import time
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle
@@ -13,7 +15,7 @@ TEAM_LIST =["BUF","MIA","NE","NYJ","BAL","CIN","CLE","PIT","HOU","IND","JAC",
             "TEN","DEN","KC","OAK","SD","DAL","NYG","PHI","WAS","CHI","DET",
             "GB","MIN","ATL","CAR","NO","TB","ARI","STL","SF","SEA"]
            
-YEAR_LIST = ["2010","2011","2012","2013","2014","2015"]
+YEAR_LIST = ["2010","2011","2012","2013","2014","2015","2016"]
 
 WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10",
              "11","12","13","14","15","16","17"]
@@ -28,7 +30,6 @@ POINTS_ALLOWED_ROOKIES = pickle.load(open(os.path.join(
                         PICKLE_DIR,"PastPointsAllowedRookies.p"),"rb"))
 ROOKIE_AVERAGE = pickle.load(open(os.path.join(
                         PICKLE_DIR,"RookieAverage.p"),"rb"))
-LAST_YEAR = "2015"
 
 TEAM_NAME_DICT = {
  'Broncos':'DEN',
@@ -86,8 +87,14 @@ class Player(object):
         self.pickle_file_name = self.name+".p"
         self.pickle_path = os.path.join(PICKLE_DIR,self.abbr,self.pickle_file_name)
         try:
-            self.stats = pickle.load(open(self.pickle_path,"rb"))
-        except IOError:
+            csvtime = os.path.getmtime(self.csv_path)
+            pickletime = os.path.getmtime(self.pickle_path)
+            delta = csvtime-pickletime
+            if delta > 0:   #checks to see if the csv data has been recently modified
+                raise IOError
+            else:    
+                self.stats = pickle.load(open(self.pickle_path,"rb"))
+        except (IOError, OSError):
             self.stats = {year:{week:{} for week in WEEK_LIST} for year in YEAR_LIST}
             with open(self.csv_path) as csv_file:
                 reader = csv.DictReader(csv_file)
@@ -456,14 +463,23 @@ class Defense(Player):
     field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt",
                    "PassYds","PassTD","FGBlk","FGAtt","FGM","XPM","XPBlk","Sck",
                    "Home","Won","Score"]
+    csv_file_name = "QBStats.csv" #uses QBStats.csv to look for updates
 
     def __init__(self,name):
         self.name = name
         self.pickle_file_name = self.name+".p"
         self.pickle_path = os.path.join(PICKLE_DIR,self.abbr,self.pickle_file_name)
+        self.csv_path = os.path.join(CSV_DIR,self.csv_file_name)
         try:
-            self.stats = pickle.load(open(self.pickle_path,"rb"))
-        except IOError:
+            csvtime = os.path.getmtime(self.csv_path)
+            pickletime = os.path.getmtime(self.pickle_path)
+            delta = csvtime-pickletime
+            if delta > 0:   #checks to see if the csv data has been recently modified
+                raise IOError
+            else:    
+                self.stats = pickle.load(open(self.pickle_path,"rb"))
+
+        except (IOError, OSError):
             self.stats = {year:{week:{"Players":[],"Home":[],"Won":[],"Score":[],
                           "RushAtt":0.0,"RushYds":0.0,"RushTD":0.0,
                           "PassAtt":0.0,"PassYds":0.0,"PassTD":0.0,
