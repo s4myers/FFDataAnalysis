@@ -210,22 +210,60 @@ def lineup_cost(lineup):
         price+=SALARIES[pos][player.name][0]
     return price
 
-def past_points_allowed(rookies = False):
+def matchup_history(player,opp):
+    """
+    Returns matchup history against particular a particular team. Returns
+    the Average points scored, standard deviation, max, min, games played.
+    
+    Keyword Arguments:
+    player - Player class object
+    opp - opponent as the city, e.g. CHI, IND, etc.
+    """
+    ppg_total = []
+    for year in player.stats.keys():
+        for week in player.stats[year].keys():
+            opp_check = player.stats[year][week]["Opp"]
+            played = player.stats[year][week]["G"]
+            if '@' in opp_check:
+                opp_check = opp_check[1:]
+                
+            if opp_check==opp and played == '1':
+                points = player.week_points(week,year)
+                ppg_total.append(points)
+            else:
+                continue
+    ppg_total = np.array(ppg_total)            
+    average = np.average(ppg_total)
+    std = np.std(ppg_total)
+    high = np.max(ppg_total)
+    low = np.min(ppg_total)
+    games_played = len(ppg_total)
+    
+    return average,std,high,low,games_played,ppg_total    
+
+def points_allowed(past = True,rookies = False):
     """
     Generate a nested dictionary of all the for past points allowed to positions by team.
     """
+    if past == True:
+        years = [y for y in YEAR_LIST[:-1]]
+        rookie_file = "PastPointsAllowedRookies.p"
+        vet_file = "PastPointsAllowed.p"
+    else:
+        years = [y for y in YEAR_LIST[-1]]
+        rookie_file = "CurrentPointsAllowedRookies.p"
+        vet_file = "CurrentPointsAllowed.p"
     if rookies:
-        pickle_path = os.path.join(PICKLE_DIR,"PastPointsAllowedRookies.p")
+        pickle_path = os.path.join(PICKLE_DIR,rookie_file)
         rookie_dict = generate_rookies(POS_LIST)
     else:    
-        pickle_path = os.path.join(PICKLE_DIR,"PastPointsAllowed.p")
+        pickle_path = os.path.join(PICKLE_DIR,vet_file)
     try:
         temp_dict = pickle.load(open(pickle_path,"rb"))
     except IOError:
         temp_dict = {year:{pos:{team:0.0 for team in TEAM_LIST}
                        for pos in POS_LIST}
-                for year in YEAR_LIST}
-        #print temp_dict
+                       for year in years}
 
         for pos in POS_LIST:
             if rookies:
@@ -236,8 +274,8 @@ def past_points_allowed(rookies = False):
             else:    
                 player_list = generate_player_list(pos)
                 class_list = generate_class_list(pos,player_list)
-            
-            for year in YEAR_LIST:
+        
+            for year in years:
                 for player in class_list:
                     for week in WEEK_LIST:
                         points = player.week_points(week,year)
@@ -245,7 +283,7 @@ def past_points_allowed(rookies = False):
                             continue    
                         else:
                             team = player.stats[year][week]["Opp"]    
-                        
+                    
                             if '@' in team:
                                 team = team[1:]
                             temp_dict[year][pos][team] += points
@@ -308,7 +346,7 @@ def player_score(player):
     are important.
     
     Keyword Arguments:
-    player - the player as a class object
+    player - Player class object
     """
     last_year = YEAR_LIST[-2]
     pos = player.abbr
@@ -316,10 +354,10 @@ def player_score(player):
     opp = SALARIES[pos][name][1]
     past_ppg = player.ppg_average(last_year)
     if past_ppg == 0.0:
-        past_allowed = POINTS_ALLOWED_ROOKIES[last_year][pos][opp]/16
+        past_allowed = PAST_POINTS_ALLOWED_ROOKIES[last_year][pos][opp]/16
         past_ppg = ROOKIE_AVERAGE["PPG"][last_year][pos]
     else:
-        past_allowed = POINTS_ALLOWED[last_year][pos][opp]/16
+        past_allowed = PAST_POINTS_ALLOWED[last_year][pos][opp]/16
     score = (past_ppg + past_allowed)/2
     return score
 

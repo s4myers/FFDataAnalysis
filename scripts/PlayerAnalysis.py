@@ -24,9 +24,9 @@ POS_LIST = ["QB","RB","WR","TE","K"]
 
 SALARIES = pickle.load(open(os.path.join(
                         PICKLE_DIR,"dksalaries.p"),"rb"))
-POINTS_ALLOWED = pickle.load(open(os.path.join(
+PAST_POINTS_ALLOWED = pickle.load(open(os.path.join(
                         PICKLE_DIR,"PastPointsAllowed.p"),"rb"))
-POINTS_ALLOWED_ROOKIES = pickle.load(open(os.path.join(
+PAST_POINTS_ALLOWED_ROOKIES = pickle.load(open(os.path.join(
                         PICKLE_DIR,"PastPointsAllowedRookies.p"),"rb"))
 ROOKIE_AVERAGE = pickle.load(open(os.path.join(
                         PICKLE_DIR,"RookieAverage.p"),"rb"))
