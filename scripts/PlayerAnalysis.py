@@ -22,14 +22,26 @@ WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10",
 
 POS_LIST = ["QB","RB","WR","TE","K"]
 
-SALARIES = pickle.load(open(os.path.join(
+try:
+    SALARIES = pickle.load(open(os.path.join(
                         PICKLE_DIR,"dksalaries.p"),"rb"))
-PAST_POINTS_ALLOWED = pickle.load(open(os.path.join(
+except IOError:
+    pass
+try:
+    PAST_POINTS_ALLOWED = pickle.load(open(os.path.join(
                         PICKLE_DIR,"PastPointsAllowed.p"),"rb"))
-PAST_POINTS_ALLOWED_ROOKIES = pickle.load(open(os.path.join(
+except IOError:
+    pass
+try:
+    PAST_POINTS_ALLOWED_ROOKIES = pickle.load(open(os.path.join(
                         PICKLE_DIR,"PastPointsAllowedRookies.p"),"rb"))
-ROOKIE_AVERAGE = pickle.load(open(os.path.join(
+except IOError:
+    pass
+try:
+    ROOKIE_AVERAGE = pickle.load(open(os.path.join(
                         PICKLE_DIR,"RookieAverage.p"),"rb"))
+except IOError:
+    pass
 
 TEAM_NAME_DICT = {
  'Broncos':'DEN',
@@ -77,7 +89,7 @@ class Player(object):
     field_names = []
     scoring_field_names = []
     csv_file_name = ""
-    fantasy_point_multiplers = {"PassYds":0.04,"PassTD":4.0,"RecYds":0.1,
+    fantasy_point_multipliers = {"PassYds":0.04,"PassTD":4.0,"RecYds":0.1,
                                 "RecTD":6.0,"Rec":0.0,"RushYds":0.1,
                                 "RushTD":6.0,"FGM":3.0,"XPM":1.0,"Int":-2.0,"Lost":-2.0}
 
@@ -217,7 +229,7 @@ class Player(object):
         else:   
             return std
 
-    def outlier_games(self, year, threshold):
+    def outlier_games(self,year,threshold,ppr=0.0):
         """
         Returns a list of games that a player outperformed their average.
 
@@ -227,11 +239,11 @@ class Player(object):
             i.e. .5   = 50 percent more than average
                  -.25 = 25 percent less than average
         """
-        ppg_avg = self.ppg_average(year)
+        ppg_avg = self.ppg_average(year,ppr)
         print "Average PPG: " + str(ppg_avg)
         outlier_games = []
         for week in range(1,18):
-            points = self.week_points(str(week), year)
+            points = self.week_points(str(week),year,ppr)
             try:
                 diff = (points - ppg_avg)/ppg_avg
             except TypeError:
@@ -246,7 +258,8 @@ class Player(object):
         return outlier_games
 
 
-    def week_points(self,week,year):
+    def week_points(self,week,year,ppr=0.0):
+        self.fantasy_point_multipliers["Rec"]=ppr
         try:
             week_dict = self.stats[year][week]
         except KeyError:
@@ -305,13 +318,13 @@ class Player(object):
             for field in self.scoring_field_names:
                 if self.stats[year][week][field] != "--":
                     points += (float(self.stats[year][week][field])*
-                           self.fantasy_point_multiplers[field])
+                           self.fantasy_point_multipliers[field])
                 else:
                     continue
             return points
 
     
-    def total_points(self,year):
+    def total_points(self,year,ppr=0.0):
         """
         Total points scored for a given year
 
@@ -332,14 +345,14 @@ class Player(object):
             elif self.stats[year][week]['G'] != '1':
                 continue
             else:
-                week_totals += [self.week_points(week,year)]
+                week_totals += [self.week_points(week,year,ppr)]
         if week_totals == []:
             return 0.00
         else:   
             return np.sum(week_totals)   
     
 
-    def ppg_average(self,year):
+    def ppg_average(self,year,ppr=0.0):
         """
         Returns the average points per game for a given year
 
@@ -360,13 +373,13 @@ class Player(object):
             elif self.stats[year][week]['G'] != '1':
                 continue
             else:
-                week_totals += [self.week_points(week,year)]
+                week_totals += [self.week_points(week,year,ppr)]
         if week_totals == []:
             return 0.00
         else:   
             return np.round(np.average(week_totals),2)      
 
-    def ppg_var(self,year):
+    def ppg_var(self,year,ppr=0.0):
         """
         Returns a tuple of the variance in weekly points per game for a given year
         and also the weeks of games played
@@ -380,7 +393,7 @@ class Player(object):
         except KeyError:
             return ("Did Not Play in {}".format(year),0) #the player didn't play this year
         
-        average = self.ppg_average(year)
+        average = self.ppg_average(year,ppr)
         week_variance = []
         for week in week_list:
             if self.stats[year][week]["Game Date"] == "Bye":
@@ -388,7 +401,7 @@ class Player(object):
             elif self.stats[year][week]["G"] != '1':
                 continue
             else:
-                week_variance += [(self.week_points(week,year) - average)**2]
+                week_variance += [(self.week_points(week,year,ppr) - average)**2]
         if week_variance == []:
             return ("Empty List",0)
         else:

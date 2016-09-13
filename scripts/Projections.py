@@ -213,13 +213,15 @@ def lineup_cost(lineup):
 def matchup_history(player,opp):
     """
     Returns matchup history against particular a particular team. Returns
-    the Average points scored, standard deviation, max, min, games played.
+    the Average points scored, standard deviation, max, min, and
+    last game points.
     
     Keyword Arguments:
     player - Player class object
     opp - opponent as the city, e.g. CHI, IND, etc.
     """
     ppg_total = []
+    prev_games = []
     for year in player.stats.keys():
         for week in player.stats[year].keys():
             opp_check = player.stats[year][week]["Opp"]
@@ -230,6 +232,7 @@ def matchup_history(player,opp):
             if opp_check==opp and played == '1':
                 points = player.week_points(week,year)
                 ppg_total.append(points)
+                prev_games.append((week,year))
             else:
                 continue
     ppg_total = np.array(ppg_total)            
@@ -239,20 +242,30 @@ def matchup_history(player,opp):
     low = np.min(ppg_total)
     games_played = len(ppg_total)
     
-    return average,std,high,low,games_played,ppg_total    
+    return average,std,high,low,games_played,ppg_total[0],prev_games[0]
 
-def points_allowed(past = True,rookies = False):
+def points_allowed(ppr = 0.0, past = True,rookies = False):
     """
     Generate a nested dictionary of all the for past points allowed to positions by team.
     """
+    if ppr == 0.0:
+        suffix = ".p"
+    elif ppr == 0.5:
+        suffix = "HalfPoint.p"
+    elif ppr == 1.0:
+        suffix = "FullPoint.p"
+    else:
+        print "Invalid PPR value"
+        return
+        
     if past == True:
         years = [y for y in YEAR_LIST[:-1]]
-        rookie_file = "PastPointsAllowedRookies.p"
-        vet_file = "PastPointsAllowed.p"
+        rookie_file = "PastPointsAllowedRookies" + suffix
+        vet_file = "PastPointsAllowed" + suffix
     else:
         years = [y for y in YEAR_LIST[-1]]
-        rookie_file = "CurrentPointsAllowedRookies.p"
-        vet_file = "CurrentPointsAllowed.p"
+        rookie_file = "CurrentPointsAllowedRookies" + suffix
+        vet_file = "CurrentPointsAllowed" + suffix
     if rookies:
         pickle_path = os.path.join(PICKLE_DIR,rookie_file)
         rookie_dict = generate_rookies(POS_LIST)
@@ -277,6 +290,7 @@ def points_allowed(past = True,rookies = False):
         
             for year in years:
                 for player in class_list:
+                    player.fantasy_point_multipliers["Rec"] = ppr
                     for week in WEEK_LIST:
                         points = player.week_points(week,year)
                         if points == "Bye" or points == "No Data":
