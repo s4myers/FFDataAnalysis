@@ -1,8 +1,6 @@
 import sys
 sys.path.append("~/Projects/FFDataAnalysis/scripts/")
 from PlayerAnalysis import *
-import scipy.stats as stats
-
 
 
 def correlation(pos,year_list,var1,var2="PPG",plot=False):
@@ -62,43 +60,6 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
 
     return r_list
 
-
-def past_points_allowed():
-    """
-    Generate a nested dictionary of all the for past points allowed to positions by team.
-    """
-    pickle_path = os.path.join(PICKLE_DIR,"PastPointsAllowed.p")
-    try:
-        temp_dict = pickle.load(open(pickle_path,"rb"))
-    except IOError:
-        temp_dict = {year:{pos:{team:0.0 for team in TEAM_LIST}
-                       for pos in POS_LIST}
-                for year in YEAR_LIST}
-        #print temp_dict
-
-        for pos in POS_LIST:
-            
-            player_list = generate_player_list(pos)
-
-            class_list = generate_class_list(pos,player_list)
-
-            for year in YEAR_LIST:
-                for player in class_list:
-                    for week in WEEK_LIST:
-                        points = player.week_points(week,year)
-                        if points == "Bye" or points == "No Data":
-                            continue    
-                        else:
-                            team = player.stats[year][week]["Opp"]    
-                        
-                            if '@' in team:
-                                team = team[1:]
-                            temp_dict[year][pos][team] += points
-        pickle.dump(temp_dict,open(pickle_path,"wb"))
-
-    return temp_dict
-
-
 def find_opponents(team,week,year):
     """
     Find all the players who participated in a game. Returns a tuple
@@ -120,7 +81,6 @@ def find_opponents(team,week,year):
                 if (row["Year"]==year and row["WK"]==week and team in row["Opp"]):
                     opponent_list +=[(row["Player"],pos)]
     return opponent_list
-
 
 def generate_class_list(pos,player_list):
     """
@@ -145,7 +105,6 @@ def generate_class_list(pos,player_list):
     else:
         return "Not a proper posistion"
     return class_list
-
 
 def generate_rookies(pos_list):
     """
@@ -184,7 +143,6 @@ def generate_rookies(pos_list):
                     old_year = row["Year"]
     return Rookies
 
-
 def generate_player_list(pos):
     """
     Create a list of all avaiable players at a desired position
@@ -203,3 +161,233 @@ def generate_player_list(pos):
             else:
                 continue
     return name_list
+
+def join_combinations(combos_list):
+    """
+    Combines the player combinations to return a lineup.
+    
+    Keyword Arguments:
+    combos_list - a list of player_combos list
+    """
+    joined = []
+    if len(combos_list) == 2:
+        for item1 in combos_list[0]:
+            for item2 in combos_list[1]:
+                joined.append(item1+item2)
+    elif len(combos_list) == 3:
+        for item1 in combos_list[0]:
+            for item2 in combos_list[1]:
+                for item3 in combos_list[2]:
+                    joined.append(item1+item2+item3)
+    elif len(combos_list) == 4:
+        for item1 in combos_list[0]:
+            for item2 in combos_list[1]:
+                for item3 in combos_list[2]:
+                    for item4 in combos_list[3]:
+                        joined.append(item1+item2+item3+item4)
+    elif len(combos_list) == 5:
+        for item1 in combos_list[0]:
+            for item2 in combos_list[1]:
+                for item3 in combos_list[2]:
+                    for item4 in combos_list[3]:
+                        for item5 in combos_list[4]:
+                            joined.append(item1+item2+item3+item4+item5)
+    else:
+        print "Invalid len of list"
+        return
+    return joined
+
+def lineup_cost(lineup):
+    """
+    The cost of the lineup according to DraftKings.com
+    
+    Keyword Arguments:
+    lineup = a list of player classes
+    """
+    price = 0
+    for player in lineup:
+        pos = player.abbr
+        price+=SALARIES[pos][player.name][0]
+    return price
+
+def matchup_history(player,opp):
+    """
+    Returns matchup history against particular a particular team. Returns
+    the Average points scored, standard deviation, max, min, and
+    last game points.
+    
+    Keyword Arguments:
+    player - Player class object
+    opp - opponent as the city, e.g. CHI, IND, etc.
+    """
+    ppg_total = []
+    prev_games = []
+    for year in player.stats.keys():
+        for week in player.stats[year].keys():
+            opp_check = player.stats[year][week]["Opp"]
+            played = player.stats[year][week]["G"]
+            if '@' in opp_check:
+                opp_check = opp_check[1:]
+                
+            if opp_check==opp and played == '1':
+                points = player.week_points(week,year)
+                ppg_total.append(points)
+                prev_games.append((week,year))
+            else:
+                continue
+    ppg_total = np.array(ppg_total)            
+    average = np.average(ppg_total)
+    std = np.std(ppg_total)
+    high = np.max(ppg_total)
+    low = np.min(ppg_total)
+    games_played = len(ppg_total)
+    
+    return average,std,high,low,games_played,ppg_total[0],prev_games[0]
+
+def points_allowed(ppr = 0.0, past = True,rookies = False):
+    """
+    Generate a nested dictionary of all the for past points allowed to positions by team.
+    """
+    if ppr == 0.0:
+        suffix = ".p"
+    elif ppr == 0.5:
+        suffix = "HalfPoint.p"
+    elif ppr == 1.0:
+        suffix = "FullPoint.p"
+    else:
+        print "Invalid PPR value"
+        return
+        
+    if past == True:
+        years = [y for y in YEAR_LIST[:-1]]
+        rookie_file = "PastPointsAllowedRookies" + suffix
+        vet_file = "PastPointsAllowed" + suffix
+    else:
+        years = [y for y in YEAR_LIST[-1]]
+        rookie_file = "CurrentPointsAllowedRookies" + suffix
+        vet_file = "CurrentPointsAllowed" + suffix
+    if rookies:
+        pickle_path = os.path.join(PICKLE_DIR,rookie_file)
+        rookie_dict = generate_rookies(POS_LIST)
+    else:    
+        pickle_path = os.path.join(PICKLE_DIR,vet_file)
+    try:
+        temp_dict = pickle.load(open(pickle_path,"rb"))
+    except IOError:
+        temp_dict = {year:{pos:{team:0.0 for team in TEAM_LIST}
+                       for pos in POS_LIST}
+                       for year in years}
+
+        for pos in POS_LIST:
+            if rookies:
+                player_list = []
+                for y in rookie_dict[pos].keys():
+                    player_list+=rookie_dict[pos][y]
+                class_list = generate_class_list(pos,player_list)
+            else:    
+                player_list = generate_player_list(pos)
+                class_list = generate_class_list(pos,player_list)
+        
+            for year in years:
+                for player in class_list:
+                    player.fantasy_point_multipliers["Rec"] = ppr
+                    for week in WEEK_LIST:
+                        points = player.week_points(week,year)
+                        if points == "Bye" or points == "No Data":
+                            continue    
+                        else:
+                            team = player.stats[year][week]["Opp"]    
+                    
+                            if '@' in team:
+                                team = team[1:]
+                            temp_dict[year][pos][team] += points
+            pickle.dump(temp_dict,open(pickle_path,"wb"))
+
+    return temp_dict
+
+def player_combinations(pos,player_list,num):
+    """
+    Creates a list of player combinations based on the 
+    number of slots needed filled. Returns a list of tuples, where
+    each tuple contains PlayerClass objects.
+    
+    Keyword Arguments:
+    pos - the player position; e.g. "QB", "RB", etc.
+    player_list - a list of player to combine
+    num - the number of players to group into pairs,triples,quartets
+    """
+    player_classes = generate_class_list(pos,player_list)
+    player_combos = []
+    
+    if num == 1:
+        player_combos = [[c] for c in player_classes]
+    elif num == 2:
+        for l in range(len(player_list)):
+            for m in range(len(player_list)):
+                if m>l:
+                    player_combos+=[[player_classes[l],
+                                     player_classes[m]]]      
+    elif num == 3:
+        for l in range(len(player_list)):
+            for m in range(len(player_list)):
+                if m>l:
+                    for n in range(len(player_list)):
+                        if n>m:
+                            player_combos+=[[player_classes[l],
+                                             player_classes[m],
+                                             player_classes[n]]]      
+    elif num == 4:
+        for l in range(len(player_list)):
+            for m in range(len(player_list)):
+                if m>l:
+                    for n in range(len(player_list)):
+                        if n>m:
+                            for p in range(len(player_list)):
+                                if p>n:
+                                    player_combos+=[[player_classes[l],
+                                                     player_classes[m],
+                                                     player_classes[n],
+                                                     player_classes[p]]]
+    else:
+        print "Choose a number from 2-4"
+        return 
+    
+    return player_combos
+
+def player_score(player):
+    """
+    Gives a player a score based on whatever wack-a-do things we think
+    are important.
+    
+    Keyword Arguments:
+    player - Player class object
+    """
+    last_year = YEAR_LIST[-2]
+    pos = player.abbr
+    name = player.name
+    opp = SALARIES[pos][name][1]
+    past_ppg = player.ppg_average(last_year)
+    if past_ppg == 0.0:
+        past_allowed = PAST_POINTS_ALLOWED_ROOKIES[last_year][pos][opp]/16
+        past_ppg = ROOKIE_AVERAGE["PPG"][last_year][pos]
+    else:
+        past_allowed = PAST_POINTS_ALLOWED[last_year][pos][opp]/16
+    score = (past_ppg + past_allowed)/2
+    return score
+
+def score_lineups(lineup_list):
+    """
+    Scores each lineup according to player_score() function and then 
+    returns a sorted list from High to low
+
+    Keywork Arguments:
+    lineup_list - the list of lineups to score
+    """
+    lineup_scores = []
+    for l in lineup_list:
+        tot_score = 0
+        for p in l:
+            tot_score += player_score(p)
+        lineup = [p.name for p in l]
+        lineup_scores.append((tot_score,lineup))
+    return sorted(lineup_scores,reverse = True)

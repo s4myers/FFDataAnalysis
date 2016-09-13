@@ -1,5 +1,7 @@
 import csv
 import os
+import datetime
+import time
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle
@@ -13,18 +15,68 @@ TEAM_LIST =["BUF","MIA","NE","NYJ","BAL","CIN","CLE","PIT","HOU","IND","JAC",
             "TEN","DEN","KC","OAK","SD","DAL","NYG","PHI","WAS","CHI","DET",
             "GB","MIN","ATL","CAR","NO","TB","ARI","STL","SF","SEA"]
            
-YEAR_LIST = ["2010","2011","2012","2013","2014","2015"]
+YEAR_LIST = ["2010","2011","2012","2013","2014","2015","2016"]
 
 WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10",
              "11","12","13","14","15","16","17"]
 
 POS_LIST = ["QB","RB","WR","TE","K"]
+
+try:
+    SALARIES = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"dksalaries.p"),"rb"))
+except IOError:
+    pass
+try:
+    PAST_POINTS_ALLOWED = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"PastPointsAllowed.p"),"rb"))
+except IOError:
+    pass
+try:
+    PAST_POINTS_ALLOWED_ROOKIES = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"PastPointsAllowedRookies.p"),"rb"))
+except IOError:
+    pass
+try:
+    ROOKIE_AVERAGE = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"RookieAverage.p"),"rb"))
+except IOError:
+    pass
+
+TEAM_NAME_DICT = {
+ 'Broncos':'DEN',
+ 'Vikings':'MIN',
+ 'Bears':'CHI',
+ 'Falcons':'ATL',
+ 'Saints':'NO',
+ 'Chargers':'SD',
+ 'Raiders':'OAK',
+ 'Lions':'DET',
+ 'Browns':'CLE',
+ 'Eagles':'PHI',
+ 'Steelers':'PIT',
+ 'Giants':'NYG',
+ 'Buccaneers':'TB',
+ 'Cardinals':'ARI',
+ 'Bengals':'CIN',
+ 'Chiefs':'KC',
+ 'Jaguars':'JAC',
+ 'Seahawks':'SEA',
+ 'Jets':'NYJ',
+ 'Ravens':'BAL',
+ 'Colts':'IND',
+ 'Packers':'GB',
+ 'Dolphins':'MIA',
+ 'Rams':'STL',
+ 'Bills':'BUF',
+ 'Panthers':'CAR',
+ 'Texans':'HOU',
+ '49ers':'SF',
+ 'Patriots':'NE',
+ 'Cowboys':'DAL',
+ 'Titans':'TEN',
+ 'Redskins':'WAS'}
                 
-
-
-
-
-
 class Player(object):
     """
     An active roster player to research for your fantasy lineup.
@@ -37,7 +89,7 @@ class Player(object):
     field_names = []
     scoring_field_names = []
     csv_file_name = ""
-    fantasy_point_multiplers = {"PassYds":0.04,"PassTD":4.0,"RecYds":0.1,
+    fantasy_point_multipliers = {"PassYds":0.04,"PassTD":4.0,"RecYds":0.1,
                                 "RecTD":6.0,"Rec":0.0,"RushYds":0.1,
                                 "RushTD":6.0,"FGM":3.0,"XPM":1.0,"Int":-2.0,"Lost":-2.0}
 
@@ -47,8 +99,14 @@ class Player(object):
         self.pickle_file_name = self.name+".p"
         self.pickle_path = os.path.join(PICKLE_DIR,self.abbr,self.pickle_file_name)
         try:
-            self.stats = pickle.load(open(self.pickle_path,"rb"))
-        except IOError:
+            csvtime = os.path.getmtime(self.csv_path)
+            pickletime = os.path.getmtime(self.pickle_path)
+            delta = csvtime-pickletime
+            if delta > 0:   #checks to see if the csv data has been recently modified
+                raise IOError
+            else:    
+                self.stats = pickle.load(open(self.pickle_path,"rb"))
+        except (IOError, OSError):
             self.stats = {year:{week:{} for week in WEEK_LIST} for year in YEAR_LIST}
             with open(self.csv_path) as csv_file:
                 reader = csv.DictReader(csv_file)
@@ -171,7 +229,7 @@ class Player(object):
         else:   
             return std
 
-    def outlier_games(self, year, threshold):
+    def outlier_games(self,year,threshold,ppr=0.0):
         """
         Returns a list of games that a player outperformed their average.
 
@@ -181,11 +239,11 @@ class Player(object):
             i.e. .5   = 50 percent more than average
                  -.25 = 25 percent less than average
         """
-        ppg_avg = self.ppg_average(year)
+        ppg_avg = self.ppg_average(year,ppr)
         print "Average PPG: " + str(ppg_avg)
         outlier_games = []
         for week in range(1,18):
-            points = self.week_points(str(week), year)
+            points = self.week_points(str(week),year,ppr)
             try:
                 diff = (points - ppg_avg)/ppg_avg
             except TypeError:
@@ -200,7 +258,8 @@ class Player(object):
         return outlier_games
 
 
-    def week_points(self,week,year):
+    def week_points(self,week,year,ppr=0.0):
+        self.fantasy_point_multipliers["Rec"]=ppr
         try:
             week_dict = self.stats[year][week]
         except KeyError:
@@ -209,19 +268,63 @@ class Player(object):
             if self.stats[year][week]["Game Date"]=="Bye":
                 return "Bye"
         except KeyError:
-            return "No Data"        
+            return "No Data"
 
-        points = 0.0
-        for field in self.scoring_field_names:
-            if self.stats[year][week][field] != "--":
-                points += (float(self.stats[year][week][field])*
-                           self.fantasy_point_multiplers[field])
+        #scoring currently doesn't include kick returns or defensive TDs
+        if self.name in TEAM_LIST:
+            score = d.stats[year][week]["Score"]
+            opp_score = float(score.split("-")[1])
+            TD = d.stats[year][week]["PassTD"] + d.stats[year][week]["RushTD"]
+            FGM = d.stats[year][week]["FGM"]
+            FGB = d.stats[year][week]["FGBlk"]
+            XPM = d.stats[year][week]["XPM"]
+            XPB = d.stats[year][week]["XPBlk"]
+            sacks = d.stats[year][week]["Sck"]
+
+            points_from_offense = 6*TD + 3*FGM +XPM
+
+            if points_from_offense == 0:
+                base_points = 10.0
+            elif points_from_offense < 7:
+                base_points = 7.0
+            elif points_from_offense < 14:
+                base_points = 4.0
+            elif points_from_offense < 21:
+                base_points = 1.0
+            elif points_from_offense < 28:
+                base_points = 0.0
+            elif points_from_offense < 35:
+                base_points = -1.0
             else:
-                continue
-        return points
+                base_points = -4.0
+
+            turnovers = 0.0
+            turnover_fields = ["Int","Lost"]
+            p = [i for i in d.stats[year][week]["Players"]]
+            for (player,pos) in p:
+                a = generate_class_list(pos,[player])[0]
+                for b in turnover_fields:
+                    try:
+                        turnovers += float(a.stats[year][week][b])
+                    except (KeyError, ValueError):
+                        continue
+            
+            blocks = XPB + FGB
+            points = base_points + 2*blocks + sacks + 2*turnovers
+            return points
+
+        else:
+            points = 0.0
+            for field in self.scoring_field_names:
+                if self.stats[year][week][field] != "--":
+                    points += (float(self.stats[year][week][field])*
+                           self.fantasy_point_multipliers[field])
+                else:
+                    continue
+            return points
 
     
-    def total_points(self,year):
+    def total_points(self,year,ppr=0.0):
         """
         Total points scored for a given year
 
@@ -242,14 +345,14 @@ class Player(object):
             elif self.stats[year][week]['G'] != '1':
                 continue
             else:
-                week_totals += [self.week_points(week,year)]
+                week_totals += [self.week_points(week,year,ppr)]
         if week_totals == []:
             return 0.00
         else:   
             return np.sum(week_totals)   
     
 
-    def ppg_average(self,year):
+    def ppg_average(self,year,ppr=0.0):
         """
         Returns the average points per game for a given year
 
@@ -270,13 +373,13 @@ class Player(object):
             elif self.stats[year][week]['G'] != '1':
                 continue
             else:
-                week_totals += [self.week_points(week,year)]
+                week_totals += [self.week_points(week,year,ppr)]
         if week_totals == []:
             return 0.00
         else:   
             return np.round(np.average(week_totals),2)      
 
-    def ppg_var(self,year):
+    def ppg_var(self,year,ppr=0.0):
         """
         Returns a tuple of the variance in weekly points per game for a given year
         and also the weeks of games played
@@ -290,7 +393,7 @@ class Player(object):
         except KeyError:
             return ("Did Not Play in {}".format(year),0) #the player didn't play this year
         
-        average = self.ppg_average(year)
+        average = self.ppg_average(year,ppr)
         week_variance = []
         for week in week_list:
             if self.stats[year][week]["Game Date"] == "Bye":
@@ -298,7 +401,7 @@ class Player(object):
             elif self.stats[year][week]["G"] != '1':
                 continue
             else:
-                week_variance += [(self.week_points(week,year) - average)**2]
+                week_variance += [(self.week_points(week,year,ppr) - average)**2]
         if week_variance == []:
             return ("Empty List",0)
         else:
@@ -371,19 +474,29 @@ class Defense(Player):
     """ Defensive Matchup """
     abbr = "DEF"
     field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt",
-                   "PassYds","PassTD","FGBlk","FGAtt","FGM","Home","Won","Score"]
+                   "PassYds","PassTD","FGBlk","FGAtt","FGM","XPM","XPBlk","Sck",
+                   "Home","Won","Score"]
+    csv_file_name = "QBStats.csv" #uses QBStats.csv to look for updates
 
     def __init__(self,name):
         self.name = name
         self.pickle_file_name = self.name+".p"
         self.pickle_path = os.path.join(PICKLE_DIR,self.abbr,self.pickle_file_name)
+        self.csv_path = os.path.join(CSV_DIR,self.csv_file_name)
         try:
-            self.stats = pickle.load(open(self.pickle_path,"rb"))
-        except IOError:
+            csvtime = os.path.getmtime(self.csv_path)
+            pickletime = os.path.getmtime(self.pickle_path)
+            delta = csvtime-pickletime
+            if delta > 0:   #checks to see if the csv data has been recently modified
+                raise IOError
+            else:    
+                self.stats = pickle.load(open(self.pickle_path,"rb"))
+
+        except (IOError, OSError):
             self.stats = {year:{week:{"Players":[],"Home":[],"Won":[],"Score":[],
                           "RushAtt":0.0,"RushYds":0.0,"RushTD":0.0,
                           "PassAtt":0.0,"PassYds":0.0,"PassTD":0.0,
-                          "FGBlk":0.0,"FGAtt":0.0,"FGM":0.0}
+                          "FGBlk":0.0,"FGAtt":0.0,"FGM":0.0,"XPM":0.0,"XPBlk":0.0,"Sck":0.0}
                             for week in WEEK_LIST} 
                             for year in YEAR_LIST}
             for pos in POS_LIST:
