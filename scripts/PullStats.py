@@ -17,7 +17,7 @@ wr_fields = "WK,Game Date,Opp,Result,G,GS,Rec,RecYds,RecAvg,RecLng,RecTD,RushAtt
 te_fields = "WK,Game Date,Opp,Result,G,GS,Rec,RecYds,RecAvg,RecLng,RecTD,RushAtt,RushYds,RushAvg,RushLng,RushTD,FUM,Lost,Player,Year"
 k_fields = "WK,Game Date,Opp,Result,G,GS,FGBlk,FGLng,FGAtt,FGM,FGPct,XPM,XPAtt,XPPct,XPBlk,KO,KOAvg,TB,Ret,RetAvg,Player,Year"
 pos_fields_dict = {'QB': qb_fields, 'RB': rb_fields, 'WR': wr_fields, 'TE': te_fields, 'K': k_fields}
-titlesPulled = False
+
 
 
 def main():
@@ -89,27 +89,16 @@ def pull_game_stats_weekly(season,week):
             url_list.append(row[2])
 
 # scrape through all player url tags
-    file_path = "../CSV_data/Weekly/"+str(season)+"/"+str(week)+".csv"
     for pos,url in zip(pos_list,url_list):
+        file_path = "../CSV_data/"+pos+"Stats.csv"
         try:
             url += str(season)
             soup = BeautifulSoup(ul.urlopen(url).read(), "html.parser")
-
             # assign field names
             player_name = soup.find("span", {"class" : "player-name"}).string
             print player_name, url
             fieldNames = soup.find("tr", {"class" : "player-table-key"}).findAll("td")
             numColumns = len(fieldNames)
-            global titlesPulled
-            if (titlesPulled == False):
-               #outputLine = pos_fields_dict[pos]
-               # for i in range(len(fieldNames)):
-               #    outputLine = fieldNames[i].text, ", "
-               # with open(file_path, "a") as text_file:
-               #     text_file.writelines(outputLine)
-               # text_file.close()
-                titlesPulled = True
-
             # pull the statistics
             table = soup.findAll("table", {"class":"data-table1"})
             regularSeason = table[1]
@@ -133,7 +122,6 @@ def pull_game_stats_weekly(season,week):
                 if (cells[0].string == str(week)):
                     for i in range(numColumns): # for each field, append to output string
                         tempCell = str(cells[i]).lstrip("<td>").rstrip("</td>").replace('\t', "").replace('\r', "").replace('\n', "").replace(" ", "")
-                        #print "tempCell: " + tempCell + " i: " + str(i)
                         cell = re.sub('<[^>]+>', '', tempCell)
                         cell = re.sub("[^{}]+".format(printable), "", cell)
                         output = output + cell + ","
@@ -145,8 +133,6 @@ def pull_game_stats_weekly(season,week):
                 if output != "":
                     output = "\n" + output + player_name.strip() + "," + str(season)
                     print output
-                    print file_path
-                    file_path = "../CSV_data/Weekly/"+pos+"Stats.csv"
                     with open(file_path, "a") as text_file:
                         print "Writing to..." + file_path
                         text_file.write(output)
