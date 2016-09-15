@@ -22,24 +22,88 @@ WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10",
 
 POS_LIST = ["QB","RB","WR","TE","K"]
 
+# Load all available pickle files
 try:
     SALARIES = pickle.load(open(os.path.join(
                         PICKLE_DIR,"dksalaries.p"),"rb"))
 except IOError:
     pass
+
 try:
     PAST_POINTS_ALLOWED = pickle.load(open(os.path.join(
                         PICKLE_DIR,"PastPointsAllowed.p"),"rb"))
 except IOError:
     pass
+
 try:
-    PAST_POINTS_ALLOWED_ROOKIES = pickle.load(open(os.path.join(
+    PAST_POINTS_ALLOWED_HALF = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"PastPointsAllowedHalfPoint.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    PAST_POINTS_ALLOWED_FULL = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"PastPointsAllowedFullPoint.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    CURR_POINTS_ALLOWED = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"CurrentPointsAllowed.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    CURR_POINTS_ALLOWED_HALF = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"CurrentPointsAllowedHalfPoint.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    CURR_POINTS_ALLOWED_FULL = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"CurrentPointsAllowedFullPoint.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    PAST_POINTS_ALLOWED_ROOKIES= pickle.load(open(os.path.join(
                         PICKLE_DIR,"PastPointsAllowedRookies.p"),"rb"))
 except IOError:
     pass
+
+try:
+    PAST_POINTS_ALLOWED_ROOKIES_HALF = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"PastPointsAllowedRookiesHalfPoint.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    PAST_POINTS_ALLOWED_ROOKIES_FULL = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"PastPointsAllowedRookiesFullPoint.p"),"rb"))
+except IOError:
+    pass
+
 try:
     ROOKIE_AVERAGE = pickle.load(open(os.path.join(
                         PICKLE_DIR,"RookieAverage.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    ROOKIE_AVERAGE_HALF = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"RookieAverageHalfPoint.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    ROOKIE_AVERAGE_FULL = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"RookieAverageFullPoint.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    ROOKIES = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"RookieDict.p"),"rb"))
 except IOError:
     pass
 
@@ -127,6 +191,22 @@ class Player(object):
 
 
 
+    def games_played(self,year):
+        games = 0
+        for week in WEEK_LIST:
+            if self.name in TEAM_LIST:
+                if self.stats[year][week]["Home"]!=[]:
+                    games+=1
+            else:
+                if (self.stats[year][week]["Game Date"]=="Bye" or 
+                    self.stats[year][week]["G"]=="0"):
+                    continue
+                else:
+                    games+=1
+        if games == 0:
+            games = 1
+        return games
+            
 
     def generate_array_stats(self,field,year):
         """

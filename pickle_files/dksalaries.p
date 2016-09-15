@@ -5,32 +5,32 @@ p1
 S'Broncos'
 p3
 (lp4
-I3700
-aS'CAR'
+I3600
+aS'IND'
 p5
 aS'DEN'
 p6
 asS'Vikings'
 p7
 (lp8
-I3100
-aS'TEN'
+I3400
+aS'GB'
 p9
 aS'MIN'
 p10
 asS'Bears'
 p11
 (lp12
-I2500
-aS'HOU'
+I2900
+aS'PHI'
 p13
 aS'CHI'
 p14
 asS'Falcons'
 p15
 (lp16
-I2800
-aS'TB'
+I2300
+aS'OAK'
 p17
 aS'ATL'
 p18
@@ -38,7 +38,7 @@ asS'Saints'
 p19
 (lp20
 I2300
-aS'OAK'
+aS'NYG'
 p21
 aS'NO'
 p22
@@ -46,31 +46,31 @@ asS'Chargers'
 p23
 (lp24
 I2500
-aS'KC'
+aS'JAC'
 p25
 aS'SD'
 p26
 asS'Raiders'
 p27
 (lp28
-I2400
-aS'NO'
+I2700
+aS'ATL'
 p29
 aS'OAK'
 p30
 asS'Lions'
 p31
 (lp32
-I2500
-aS'IND'
+I2800
+aS'TEN'
 p33
 aS'DET'
 p34
 asS'Browns'
 p35
 (lp36
-I2300
-aS'PHI'
+I2500
+aS'BAL'
 p37
 aS'CLE'
 p38
@@ -78,7 +78,7 @@ asS'Eagles'
 p39
 (lp40
 I3300
-aS'CLE'
+aS'CHI'
 p41
 aS'PHI'
 p42
@@ -86,23 +86,23 @@ asS'Steelers'
 p43
 (lp44
 I2900
-aS'WAS'
+aS'CIN'
 p45
 aS'PIT'
 p46
 asS'Giants'
 p47
 (lp48
-I2700
-aS'DAL'
+I2600
+aS'NO'
 p49
 aS'NYG'
 p50
 asS'Buccaneers'
 p51
 (lp52
-I2600
-aS'ATL'
+I2200
+aS'ARI'
 p53
 aS'TB'
 p54
@@ -110,7209 +110,4248 @@ asS'Cardinals'
 p55
 (lp56
 I3500
-aS'NE'
+aS'TB'
 p57
 aS'ARI'
 p58
 asS'Bengals'
 p59
 (lp60
-I3000
-aS'NYJ'
+I2800
+aS'PIT'
 p61
 aS'CIN'
 p62
 asS'Chiefs'
 p63
 (lp64
-I3600
-aS'SD'
+I3200
+aS'HOU'
 p65
 aS'KC'
 p66
 asS'Dolphins'
 p67
 (lp68
-I2200
-aS'SEA'
+I2500
+aS'NE'
 p69
 aS'MIA'
 p70
 asS'Jaguars'
 p71
 (lp72
-I2400
-aS'GB'
+I2300
+aS'SD'
 p73
-aS'JAC'
-p74
+ag25
 asS'Seahawks'
-p75
-(lp76
-I3900
-aS'MIA'
-p77
+p74
+(lp75
+I3800
+aS'STL'
+p76
 aS'SEA'
-p78
+p77
 asS'Jets'
-p79
-(lp80
-I3400
-aS'CIN'
-p81
-aS'NYJ'
-p82
-asS'Ravens'
-p83
-(lp84
-I2700
+p78
+(lp79
+I3300
 aS'BUF'
-p85
+p80
+aS'NYJ'
+p81
+asS'Ravens'
+p82
+(lp83
+I3000
+aS'CLE'
+p84
 aS'BAL'
-p86
+p85
 asS'Colts'
-p87
-(lp88
+p86
+(lp87
 I2700
-aS'DET'
-p89
+aS'DEN'
+p88
 aS'IND'
-p90
+p89
 asS'Packers'
-p91
-(lp92
-I2800
-ag74
+p90
+(lp91
+I3200
+aS'MIN'
+p92
 aS'GB'
 p93
-asS'Titans'
+asS'Redskins'
 p94
 (lp95
-I2600
-aS'MIN'
+I2800
+aS'DAL'
 p96
-aS'TEN'
+aS'WAS'
 p97
-asS'Rams'
+asS'Titans'
 p98
 (lp99
-I3800
-aS'SF'
+I2200
+aS'DET'
 p100
-aS'STL'
+aS'TEN'
 p101
-asS'Bills'
+asS'Rams'
 p102
 (lp103
-I2900
-aS'BAL'
+I3300
+aS'SEA'
 p104
-aS'BUF'
+ag76
+asS'Bills'
 p105
-asS'Texans'
-p106
-(lp107
-I3200
-aS'CHI'
-p108
-aS'HOU'
-p109
-asS'49ers'
-p110
-(lp111
+(lp106
 I3100
-ag101
-aS'SF'
+aS'NYJ'
+p107
+aS'BUF'
+p108
+asS'Texans'
+p109
+(lp110
+I3400
+aS'KC'
+p111
+aS'HOU'
 p112
-asS'Patriots'
+asS'49ers'
 p113
 (lp114
-I2900
-aS'ARI'
+I2400
+aS'CAR'
 p115
-aS'NE'
+aS'SF'
 p116
-asS'Cowboys'
+asS'Patriots'
 p117
 (lp118
-I2500
-aS'NYG'
+I3000
+aS'MIA'
 p119
-aS'DAL'
+aS'NE'
 p120
-asS'Panthers'
+asS'Cowboys'
 p121
 (lp122
-I3800
-aS'DEN'
+I2400
+aS'WAS'
 p123
-aS'CAR'
+aS'DAL'
 p124
-asS'Redskins'
+asS'Panthers'
 p125
 (lp126
-I2700
-aS'PIT'
+I3900
+aS'SF'
 p127
-aS'WAS'
+aS'CAR'
 p128
 assS'QB'
 p129
 (dp130
-S'Jake Heaps'
+S'Ryan Tannehill'
 p131
 (lp132
-I5000
-aS'MIA'
+I5600
+aS'NE'
 p133
-aS'SEA'
+aS'MIA'
 p134
-asS'Carson Wentz'
+asS'Sean Mannion'
 p135
 (lp136
 I5000
-aS'CLE'
+aS'SEA'
 p137
-aS'PHI'
+ag76
+asS'Carson Wentz'
 p138
-asS'Colt McCoy'
-p139
-(lp140
+(lp139
+I5500
+aS'CHI'
+p140
+aS'PHI'
+p141
+asS'AJ McCarron'
+p142
+(lp143
 I5000
 aS'PIT'
-p141
-aS'WAS'
-p142
-asS'Cody Kessler'
-p143
-(lp144
-I5000
-aS'PHI'
+p144
+aS'CIN'
 p145
-aS'CLE'
+asS'Ryan Griffin'
 p146
-asS'Derek Anderson'
-p147
-(lp148
+(lp147
 I5000
-aS'DEN'
+aS'ARI'
+p148
+aS'TB'
 p149
-aS'CAR'
+asS'Derek Anderson'
 p150
-asS'Taylor Heinicke'
-p151
-(lp152
+(lp151
 I5000
-aS'TEN'
-p153
-aS'MIN'
-p154
-asS'Robert Griffin'
-p155
-(lp156
-I5600
-aS'PHI'
-p157
-aS'CLE'
-p158
-asS'Jeff Driskel'
-p159
-(lp160
-I5000
-ag101
 aS'SF'
+p152
+aS'CAR'
+p153
+asS'Cam Newton'
+p154
+(lp155
+I7900
+aS'SF'
+p156
+aS'CAR'
+p157
+asS'Josh McCown'
+p158
+(lp159
+I5000
+aS'BAL'
+p160
+aS'CLE'
 p161
-asS'Logan Thomas'
+asS'Mike Glennon'
 p162
 (lp163
 I5000
-aS'DAL'
+aS'ARI'
 p164
-aS'NYG'
+aS'TB'
 p165
-asS'Austin Davis'
+asS'Nate Sudfeld'
 p166
 (lp167
 I5000
-aS'PHI'
+aS'DAL'
 p168
-aS'CLE'
+aS'WAS'
 p169
-asS'Aaron Rodgers'
+asS'Blake Bortles'
 p170
 (lp171
-I8500
-ag74
-aS'GB'
+I6700
+aS'SD'
 p172
-asS'Christian Hackenberg'
+ag25
+asS'Connor Cook'
 p173
 (lp174
 I5000
-aS'CIN'
+aS'ATL'
 p175
-aS'NYJ'
+aS'OAK'
 p176
-asS'Matt Moore'
+asS'Robert Griffin'
 p177
 (lp178
-I5000
-aS'SEA'
+I5300
+aS'BAL'
 p179
-aS'MIA'
+aS'CLE'
 p180
-asS'Brock Osweiler'
+asS'Scott Tolzien'
 p181
 (lp182
-I6300
-aS'CHI'
+I5000
+aS'DEN'
 p183
-aS'HOU'
+aS'IND'
 p184
-asS'Brian Hoyer'
+asS'Christian Hackenberg'
 p185
 (lp186
 I5000
-aS'HOU'
+aS'BUF'
 p187
-aS'CHI'
+aS'NYJ'
 p188
-asS'Marcus Mariota'
+asS'Joe Flacco'
 p189
 (lp190
-I6400
-aS'MIN'
+I6500
+aS'CLE'
 p191
-aS'TEN'
+aS'BAL'
 p192
-asS'Bruce Gradkowski'
+asS'Jimmy Garoppolo'
 p193
 (lp194
-I5000
-aS'WAS'
+I5900
+aS'MIA'
 p195
-aS'PIT'
+aS'NE'
 p196
-asS'Joel Stave'
+asS'Alex Smith'
 p197
 (lp198
-I5000
-aS'TEN'
+I6300
+aS'HOU'
 p199
-aS'MIN'
+aS'KC'
 p200
-asS'Carson Palmer'
+asS'Brandon Doughty'
 p201
 (lp202
-I7100
+I5000
 aS'NE'
 p203
-aS'ARI'
+aS'MIA'
 p204
-asS'Colin Kaepernick'
+asS'Chad Henne'
 p205
 (lp206
 I5000
-ag101
-aS'SF'
+aS'SD'
 p207
-asS'Blaine Gabbert'
+ag25
+asS'Dan Orlovsky'
 p208
 (lp209
-I5200
-ag101
-aS'SF'
-p210
-asS'Tony Romo'
-p211
-(lp212
-I6800
-aS'NYG'
-p213
-aS'DAL'
-p214
-asS'Derek Carr'
-p215
-(lp216
-I7300
-aS'NO'
-p217
-aS'OAK'
-p218
-asS'Matt Simms'
-p219
-(lp220
 I5000
-aS'TB'
-p221
+aS'TEN'
+p210
+aS'DET'
+p211
+asS'Matt Schaub'
+p212
+(lp213
+I5000
+aS'OAK'
+p214
 aS'ATL'
-p222
-asS'Joe Licata'
-p223
-(lp224
+p215
+asS'Jeff Driskel'
+p216
+(lp217
+I5000
+aS'PIT'
+p218
+aS'CIN'
+p219
+asS'EJ Manuel'
+p220
+(lp221
 I5000
 aS'NYJ'
-p225
-aS'CIN'
+p222
+aS'BUF'
+p223
+asS'Cody Kessler'
+p224
+(lp225
+I5000
+aS'BAL'
 p226
-asS'Connor Shaw'
+aS'CLE'
 p227
-(lp228
+asS'Joe Callahan'
+p228
+(lp229
+I5000
+aS'MIN'
+p230
+aS'GB'
+p231
+asS'Tyrod Taylor'
+p232
+(lp233
+I6300
+aS'NYJ'
+p234
+aS'BUF'
+p235
+asS'Eli Manning'
+p236
+(lp237
+I7600
+aS'NO'
+p238
+aS'NYG'
+p239
+asS'Colt McCoy'
+p240
+(lp241
+I5000
+aS'DAL'
+p242
+aS'WAS'
+p243
+asS'Matt Moore'
+p244
+(lp245
+I5000
+aS'NE'
+p246
+aS'MIA'
+p247
+asS'Kirk Cousins'
+p248
+(lp249
+I7000
+aS'DAL'
+p250
+aS'WAS'
+p251
+asS'Nick Foles'
+p252
+(lp253
 I5000
 aS'HOU'
-p229
-aS'CHI'
-p230
-asS'Max Wittek'
-p231
-(lp232
+p254
+aS'KC'
+p255
+asS'Landry Jones'
+p256
+(lp257
+I5000
+aS'CIN'
+p258
+aS'PIT'
+p259
+asS'Jameis Winston'
+p260
+(lp261
+I6200
+aS'ARI'
+p262
+aS'TB'
+p263
+asS'Christian Ponder'
+p264
+(lp265
+I5000
+aS'CAR'
+p266
+aS'SF'
+p267
+asS'Ben Roethlisberger'
+p268
+(lp269
+I7500
+aS'CIN'
+p270
+aS'PIT'
+p271
+asS'Austin Davis'
+p272
+(lp273
+I5000
+aS'IND'
+p274
+aS'DEN'
+p275
+asS'Russell Wilson'
+p276
+(lp277
+I7400
+ag76
+aS'SEA'
+p278
+asS'Luke McCown'
+p279
+(lp280
+I5000
+aS'NYG'
+p281
+aS'NO'
+p282
+asS'Shaun Hill'
+p283
+(lp284
 I5000
 aS'GB'
-p233
-ag74
-asS'Teddy Bridgewater'
-p234
-(lp235
-I6000
-aS'TEN'
-p236
+p285
 aS'MIN'
-p237
-asS'Cam Newton'
-p238
-(lp239
+p286
+asS'Matthew Stafford'
+p287
+(lp288
+I7300
+aS'TEN'
+p289
+aS'DET'
+p290
+asS'Andrew Luck'
+p291
+(lp292
 I7700
 aS'DEN'
-p240
-aS'CAR'
-p241
-asS'Zach Mettenberger'
-p242
-(lp243
-I5000
-aS'KC'
-p244
-aS'SD'
-p245
-asS'Ryan Mallett'
-p246
-(lp247
-I5000
-aS'BUF'
-p248
-aS'BAL'
-p249
-asS'Dan Orlovsky'
-p250
-(lp251
-I5000
-aS'IND'
-p252
-aS'DET'
-p253
-asS'Matt Schaub'
-p254
-(lp255
-I5000
-aS'TB'
-p256
-aS'ATL'
-p257
-asS'Landry Jones'
-p258
-(lp259
-I5000
-aS'WAS'
-p260
-aS'PIT'
-p261
-asS'Jameis Winston'
-p262
-(lp263
-I6600
-aS'ATL'
-p264
-aS'TB'
-p265
-asS'Brandon Allen'
-p266
-(lp267
-I5000
-aS'GB'
-p268
-ag74
-asS'Bryn Renner'
-p269
-(lp270
-I5000
-aS'WAS'
-p271
-aS'PIT'
-p272
-asS'Scott Tolzien'
-p273
-(lp274
-I5000
-aS'DET'
-p275
-aS'IND'
-p276
-asS'Jay Cutler'
-p277
-(lp278
-I6300
-aS'HOU'
-p279
-aS'CHI'
-p280
-asS'Joe Webb'
-p281
-(lp282
-I5000
-aS'DEN'
-p283
-aS'CAR'
-p284
-asS'Nick Foles'
-p285
-(lp286
-I5000
-aS'SD'
-p287
-aS'KC'
-p288
-asS'Ryan Nassib'
-p289
-(lp290
-I5000
-aS'DAL'
-p291
-aS'NYG'
-p292
-asS'Sam Bradford'
 p293
-(lp294
-I6400
-aS'CLE'
-p295
-aS'PHI'
-p296
-asS'EJ Manuel'
-p297
-(lp298
-I5000
-aS'BAL'
-p299
-aS'BUF'
-p300
-asS'Eli Manning'
-p301
-(lp302
-I7500
-aS'DAL'
-p303
-aS'NYG'
-p304
-asS'Matt McGloin'
-p305
-(lp306
-I5000
-aS'NO'
-p307
-aS'OAK'
-p308
-asS'Josh Johnson'
-p309
-(lp310
-I5000
-aS'BUF'
-p311
-aS'BAL'
-p312
-asS'Matthew Stafford'
-p313
-(lp314
-I7200
 aS'IND'
-p315
-aS'DET'
-p316
-asS'Keith Wenning'
-p317
-(lp318
+p294
+asS'Tyler Bray'
+p295
+(lp296
 I5000
-aS'NYJ'
-p319
-aS'CIN'
-p320
-asS'Aaron Murray'
-p321
-(lp322
-I5000
-aS'SD'
-p323
+aS'HOU'
+p297
 aS'KC'
-p324
-asS'Jacoby Brissett'
-p325
-(lp326
+p298
+asS'Josh Johnson'
+p299
+(lp300
 I5000
-aS'ARI'
-p327
-aS'NE'
-p328
-asS'Mike Glennon'
-p329
-(lp330
-I5000
-aS'ATL'
-p331
-aS'TB'
-p332
-asS'Ryan Griffin'
-p333
-(lp334
-I5000
-aS'ATL'
-p335
-aS'TB'
-p336
-asS'Christian Ponder'
-p337
-(lp338
-I5000
-ag101
-aS'SF'
-p339
-asS'Luke McCown'
-p340
-(lp341
-I5000
-aS'OAK'
-p342
 aS'NO'
-p343
-asS'Joe Callahan'
-p344
-(lp345
-I5000
-ag74
-aS'GB'
-p346
-asS'Tyrod Taylor'
-p347
-(lp348
-I6900
-aS'BAL'
-p349
-aS'BUF'
-p350
-asS'Matt Ryan'
-p351
-(lp352
-I7100
-aS'TB'
-p353
-aS'ATL'
-p354
-asS'Kirk Cousins'
-p355
-(lp356
-I7400
-aS'PIT'
-p357
-aS'WAS'
-p358
-asS'Nate Sudfeld'
-p359
-(lp360
-I5000
-aS'PIT'
-p361
-aS'WAS'
-p362
-asS'Shaun Hill'
-p363
-(lp364
-I5000
-aS'TEN'
-p365
-aS'MIN'
-p366
-asS'Tom Savage'
-p367
-(lp368
-I5000
-aS'CHI'
-p369
-aS'HOU'
-p370
+p301
+aS'NYG'
+p302
 asS'Brandon Weeden'
-p371
-(lp372
+p303
+(lp304
 I5000
-aS'CHI'
-p373
+aS'KC'
+p305
 aS'HOU'
-p374
+p306
 asS'Trevone Boykin'
-p375
-(lp376
+p307
+(lp308
 I5000
-aS'MIA'
-p377
+ag76
 aS'SEA'
-p378
-asS'Marquise Williams'
-p379
-(lp380
+p309
+asS'Jay Cutler'
+p310
+(lp311
+I5700
+aS'PHI'
+p312
+aS'CHI'
+p313
+asS'Dak Prescott'
+p314
+(lp315
+I5800
+aS'WAS'
+p316
+aS'DAL'
+p317
+asS'Brock Osweiler'
+p318
+(lp319
+I6100
+aS'KC'
+p320
+aS'HOU'
+p321
+asS'Joe Webb'
+p322
+(lp323
 I5000
-ag74
+aS'SF'
+p324
+aS'CAR'
+p325
+asS'Trevor Siemian'
+p326
+(lp327
+I5200
+aS'IND'
+p328
+aS'DEN'
+p329
+asS'Geno Smith'
+p330
+(lp331
+I5000
+aS'BUF'
+p332
+aS'NYJ'
+p333
+asS'Brian Hoyer'
+p334
+(lp335
+I5000
+aS'PHI'
+p336
+aS'CHI'
+p337
+asS'Marcus Mariota'
+p338
+(lp339
+I6000
+aS'DET'
+p340
+aS'TEN'
+p341
+asS'Mark Sanchez'
+p342
+(lp343
+I5000
+aS'WAS'
+p344
+aS'DAL'
+p345
+asS'Matt McGloin'
+p346
+(lp347
+I5000
+aS'ATL'
+p348
+aS'OAK'
+p349
+asS'Ryan Nassib'
+p350
+(lp351
+I5000
+aS'NO'
+p352
+aS'NYG'
+p353
+asS'Carson Palmer'
+p354
+(lp355
+I6900
+aS'TB'
+p356
+aS'ARI'
+p357
+asS'Sam Bradford'
+p358
+(lp359
+I5600
 aS'GB'
-p381
-asS'Zac Dysert'
-p382
-(lp383
+p360
+aS'MIN'
+p361
+asS'Jared Goff'
+p362
+(lp363
 I5000
 aS'SEA'
+p364
+ag76
+asS'Tom Savage'
+p365
+(lp366
+I5000
+aS'KC'
+p367
+aS'HOU'
+p368
+asS'Case Keenum'
+p369
+(lp370
+I5100
+aS'SEA'
+p371
+ag76
+asS'Matt Ryan'
+p372
+(lp373
+I6800
+aS'OAK'
+p374
+aS'ATL'
+p375
+asS'Blaine Gabbert'
+p376
+(lp377
+I5000
+aS'CAR'
+p378
+aS'SF'
+p379
+asS'Andy Dalton'
+p380
+(lp381
+I6400
+aS'PIT'
+p382
+aS'CIN'
+p383
+asS'Tony Romo'
 p384
-aS'MIA'
-p385
-asS'McLeod Bethel-Thompson'
+(lp385
+I6000
+aS'WAS'
 p386
-(lp387
+aS'DAL'
+p387
+asS'Matt Cassel'
+p388
+(lp389
+I5000
+aS'DET'
+p390
+aS'TEN'
+p391
+asS'Ryan Mallett'
+p392
+(lp393
 I5000
 aS'CLE'
-p388
-aS'PHI'
-p389
-asS'Jared Goff'
-p390
-(lp391
-I5000
-aS'SF'
-p392
-ag101
-asS'Jake Coker'
-p393
-(lp394
-I5000
-aS'NE'
+p394
+aS'BAL'
 p395
-aS'ARI'
+asS'Derek Carr'
 p396
-asS'Case Keenum'
-p397
-(lp398
-I5400
-aS'SF'
+(lp397
+I7200
+aS'ATL'
+p398
+aS'OAK'
 p399
-ag101
-asS'Mark Sanchez'
+asS'Colin Kaepernick'
 p400
 (lp401
 I5000
 aS'CAR'
 p402
-aS'DEN'
+aS'SF'
 p403
-asS'Andy Dalton'
+asS'Ryan Fitzpatrick'
 p404
 (lp405
-I6800
-aS'NYJ'
+I6100
+aS'BUF'
 p406
-aS'CIN'
+aS'NYJ'
 p407
-asS'Ryan Fitzpatrick'
+asS'Aaron Rodgers'
 p408
 (lp409
-I6500
-aS'CIN'
+I7800
+aS'MIN'
 p410
-aS'NYJ'
+aS'GB'
 p411
-asS'David Fales'
+asS'Paxton Lynch'
 p412
 (lp413
 I5000
-aS'HOU'
+aS'IND'
 p414
-aS'CHI'
+aS'DEN'
 p415
-asS'Mike Bercovici'
+asS'Alex Tanney'
 p416
 (lp417
 I5000
-aS'KC'
+aS'DET'
 p418
-aS'SD'
+aS'TEN'
 p419
-asS'Drew Brees'
+asS'Brett Hundley'
 p420
 (lp421
-I8100
-aS'OAK'
+I5000
+aS'MIN'
 p422
-aS'NO'
+aS'GB'
 p423
-asS'Jake Rudock'
+asS'Brandon Allen'
 p424
 (lp425
 I5000
-aS'IND'
+aS'SD'
 p426
-aS'DET'
+ag25
+asS'Philip Rivers'
 p427
-asS'Jerrod Johnson'
-p428
-(lp429
-I5000
-aS'BUF'
+(lp428
+I6400
+ag25
+aS'SD'
+p429
+asS'Drew Stanton'
 p430
-aS'BAL'
-p431
-asS'Ryan Tannehill'
-p432
-(lp433
-I5900
-aS'SEA'
-p434
-aS'MIA'
-p435
-asS'Chad Henne'
-p436
-(lp437
+(lp431
 I5000
-aS'GB'
+aS'TB'
+p432
+aS'ARI'
+p433
+asS'Zach Mettenberger'
+p434
+(lp435
+I5000
+aS'CIN'
+p436
+aS'PIT'
+p437
+asS'Drew Brees'
 p438
-ag74
-asS'AJ McCarron'
-p439
-(lp440
+(lp439
+I8200
+aS'NYG'
+p440
+aS'NO'
+p441
+asS'Cardale Jones'
+p442
+(lp443
 I5000
 aS'NYJ'
-p441
-aS'CIN'
-p442
-asS'Brandon Doughty'
-p443
-(lp444
-I5000
-aS'SEA'
+p444
+aS'BUF'
 p445
-aS'MIA'
+asS'Bryce Petty'
 p446
-asS'Josh McCown'
-p447
-(lp448
+(lp447
 I5000
-aS'PHI'
+aS'BUF'
+p448
+aS'NYJ'
 p449
-aS'CLE'
+asS'Chase Daniel'
 p450
-asS'Blake Bortles'
-p451
-(lp452
-I7200
-aS'GB'
+(lp451
+I5000
+aS'CHI'
+p452
+aS'PHI'
 p453
-ag74
-asS'Connor Cook'
+asS'Kellen Clemens'
 p454
 (lp455
 I5000
-aS'NO'
-p456
-aS'OAK'
-p457
-asS'Philip Rivers'
-p458
-(lp459
-I7000
-aS'KC'
-p460
+ag25
 aS'SD'
-p461
-asS'Jimmy Garoppolo'
-p462
-(lp463
-I6200
-aS'ARI'
-p464
+p456
+asS'Jacoby Brissett'
+p457
+(lp458
+I5000
+aS'MIA'
+p459
 aS'NE'
+p460
+assS'WR'
+p461
+(dp462
+S'Tyler Lockett'
+p463
+(lp464
+I4600
+ag76
+aS'SEA'
 p465
-asS'Alex Smith'
+asS'Chester Rogers'
 p466
 (lp467
-I6500
-aS'SD'
+I3000
+aS'DEN'
 p468
-aS'KC'
+aS'IND'
 p469
-asS'Joe Flacco'
+asS'Deonte Thompson'
 p470
 (lp471
-I6700
-aS'BUF'
+I3000
+aS'PHI'
 p472
-aS'BAL'
+aS'CHI'
 p473
-asS'Brett Hundley'
+asS'Andre Holmes'
 p474
 (lp475
-I5000
-ag74
-aS'GB'
+I3000
+aS'ATL'
 p476
-asS'Ben Roethlisberger'
+aS'OAK'
 p477
-(lp478
-I7800
-aS'WAS'
-p479
-aS'PIT'
+asS'Jalin Marshall'
+p478
+(lp479
+I3000
+aS'BUF'
 p480
-asS'Russell Wilson'
-p481
-(lp482
-I7900
-aS'MIA'
-p483
-aS'SEA'
-p484
-asS'Sean Mannion'
-p485
-(lp486
-I5000
-aS'SF'
-p487
-ag101
-asS'Andrew Luck'
-p488
-(lp489
-I8300
-aS'DET'
-p490
-aS'IND'
-p491
-asS'Tyler Bray'
-p492
-(lp493
-I5000
-aS'SD'
-p494
-aS'KC'
-p495
-asS'Dak Prescott'
-p496
-(lp497
-I5000
-aS'NYG'
-p498
-aS'DAL'
-p499
-asS'Paxton Lynch'
-p500
-(lp501
-I5000
-aS'CAR'
-p502
-aS'DEN'
-p503
-asS'Trevor Siemian'
-p504
-(lp505
-I5200
-aS'CAR'
-p506
-aS'DEN'
-p507
-asS'Geno Smith'
-p508
-(lp509
-I5000
-aS'CIN'
-p510
 aS'NYJ'
-p511
-asS'Matt Cassel'
-p512
-(lp513
-I5000
+p481
+asS'Dwayne Harris'
+p482
+(lp483
+I3300
+aS'NO'
+p484
+aS'NYG'
+p485
+asS'Lucky Whitehead'
+p486
+(lp487
+I3000
+aS'WAS'
+p488
+aS'DAL'
+p489
+asS'Golden Tate'
+p490
+(lp491
+I6800
+aS'TEN'
+p492
+aS'DET'
+p493
+asS'Ty Montgomery'
+p494
+(lp495
+I3000
 aS'MIN'
-p514
+p496
+aS'GB'
+p497
+asS'Braxton Miller'
+p498
+(lp499
+I3000
+aS'KC'
+p500
+aS'HOU'
+p501
+asS'Tajae Sharpe'
+p502
+(lp503
+I4100
+aS'DET'
+p504
+aS'TEN'
+p505
+asS'Bryan Walters'
+p506
+(lp507
+I3000
+aS'SD'
+p508
+ag25
+asS'Josh Huff'
+p509
+(lp510
+I3000
+aS'CHI'
+p511
+aS'PHI'
+p512
+asS'Anquan Boldin'
+p513
+(lp514
+I4500
 aS'TEN'
 p515
-asS'Jameill Showers'
-p516
-(lp517
-I5000
-aS'NYG'
-p518
-aS'DAL'
-p519
-asS'Tom Brady'
-p520
-(lp521
-I7400
-aS'ARI'
-p522
-aS'NE'
-p523
-asS'Stephen Morris'
-p524
-(lp525
-I5000
 aS'DET'
-p526
-aS'IND'
-p527
-asS'Kevin Hogan'
-p528
-(lp529
-I5000
-aS'SD'
-p530
-aS'KC'
-p531
-asS'Alex Tanney'
-p532
-(lp533
-I5000
-aS'MIN'
-p534
-aS'TEN'
-p535
-asS'Kellen Moore'
-p536
-(lp537
-I5000
+p516
+asS'Kenny Stills'
+p517
+(lp518
+I3400
+aS'NE'
+p519
+aS'MIA'
+p520
+asS'Dorial Green-Beckham'
+p521
+(lp522
+I3300
+aS'CHI'
+p523
+aS'PHI'
+p524
+asS'Brandon Coleman'
+p525
+(lp526
+I3000
 aS'NYG'
-p538
+p527
+aS'NO'
+p528
+asS'Kendall Wright'
+p529
+(lp530
+I3000
+aS'DET'
+p531
+aS'TEN'
+p532
+asS'DeSean Jackson'
+p533
+(lp534
+I6300
+aS'DAL'
+p535
+aS'WAS'
+p536
+asS'Jamison Crowder'
+p537
+(lp538
+I3600
 aS'DAL'
 p539
-asS'Sean Renfree'
+aS'WAS'
 p540
-(lp541
-I5000
-aS'TB'
-p542
-aS'ATL'
+asS'Tavon Austin'
+p541
+(lp542
+I4900
+aS'SEA'
 p543
-asS'Drew Stanton'
+ag76
+asS'Markus Wheaton'
 p544
 (lp545
 I5000
-aS'NE'
+aS'CIN'
 p546
-aS'ARI'
+aS'PIT'
 p547
-asS'Cardale Jones'
+asS'Amari Cooper'
 p548
 (lp549
-I5000
-aS'BAL'
+I7600
+aS'ATL'
 p550
-aS'BUF'
+aS'OAK'
 p551
-asS'Bryce Petty'
+asS'Josh Doctson'
 p552
 (lp553
-I5000
-aS'CIN'
+I3000
+aS'DAL'
 p554
-aS'NYJ'
+aS'WAS'
 p555
-asS'Matt Barkley'
+asS'Justin Hardy'
 p556
 (lp557
-I5000
-aS'NE'
+I3000
+aS'OAK'
 p558
-aS'ARI'
+aS'ATL'
 p559
-asS'Chase Daniel'
+asS'Albert Wilson'
 p560
 (lp561
-I5000
-aS'CLE'
+I3200
+aS'HOU'
 p562
-aS'PHI'
+aS'KC'
 p563
-asS'Garrett Grayson'
+asS'Sterling Shepard'
 p564
 (lp565
-I5000
-aS'OAK'
-p566
+I5200
 aS'NO'
+p566
+aS'NYG'
 p567
-asS'Kellen Clemens'
+asS'Doug Baldwin'
 p568
 (lp569
-I5000
-aS'KC'
-p570
-aS'SD'
-p571
-assS'WR'
-p572
-(dp573
-S'Tyler Lockett'
-p574
-(lp575
-I5000
-aS'MIA'
-p576
+I6600
+ag76
 aS'SEA'
+p570
+asS'Justin Hunter'
+p571
+(lp572
+I3000
+aS'NE'
+p573
+aS'MIA'
+p574
+asS'Jarvis Landry'
+p575
+(lp576
+I6400
+aS'NE'
 p577
-asS'Tony Washington'
+aS'MIA'
 p578
-(lp579
-I3000
-aS'GB'
-p580
-ag74
-asS'Deonte Thompson'
+asS'Danny Amendola'
+p579
+(lp580
+I3800
+aS'MIA'
 p581
-(lp582
-I3000
-aS'HOU'
+aS'NE'
+p582
+asS'Travis Benjamin'
 p583
-aS'CHI'
-p584
-asS'Dobson Collins'
+(lp584
+I4400
+ag25
+aS'SD'
 p585
-(lp586
-I3000
-aS'BUF'
-p587
-aS'BAL'
+asS'Allen Robinson'
+p586
+(lp587
+I7800
+aS'SD'
 p588
-asS'Golden Tate'
+ag25
+asS'Mohamed Sanu'
 p589
 (lp590
-I7300
-aS'IND'
+I5500
+aS'OAK'
 p591
-aS'DET'
+aS'ATL'
 p592
-asS'Josh Boyce'
+asS'Harry Douglas'
 p593
 (lp594
-I3000
+I3100
 aS'DET'
 p595
-aS'IND'
+aS'TEN'
 p596
-asS'Wendall Williams'
+asS'Quan Bray'
 p597
 (lp598
 I3000
-aS'CHI'
+aS'DEN'
 p599
-aS'HOU'
+aS'IND'
 p600
-asS'Andy Jones'
+asS'Mike Thomas'
 p601
 (lp602
 I3000
-aS'NYG'
+aS'SEA'
 p603
-aS'DAL'
+ag76
+asS'Jeremy Maclin'
 p604
-asS'Jeremy Ross'
-p605
-(lp606
-I3000
-aS'CIN'
+(lp605
+I6300
+aS'HOU'
+p606
+aS'KC'
 p607
-aS'NYJ'
+asS'Adam Humphries'
 p608
-asS'DeAndrew White'
-p609
-(lp610
-I3000
-ag101
-aS'SF'
+(lp609
+I3100
+aS'ARI'
+p610
+aS'TB'
 p611
-asS'Brandon Coleman'
+asS'Bryce Treggs'
 p612
 (lp613
 I3000
-aS'OAK'
+aS'CHI'
 p614
-aS'NO'
+aS'PHI'
 p615
-asS'Dorial Green-Beckham'
+asS'Chris Moore'
 p616
 (lp617
-I4500
-aS'MIN'
+I3000
+aS'CLE'
 p618
-aS'TEN'
+aS'BAL'
 p619
-asS'Tavon Austin'
+asS'Laquon Treadwell'
 p620
 (lp621
-I5000
-aS'SF'
+I3500
+aS'GB'
 p622
-ag101
-asS'Odell Beckham'
-p623
-(lp624
-I9300
-aS'DAL'
-p625
-aS'NYG'
-p626
-asS'Dominique Williams'
-p627
-(lp628
-I3000
-aS'KC'
-p629
-aS'SD'
-p630
-asS'Josh Doctson'
-p631
-(lp632
-I3000
-aS'PIT'
-p633
-aS'WAS'
-p634
-asS'Pierre Garcon'
-p635
-(lp636
-I4400
-aS'PIT'
-p637
-aS'WAS'
-p638
-asS'Harry Douglas'
-p639
-(lp640
-I3400
 aS'MIN'
-p641
-aS'TEN'
-p642
-asS'Joe Hansley'
-p643
-(lp644
+p623
+asS'Cody Latimer'
+p624
+(lp625
 I3000
-aS'NO'
-p645
-aS'OAK'
-p646
-asS'Quan Bray'
-p647
-(lp648
-I3000
-aS'DET'
-p649
 aS'IND'
+p626
+aS'DEN'
+p627
+asS'Brandon Tate'
+p628
+(lp629
+I3000
+aS'NYJ'
+p630
+aS'BUF'
+p631
+asS'Eric Weems'
+p632
+(lp633
+I3000
+aS'OAK'
+p634
+aS'ATL'
+p635
+asS'Charone Peake'
+p636
+(lp637
+I3000
+aS'BUF'
+p638
+aS'NYJ'
+p639
+asS'Marquise Goodwin'
+p640
+(lp641
+I3000
+aS'NYJ'
+p642
+aS'BUF'
+p643
+asS'Julian Edelman'
+p644
+(lp645
+I6200
+aS'MIA'
+p646
+aS'NE'
+p647
+asS'Tanner McEvoy'
+p648
+(lp649
+I3000
+ag76
+aS'SEA'
 p650
-asS'Mike Thomas'
+asS'Ted Ginn'
 p651
 (lp652
-I3000
+I3900
 aS'SF'
 p653
-ag101
-asS'Griff Whalen'
+aS'CAR'
 p654
-(lp655
+asS'Malcolm Mitchell'
+p655
+(lp656
 I3000
-aS'SEA'
-p656
 aS'MIA'
 p657
-asS'James Jones'
+aS'NE'
 p658
-(lp659
-I3500
-aS'KC'
-p660
-aS'SD'
-p661
-asS'Anthony Dable'
-p662
-(lp663
-I3000
-aS'DAL'
-p664
-aS'NYG'
-p665
-asS'Moritz Boehringer'
-p666
-(lp667
+asS'Andre Roberts'
+p659
+(lp660
 I3000
 aS'TEN'
-p668
-aS'MIN'
-p669
-asS'Brandon Shippen'
-p670
-(lp671
+p661
+aS'DET'
+p662
+asS'Brice Butler'
+p663
+(lp664
 I3000
+aS'WAS'
+p665
+aS'DAL'
+p666
+asS'Breshad Perriman'
+p667
+(lp668
+I3200
+aS'CLE'
+p669
+aS'BAL'
+p670
+asS'Jermaine Kearse'
+p671
+(lp672
+I3500
+ag76
 aS'SEA'
-p672
-aS'MIA'
 p673
-asS'Kevin Smith'
+asS'Allen Hurns'
 p674
 (lp675
+I5400
+aS'SD'
+p676
+ag25
+asS'Phillip Dorsett'
+p677
+(lp678
+I4400
+aS'DEN'
+p679
+aS'IND'
+p680
+asS'Sammy Watkins'
+p681
+(lp682
+I7300
+aS'NYJ'
+p683
+aS'BUF'
+p684
+asS'Jakeem Grant'
+p685
+(lp686
+I3000
+aS'NE'
+p687
+aS'MIA'
+p688
+asS'Matthew Slater'
+p689
+(lp690
 I3000
 aS'MIA'
-p676
-aS'SEA'
-p677
-asS'Victor Cruz'
-p678
-(lp679
-I4000
-aS'DAL'
-p680
-aS'NYG'
-p681
-asS'Laquon Treadwell'
-p682
-(lp683
-I4500
-aS'TEN'
-p684
-aS'MIN'
-p685
-asS'Max McCaffrey'
-p686
-(lp687
-I3000
-aS'NO'
-p688
-aS'OAK'
-p689
-asS'Tevaun Smith'
-p690
-(lp691
-I3000
-aS'DET'
+p691
+aS'NE'
 p692
-aS'IND'
+asS'Demaryius Thomas'
 p693
-asS'DeAndre Reaves'
-p694
-(lp695
-I3000
-aS'KC'
-p696
-aS'SD'
-p697
-asS'Andre Caldwell'
-p698
-(lp699
-I3000
+(lp694
+I6400
 aS'IND'
-p700
-aS'DET'
-p701
-asS'Marquise Goodwin'
-p702
-(lp703
+p695
+aS'DEN'
+p696
+asS'Rashard Higgins'
+p697
+(lp698
 I3000
 aS'BAL'
-p704
-aS'BUF'
-p705
-asS'Herb Waters'
-p706
-(lp707
-I3000
-ag74
+p699
+aS'CLE'
+p700
+asS'Davante Adams'
+p701
+(lp702
+I4200
+aS'MIN'
+p703
 aS'GB'
+p704
+asS'Tyreek Hill'
+p705
+(lp706
+I3000
+aS'HOU'
+p707
+aS'KC'
 p708
-asS'Malcolm Mitchell'
+asS'Will Fuller'
 p709
 (lp710
-I3000
-aS'ARI'
+I4200
+aS'KC'
 p711
-aS'NE'
+aS'HOU'
 p712
-asS'Breshad Perriman'
+asS'Rishard Matthews'
 p713
 (lp714
-I3700
-aS'BUF'
+I3300
+aS'DET'
 p715
-aS'BAL'
+aS'TEN'
 p716
-asS'Jermaine Kearse'
+asS'Marqise Lee'
 p717
 (lp718
-I3500
-aS'MIA'
+I3100
+aS'SD'
 p719
-aS'SEA'
+ag25
+asS'Jaron Brown'
 p720
-asS'Phillip Dorsett'
-p721
-(lp722
-I4500
-aS'DET'
+(lp721
+I3300
+aS'TB'
+p722
+aS'ARI'
 p723
-aS'IND'
+asS'Devin Funchess'
 p724
-asS'Sammy Watkins'
-p725
-(lp726
-I6900
-aS'BAL'
-p727
-aS'BUF'
-p728
-asS'Damian Copeland'
-p729
-(lp730
-I3000
-aS'IND'
-p731
-aS'DET'
-p732
-asS'Davante Adams'
-p733
-(lp734
+(lp725
 I4300
-ag74
-aS'GB'
+aS'SF'
+p726
+aS'CAR'
+p727
+asS'Tommylee Lewis'
+p728
+(lp729
+I3000
+aS'NYG'
+p730
+aS'NO'
+p731
+asS'Brandin Cooks'
+p732
+(lp733
+I8000
+aS'NYG'
+p734
+aS'NO'
 p735
-asS'Devin Fuller'
+asS'Ryan Grant'
 p736
 (lp737
 I3000
-aS'TB'
+aS'DAL'
 p738
-aS'ATL'
+aS'WAS'
 p739
-asS'Terrelle Pryor'
+asS'Damiere Byrd'
 p740
 (lp741
 I3000
-aS'PHI'
+aS'SF'
 p742
-aS'CLE'
+aS'CAR'
 p743
-asS'Jordan Norwood'
+asS'Rashad Greene'
 p744
 (lp745
-I3000
-aS'CAR'
+I3100
+aS'SD'
 p746
-aS'DEN'
+ag25
+asS"De'Anthony Thomas"
 p747
-asS'James Wright'
-p748
-(lp749
+(lp748
 I3000
-aS'NYJ'
+aS'HOU'
+p749
+aS'KC'
 p750
-aS'CIN'
+asS'Terrelle Pryor'
 p751
-asS'Tevin Jones'
-p752
-(lp753
-I3000
-aS'CHI'
+(lp752
+I3500
+aS'BAL'
+p753
+aS'CLE'
 p754
-aS'HOU'
+asS'Antonio Brown'
 p755
-asS'Kevin White'
-p756
-(lp757
-I5200
-aS'HOU'
+(lp756
+I9900
+aS'CIN'
+p757
+aS'PIT'
 p758
-aS'CHI'
+asS'Michael Thomas'
 p759
-asS'Jaydon Mickens'
-p760
-(lp761
-I3000
+(lp760
+I4000
+aS'NYG'
+p761
 aS'NO'
 p762
-aS'OAK'
+asS'Andrew Hawkins'
 p763
-asS'Harvey Binford'
-p764
-(lp765
-I3000
-ag74
-aS'GB'
+(lp764
+I3100
+aS'BAL'
+p765
+aS'CLE'
 p766
-asS'Quinshad Davis'
+asS'Jordan Norwood'
 p767
 (lp768
 I3000
 aS'IND'
 p769
-aS'DET'
+aS'DEN'
 p770
-asS'Chris Conley'
+asS'Rashad Ross'
 p771
 (lp772
-I3700
-aS'SD'
+I3000
+aS'DAL'
 p773
-aS'KC'
+aS'WAS'
 p774
-asS'Chris Harper'
+asS'James Wright'
 p775
 (lp776
 I3000
-aS'ARI'
+aS'PIT'
 p777
-aS'NE'
+aS'CIN'
 p778
-asS'Jaelen Strong'
+asS'Sammie Coates'
 p779
 (lp780
-I3800
-aS'CHI'
+I3700
+aS'CIN'
 p781
-aS'HOU'
+aS'PIT'
 p782
-asS'DeAndre Smelter'
+asS'Charles Johnson'
 p783
 (lp784
 I3000
-ag101
-aS'SF'
+aS'GB'
 p785
-asS'Chris King'
+aS'MIN'
 p786
-(lp787
-I3000
-aS'TB'
-p788
+asS'Michael Crabtree'
+p787
+(lp788
+I6100
 aS'ATL'
 p789
-asS'Pharoh Cooper'
+aS'OAK'
 p790
-(lp791
-I3600
-aS'SF'
-p792
-ag101
-asS'Rod Streater'
+asS'Kevin White'
+p791
+(lp792
+I4300
+aS'PHI'
 p793
-(lp794
-I3000
-aS'SD'
-p795
-aS'KC'
-p796
-asS'Stevie Johnson'
-p797
-(lp798
-I3100
-aS'KC'
-p799
-aS'SD'
-p800
-asS'Hunter Sharp'
-p801
-(lp802
-I3000
-aS'CLE'
-p803
-aS'PHI'
-p804
-asS'Robert Woods'
-p805
-(lp806
-I4600
-aS'BAL'
-p807
-aS'BUF'
-p808
-asS'Rueben Randle'
-p809
-(lp810
-I3300
-aS'CLE'
-p811
-aS'PHI'
-p812
-asS'Cole Beasley'
-p813
-(lp814
-I3200
-aS'NYG'
-p815
-aS'DAL'
-p816
-asS'Cody Core'
-p817
-(lp818
-I3000
-aS'NYJ'
-p819
-aS'CIN'
-p820
-asS'Tre McBride'
-p821
-(lp822
-I3000
-aS'MIN'
-p823
-aS'TEN'
-p824
-asS'Evan Spencer'
-p825
-(lp826
-I3000
-aS'ATL'
-p827
-aS'TB'
-p828
-asS'Alex Erickson'
-p829
-(lp830
-I3000
-aS'NYJ'
-p831
-aS'CIN'
-p832
-asS'Daniel Braverman'
-p833
-(lp834
-I3000
-aS'HOU'
-p835
 aS'CHI'
+p794
+asS'Eric Decker'
+p795
+(lp796
+I6500
+aS'BUF'
+p797
+aS'NYJ'
+p798
+asS'Arrelious Benn'
+p799
+(lp800
+I3000
+aS'SD'
+p801
+ag25
+asS'Aldrick Robinson'
+p802
+(lp803
+I3000
+aS'OAK'
+p804
+aS'ATL'
+p805
+asS'Keith Mumphery'
+p806
+(lp807
+I3000
+aS'KC'
+p808
+aS'HOU'
+p809
+asS'Chris Conley'
+p810
+(lp811
+I3500
+aS'HOU'
+p812
+aS'KC'
+p813
+asS'Jaelen Strong'
+p814
+(lp815
+I3300
+aS'KC'
+p816
+aS'HOU'
+p817
+asS'J.J. Nelson'
+p818
+(lp819
+I3000
+aS'TB'
+p820
+aS'ARI'
+p821
+asS'Jarius Wright'
+p822
+(lp823
+I3000
+aS'GB'
+p824
+aS'MIN'
+p825
+asS'Seth Roberts'
+p826
+(lp827
+I3800
+aS'ATL'
+p828
+aS'OAK'
+p829
+asS'Brandon LaFell'
+p830
+(lp831
+I4000
+aS'PIT'
+p832
+aS'CIN'
+p833
+asS'Pharoh Cooper'
+p834
+(lp835
+I3300
+aS'SEA'
 p836
-asS'Willie Snead'
+ag76
+asS'Johnny Holton'
 p837
 (lp838
-I4800
-aS'OAK'
+I3000
+aS'ATL'
 p839
-aS'NO'
+aS'OAK'
 p840
-asS'Terrell Sinkfield'
+asS'Rod Streater'
 p841
 (lp842
 I3000
-aS'TEN'
+aS'CAR'
 p843
-aS'MIN'
+aS'SF'
 p844
-asS'Jonathan Krause'
+asS'A.J. Green'
 p845
 (lp846
-I3000
-aS'ATL'
+I8900
+aS'PIT'
 p847
-aS'TB'
+aS'CIN'
 p848
-asS'Rishard Matthews'
+asS'Bennie Fowler'
 p849
 (lp850
-I3300
-aS'MIN'
+I3000
+aS'IND'
 p851
-aS'TEN'
+aS'DEN'
 p852
-asS'Emmanuel Sanders'
+asS'Robert Woods'
 p853
 (lp854
-I5700
-aS'CAR'
+I4000
+aS'NYJ'
 p855
-aS'DEN'
+aS'BUF'
 p856
-asS'Amir Carlisle'
+asS'Vincent Jackson'
 p857
 (lp858
-I3000
-aS'NE'
-p859
+I4000
 aS'ARI'
+p859
+aS'TB'
 p860
-asS'Marquis Bundy'
+asS'Alex Erickson'
 p861
 (lp862
 I3000
-aS'NE'
+aS'PIT'
 p863
-aS'ARI'
+aS'CIN'
 p864
-asS'Steve Smith'
+asS'Julio Jones'
 p865
 (lp866
-I4900
-aS'BUF'
+I9200
+aS'OAK'
 p867
-aS'BAL'
+aS'ATL'
 p868
-asS'Cameron Meredith'
+asS'Kelvin Benjamin'
 p869
 (lp870
-I3000
-aS'HOU'
+I6500
+aS'SF'
 p871
-aS'CHI'
+aS'CAR'
 p872
-asS'Kenny Bell'
+asS'Cole Beasley'
 p873
 (lp874
-I3400
-aS'ATL'
+I3200
+aS'WAS'
 p875
-aS'TB'
+aS'DAL'
 p876
-asS'Quincy Enunwa'
+asS'Cody Core'
 p877
 (lp878
-I3800
-aS'CIN'
+I3000
+aS'PIT'
 p879
-aS'NYJ'
+aS'CIN'
 p880
-asS'Jake Kumerow'
+asS'Corey Coleman'
 p881
 (lp882
-I3000
-aS'NYJ'
+I4700
+aS'BAL'
 p883
-aS'CIN'
+aS'CLE'
 p884
-asS'Marlon Moore'
+asS'Cecil Shorts'
 p885
 (lp886
 I3000
-aS'PHI'
+aS'ARI'
 p887
-aS'CLE'
+aS'TB'
 p888
-asS'Corey Brown'
+asS'Mike Evans'
 p889
 (lp890
-I3000
-aS'DEN'
+I7200
+aS'ARI'
 p891
-aS'CAR'
+aS'TB'
 p892
-asS'Kasen Williams'
+asS'Russell Shepard'
 p893
 (lp894
 I3000
-aS'MIA'
+aS'ARI'
 p895
-aS'SEA'
+aS'TB'
 p896
-asS'Nelson Agholor'
+asS'Eddie Royal'
 p897
 (lp898
 I3500
-aS'CLE'
-p899
 aS'PHI'
+p899
+aS'CHI'
 p900
-asS'Kyle Williams'
+asS'Jared Abbrederis'
 p901
 (lp902
 I3000
-aS'CIN'
+aS'MIN'
 p903
-aS'NYJ'
+aS'GB'
 p904
-asS'Walt Powell'
+asS'Willie Snead'
 p905
 (lp906
-I3000
-aS'BAL'
+I5800
+aS'NYG'
 p907
-aS'BUF'
+aS'NO'
 p908
-asS'Dres Anderson'
+asS'Trevor Davis'
 p909
 (lp910
 I3000
-ag101
-aS'SF'
+aS'MIN'
 p911
-asS'Rashard Higgins'
+aS'GB'
 p912
-(lp913
-I3000
-aS'PHI'
-p914
-aS'CLE'
+asS'Jeff Janis'
+p913
+(lp914
+I3300
+aS'MIN'
 p915
-asS'Brice Butler'
+aS'GB'
 p916
-(lp917
+asS'Nelson Spruce'
+p917
+(lp918
 I3000
-aS'NYG'
-p918
-aS'DAL'
+aS'SEA'
 p919
-asS'Frankie Hammond'
+ag76
+asS'DeVante Parker'
 p920
 (lp921
-I3000
-aS'SD'
+I4800
+aS'NE'
 p922
-aS'KC'
+aS'MIA'
 p923
-asS'Isaac Fruechte'
+asS'Adam Thielen'
 p924
 (lp925
-I3000
-aS'TEN'
+I3200
+aS'GB'
 p926
 aS'MIN'
 p927
-asS'Kalif Raymond'
+asS'DeAndre Hopkins'
 p928
 (lp929
-I3000
-aS'CAR'
+I8700
+aS'KC'
 p930
-aS'DEN'
+aS'HOU'
 p931
-asS'Chris Hubert'
+asS'Demarcus Robinson'
 p932
 (lp933
 I3000
-aS'NE'
+aS'HOU'
 p934
-aS'ARI'
+aS'KC'
 p935
-asS'Ed Williams'
+asS'Victor Cruz'
 p936
 (lp937
-I3000
-ag74
-aS'GB'
+I4300
+aS'NO'
 p938
-asS'Ed Eagan'
-p939
-(lp940
-I3000
 aS'NYG'
-p941
-aS'DAL'
+p939
+asS'Jordan Taylor'
+p940
+(lp941
+I3000
+aS'IND'
 p942
-asS'Vincent Jackson'
-p943
-(lp944
-I4400
-aS'ATL'
-p945
-aS'TB'
-p946
-asS'Isaiah Burse'
-p947
-(lp948
-I3000
-aS'KC'
-p949
-aS'SD'
-p950
-asS'Brenton Bersin'
-p951
-(lp952
-I3000
 aS'DEN'
-p953
-aS'CAR'
-p954
-asS'Rashawn Scott'
-p955
-(lp956
+p943
+asS'Jeremy Kerley'
+p944
+(lp945
 I3000
+aS'CAR'
+p946
+aS'SF'
+p947
+asS'Greg Salas'
+p948
+(lp949
+I3000
+aS'NYJ'
+p950
+aS'BUF'
+p951
+asS'Emmanuel Sanders'
+p952
+(lp953
+I6000
+aS'IND'
+p954
+aS'DEN'
+p955
+asS'Kenny Britt'
+p956
+(lp957
+I3700
 aS'SEA'
-p957
-aS'MIA'
 p958
-asS'Shane Wynn'
+ag76
+asS'Odell Beckham'
 p959
 (lp960
+I9500
+aS'NO'
+p961
+aS'NYG'
+p962
+asS'Cordarrelle Patterson'
+p963
+(lp964
 I3000
 aS'GB'
-p961
-ag74
-asS'Chris Hogan'
-p962
-(lp963
-I3600
-aS'ARI'
-p964
-aS'NE'
 p965
-asS'Donte Moncrief'
+aS'MIN'
 p966
-(lp967
-I6000
-aS'DET'
-p968
-aS'IND'
+asS'Paul Richardson'
+p967
+(lp968
+I3000
+ag76
+aS'SEA'
 p969
-asS'Chester Rogers'
+asS'Tavarres King'
 p970
 (lp971
 I3000
-aS'DET'
+aS'NO'
 p972
-aS'IND'
+aS'NYG'
 p973
-asS'Dwayne Harris'
+asS'Dontrelle Inman'
 p974
 (lp975
 I3600
-aS'DAL'
-p976
-aS'NYG'
-p977
-asS'Rodney Smith'
-p978
-(lp979
-I3000
-aS'NYG'
-p980
-aS'DAL'
-p981
-asS'Javontee Herndon'
-p982
-(lp983
-I3000
-aS'KC'
-p984
+ag25
 aS'SD'
-p985
-asS'Bryan Walters'
-p986
-(lp987
-I3000
+p976
+asS'Randall Cobb'
+p977
+(lp978
+I7400
+aS'MIN'
+p979
 aS'GB'
-p988
-ag74
-asS'Josh Huff'
-p989
-(lp990
-I3000
-aS'CLE'
-p991
-aS'PHI'
-p992
-asS'Kenny Stills'
-p993
-(lp994
-I3200
+p980
+asS'Brian Quick'
+p981
+(lp982
+I3300
 aS'SEA'
+p983
+ag76
+asS'Steve Smith'
+p984
+(lp985
+I4300
+aS'CLE'
+p986
+aS'BAL'
+p987
+asS'Cameron Meredith'
+p988
+(lp989
+I3000
+aS'PHI'
+p990
+aS'CHI'
+p991
+asS'T.Y. Hilton'
+p992
+(lp993
+I7000
+aS'DEN'
+p994
+aS'IND'
 p995
-aS'MIA'
+asS'John Brown'
 p996
-asS'Daniel Anthrop'
-p997
-(lp998
+(lp997
+I5300
+aS'TB'
+p998
+aS'ARI'
+p999
+asS'Jordan Payton'
+p1000
+(lp1001
+I3000
+aS'BAL'
+p1002
+aS'CLE'
+p1003
+asS'Jordy Nelson'
+p1004
+(lp1005
+I7500
+aS'MIN'
+p1006
+aS'GB'
+p1007
+asS'Quincy Enunwa'
+p1008
+(lp1009
+I4400
+aS'BUF'
+p1010
+aS'NYJ'
+p1011
+asS'Joshua Bellamy'
+p1012
+(lp1013
+I3000
+aS'PHI'
+p1014
+aS'CHI'
+p1015
+asS'Jordan Matthews'
+p1016
+(lp1017
+I6900
+aS'CHI'
+p1018
+aS'PHI'
+p1019
+asS'Taylor Gabriel'
+p1020
+(lp1021
+I3000
+aS'OAK'
+p1022
+aS'ATL'
+p1023
+asS'Marc Mariani'
+p1024
+(lp1025
 I3000
 aS'DET'
-p999
-aS'IND'
-p1000
-asS'Dennis Parks'
-p1001
-(lp1002
-I3000
-aS'PHI'
-p1003
-aS'CLE'
-p1004
-asS'Albert Wilson'
-p1005
-(lp1006
-I3600
-aS'SD'
-p1007
-aS'KC'
-p1008
-asS'Chris Brown'
-p1009
-(lp1010
-I3000
-aS'NYG'
-p1011
-aS'DAL'
-p1012
-asS'Mario Alford'
-p1013
-(lp1014
-I3000
-aS'NYJ'
-p1015
-aS'CIN'
-p1016
-asS'Tyler Boyd'
-p1017
-(lp1018
-I3600
-aS'NYJ'
-p1019
-aS'CIN'
-p1020
-asS'Xavier Rush'
-p1021
-(lp1022
-I3000
-aS'CLE'
-p1023
-aS'PHI'
-p1024
-asS'Marcus Tucker'
-p1025
-(lp1026
-I3000
-aS'WAS'
-p1027
-aS'PIT'
-p1028
-asS'Brandon Tate'
-p1029
-(lp1030
-I3000
-aS'NYJ'
-p1031
-aS'CIN'
-p1032
-asS'Ted Ginn'
-p1033
-(lp1034
-I4100
-aS'DEN'
-p1035
-aS'CAR'
-p1036
-asS'Keyarris Garrett'
-p1037
-(lp1038
-I3000
-aS'DEN'
-p1039
-aS'CAR'
-p1040
-asS'Ben Roberts'
-p1041
-(lp1042
-I3000
-aS'MIN'
-p1043
+p1026
 aS'TEN'
+p1027
+asS'Mike Wallace'
+p1028
+(lp1029
+I4700
+aS'CLE'
+p1030
+aS'BAL'
+p1031
+asS'Torrey Smith'
+p1032
+(lp1033
+I4700
+aS'CAR'
+p1034
+aS'SF'
+p1035
+asS'Corey Brown'
+p1036
+(lp1037
+I3000
+aS'SF'
+p1038
+aS'CAR'
+p1039
+asS'Roger Lewis'
+p1040
+(lp1041
+I3000
+aS'NO'
+p1042
+aS'NYG'
+p1043
+asS'Nelson Agholor'
 p1044
-asS'DeAndre Carter'
-p1045
-(lp1046
-I3000
-aS'ARI'
-p1047
-aS'NE'
-p1048
-asS'Mitch Mathews'
-p1049
-(lp1050
-I3000
-aS'SD'
-p1051
-aS'KC'
-p1052
-asS'Darrin Peterson'
-p1053
-(lp1054
-I3000
-aS'HOU'
-p1055
+(lp1045
+I3500
 aS'CHI'
+p1046
+aS'PHI'
+p1047
+asS'Michael Floyd'
+p1048
+(lp1049
+I5900
+aS'TB'
+p1050
+aS'ARI'
+p1051
+asS'Quinton Patton'
+p1052
+(lp1053
+I3800
+aS'CAR'
+p1054
+aS'SF'
+p1055
+asS'Walt Powell'
 p1056
-asS'Eli Rogers'
-p1057
-(lp1058
-I4200
-aS'WAS'
-p1059
-aS'PIT'
-p1060
-asS'Jalin Marshall'
-p1061
-(lp1062
+(lp1057
 I3000
+aS'NYJ'
+p1058
+aS'BUF'
+p1059
+asS'Tyler Boyd'
+p1060
+(lp1061
+I3500
+aS'PIT'
+p1062
 aS'CIN'
 p1063
-aS'NYJ'
+asS'Bradley Marquez'
 p1064
-asS'Matthew Slater'
-p1065
-(lp1066
+(lp1065
 I3000
-aS'ARI'
+aS'SEA'
+p1066
+ag76
+asS'Leonte Carroo'
 p1067
+(lp1068
+I3200
 aS'NE'
-p1068
-asS'Paul Turner'
 p1069
-(lp1070
+aS'MIA'
+p1070
+asS'Andre Johnson'
+p1071
+(lp1072
+I3400
+aS'DET'
+p1073
+aS'TEN'
+p1074
+asS'Alshon Jeffery'
+p1075
+(lp1076
+I7700
+aS'PHI'
+p1077
+aS'CHI'
+p1078
+asS'Brandon Marshall'
+p1079
+(lp1080
+I7500
+aS'BUF'
+p1081
+aS'NYJ'
+p1082
+asS'Kamar Aiken'
+p1083
+(lp1084
+I3900
+aS'CLE'
+p1085
+aS'BAL'
+p1086
+asS'Keenan Allen'
+p1087
+(lp1088
+I7500
+ag25
+aS'SD'
+p1089
+asS'Robby Anderson'
+p1090
+(lp1091
+I3000
+aS'BUF'
+p1092
+aS'NYJ'
+p1093
+asS'Stefon Diggs'
+p1094
+(lp1095
+I5100
+aS'GB'
+p1096
+aS'MIN'
+p1097
+asS'Larry Fitzgerald'
+p1098
+(lp1099
+I6400
+aS'TB'
+p1100
+aS'ARI'
+p1101
+asS'Terrance Williams'
+p1102
+(lp1103
+I3300
+aS'WAS'
+p1104
+aS'DAL'
+p1105
+asS'Devin Hester'
+p1106
+(lp1107
 I3000
 aS'CLE'
-p1071
-aS'PHI'
-p1072
-asS'Marqise Lee'
-p1073
-(lp1074
-I3100
-aS'GB'
-p1075
-ag74
-asS'Jaron Brown'
-p1076
-(lp1077
-I3400
-aS'NE'
-p1078
-aS'ARI'
-p1079
-asS'Devin Funchess'
-p1080
-(lp1081
-I4800
-aS'DEN'
-p1082
-aS'CAR'
-p1083
-asS'David Glidden'
-p1084
-(lp1085
-I3000
-aS'TB'
-p1086
-aS'ATL'
-p1087
-asS'Damiere Byrd'
-p1088
-(lp1089
-I3000
-aS'DEN'
-p1090
-aS'CAR'
-p1091
-asS'Antonio Brown'
-p1092
-(lp1093
-I9800
-aS'WAS'
-p1094
-aS'PIT'
-p1095
-asS'Myles White'
-p1096
-(lp1097
-I3000
-aS'DAL'
-p1098
-aS'NYG'
-p1099
-asS'Rashad Ross'
-p1100
-(lp1101
-I3000
-aS'PIT'
-p1102
-aS'WAS'
-p1103
-asS'Mike Williams'
-p1104
-(lp1105
-I3000
-aS'SD'
-p1106
-aS'KC'
-p1107
-asS'Andrew Turzilli'
 p1108
-(lp1109
-I3000
-aS'MIN'
+aS'BAL'
+p1109
+asS'Isaiah Burse'
 p1110
-aS'TEN'
-p1111
-asS'A.J. Green'
+(lp1111
+I3000
+ag25
+aS'SD'
 p1112
-(lp1113
-I8400
-aS'NYJ'
-p1114
-aS'CIN'
+asS'Brenton Bersin'
+p1113
+(lp1114
+I3000
+aS'SF'
 p1115
-asS'Gary Chambers'
+aS'CAR'
 p1116
-(lp1117
+asS'Ricardo Louis'
+p1117
+(lp1118
 I3000
 aS'BAL'
-p1118
-aS'BUF'
 p1119
-asS'Marquess Wilson'
+aS'CLE'
 p1120
-(lp1121
-I3700
-aS'HOU'
-p1122
-aS'CHI'
+asS'Marvin Jones'
+p1121
+(lp1122
+I5500
+aS'TEN'
 p1123
-asS'Rashaun Simonise'
-p1124
-(lp1125
-I3000
-aS'NYJ'
-p1126
-aS'CIN'
-p1127
-asS'Devon Cajuste'
-p1128
-(lp1129
-I3000
-ag101
-aS'SF'
-p1130
-asS'Kenbrell Thompkins'
-p1131
-(lp1132
-I3000
-aS'CIN'
-p1133
-aS'NYJ'
-p1134
-asS'Jarrett Boykin'
-p1135
-(lp1136
-I3000
-aS'BAL'
-p1137
-aS'BUF'
-p1138
-asS'Nate Washington'
-p1139
-(lp1140
-I3000
-aS'ARI'
-p1141
-aS'NE'
-p1142
-asS'Ryan Whalen'
-p1143
-(lp1144
-I3000
-ag101
-aS'SF'
-p1145
-asS'Jace Billingsley'
-p1146
-(lp1147
-I3000
-aS'IND'
-p1148
 aS'DET'
-p1149
-asS'Cecil Shorts'
-p1150
-(lp1151
-I3300
-aS'CHI'
-p1152
-aS'HOU'
-p1153
-asS'Franky Okafor'
-p1154
-(lp1155
-I3000
+p1124
+asS'Pierre Garcon'
+p1125
+(lp1126
+I4200
+aS'DAL'
+p1127
+aS'WAS'
+p1128
+asS'Chris Hogan'
+p1129
+(lp1130
+I3500
+aS'MIA'
+p1131
 aS'NE'
+p1132
+asS'Donte Moncrief'
+p1133
+(lp1134
+I6400
+aS'DEN'
+p1135
+aS'IND'
+p1136
+asS'Darrius Heyward-Bey'
+p1137
+(lp1138
+I3600
+aS'CIN'
+p1139
+aS'PIT'
+p1140
+asS'Dez Bryant'
+p1141
+(lp1142
+I8400
+aS'WAS'
+p1143
+aS'DAL'
+p1144
+asS'Tyrell Williams'
+p1145
+(lp1146
+I3700
+ag25
+aS'SD'
+p1147
+asS'Aaron Burbridge'
+p1148
+(lp1149
+I3000
+aS'CAR'
+p1150
+aS'SF'
+p1151
+asS'Eli Rogers'
+p1152
+(lp1153
+I4100
+aS'CIN'
+p1154
+aS'PIT'
+p1155
+assS'RB'
 p1156
-aS'ARI'
-p1157
-asS'Josh Gordon'
+(dp1157
+S'Taiwan Jones'
 p1158
 (lp1159
-I6800
-aS'PHI'
+I3000
+aS'ATL'
 p1160
-aS'CLE'
+aS'OAK'
 p1161
-asS'Eddie Royal'
+asS'Frank Gore'
 p1162
 (lp1163
-I3200
-aS'HOU'
+I5000
+aS'DEN'
 p1164
-aS'CHI'
+aS'IND'
 p1165
-asS'Jared Abbrederis'
+asS'Rashad Jennings'
 p1166
 (lp1167
-I3300
-ag74
-aS'GB'
-p1168
-asS'Adam Thielen'
-p1169
-(lp1170
-I3000
-aS'TEN'
-p1171
-aS'MIN'
-p1172
-asS'Jordan Williams-Lambert'
-p1173
-(lp1174
-I3000
-aS'OAK'
-p1175
+I5600
 aS'NO'
-p1176
-asS'Leonard Hankerson'
-p1177
-(lp1178
+p1168
+aS'NYG'
+p1169
+asS'Jerick McKinnon'
+p1170
+(lp1171
+I3700
+aS'GB'
+p1172
+aS'MIN'
+p1173
+asS'Terrance West'
+p1174
+(lp1175
 I3300
+aS'CLE'
+p1176
 aS'BAL'
-p1179
-aS'BUF'
-p1180
-asS'Mekale McKay'
-p1181
-(lp1182
+p1177
+asS'Jalston Fowler'
+p1178
+(lp1179
 I3000
 aS'DET'
-p1183
-aS'IND'
-p1184
-asS'Tavarres King'
-p1185
-(lp1186
-I3000
-aS'DAL'
-p1187
-aS'NYG'
-p1188
-asS'Brian Quick'
-p1189
-(lp1190
-I3500
-aS'SF'
-p1191
-ag101
-asS'Seth Roberts'
-p1192
-(lp1193
-I3800
-aS'NO'
-p1194
-aS'OAK'
-p1195
-asS'Rannell Hall'
-p1196
-(lp1197
-I3000
-aS'PHI'
-p1198
-aS'CLE'
-p1199
-asS'Josh Lenz'
-p1200
-(lp1201
-I3000
-aS'CHI'
-p1202
-aS'HOU'
-p1203
-asS'Jordan Matthews'
-p1204
-(lp1205
-I6700
-aS'CLE'
-p1206
-aS'PHI'
-p1207
-asS'Michael Floyd'
-p1208
-(lp1209
-I5900
-aS'NE'
-p1210
-aS'ARI'
-p1211
-asS'J.D. McKissic'
-p1212
-(lp1213
-I3000
+p1180
+aS'TEN'
+p1181
+asS'Andre Ellington'
+p1182
+(lp1183
+I3900
 aS'TB'
-p1214
-aS'ATL'
-p1215
-asS'Alonzo Russell'
-p1216
-(lp1217
+p1184
+aS'ARI'
+p1185
+asS'D.J. Foster'
+p1186
+(lp1187
 I3000
-aS'NYJ'
-p1218
-aS'CIN'
+aS'MIA'
+p1188
+aS'NE'
+p1189
+asS'Fozzy Whittaker'
+p1190
+(lp1191
+I3000
+aS'SF'
+p1192
+aS'CAR'
+p1193
+asS'Terron Ward'
+p1194
+(lp1195
+I3000
+aS'OAK'
+p1196
+aS'ATL'
+p1197
+asS'Kenneth Dixon'
+p1198
+(lp1199
+I3000
+aS'CLE'
+p1200
+aS'BAL'
+p1201
+asS'Tyler Ervin'
+p1202
+(lp1203
+I3000
+aS'KC'
+p1204
+aS'HOU'
+p1205
+asS'Alex Collins'
+p1206
+(lp1207
+I3000
+ag76
+aS'SEA'
+p1208
+asS'Theo Riddick'
+p1209
+(lp1210
+I4300
+aS'TEN'
+p1211
+aS'DET'
+p1212
+asS'Zach Line'
+p1213
+(lp1214
+I3000
+aS'GB'
+p1215
+aS'MIN'
+p1216
+asS'Malcolm Brown'
+p1217
+(lp1218
+I3000
+aS'SEA'
 p1219
-asS'Bradley Marquez'
+ag76
+asS'Darren Sproles'
 p1220
 (lp1221
-I3000
-aS'SF'
+I3800
+aS'CHI'
 p1222
-ag101
-asS'T.J. Graham'
-p1223
-(lp1224
-I3000
-aS'CLE'
-p1225
 aS'PHI'
+p1223
+asS'Christine Michael'
+p1224
+(lp1225
+I4600
+ag76
+aS'SEA'
 p1226
-asS'Kamar Aiken'
+asS'Charles Sims'
 p1227
 (lp1228
-I4700
-aS'BUF'
+I4400
+aS'ARI'
 p1229
-aS'BAL'
+aS'TB'
 p1230
-asS'Louis Murphy'
+asS'Jeremy Hill'
 p1231
 (lp1232
-I3000
-aS'ATL'
+I4300
+aS'PIT'
 p1233
-aS'TB'
+aS'CIN'
 p1234
-asS'Vince Mayle'
+asS'Javorius Allen'
 p1235
 (lp1236
-I3000
-aS'NYG'
+I3100
+aS'CLE'
 p1237
-aS'DAL'
+aS'BAL'
 p1238
-asS'Larry Fitzgerald'
+asS'Tevin Coleman'
 p1239
 (lp1240
-I6300
-aS'NE'
+I4500
+aS'OAK'
 p1241
-aS'ARI'
+aS'ATL'
 p1242
-asS'Keenan Reynolds'
+asS'Shaun Draughn'
 p1243
 (lp1244
-I3000
-aS'BUF'
+I3700
+aS'CAR'
 p1245
-aS'BAL'
+aS'SF'
 p1246
-asS'Jordan Leslie'
+asS'Mike Tolbert'
 p1247
 (lp1248
 I3000
-aS'TB'
+aS'SF'
 p1249
-aS'ATL'
+aS'CAR'
 p1250
-asS'Marvin Jones'
+asS'Jonathan Grimes'
 p1251
 (lp1252
-I4600
-aS'IND'
+I3000
+aS'KC'
 p1253
-aS'DET'
+aS'HOU'
 p1254
-asS'Leonte Carroo'
+asS'Paul Perkins'
 p1255
 (lp1256
 I3200
-aS'SEA'
+aS'NO'
 p1257
-aS'MIA'
+aS'NYG'
 p1258
-asS'Antwane Grant'
+asS'Roosevelt Nix'
 p1259
 (lp1260
 I3000
-aS'NYJ'
-p1261
 aS'CIN'
+p1261
+aS'PIT'
 p1262
-asS'Corey Washington'
+asS'Reggie Bush'
 p1263
 (lp1264
-I3000
-aS'TB'
+I3200
+aS'NYJ'
 p1265
-aS'ATL'
+aS'BUF'
 p1266
-asS'Dez Bryant'
+asS'Devontae Booker'
 p1267
 (lp1268
-I8500
-aS'NYG'
+I3000
+aS'IND'
 p1269
-aS'DAL'
+aS'DEN'
 p1270
-asS'Marcus Easley'
+asS'Jamaal Charles'
 p1271
 (lp1272
-I3000
-aS'BAL'
+I6300
+aS'HOU'
 p1273
-aS'BUF'
+aS'KC'
 p1274
-asS"Da'Ron Brown"
+asS'C.J. Anderson'
 p1275
 (lp1276
-I3000
-aS'SD'
+I6800
+aS'IND'
 p1277
-aS'KC'
+aS'DEN'
 p1278
-asS'Rashad Lawrence'
+asS'Denard Robinson'
 p1279
 (lp1280
-I3000
-aS'GB'
+I3100
+aS'SD'
 p1281
-ag74
-asS'Lucky Whitehead'
+ag25
+asS'Julian Howsare'
 p1282
 (lp1283
 I3000
-aS'NYG'
+aS'BUF'
 p1284
-aS'DAL'
+aS'NYJ'
 p1285
-asS'Chris Matthews'
+asS'Danny Woodhead'
 p1286
 (lp1287
-I3000
-aS'BUF'
+I5200
+ag25
+aS'SD'
 p1288
-aS'BAL'
+asS'Derrick Henry'
 p1289
-asS'Nick Williams'
-p1290
-(lp1291
-I3000
-aS'TB'
+(lp1290
+I3800
+aS'DET'
+p1291
+aS'TEN'
 p1292
-aS'ATL'
+asS'Ameer Abdullah'
 p1293
-asS'Charone Peake'
-p1294
-(lp1295
-I3000
-aS'CIN'
+(lp1294
+I4900
+aS'TEN'
+p1295
+aS'DET'
 p1296
-aS'NYJ'
+asS'Fitzgerald Toussaint'
 p1297
-asS'Neal Sterling'
-p1298
-(lp1299
-I3000
-aS'GB'
+(lp1298
+I3500
+aS'CIN'
+p1299
+aS'PIT'
 p1300
-ag74
-asS'Marcus Johnson'
+asS'Michael Burton'
 p1301
 (lp1302
 I3000
-aS'CLE'
+aS'TEN'
 p1303
-aS'PHI'
+aS'DET'
 p1304
-asS'Anquan Boldin'
+asS'Bobby Rainey'
 p1305
 (lp1306
-I4500
-aS'IND'
+I3000
+aS'NO'
 p1307
-aS'DET'
+aS'NYG'
 p1308
-asS'Eric Decker'
+asS'Melvin Gordon'
 p1309
 (lp1310
-I6600
-aS'CIN'
+I4800
+ag25
+aS'SD'
 p1311
-aS'NYJ'
+asS'George Atkinson'
 p1312
-asS'Jamison Crowder'
-p1313
-(lp1314
-I3800
-aS'PIT'
-p1315
-aS'WAS'
-p1316
-asS'Markus Wheaton'
-p1317
-(lp1318
-I5400
-aS'WAS'
-p1319
-aS'PIT'
-p1320
-asS'Cobi Hamilton'
-p1321
-(lp1322
-I3000
-aS'WAS'
-p1323
-aS'PIT'
-p1324
-asS'Russell Shepard'
-p1325
-(lp1326
-I3000
-aS'ATL'
-p1327
-aS'TB'
-p1328
-asS'Jarvis Landry'
-p1329
-(lp1330
-I6000
-aS'SEA'
-p1331
-aS'MIA'
-p1332
-asS"De'Anthony Thomas"
-p1333
-(lp1334
-I3000
-aS'SD'
-p1335
-aS'KC'
-p1336
-asS'Travis Benjamin'
-p1337
-(lp1338
-I4100
-aS'KC'
-p1339
-aS'SD'
-p1340
-asS'Allen Robinson'
-p1341
-(lp1342
-I8300
-aS'GB'
-p1343
-ag74
-asS'Kain Colter'
-p1344
-(lp1345
+(lp1313
 I3000
 aS'BAL'
-p1346
-aS'BUF'
-p1347
-asS'Jaxon Shipley'
-p1348
-(lp1349
+p1314
+aS'CLE'
+p1315
+asS'Kenneth Farrow'
+p1316
+(lp1317
 I3000
-aS'NE'
-p1350
-aS'ARI'
-p1351
-asS'Jeremy Maclin'
-p1352
-(lp1353
-I6500
+ag25
 aS'SD'
-p1354
-aS'KC'
-p1355
-asS'Adam Humphries'
-p1356
-(lp1357
+p1318
+asS'DeAngelo Williams'
+p1319
+(lp1320
+I7100
+aS'CIN'
+p1321
+aS'PIT'
+p1322
+asS'James Starks'
+p1323
+(lp1324
+I4000
+aS'MIN'
+p1325
+aS'GB'
+p1326
+asS'Zach Zenner'
+p1327
+(lp1328
 I3000
-aS'ATL'
-p1358
+aS'TEN'
+p1329
+aS'DET'
+p1330
+asS'Kapri Bibbs'
+p1331
+(lp1332
+I3000
+aS'IND'
+p1333
+aS'DEN'
+p1334
+asS'Chris Johnson'
+p1335
+(lp1336
+I3700
 aS'TB'
-p1359
-asS'Bryce Treggs'
-p1360
-(lp1361
+p1337
+aS'ARI'
+p1338
+asS'LeGarrette Blount'
+p1339
+(lp1340
+I4000
+aS'MIA'
+p1341
+aS'NE'
+p1342
+asS'Rob Kelley'
+p1343
+(lp1344
+I3900
+aS'DAL'
+p1345
+aS'WAS'
+p1346
+asS'Lance Dunbar'
+p1347
+(lp1348
 I3000
-ag101
-aS'SF'
+aS'WAS'
+p1349
+aS'DAL'
+p1350
+asS'Andy Janovich'
+p1351
+(lp1352
+I3000
+aS'IND'
+p1353
+aS'DEN'
+p1354
+asS'Wendell Smallwood'
+p1355
+(lp1356
+I3000
+aS'CHI'
+p1357
+aS'PHI'
+p1358
+asS'Jhurell Pressley'
+p1359
+(lp1360
+I3000
+aS'MIN'
+p1361
+aS'GB'
 p1362
-asS'R.J. Harris'
+asS'Antonio Andrews'
 p1363
 (lp1364
 I3000
-aS'OAK'
+aS'DET'
 p1365
-aS'NO'
+aS'TEN'
 p1366
-asS'Jake Lampman'
+asS'Keith Smith'
 p1367
 (lp1368
 I3000
-aS'OAK'
+aS'WAS'
 p1369
-aS'NO'
+aS'DAL'
 p1370
-asS'Julian Edelman'
+asS'Jay Ajayi'
 p1371
 (lp1372
-I6100
-aS'ARI'
-p1373
+I3700
 aS'NE'
+p1373
+aS'MIA'
 p1374
-asS'Tanner McEvoy'
+asS'DeMarco Murray'
 p1375
 (lp1376
-I3000
-aS'MIA'
+I5700
+aS'DET'
 p1377
-aS'SEA'
+aS'TEN'
 p1378
-asS'Seantavius Jones'
+asS'Eddie Lacy'
 p1379
 (lp1380
-I3000
-aS'SD'
+I6000
+aS'MIN'
 p1381
-aS'KC'
+aS'GB'
 p1382
-asS'Tajae Sharpe'
+asS'Isaiah Crowell'
 p1383
 (lp1384
-I3000
-aS'MIN'
+I4400
+aS'BAL'
 p1385
-aS'TEN'
+aS'CLE'
 p1386
-asS'K.J. Brent'
+asS'John Kuhn'
 p1387
 (lp1388
 I3000
-aS'NO'
+aS'NYG'
 p1389
-aS'OAK'
+aS'NO'
 p1390
-asS'Devin Smith'
+asS'Darius Jackson'
 p1391
 (lp1392
 I3000
-aS'CIN'
+aS'WAS'
 p1393
-aS'NYJ'
+aS'DAL'
 p1394
-asS'Jamel Johnson'
+asS'Todd Gurley'
 p1395
 (lp1396
-I3000
-ag74
-aS'GB'
+I7500
+aS'SEA'
 p1397
-asS'Tyreek Hill'
+ag76
+asS'Daniel Lasco'
 p1398
 (lp1399
 I3000
-aS'SD'
+aS'NYG'
 p1400
-aS'KC'
+aS'NO'
 p1401
-asS'Will Fuller'
+asS'Duke Johnson'
 p1402
 (lp1403
-I3700
-aS'CHI'
+I4500
+aS'BAL'
 p1404
-aS'HOU'
+aS'CLE'
 p1405
-asS'Darius Powe'
+asS'Adrian Peterson'
 p1406
 (lp1407
-I3000
-aS'DAL'
+I7000
+aS'GB'
 p1408
-aS'NYG'
+aS'MIN'
 p1409
-asS'Michael Bennett'
+asS'Giovani Bernard'
 p1410
 (lp1411
-I3000
-aS'NYJ'
+I4200
+aS'PIT'
 p1412
 aS'CIN'
 p1413
-asS'KJ Maye'
+asS'James White'
 p1414
 (lp1415
-I3000
-aS'DAL'
+I4000
+aS'MIA'
 p1416
-aS'NYG'
+aS'NE'
 p1417
-asS'Brandin Cooks'
+asS'LeSean McCoy'
 p1418
 (lp1419
-I7700
-aS'OAK'
+I6500
+aS'NYJ'
 p1420
-aS'NO'
+aS'BUF'
 p1421
-asS'Ryan Grant'
+asS'T.J. Yeldon'
 p1422
 (lp1423
-I3000
-aS'PIT'
+I4700
+aS'SD'
 p1424
-aS'WAS'
+ag25
+asS'Bilal Powell'
 p1425
-asS'Troy Stoudermire'
-p1426
-(lp1427
-I3000
-aS'TEN'
+(lp1426
+I4000
+aS'BUF'
+p1427
+aS'NYJ'
 p1428
-aS'MIN'
+asS'Alfred Morris'
 p1429
-asS'Rashad Greene'
-p1430
-(lp1431
-I3500
-aS'GB'
+(lp1430
+I3600
+aS'WAS'
+p1431
+aS'DAL'
 p1432
-ag74
-asS'Cordarrelle Patterson'
+asS'Mark Ingram'
 p1433
 (lp1434
-I3000
-aS'TEN'
+I6200
+aS'NYG'
 p1435
-aS'MIN'
+aS'NO'
 p1436
-asS'Demarcus Ayers'
+asS'Chase Reynolds'
 p1437
 (lp1438
 I3000
-aS'WAS'
+aS'SEA'
 p1439
-aS'PIT'
+ag76
+asS'Rod Smith'
 p1440
-asS'Michael Thomas'
-p1441
-(lp1442
-I4000
-aS'OAK'
-p1443
-aS'NO'
-p1444
-asS'Sammie Coates'
-p1445
-(lp1446
-I3700
-aS'WAS'
-p1447
-aS'PIT'
-p1448
-asS'Mose Frazier'
-p1449
-(lp1450
+(lp1441
 I3000
-aS'CAR'
-p1451
-aS'DEN'
+aS'WAS'
+p1442
+aS'DAL'
+p1443
+asS'Benny Cunningham'
+p1444
+(lp1445
+I3700
+aS'SEA'
+p1446
+ag76
+asS'Chris Ivory'
+p1447
+(lp1448
+I4100
+aS'SD'
+p1449
+ag25
+asS'Derek Watt'
+p1450
+(lp1451
+I3000
+ag25
+aS'SD'
 p1452
-asS'Terrance Williams'
+asS'Isaiah Pead'
 p1453
 (lp1454
-I3300
-aS'NYG'
+I3000
+aS'NE'
 p1455
-aS'DAL'
+aS'MIA'
 p1456
-asS'Marvin Hall'
+asS'Doug Martin'
 p1457
 (lp1458
-I3000
-aS'NO'
+I5900
+aS'ARI'
 p1459
-aS'OAK'
+aS'TB'
 p1460
-asS'Quenton Bundrage'
+asS'David Johnson'
 p1461
 (lp1462
-I3000
-aS'CHI'
+I7600
+aS'TB'
 p1463
-aS'HOU'
+aS'ARI'
 p1464
-asS'J.J. Nelson'
+asS'Rex Burkhead'
 p1465
 (lp1466
-I3200
-aS'NE'
-p1467
-aS'ARI'
-p1468
-asS'Bernard Reedy'
-p1469
-(lp1470
-I3000
-aS'ATL'
-p1471
-aS'TB'
-p1472
-asS'Kendal Thompson'
-p1473
-(lp1474
 I3000
 aS'PIT'
+p1467
+aS'CIN'
+p1468
+asS'Ryan Mathews'
+p1469
+(lp1470
+I5800
+aS'CHI'
+p1471
+aS'PHI'
+p1472
+asS'Jonathan Stewart'
+p1473
+(lp1474
+I5400
+aS'SF'
 p1475
-aS'WAS'
+aS'CAR'
 p1476
-asS'Bennie Fowler'
+asS'Damien Williams'
 p1477
 (lp1478
 I3000
-aS'CAR'
+aS'NE'
 p1479
-aS'DEN'
+aS'MIA'
 p1480
-asS'Kelvin Benjamin'
+asS'Tim Hightower'
 p1481
 (lp1482
-I5700
-aS'DEN'
+I3800
+aS'NYG'
 p1483
-aS'CAR'
+aS'NO'
 p1484
-asS'Trevor Davis'
+asS'Brandon Bolden'
 p1485
 (lp1486
 I3000
-ag74
-aS'GB'
+aS'MIA'
 p1487
-asS'Jeff Janis'
+aS'NE'
 p1488
-(lp1489
-I3700
-ag74
-aS'GB'
-p1490
-asS'Nelson Spruce'
+asS'Corey Grant'
+p1489
+(lp1490
+I3000
+aS'SD'
 p1491
-(lp1492
-I3000
-aS'SF'
-p1493
-ag101
-asS'Andre Davis'
+ag25
+asS'Jeremy Langford'
+p1492
+(lp1493
+I4600
+aS'PHI'
 p1494
-(lp1495
-I3000
-aS'ATL'
+aS'CHI'
+p1495
+asS'Daryl Richardson'
 p1496
-aS'TB'
-p1497
-asS'Joshua Bellamy'
+(lp1497
+I3000
+aS'CIN'
 p1498
-(lp1499
+aS'PIT'
+p1499
+asS'Knile Davis'
+p1500
+(lp1501
 I3000
 aS'HOU'
-p1500
-aS'CHI'
-p1501
-asS'Jeremy Kerley'
 p1502
-(lp1503
-I3000
-aS'IND'
+aS'KC'
+p1503
+asS'Anthony Sherman'
 p1504
-aS'DET'
-p1505
-asS'Kenny Britt'
-p1506
-(lp1507
-I3900
-aS'SF'
-p1508
-ag101
-asS'Paul Richardson'
-p1509
-(lp1510
+(lp1505
 I3000
-aS'MIA'
+aS'HOU'
+p1506
+aS'KC'
+p1507
+asS'Troymaine Pope'
+p1508
+(lp1509
+I3000
+aS'BUF'
+p1510
+aS'NYJ'
 p1511
-aS'SEA'
+asS'Patrick DiMarco'
 p1512
-asS'Dontrelle Inman'
-p1513
-(lp1514
+(lp1513
+I3000
+aS'OAK'
+p1514
+aS'ATL'
+p1515
+asS'Peyton Barber'
+p1516
+(lp1517
+I3000
+aS'ARI'
+p1518
+aS'TB'
+p1519
+asS'Stepfan Taylor'
+p1520
+(lp1521
+I3000
+aS'TB'
+p1522
+aS'ARI'
+p1523
+asS'Aaron Ripkowski'
+p1524
+(lp1525
+I3000
+aS'MIN'
+p1526
+aS'GB'
+p1527
+asS'Carlos Hyde'
+p1528
+(lp1529
+I5100
+aS'CAR'
+p1530
+aS'SF'
+p1531
+asS'Orleans Darkwa'
+p1532
+(lp1533
+I3000
+aS'NO'
+p1534
+aS'NYG'
+p1535
+asS'Kenjon Barner'
+p1536
+(lp1537
+I3000
+aS'CHI'
+p1538
+aS'PHI'
+p1539
+asS'Tani Tupou'
+p1540
+(lp1541
+I3000
+ag76
+aS'SEA'
+p1542
+asS'Arian Foster'
+p1543
+(lp1544
+I6000
+aS'NE'
+p1545
+aS'MIA'
+p1546
+asS'Jordan Todman'
+p1547
+(lp1548
+I3000
+aS'DEN'
+p1549
+aS'IND'
+p1550
+asS'Latavius Murray'
+p1551
+(lp1552
+I5700
+aS'ATL'
+p1553
+aS'OAK'
+p1554
+asS'Andre Williams'
+p1555
+(lp1556
+I3000
+ag25
+aS'SD'
+p1557
+asS'DuJuan Harris'
+p1558
+(lp1559
+I3000
+aS'CAR'
+p1560
+aS'SF'
+p1561
+asS'Shane Vereen'
+p1562
+(lp1563
+I3800
+aS'NO'
+p1564
+aS'NYG'
+p1565
+asS'C.J. Prosise'
+p1566
+(lp1567
+I3700
+ag76
+aS'SEA'
+p1568
+asS'Josh Ferguson'
+p1569
+(lp1570
+I3300
+aS'DEN'
+p1571
+aS'IND'
+p1572
+asS'Spencer Ware'
+p1573
+(lp1574
+I6100
+aS'HOU'
+p1575
+aS'KC'
+p1576
+asS'Justin Forsett'
+p1577
+(lp1578
+I4400
+aS'CLE'
+p1579
+aS'BAL'
+p1580
+asS'Paul Lasike'
+p1581
+(lp1582
+I3000
+aS'PHI'
+p1583
+aS'CHI'
+p1584
+asS'Chris Thompson'
+p1585
+(lp1586
+I3700
+aS'DAL'
+p1587
+aS'WAS'
+p1588
+asS'Charcandrick West'
+p1589
+(lp1590
+I3500
+aS'HOU'
+p1591
+aS'KC'
+p1592
+asS'Mike Davis'
+p1593
+(lp1594
+I3000
+aS'CAR'
+p1595
+aS'SF'
+p1596
+asS'Kyle Juszczyk'
+p1597
+(lp1598
+I3000
+aS'CLE'
+p1599
+aS'BAL'
+p1600
+asS'Jordan Howard'
+p1601
+(lp1602
+I3300
+aS'PHI'
+p1603
+aS'CHI'
+p1604
+asS'Travaris Cadet'
+p1605
+(lp1606
+I3000
+aS'NYG'
+p1607
+aS'NO'
+p1608
+asS"Ka'Deem Carey"
+p1609
+(lp1610
+I3100
+aS'PHI'
+p1611
+aS'CHI'
+p1612
+asS'Devonta Freeman'
+p1613
+(lp1614
+I6100
+aS'OAK'
+p1615
+aS'ATL'
+p1616
+asS'Alfred Blue'
+p1617
+(lp1618
 I3400
 aS'KC'
-p1515
-aS'SD'
-p1516
-asS'Johnny Holton'
-p1517
-(lp1518
-I3000
-aS'NO'
-p1519
-aS'OAK'
-p1520
-asS'T.Y. Hilton'
-p1521
-(lp1522
-I7500
-aS'DET'
-p1523
-aS'IND'
-p1524
-asS'Matt Hazel'
-p1525
-(lp1526
-I3000
-aS'SEA'
-p1527
-aS'MIA'
-p1528
-asS'Jordan Payton'
-p1529
-(lp1530
-I3000
-aS'PHI'
-p1531
-aS'CLE'
-p1532
-asS'Kieran Duncan'
-p1533
-(lp1534
-I3000
-aS'HOU'
-p1535
-aS'CHI'
-p1536
-asS'Greg Little'
-p1537
-(lp1538
-I3000
-aS'BAL'
-p1539
-aS'BUF'
-p1540
-asS'Jakeem Grant'
-p1541
-(lp1542
-I3000
-aS'SEA'
-p1543
-aS'MIA'
-p1544
-asS'Jay Lee'
-p1545
-(lp1546
-I3000
-aS'IND'
-p1547
-aS'DET'
-p1548
-asS'Taylor Gabriel'
-p1549
-(lp1550
-I3000
-aS'PHI'
-p1551
-aS'CLE'
-p1552
-asS'Torrey Smith'
-p1553
-(lp1554
-I4900
-ag101
-aS'SF'
-p1555
-asS'Nathan Palmer'
-p1556
-(lp1557
-I3000
-aS'NO'
-p1558
-aS'OAK'
-p1559
-asS'Roger Lewis'
-p1560
-(lp1561
-I3000
-aS'DAL'
-p1562
-aS'NYG'
-p1563
-asS'Mike Wallace'
-p1564
-(lp1565
-I4200
-aS'BUF'
-p1566
-aS'BAL'
-p1567
-asS'Joshua Stangby'
-p1568
-(lp1569
-I3000
-aS'DET'
-p1570
-aS'IND'
-p1571
-asS'Geronimo Allison'
-p1572
-(lp1573
-I3000
-ag74
-aS'GB'
-p1574
-asS'Quinton Patton'
-p1575
-(lp1576
-I4000
-ag101
-aS'SF'
-p1577
-asS'Freddie Martino'
-p1578
-(lp1579
-I3000
-aS'ATL'
-p1580
-aS'TB'
-p1581
-asS'Andre Holmes'
-p1582
-(lp1583
-I3200
-aS'NO'
-p1584
-aS'OAK'
-p1585
-asS'Dezmin Lewis'
-p1586
-(lp1587
-I3000
-aS'BAL'
-p1588
-aS'BUF'
-p1589
-asS'Donteea Dye'
-p1590
-(lp1591
-I3000
-aS'ATL'
-p1592
-aS'TB'
-p1593
-asS'Andre Johnson'
-p1594
-(lp1595
-I3900
-aS'MIN'
-p1596
-aS'TEN'
-p1597
-asS'Alshon Jeffery'
-p1598
-(lp1599
-I7900
-aS'HOU'
-p1600
-aS'CHI'
-p1601
-asS'Brandon Marshall'
-p1602
-(lp1603
-I7800
-aS'CIN'
-p1604
-aS'NYJ'
-p1605
-asS'Keenan Allen'
-p1606
-(lp1607
-I8000
-aS'KC'
-p1608
-aS'SD'
-p1609
-asS'Montario Hunter'
-p1610
-(lp1611
-I3000
-aS'MIA'
-p1612
-aS'SEA'
-p1613
-asS'Hakeem Nicks'
-p1614
-(lp1615
-I3200
-aS'OAK'
-p1616
-aS'NO'
-p1617
-asS'B.J. Daniels'
-p1618
-(lp1619
-I3000
+p1619
 aS'HOU'
 p1620
-aS'CHI'
+asS'Cameron Artis-Payne'
 p1621
-asS"D'haquille Williams"
-p1622
-(lp1623
+(lp1622
 I3000
 aS'SF'
+p1623
+aS'CAR'
 p1624
-ag101
-asS'Daniel Brown'
+asS'Matt Forte'
 p1625
 (lp1626
-I3000
+I6600
 aS'BUF'
 p1627
-aS'BAL'
+aS'NYJ'
 p1628
-asS'Ricardo Louis'
+asS'Jonathan Williams'
 p1629
 (lp1630
 I3000
-aS'PHI'
+aS'NYJ'
 p1631
-aS'CLE'
+aS'BUF'
 p1632
-asS'Chuck Jacobs'
+asS'Mike Gillislee'
 p1633
 (lp1634
-I3000
-aS'BUF'
+I3400
+aS'NYJ'
 p1635
-aS'BAL'
+aS'BUF'
 p1636
-asS'Chandler Worthy'
+asS'Malcolm Johnson'
 p1637
 (lp1638
 I3000
-aS'CIN'
+aS'BAL'
 p1639
-aS'NYJ'
+aS'CLE'
 p1640
-asS'Rasheed Bailey'
+asS'Jalen Richard'
 p1641
 (lp1642
-I3000
-aS'GB'
+I3600
+aS'ATL'
 p1643
-ag74
-asS'Tyrell Williams'
+aS'OAK'
 p1644
-(lp1645
+asS'Kenyan Drake'
+p1645
+(lp1646
+I3000
+aS'NE'
+p1647
+aS'MIA'
+p1648
+asS'Glenn Gronkowski'
+p1649
+(lp1650
+I3000
+aS'NYJ'
+p1651
+aS'BUF'
+p1652
+asS'Matt Jones'
+p1653
+(lp1654
+I4500
+aS'DAL'
+p1655
+aS'WAS'
+p1656
+asS'Dwayne Washington'
+p1657
+(lp1658
+I3000
+aS'TEN'
+p1659
+aS'DET'
+p1660
+asS'Lamar Miller'
+p1661
+(lp1662
+I7200
+aS'KC'
+p1663
+aS'HOU'
+p1664
+asS'Ezekiel Elliott'
+p1665
+(lp1666
+I7300
+aS'WAS'
+p1667
+aS'DAL'
+p1668
+asS'DeAndre Washington'
+p1669
+(lp1670
+I3400
+aS'ATL'
+p1671
+aS'OAK'
+p1672
+asS'Jay Prosch'
+p1673
+(lp1674
 I3000
 aS'KC'
-p1646
-aS'SD'
-p1647
-asS'Aaron Burbridge'
-p1648
-(lp1649
-I3000
-ag101
-aS'SF'
-p1650
-asS'Reggie Bell'
-p1651
-(lp1652
-I3000
-aS'OAK'
-p1653
-aS'NO'
-p1654
-asS'Jeremy Butler'
-p1655
-(lp1656
-I3000
-aS'BUF'
-p1657
-aS'BAL'
-p1658
-asS'Keith Mumphery'
-p1659
-(lp1660
-I3000
-aS'CHI'
-p1661
+p1675
 aS'HOU'
-p1662
-asS'Ty Montgomery'
-p1663
-(lp1664
-I3600
-ag74
-aS'GB'
-p1665
-asS'Devin Lucien'
-p1666
-(lp1667
-I3000
-aS'ARI'
-p1668
-aS'NE'
-p1669
-asS'T.J. Thorpe'
-p1670
-(lp1671
-I3000
-aS'PIT'
-p1672
-aS'WAS'
-p1673
-asS'Kevin Norwood'
-p1674
-(lp1675
-I3000
-aS'DEN'
 p1676
-aS'CAR'
+asS'C.J. Spiller'
 p1677
-asS'Jamal Robinson'
-p1678
-(lp1679
+(lp1678
 I3000
-aS'GB'
+aS'NYG'
+p1679
+aS'NO'
 p1680
-ag74
-asS'Kendall Wright'
+asS'Marcus Murphy'
 p1681
 (lp1682
-I3400
-aS'MIN'
+I3000
+aS'NYG'
 p1683
-aS'TEN'
+aS'NO'
 p1684
-asS'DeSean Jackson'
+asS'Matt Asiata'
 p1685
 (lp1686
-I6100
-aS'PIT'
+I3000
+aS'GB'
 p1687
-aS'WAS'
+aS'MIN'
 p1688
-asS'Amari Cooper'
+asS'Robert Turbin'
 p1689
 (lp1690
-I7200
-aS'NO'
+I3000
+aS'DEN'
 p1691
-aS'OAK'
+aS'IND'
 p1692
-asS'Austin Hill'
+asS'James Develin'
 p1693
 (lp1694
 I3000
-aS'SF'
+aS'MIA'
 p1695
-ag101
-asS'Aaron Dobson'
-p1696
-(lp1697
-I3000
-aS'ARI'
-p1698
 aS'NE'
+p1696
+asS'Thomas Rawls'
+p1697
+(lp1698
+I5500
+ag76
+aS'SEA'
 p1699
-asS'Sterling Shepard'
+asS'Jamize Olawale'
 p1700
 (lp1701
-I4900
-aS'DAL'
+I3100
+aS'ATL'
 p1702
-aS'NYG'
-p1703
-asS'Doug Baldwin'
-p1704
-(lp1705
-I6600
-aS'MIA'
-p1706
-aS'SEA'
-p1707
-asS'Douglas McNeil'
-p1708
-(lp1709
-I3000
-aS'MIA'
-p1710
-aS'SEA'
-p1711
-asS'Justin Hunter'
-p1712
-(lp1713
-I3000
-aS'MIN'
-p1714
-aS'TEN'
-p1715
-asS'Danny Amendola'
-p1716
-(lp1717
-I4200
-aS'ARI'
-p1718
-aS'NE'
-p1719
-asS'Mohamed Sanu'
-p1720
-(lp1721
-I5100
-aS'TB'
-p1722
-aS'ATL'
-p1723
-asS'Eric Weems'
-p1724
-(lp1725
-I3000
-aS'TB'
-p1726
-aS'ATL'
-p1727
-asS'Brandon LaFell'
-p1728
-(lp1729
-I3900
-aS'NYJ'
-p1730
-aS'CIN'
-p1731
-asS'Deshon Foxx'
-p1732
-(lp1733
-I3000
-aS'MIA'
-p1734
-aS'SEA'
-p1735
-asS'Jared Dangerfield'
-p1736
-(lp1737
-I3000
 aS'OAK'
-p1738
+p1703
+assS'TE'
+p1704
+(dp1705
+S'Will Tye'
+p1706
+(lp1707
+I2900
 aS'NO'
+p1708
+aS'NYG'
+p1709
+asS'Lee Smith'
+p1710
+(lp1711
+I2500
+aS'ATL'
+p1712
+aS'OAK'
+p1713
+asS'Maxx Williams'
+p1714
+(lp1715
+I2500
+aS'CLE'
+p1716
+aS'BAL'
+p1717
+asS'Brent Celek'
+p1718
+(lp1719
+I2600
+aS'CHI'
+p1720
+aS'PHI'
+p1721
+asS'Jason Witten'
+p1722
+(lp1723
+I4300
+aS'WAS'
+p1724
+aS'DAL'
+p1725
+asS'Greg Scruggs'
+p1726
+(lp1727
+I2500
+aS'PHI'
+p1728
+aS'CHI'
+p1729
+asS'Neal Sterling'
+p1730
+(lp1731
+I3000
+aS'SD'
+p1732
+ag25
+asS'Levine Toilolo'
+p1733
+(lp1734
+I2500
+aS'OAK'
+p1735
+aS'ATL'
+p1736
+asS'Ben Koyack'
+p1737
+(lp1738
+I2500
+aS'SD'
 p1739
-asS'Andre Roberts'
+ag25
+asS'Clay Harbor'
 p1740
 (lp1741
-I3000
-aS'IND'
+I2500
+aS'MIA'
 p1742
-aS'DET'
+aS'NE'
 p1743
-asS'Allen Hurns'
+asS'Larry Donnell'
 p1744
 (lp1745
-I5800
-aS'GB'
-p1746
-ag74
-asS'David Watford'
-p1747
-(lp1748
-I3000
-aS'CLE'
-p1749
-aS'PHI'
-p1750
-asS'Geremy Davis'
-p1751
-(lp1752
-I3000
-aS'DAL'
-p1753
-aS'NYG'
-p1754
-asS'Braxton Miller'
-p1755
-(lp1756
-I3000
-aS'CHI'
-p1757
-aS'HOU'
-p1758
-asS'Corey Fuller'
-p1759
-(lp1760
-I3000
-aS'IND'
-p1761
-aS'DET'
-p1762
-asS'Demaryius Thomas'
-p1763
-(lp1764
-I7000
-aS'CAR'
-p1765
-aS'DEN'
-p1766
-asS'Marcus Leak'
-p1767
-(lp1768
-I3000
-aS'DET'
-p1769
-aS'IND'
-p1770
-asS'Tommylee Lewis'
-p1771
-(lp1772
-I3000
-aS'OAK'
-p1773
+I2900
 aS'NO'
+p1746
+aS'NYG'
+p1747
+asS'Garrett Celek'
+p1748
+(lp1749
+I2600
+aS'CAR'
+p1750
+aS'SF'
+p1751
+asS'John Phillips'
+p1752
+(lp1753
+I2500
+aS'IND'
+p1754
+aS'DEN'
+p1755
+asS'Geoff Swaim'
+p1756
+(lp1757
+I2500
+aS'WAS'
+p1758
+aS'DAL'
+p1759
+asS'Logan Paulsen'
+p1760
+(lp1761
+I2500
+aS'PHI'
+p1762
+aS'CHI'
+p1763
+asS'Jordan Reed'
+p1764
+(lp1765
+I6800
+aS'DAL'
+p1766
+aS'WAS'
+p1767
+asS'Mychal Rivera'
+p1768
+(lp1769
+I2600
+aS'ATL'
+p1770
+aS'OAK'
+p1771
+asS'Marcedes Lewis'
+p1772
+(lp1773
+I2600
+aS'SD'
 p1774
-asS'Kadron Boone'
+ag25
+asS'Hunter Henry'
 p1775
 (lp1776
-I3000
-aS'DAL'
+I2500
+ag25
+aS'SD'
 p1777
-aS'NYG'
+asS'Trey Burton'
 p1778
-asS'Andrew Hawkins'
-p1779
-(lp1780
-I3800
+(lp1779
+I2500
+aS'CHI'
+p1780
 aS'PHI'
 p1781
-aS'CLE'
+asS'Jermaine Gresham'
 p1782
-asS'Cody Latimer'
-p1783
-(lp1784
-I3000
-aS'CAR'
+(lp1783
+I2500
+aS'TB'
+p1784
+aS'ARI'
 p1785
-aS'DEN'
+asS'Cory Harkey'
 p1786
-asS'Marken Michel'
-p1787
-(lp1788
-I3000
-aS'TEN'
+(lp1787
+I2500
+aS'SEA'
+p1788
+ag76
+asS'Tyler Higbee'
 p1789
-aS'MIN'
-p1790
-asS'Charles Johnson'
+(lp1790
+I2500
+aS'SEA'
 p1791
-(lp1792
-I3000
-aS'TEN'
-p1793
-aS'MIN'
+ag76
+asS"James O'Shaughnessy"
+p1792
+(lp1793
+I2500
+aS'HOU'
 p1794
-asS'Michael Crabtree'
+aS'KC'
 p1795
-(lp1796
-I5500
-aS'NO'
-p1797
-aS'OAK'
+asS'Jim Dray'
+p1796
+(lp1797
+I2500
+aS'NYJ'
 p1798
-asS'Arrelious Benn'
-p1799
-(lp1800
-I3000
-aS'GB'
-p1801
-ag74
-asS'Aldrick Robinson'
-p1802
-(lp1803
-I3000
-aS'TB'
-p1804
-aS'ATL'
-p1805
-asS'Justin Hardy'
-p1806
-(lp1807
-I3100
-aS'TB'
-p1808
-aS'ATL'
-p1809
-asS'Jarius Wright'
-p1810
-(lp1811
-I3000
-aS'TEN'
-p1812
-aS'MIN'
-p1813
-asS'Torrence Allen'
-p1814
-(lp1815
-I3000
-aS'KC'
-p1816
-aS'SD'
-p1817
-asS'Devin Street'
-p1818
-(lp1819
-I3000
-aS'NYG'
-p1820
-aS'DAL'
-p1821
-asS'Shaq Evans'
-p1822
-(lp1823
-I3000
-aS'GB'
-p1824
-ag74
-asS'Keshawn Martin'
-p1825
-(lp1826
-I3000
-aS'ARI'
-p1827
-aS'NE'
-p1828
-asS'Darius Jennings'
-p1829
-(lp1830
-I3000
-aS'PHI'
-p1831
-aS'CLE'
-p1832
-asS'Julio Jones'
-p1833
-(lp1834
-I9400
-aS'TB'
-p1835
-aS'ATL'
-p1836
-asS'A.J. Cruz'
-p1837
-(lp1838
-I3000
-aS'SEA'
-p1839
-aS'MIA'
-p1840
-asS'Maurice Harris'
-p1841
-(lp1842
-I3000
-aS'PIT'
-p1843
-aS'WAS'
-p1844
-asS'Corey Coleman'
-p1845
-(lp1846
-I5100
-aS'PHI'
-p1847
-aS'CLE'
-p1848
-asS'Chris Givens'
-p1849
-(lp1850
-I3000
-aS'CLE'
-p1851
-aS'PHI'
-p1852
-asS'Derek Keaton'
-p1853
-(lp1854
-I3000
-aS'HOU'
-p1855
-aS'CHI'
-p1856
-asS'Andre Debose'
-p1857
-(lp1858
-I3000
-aS'DET'
-p1859
-aS'IND'
-p1860
-asS'Paul McRoberts'
-p1861
-(lp1862
-I3000
-aS'SF'
-p1863
-ag101
-asS'DeVante Parker'
-p1864
-(lp1865
-I5300
-aS'SEA'
-p1866
-aS'MIA'
-p1867
-asS'DeAndre Hopkins'
-p1868
-(lp1869
-I8800
-aS'CHI'
-p1870
-aS'HOU'
-p1871
-asS'Demarcus Robinson'
-p1872
-(lp1873
-I3000
-aS'SD'
-p1874
-aS'KC'
-p1875
-asS'Chris Moore'
-p1876
-(lp1877
-I3000
 aS'BUF'
-p1878
-aS'BAL'
-p1879
-asS'Jordan Taylor'
-p1880
-(lp1881
+p1799
+asS'Erik Swoope'
+p1800
+(lp1801
+I2500
+aS'DEN'
+p1802
+aS'IND'
+p1803
+asS'Stephen Anderson'
+p1804
+(lp1805
+I2500
+aS'KC'
+p1806
+aS'HOU'
+p1807
+asS'Vance McDonald'
+p1808
+(lp1809
 I3000
 aS'CAR'
-p1882
-aS'DEN'
-p1883
-asS'Greg Salas'
-p1884
-(lp1885
-I3000
-aS'BAL'
-p1886
-aS'BUF'
-p1887
-asS'Randall Cobb'
-p1888
-(lp1889
-I7600
-ag74
-aS'GB'
-p1890
-asS'Kaelin Clay'
-p1891
-(lp1892
-I3000
-aS'BUF'
-p1893
-aS'BAL'
-p1894
-asS'John Brown'
-p1895
-(lp1896
-I5200
+p1810
+aS'SF'
+p1811
+asS'Jordan Cameron'
+p1812
+(lp1813
+I2800
 aS'NE'
-p1897
-aS'ARI'
-p1898
-asS'Titus Davis'
-p1899
-(lp1900
-I3000
+p1814
+aS'MIA'
+p1815
+asS'Temarrick Hemingway'
+p1816
+(lp1817
+I2500
+aS'SEA'
+p1818
+ag76
+asS'Clark Harris'
+p1819
+(lp1820
+I2500
+aS'PIT'
+p1821
 aS'CIN'
-p1901
+p1822
+asS'Coby Fleener'
+p1823
+(lp1824
+I3900
+aS'NYG'
+p1825
+aS'NO'
+p1826
+asS'Braedon Bowman'
+p1827
+(lp1828
+I2500
+aS'BUF'
+p1829
 aS'NYJ'
-p1902
-asS'Jordy Nelson'
-p1903
-(lp1904
-I7700
-ag74
+p1830
+asS'Gary Barnidge'
+p1831
+(lp1832
+I4000
+aS'BAL'
+p1833
+aS'CLE'
+p1834
+asS'Cameron Brate'
+p1835
+(lp1836
+I2600
+aS'ARI'
+p1837
+aS'TB'
+p1838
+asS'Beau Brinkley'
+p1839
+(lp1840
+I2500
+aS'DET'
+p1841
+aS'TEN'
+p1842
+asS'Jared Cook'
+p1843
+(lp1844
+I3000
+aS'MIN'
+p1845
 aS'GB'
+p1846
+asS'Kyle Rudolph'
+p1847
+(lp1848
+I3100
+aS'GB'
+p1849
+aS'MIN'
+p1850
+asS'Dennis Pitta'
+p1851
+(lp1852
+I2800
+aS'CLE'
+p1853
+aS'BAL'
+p1854
+asS'Kyle Nelson'
+p1855
+(lp1856
+I2500
+aS'CAR'
+p1857
+aS'SF'
+p1858
+asS'Nick Vannett'
+p1859
+(lp1860
+I2500
+ag76
+aS'SEA'
+p1861
+asS'Zach Ertz'
+p1862
+(lp1863
+I4100
+aS'CHI'
+p1864
+aS'PHI'
+p1865
+asS'Anthony Fasano'
+p1866
+(lp1867
+I2500
+aS'DET'
+p1868
+aS'TEN'
+p1869
+asS'Phillip Supernaw'
+p1870
+(lp1871
+I2500
+aS'DET'
+p1872
+aS'TEN'
+p1873
+asS'Orson Charles'
+p1874
+(lp1875
+I2500
+aS'TEN'
+p1876
+aS'DET'
+p1877
+asS'Richard Rodgers'
+p1878
+(lp1879
+I2800
+aS'MIN'
+p1880
+aS'GB'
+p1881
+asS'Patrick Scales'
+p1882
+(lp1883
+I2500
+aS'PHI'
+p1884
+aS'CHI'
+p1885
+asS'Darren Fells'
+p1886
+(lp1887
+I2600
+aS'TB'
+p1888
+aS'ARI'
+p1889
+asS'Martellus Bennett'
+p1890
+(lp1891
+I4400
+aS'MIA'
+p1892
+aS'NE'
+p1893
+asS'Khari Lee'
+p1894
+(lp1895
+I2500
+aS'TEN'
+p1896
+aS'DET'
+p1897
+asS'MyCole Pruitt'
+p1898
+(lp1899
+I2500
+aS'GB'
+p1900
+aS'MIN'
+p1901
+asS'Rob Gronkowski'
+p1902
+(lp1903
+I6900
+aS'MIA'
+p1904
+aS'NE'
 p1905
-asS'Kashif Moore'
+asS'Luke Stocker'
 p1906
 (lp1907
-I3000
-aS'SD'
+I2500
+aS'ARI'
 p1908
-aS'KC'
+aS'TB'
 p1909
-asS'Marc Mariani'
+asS'Chris Manhertz'
 p1910
 (lp1911
-I3000
-aS'HOU'
+I2500
+aS'NYG'
 p1912
-aS'CHI'
+aS'NO'
 p1913
-asS'Cayleb Jones'
+asS'MarQueis Gray'
 p1914
 (lp1915
-I3000
-aS'CLE'
+I2500
+aS'NE'
 p1916
-aS'PHI'
+aS'MIA'
 p1917
-asS'Kenny Lawler'
+asS"Nick O'Leary"
 p1918
 (lp1919
-I3000
-aS'MIA'
+I2500
+aS'NYJ'
 p1920
-aS'SEA'
+aS'BUF'
 p1921
-asS'Antwan Goodley'
+asS'Demetrius Harris'
 p1922
 (lp1923
-I3000
-aS'MIA'
+I2500
+aS'HOU'
 p1924
-aS'SEA'
+aS'KC'
 p1925
-asS'Mike Evans'
+asS'James Winchester'
 p1926
 (lp1927
-I7400
-aS'ATL'
+I2500
+aS'HOU'
 p1928
-aS'TB'
+aS'KC'
 p1929
-asS'Brittan Golden'
+asS'Clive Walford'
 p1930
 (lp1931
-I3000
-aS'NE'
+I2900
+aS'ATL'
 p1932
-aS'ARI'
+aS'OAK'
 p1933
-asS'Michael Campanaro'
+asS'Jesse James'
 p1934
 (lp1935
-I3000
-aS'BUF'
+I3400
+aS'CIN'
 p1936
-aS'BAL'
+aS'PIT'
 p1937
-asS'Robby Anderson'
+asS'Austin Hooper'
 p1938
 (lp1939
-I3000
-aS'CIN'
+I2500
+aS'OAK'
 p1940
-aS'NYJ'
+aS'ATL'
 p1941
-asS'Stefon Diggs'
+asS'Troy Niklas'
 p1942
 (lp1943
-I4800
-aS'TEN'
+I2500
+aS'TB'
 p1944
-aS'MIN'
+aS'ARI'
 p1945
-asS'TJ Jones'
+asS'Scott Simonson'
 p1946
 (lp1947
-I3000
-aS'IND'
+I2500
+aS'SF'
 p1948
-aS'DET'
+aS'CAR'
 p1949
-asS'Kolby Listenbee'
+asS'Austin Seferian-Jenkins'
 p1950
 (lp1951
-I3000
-aS'BAL'
+I2900
+aS'ARI'
 p1952
-aS'BUF'
+aS'TB'
 p1953
-asS'Darrius Heyward-Bey'
+asS'Jace Amaro'
 p1954
 (lp1955
-I3600
-aS'WAS'
+I2500
+aS'DET'
 p1956
-aS'PIT'
-p1957
-assS'RB'
-p1958
-(dp1959
-S'Mike James'
-p1960
-(lp1961
-I3000
-aS'ATL'
-p1962
-aS'TB'
-p1963
-asS'Taiwan Jones'
-p1964
-(lp1965
-I3000
-aS'NO'
-p1966
-aS'OAK'
-p1967
-asS'Frank Gore'
-p1968
-(lp1969
-I5500
-aS'DET'
-p1970
-aS'IND'
-p1971
-asS'Rashad Jennings'
-p1972
-(lp1973
-I5400
-aS'DAL'
-p1974
-aS'NYG'
-p1975
-asS'Jerick McKinnon'
-p1976
-(lp1977
-I4600
 aS'TEN'
-p1978
-aS'MIN'
-p1979
-asS'Trey Williams'
-p1980
-(lp1981
-I3000
-aS'DET'
-p1982
-aS'IND'
-p1983
-asS'Zac Brooks'
-p1984
-(lp1985
-I3000
-aS'MIA'
-p1986
-aS'SEA'
-p1987
-asS'Daniel Herron'
-p1988
-(lp1989
-I3000
-aS'BAL'
-p1990
-aS'BUF'
-p1991
-asS'Kapri Bibbs'
-p1992
-(lp1993
-I3000
+p1957
+asS'Ed Dickson'
+p1958
+(lp1959
+I2500
+aS'SF'
+p1960
 aS'CAR'
-p1994
+p1961
+asS'Zach Miller'
+p1962
+(lp1963
+I3000
+aS'PHI'
+p1964
+aS'CHI'
+p1965
+asS'Dwayne Allen'
+p1966
+(lp1967
+I3600
 aS'DEN'
+p1968
+aS'IND'
+p1969
+asS'Dion Sims'
+p1970
+(lp1971
+I2500
+aS'NE'
+p1972
+aS'MIA'
+p1973
+asS'Brandon Bostick'
+p1974
+(lp1975
+I2500
+aS'BUF'
+p1976
+aS'NYJ'
+p1977
+asS'A.J. Derby'
+p1978
+(lp1979
+I2500
+aS'MIA'
+p1980
+aS'NE'
+p1981
+asS'Ryan Griffin'
+p1982
+(lp1983
+I2500
+aS'KC'
+p1984
+aS'HOU'
+p1985
+asS'Gavin Escobar'
+p1986
+(lp1987
+I2600
+aS'WAS'
+p1988
+aS'DAL'
+p1989
+asS'Jimmy Graham'
+p1990
+(lp1991
+I3200
+ag76
+aS'SEA'
+p1992
+asS'Antonio Gates'
+p1993
+(lp1994
+I4500
+ag25
+aS'SD'
 p1995
-asS'T.J. Yeldon'
+asS'Kellen Davis'
 p1996
 (lp1997
-I4100
-aS'GB'
+I2500
+aS'BUF'
 p1998
-ag74
-asS'Jalston Fowler'
+aS'NYJ'
 p1999
-(lp2000
-I3000
-aS'MIN'
-p2001
-aS'TEN'
-p2002
-asS'C.J. Ham'
-p2003
-(lp2004
-I3000
-aS'TEN'
-p2005
-aS'MIN'
-p2006
-asS'Andre Ellington'
-p2007
-(lp2008
-I4100
-aS'NE'
-p2009
-aS'ARI'
-p2010
-asS'D.J. Foster'
-p2011
-(lp2012
-I3000
-aS'ARI'
-p2013
-aS'NE'
-p2014
-asS'Darren McFadden'
-p2015
-(lp2016
-I4200
-aS'NYG'
-p2017
+asS'Vernon Davis'
+p2000
+(lp2001
+I2600
 aS'DAL'
-p2018
-asS'Fozzy Whittaker'
-p2019
-(lp2020
-I3000
-aS'DEN'
-p2021
+p2002
+aS'WAS'
+p2003
+asS'David Johnson'
+p2004
+(lp2005
+I2500
+aS'CIN'
+p2006
+aS'PIT'
+p2007
+asS'Ross Travis'
+p2008
+(lp2009
+I2500
+aS'HOU'
+p2010
+aS'KC'
+p2011
+asS'Blake Bell'
+p2012
+(lp2013
+I2500
 aS'CAR'
+p2014
+aS'SF'
+p2015
+asS'Jack Doyle'
+p2016
+(lp2017
+I2500
+aS'DEN'
+p2018
+aS'IND'
+p2019
+asS'David Morgan'
+p2020
+(lp2021
+I2500
+aS'GB'
 p2022
-asS'Terron Ward'
+aS'MIN'
 p2023
-(lp2024
-I3000
-aS'TB'
-p2025
-aS'ATL'
+asS'Seth DeValve'
+p2024
+(lp2025
+I2500
+aS'BAL'
 p2026
-asS'Kenneth Dixon'
+aS'CLE'
 p2027
-(lp2028
-I3400
-aS'BUF'
-p2029
-aS'BAL'
+asS'Josh Hill'
+p2028
+(lp2029
+I2500
+aS'NYG'
 p2030
-asS'James Wilder'
+aS'NO'
 p2031
-(lp2032
-I3000
-aS'BAL'
-p2033
-aS'BUF'
+asS'Julius Thomas'
+p2032
+(lp2033
+I4400
+aS'SD'
 p2034
-asS'Tyler Ervin'
+ag25
+asS'Sean McGrath'
 p2035
 (lp2036
-I3000
-aS'CHI'
+I2500
+ag25
+aS'SD'
 p2037
-aS'HOU'
+asS'Jerell Adams'
 p2038
-asS'Alex Collins'
-p2039
-(lp2040
-I3100
-aS'MIA'
+(lp2039
+I2500
+aS'NO'
+p2040
+aS'NYG'
 p2041
-aS'SEA'
+asS'Travis Kelce'
 p2042
-asS'Theo Riddick'
-p2043
-(lp2044
-I4000
-aS'IND'
+(lp2043
+I5000
+aS'HOU'
+p2044
+aS'KC'
 p2045
-aS'DET'
+asS'Tyler Kroft'
 p2046
-asS'Karlos Williams'
-p2047
-(lp2048
-I3200
-aS'BAL'
+(lp2047
+I2500
+aS'PIT'
+p2048
+aS'CIN'
 p2049
-aS'BUF'
+asS'Crockett Gillmore'
 p2050
-asS'Malcolm Brown'
-p2051
-(lp2052
-I3000
-aS'SF'
+(lp2051
+I2500
+aS'CLE'
+p2052
+aS'BAL'
 p2053
-ag101
-asS'Dreamius Smith'
+asS'Brandon Myers'
 p2054
 (lp2055
-I3000
-aS'KC'
+I2500
+aS'ARI'
 p2056
-aS'SD'
+aS'TB'
 p2057
-asS'Darren Sproles'
+asS'Charles Clay'
 p2058
 (lp2059
-I4200
-aS'CLE'
+I3300
+aS'NYJ'
 p2060
-aS'PHI'
+aS'BUF'
 p2061
-asS'Dexter McCluster'
+asS'Justin Perillo'
 p2062
 (lp2063
-I3000
+I2500
 aS'MIN'
 p2064
-aS'TEN'
+aS'GB'
 p2065
-asS'Dominique Williams'
+asS'Joshua Perkins'
 p2066
 (lp2067
-I3000
-aS'CIN'
+I2500
+aS'OAK'
 p2068
-aS'NYJ'
+aS'ATL'
 p2069
-asS'Bernard Pierce'
+asS'C.J. Uzomah'
 p2070
 (lp2071
-I3000
-aS'CIN'
+I2600
+aS'PIT'
 p2072
-aS'NYJ'
+aS'CIN'
 p2073
-asS'Stephen Houston'
+asS'Greg Olsen'
 p2074
 (lp2075
-I3000
-aS'BUF'
+I5600
+aS'SF'
 p2076
-aS'BAL'
+aS'CAR'
 p2077
-asS'Alan Cross'
+asS'Rhett Ellison'
 p2078
 (lp2079
-I3000
-aS'ATL'
+I2500
+aS'GB'
 p2080
-aS'TB'
+aS'MIN'
 p2081
-asS'Christine Michael'
+asS'Eric Ebron'
 p2082
 (lp2083
-I3700
-aS'MIA'
+I3500
+aS'TEN'
 p2084
-aS'SEA'
+aS'DET'
 p2085
-asS'Tyler Gaffney'
+asS'Delanie Walker'
 p2086
 (lp2087
-I3000
-aS'ARI'
+I4500
+aS'DET'
 p2088
-aS'NE'
+aS'TEN'
 p2089
-asS'Charles Sims'
+asS'Kevin McDermott'
 p2090
 (lp2091
-I4400
-aS'ATL'
+I2500
+aS'GB'
 p2092
-aS'TB'
+aS'MIN'
 p2093
-asS'Aaron Green'
+asS'Tyler Eifert'
 p2094
 (lp2095
-I3000
-aS'SF'
-p2096
-ag101
-asS'Jeremy Hill'
-p2097
-(lp2098
-I4600
-aS'NYJ'
-p2099
-aS'CIN'
-p2100
-asS'Javorius Allen'
-p2101
-(lp2102
-I3600
-aS'BUF'
-p2103
-aS'BAL'
-p2104
-asS'Jonas Gray'
-p2105
-(lp2106
-I3000
-aS'GB'
-p2107
-ag74
-asS'Tevin Coleman'
-p2108
-(lp2109
-I4200
-aS'TB'
-p2110
-aS'ATL'
-p2111
-asS'Shaun Draughn'
-p2112
-(lp2113
-I3700
-ag101
-aS'SF'
-p2114
-asS'Mike Tolbert'
-p2115
-(lp2116
-I3000
-aS'DEN'
-p2117
-aS'CAR'
-p2118
-asS'Jonathan Grimes'
-p2119
-(lp2120
-I3000
-aS'CHI'
-p2121
-aS'HOU'
-p2122
-asS'Paul Perkins'
-p2123
-(lp2124
-I3200
-aS'DAL'
-p2125
-aS'NYG'
-p2126
-asS'Roosevelt Nix'
-p2127
-(lp2128
-I3000
-aS'WAS'
-p2129
+I4500
 aS'PIT'
-p2130
-asS'Reggie Bush'
-p2131
-(lp2132
-I3500
-aS'BAL'
-p2133
-aS'BUF'
-p2134
-asS'Branden Oliver'
-p2135
-(lp2136
-I3000
+p2096
+aS'CIN'
+p2097
+asS'Ryan Hewitt'
+p2098
+(lp2099
+I2500
+aS'PIT'
+p2100
+aS'CIN'
+p2101
+asS'C.J. Fiedorowicz'
+p2102
+(lp2103
+I2500
 aS'KC'
-p2137
-aS'SD'
+p2104
+aS'HOU'
+p2105
+asS'Randall Telfer'
+p2106
+(lp2107
+I2500
+aS'BAL'
+p2108
+aS'CLE'
+p2109
+asS'Jeff Heuerman'
+p2110
+(lp2111
+I2500
+aS'IND'
+p2112
+aS'DEN'
+p2113
+asS'Xavier Grimble'
+p2114
+(lp2115
+I2500
+aS'CIN'
+p2116
+aS'PIT'
+p2117
+asS'Andrew DePaola'
+p2118
+(lp2119
+I2500
+aS'ARI'
+p2120
+aS'TB'
+p2121
+asS'Jacob Tamme'
+p2122
+(lp2123
+I2900
+aS'OAK'
+p2124
+aS'ATL'
+p2125
+asS'Lance Kendricks'
+p2126
+(lp2127
+I2900
+aS'SEA'
+p2128
+ag76
+asS'Luke Willson'
+p2129
+(lp2130
+I2700
+ag76
+aS'SEA'
+p2131
+asS'Virgil Green'
+p2132
+(lp2133
+I2800
+aS'IND'
+p2134
+aS'DEN'
+p2135
+asS'Cole Wick'
+p2136
+(lp2137
+I2500
+aS'TEN'
 p2138
-asS'Andre Williams'
+aS'DET'
 p2139
-(lp2140
-I3000
-aS'DAL'
-p2141
-aS'NYG'
+asS'Brandon Williams'
+p2140
+(lp2141
+I2500
+ag76
+aS'SEA'
 p2142
-asS'Will Johnson'
+asS'Niles Paul'
 p2143
 (lp2144
-I3000
+I2500
 aS'DAL'
 p2145
-aS'NYG'
+aS'WAS'
 p2146
-asS'Raheem Mostert'
-p2147
-(lp2148
-I3000
-aS'PHI'
-p2149
-aS'CLE'
-p2150
-asS'Robert Hughes'
-p2151
-(lp2152
-I3000
-aS'PHI'
-p2153
-aS'CLE'
-p2154
-asS'Devontae Booker'
-p2155
-(lp2156
-I3300
-aS'CAR'
-p2157
-aS'DEN'
-p2158
-asS'Jamaal Charles'
-p2159
-(lp2160
-I7100
-aS'SD'
-p2161
-aS'KC'
-p2162
-asS'Taniela Tupou'
-p2163
-(lp2164
-I3000
-aS'MIA'
-p2165
-aS'SEA'
-p2166
-asS'C.J. Anderson'
-p2167
-(lp2168
-I5900
-aS'CAR'
-p2169
-aS'DEN'
-p2170
-asS'Denard Robinson'
-p2171
-(lp2172
-I3100
-aS'GB'
-p2173
-ag74
-asS'Jalen Simmons'
-p2174
-(lp2175
-I3000
-aS'DEN'
-p2176
-aS'CAR'
-p2177
-asS'Danny Woodhead'
-p2178
-(lp2179
-I5000
-aS'KC'
-p2180
-aS'SD'
-p2181
-asS'Joe Banyard'
-p2182
-(lp2183
-I3000
-aS'GB'
-p2184
-ag74
-asS'Derrick Henry'
-p2185
-(lp2186
-I4000
-aS'MIN'
-p2187
-aS'TEN'
-p2188
-asS'Khiry Robinson'
-p2189
-(lp2190
-I3000
-aS'CIN'
-p2191
-aS'NYJ'
-p2192
-asS'Ameer Abdullah'
-p2193
-(lp2194
-I4900
-aS'IND'
-p2195
-aS'DET'
-p2196
-asS'Fitzgerald Toussaint'
-p2197
-(lp2198
-I3500
-aS'WAS'
-p2199
-aS'PIT'
-p2200
-asS'Michael Burton'
-p2201
-(lp2202
-I3000
-aS'IND'
-p2203
-aS'DET'
-p2204
-asS'Bobby Rainey'
-p2205
-(lp2206
-I3000
-aS'DAL'
-p2207
-aS'NYG'
-p2208
-asS'James White'
-p2209
-(lp2210
-I3600
-aS'ARI'
-p2211
-aS'NE'
-p2212
-asS'Melvin Gordon'
-p2213
-(lp2214
-I4600
-aS'KC'
-p2215
-aS'SD'
-p2216
-asS'George Atkinson'
-p2217
-(lp2218
-I3000
-aS'NO'
-p2219
-aS'OAK'
-p2220
-asS'Kenneth Farrow'
-p2221
-(lp2222
-I3000
-aS'KC'
-p2223
-aS'SD'
-p2224
-asS'Daniel Thomas'
-p2225
-(lp2226
-I3000
-aS'SEA'
-p2227
-aS'MIA'
-p2228
-asS'DeAngelo Williams'
-p2229
-(lp2230
-I7000
-aS'WAS'
-p2231
-aS'PIT'
-p2232
-asS'James Starks'
-p2233
-(lp2234
-I4800
-ag74
-aS'GB'
-p2235
-asS'Andrew Bonnet'
-p2236
-(lp2237
-I3000
-aS'NYJ'
-p2238
-aS'CIN'
-p2239
-asS'Zach Zenner'
-p2240
-(lp2241
-I3000
-aS'IND'
-p2242
-aS'DET'
-p2243
-asS'David Fluellen'
-p2244
-(lp2245
-I3000
-aS'MIN'
-p2246
-aS'TEN'
-p2247
-asS'Marshaun Coprich'
-p2248
-(lp2249
-I3000
-aS'DAL'
-p2250
-aS'NYG'
-p2251
-asS'Senorise Perry'
-p2252
-(lp2253
-I3000
-aS'HOU'
-p2254
-aS'CHI'
-p2255
-asS'Lorenzo Taliaferro'
-p2256
-(lp2257
-I3200
-aS'BUF'
-p2258
-aS'BAL'
-p2259
-asS'Chris Johnson'
-p2260
-(lp2261
-I3700
-aS'NE'
-p2262
-aS'ARI'
-p2263
-asS'LeGarrette Blount'
-p2264
-(lp2265
-I3700
-aS'ARI'
-p2266
-aS'NE'
-p2267
-asS'Jhurell Pressley'
-p2268
-(lp2269
-I3000
-aS'TEN'
-p2270
-aS'MIN'
-p2271
-asS'Rob Kelley'
-p2272
-(lp2273
-I4300
-aS'PIT'
-p2274
-aS'WAS'
-p2275
-asS'John Crockett'
-p2276
-(lp2277
-I3000
-ag74
-aS'GB'
-p2278
-asS'Lance Dunbar'
-p2279
-(lp2280
-I3000
-aS'NYG'
-p2281
-aS'DAL'
-p2282
-asS'Andy Janovich'
-p2283
-(lp2284
-I3000
-aS'CAR'
-p2285
-aS'DEN'
-p2286
-asS'Wendell Smallwood'
-p2287
-(lp2288
-I3000
-aS'CLE'
-p2289
-aS'PHI'
-p2290
-asS'George Winn'
-p2291
-(lp2292
-I3000
-aS'IND'
-p2293
-aS'DET'
-p2294
-asS'Joey Iosefa'
-p2295
-(lp2296
-I3000
-aS'ARI'
-p2297
-aS'NE'
-p2298
-asS'David Cobb'
-p2299
-(lp2300
-I3000
-aS'MIN'
-p2301
-aS'TEN'
-p2302
-asS'Romar Morris'
-p2303
-(lp2304
-I3000
-aS'CIN'
-p2305
-aS'NYJ'
-p2306
-asS'Dion Lewis'
-p2307
-(lp2308
-I5700
-aS'ARI'
-p2309
-aS'NE'
-p2310
-asS'Nikita Whitlock'
-p2311
-(lp2312
-I3000
-aS'DAL'
-p2313
-aS'NYG'
-p2314
-asS'Matthew Tucker'
-p2315
-(lp2316
-I3000
-aS'CIN'
-p2317
-aS'NYJ'
-p2318
-asS'Antonio Andrews'
-p2319
-(lp2320
-I3000
-aS'MIN'
-p2321
-aS'TEN'
-p2322
-asS'Glenn Gronkowski'
-p2323
-(lp2324
-I3000
-aS'BAL'
-p2325
-aS'BUF'
-p2326
-asS'Mack Brown'
-p2327
-(lp2328
-I3000
-aS'PIT'
-p2329
-aS'WAS'
-p2330
-asS'Cedric Peerman'
-p2331
-(lp2332
-I3000
-aS'NYJ'
-p2333
-aS'CIN'
-p2334
-asS'Jay Ajayi'
-p2335
-(lp2336
-I4200
-aS'SEA'
-p2337
-aS'MIA'
-p2338
-asS'DeMarco Murray'
-p2339
-(lp2340
-I5300
-aS'MIN'
-p2341
-aS'TEN'
-p2342
-asS'Eddie Lacy'
-p2343
-(lp2344
-I6700
-ag74
-aS'GB'
-p2345
-asS"Le'Veon Bell"
-p2346
-(lp2347
-I7400
-aS'WAS'
-p2348
-aS'PIT'
-p2349
-asS'Isaiah Crowell'
-p2350
-(lp2351
-I4200
-aS'PHI'
-p2352
-aS'CLE'
-p2353
-asS'Darius Jackson'
-p2354
-(lp2355
-I3000
-aS'NYG'
-p2356
-aS'DAL'
-p2357
-asS'Todd Gurley'
-p2358
-(lp2359
-I7800
-aS'SF'
-p2360
-ag101
-asS'Daniel Lasco'
-p2361
-(lp2362
-I3000
-aS'OAK'
-p2363
-aS'NO'
-p2364
-asS'Duke Johnson'
-p2365
-(lp2366
-I5100
-aS'PHI'
-p2367
-aS'CLE'
-p2368
-asS'Terrence Magee'
-p2369
-(lp2370
-I3000
-aS'SF'
-p2371
-ag101
-asS'Adrian Peterson'
-p2372
-(lp2373
-I7600
-aS'TEN'
-p2374
-aS'MIN'
-p2375
-asS'Byron Marshall'
-p2376
-(lp2377
-I3000
-aS'CLE'
-p2378
-aS'PHI'
-p2379
-asS'Giovani Bernard'
-p2380
-(lp2381
-I4800
-aS'NYJ'
-p2382
-aS'CIN'
-p2383
-asS'Terrell Watson'
-p2384
-(lp2385
-I3500
-aS'PHI'
-p2386
-aS'CLE'
-p2387
-asS'LeSean McCoy'
-p2388
-(lp2389
-I6400
-aS'BAL'
-p2390
-aS'BUF'
-p2391
-asS'Storm Johnson'
-p2392
-(lp2393
-I3000
-aS'ATL'
-p2394
-aS'TB'
-p2395
-asS'Corey Grant'
-p2396
-(lp2397
-I3000
-aS'GB'
-p2398
-ag74
-asS'Dwayne Washington'
-p2399
-(lp2400
-I3000
-aS'IND'
-p2401
-aS'DET'
-p2402
-asS'Brandon Wilds'
-p2403
-(lp2404
-I3000
-aS'TB'
-p2405
-aS'ATL'
-p2406
-asS'Terrance West'
-p2407
-(lp2408
-I4100
-aS'BUF'
-p2409
-aS'BAL'
-p2410
-asS'Bilal Powell'
-p2411
-(lp2412
-I4300
-aS'CIN'
-p2413
-aS'NYJ'
-p2414
-asS'Alfred Morris'
-p2415
-(lp2416
-I3800
-aS'NYG'
-p2417
-aS'DAL'
-p2418
-asS'Mark Ingram'
-p2419
-(lp2420
-I6600
-aS'OAK'
-p2421
-aS'NO'
-p2422
-asS'Chase Reynolds'
-p2423
-(lp2424
-I3000
-aS'SF'
-p2425
-ag101
-asS'Rod Smith'
-p2426
-(lp2427
-I3000
-aS'NYG'
-p2428
-aS'DAL'
-p2429
-asS'Blake Renaud'
-p2430
-(lp2431
-I3000
-aS'TEN'
-p2432
-aS'MIN'
-p2433
-asS'Benny Cunningham'
-p2434
-(lp2435
-I3700
-aS'SF'
-p2436
-ag101
-asS'Chris Ivory'
-p2437
-(lp2438
-I4300
-aS'GB'
-p2439
-ag74
-asS'Jordan Todman'
-p2440
-(lp2441
-I3000
-aS'DET'
-p2442
-aS'IND'
-p2443
-asS'Cameron Artis-Payne'
-p2444
-(lp2445
-I3000
-aS'DEN'
-p2446
-aS'CAR'
-p2447
-asS'Derek Watt'
-p2448
-(lp2449
-I3000
-aS'KC'
-p2450
-aS'SD'
-p2451
-asS'Isaiah Pead'
-p2452
-(lp2453
-I3000
-aS'SEA'
-p2454
-aS'MIA'
-p2455
-asS'Juwan Thompson'
-p2456
-(lp2457
-I3000
-aS'CAR'
-p2458
-aS'DEN'
-p2459
-asS'Doug Martin'
-p2460
-(lp2461
-I6200
-aS'ATL'
-p2462
-aS'TB'
-p2463
-asS'Gus Johnson'
-p2464
-(lp2465
-I3000
-aS'TB'
-p2466
-aS'ATL'
-p2467
-asS'David Johnson'
-p2468
-(lp2469
-I7500
-aS'NE'
-p2470
-aS'ARI'
-p2471
-asS'Rex Burkhead'
-p2472
-(lp2473
-I3000
-aS'NYJ'
-p2474
-aS'CIN'
-p2475
-asS'Brandon Burks'
-p2476
-(lp2477
-I3000
-ag74
-aS'GB'
-p2478
-asS'Ryan Mathews'
-p2479
-(lp2480
-I5700
-aS'CLE'
-p2481
-aS'PHI'
-p2482
-asS'Jonathan Stewart'
-p2483
-(lp2484
-I5100
-aS'DEN'
-p2485
-aS'CAR'
-p2486
-asS'Bronson Hill'
-p2487
-(lp2488
-I3000
-aS'NYJ'
-p2489
-aS'CIN'
-p2490
-asS'Will Ratelle'
-p2491
-(lp2492
-I3000
-aS'TB'
-p2493
-aS'ATL'
-p2494
-asS'Kelvin Taylor'
-p2495
-(lp2496
-I3000
-ag101
-aS'SF'
-p2497
-asS'Damien Williams'
-p2498
-(lp2499
-I3000
-aS'SEA'
-p2500
-aS'MIA'
-p2501
-asS'Tim Hightower'
-p2502
-(lp2503
-I4300
-aS'OAK'
-p2504
-aS'NO'
-p2505
-asS'Brandon Bolden'
-p2506
-(lp2507
-I3000
-aS'ARI'
-p2508
-aS'NE'
-p2509
-asS'Stevan Ridley'
-p2510
-(lp2511
-I3000
-aS'IND'
-p2512
-aS'DET'
-p2513
-asS'Brandon Wegher'
-p2514
-(lp2515
-I3000
-aS'DEN'
-p2516
-aS'CAR'
-p2517
-asS'Jeremy Langford'
-p2518
-(lp2519
-I4700
-aS'HOU'
-p2520
-aS'CHI'
-p2521
-asS'Kevin Monangai'
-p2522
-(lp2523
-I3000
-aS'TEN'
-p2524
-aS'MIN'
-p2525
-asS'Brandon Brown-Dukes'
-p2526
-(lp2527
-I3000
-aS'WAS'
-p2528
-aS'PIT'
-p2529
-asS'Daryl Richardson'
-p2530
-(lp2531
-I3000
-aS'WAS'
-p2532
-aS'PIT'
-p2533
-asS'Akeem Hunt'
-p2534
-(lp2535
-I3000
-aS'CHI'
-p2536
-aS'HOU'
-p2537
-asS'Knile Davis'
-p2538
-(lp2539
-I3100
-aS'SD'
-p2540
-aS'KC'
-p2541
-asS'Chris Swain'
-p2542
-(lp2543
-I3000
-aS'KC'
-p2544
-aS'SD'
-p2545
-asS'Anthony Sherman'
-p2546
-(lp2547
-I3000
-aS'SD'
-p2548
-aS'KC'
-p2549
-asS'Sione Houma'
-p2550
-(lp2551
-I3000
-aS'OAK'
-p2552
-aS'NO'
-p2553
-asS'Glenn Winston'
-p2554
-(lp2555
-I3000
-aS'PHI'
-p2556
-aS'CLE'
-p2557
-asS'Patrick DiMarco'
-p2558
-(lp2559
-I3000
-aS'TB'
-p2560
-aS'ATL'
-p2561
-asS'Peyton Barber'
-p2562
-(lp2563
-I3000
-aS'ATL'
-p2564
-aS'TB'
-p2565
-asS'Stepfan Taylor'
-p2566
-(lp2567
-I3000
-aS'NE'
-p2568
-aS'ARI'
-p2569
-asS'Aaron Ripkowski'
-p2570
-(lp2571
-I3000
-ag74
-aS'GB'
-p2572
-asS'Brandon Ross'
-p2573
-(lp2574
-I3000
-ag74
-aS'GB'
-p2575
-asS'Russell Hansbrough'
-p2576
-(lp2577
-I3000
-aS'ATL'
-p2578
-aS'TB'
-p2579
-asS'Carlos Hyde'
-p2580
-(lp2581
-I5600
-ag101
-aS'SF'
-p2582
-asS'Cameron Marshall'
-p2583
-(lp2584
-I3000
-aS'MIA'
-p2585
-aS'SEA'
-p2586
-asS'Orleans Darkwa'
-p2587
-(lp2588
-I3000
-aS'DAL'
-p2589
-aS'NYG'
-p2590
-asS'Kenjon Barner'
-p2591
-(lp2592
-I3000
-aS'CLE'
-p2593
-aS'PHI'
-p2594
-asS'Arian Foster'
-p2595
-(lp2596
-I5800
-aS'SEA'
-p2597
-aS'MIA'
-p2598
-asS'Marcel Reece'
-p2599
-(lp2600
-I3000
-aS'NO'
-p2601
-aS'OAK'
-p2602
-asS'Latavius Murray'
-p2603
-(lp2604
-I5600
-aS'NO'
-p2605
-aS'OAK'
-p2606
-asS'Bruce Miller'
-p2607
-(lp2608
-I3000
-ag101
-aS'SF'
-p2609
-asS'Alstevis Squirewell'
-p2610
-(lp2611
-I3000
-ag74
-aS'GB'
-p2612
-asS'DuJuan Harris'
-p2613
-(lp2614
-I3000
-ag101
-aS'SF'
-p2615
-asS'Soma Vainuku'
-p2616
-(lp2617
-I3000
-aS'CHI'
-p2618
-aS'HOU'
-p2619
-asS'Abou Toure'
-p2620
-(lp2621
-I3000
-aS'DET'
-p2622
-aS'IND'
-p2623
-asS'Shane Vereen'
-p2624
-(lp2625
-I3800
-aS'DAL'
-p2626
-aS'NYG'
-p2627
-asS'C.J. Prosise'
-p2628
-(lp2629
-I3900
-aS'MIA'
-p2630
-aS'SEA'
-p2631
-asS'Bishop Sankey'
-p2632
-(lp2633
-I3000
-aS'MIN'
-p2634
-aS'TEN'
-p2635
-asS'Josh Ferguson'
-p2636
-(lp2637
-I3500
-aS'DET'
-p2638
-aS'IND'
-p2639
-asS'Spencer Ware'
-p2640
-(lp2641
-I4400
-aS'SD'
-p2642
-aS'KC'
-p2643
-asS'Justin Forsett'
-p2644
-(lp2645
-I4600
-aS'BUF'
-p2646
-aS'BAL'
-p2647
-asS'Austin Johnson'
-p2648
-(lp2649
-I3000
-aS'OAK'
-p2650
-aS'NO'
-p2651
-asS'Paul Lasike'
-p2652
-(lp2653
-I3000
-aS'HOU'
-p2654
-aS'CHI'
-p2655
-asS'Chris Thompson'
-p2656
-(lp2657
-I4000
-aS'PIT'
-p2658
-aS'WAS'
-p2659
-asS'Tommy Bohanon'
-p2660
-(lp2661
-I3000
-aS'CIN'
-p2662
-aS'NYJ'
-p2663
-asS'Jacquizz Rodgers'
-p2664
-(lp2665
-I3100
-aS'HOU'
-p2666
-aS'CHI'
-p2667
-asS'Charcandrick West'
-p2668
-(lp2669
-I3500
-aS'SD'
-p2670
-aS'KC'
-p2671
-asS'Elijhaa Penny'
-p2672
-(lp2673
-I3000
-aS'NE'
-p2674
-aS'ARI'
-p2675
-asS'Brandon Cottom'
-p2676
-(lp2677
-I3000
-aS'MIA'
-p2678
-aS'SEA'
-p2679
-asS'Rajion Neal'
-p2680
-(lp2681
-I3000
-aS'PHI'
-p2682
-aS'CLE'
-p2683
-asS'Darrin Reaves'
-p2684
-(lp2685
-I3000
-aS'SD'
-p2686
-aS'KC'
-p2687
-asS'Ronnie Hillman'
-p2688
-(lp2689
-I3000
-aS'CAR'
-p2690
-aS'DEN'
-p2691
-asS'Kerwynn Williams'
-p2692
-(lp2693
-I3000
-aS'NE'
-p2694
-aS'ARI'
-p2695
-asS'Kyle Juszczyk'
-p2696
-(lp2697
-I3100
-aS'BUF'
-p2698
-aS'BAL'
-p2699
-asS'Jordan Howard'
-p2700
-(lp2701
-I3700
-aS'HOU'
-p2702
-aS'CHI'
-p2703
-asS'Travaris Cadet'
-p2704
-(lp2705
-I3000
-aS'OAK'
-p2706
-aS'NO'
-p2707
-asS'Tre Madden'
-p2708
-(lp2709
-I3000
-aS'MIA'
-p2710
-aS'SEA'
-p2711
-asS"Ka'Deem Carey"
-p2712
-(lp2713
-I3500
-aS'HOU'
-p2714
-aS'CHI'
-p2715
-asS'Devonta Freeman'
-p2716
-(lp2717
-I6900
-aS'TB'
-p2718
-aS'ATL'
-p2719
-asS'Alfred Blue'
-p2720
-(lp2721
-I3600
-aS'CHI'
-p2722
-aS'HOU'
-p2723
-asS'Kenny Hilliard'
-p2724
-(lp2725
-I3000
-aS'CHI'
-p2726
-aS'HOU'
-p2727
-asS'Matt Forte'
-p2728
-(lp2729
-I6100
-aS'CIN'
-p2730
-aS'NYJ'
-p2731
-asS'Jonathan Williams'
-p2732
-(lp2733
-I3000
-aS'BAL'
-p2734
-aS'BUF'
-p2735
-asS'Mike Gillislee'
-p2736
-(lp2737
-I3800
-aS'BAL'
-p2738
-aS'BUF'
-p2739
-asS'Malcolm Johnson'
-p2740
-(lp2741
-I3000
-aS'PHI'
-p2742
-aS'CLE'
-p2743
-asS'Jalen Richard'
-p2744
-(lp2745
-I3000
-aS'NO'
-p2746
-aS'OAK'
-p2747
-asS'Kenyan Drake'
-p2748
-(lp2749
-I3000
-aS'SEA'
-p2750
-aS'MIA'
-p2751
-asS'Cameron Stingily'
-p2752
-(lp2753
-I3000
-aS'WAS'
-p2754
-aS'PIT'
-p2755
-asS'Jerome Felton'
-p2756
-(lp2757
-I3000
-aS'BAL'
-p2758
-aS'BUF'
-p2759
-asS'Sam Bergen'
-p2760
-(lp2761
-I3000
-aS'MIN'
-p2762
-aS'TEN'
-p2763
-asS'Matt Jones'
-p2764
-(lp2765
-I4700
-aS'PIT'
-p2766
-aS'WAS'
-p2767
-asS'Mike Davis'
-p2768
-(lp2769
-I3000
-ag101
-aS'SF'
-p2770
-asS'Lamar Miller'
-p2771
-(lp2772
-I7000
-aS'CHI'
-p2773
-aS'HOU'
-p2774
-asS"Cedric O'Neal"
-p2775
-(lp2776
-I3000
-aS'CLE'
-p2777
-aS'PHI'
-p2778
-asS'Ezekiel Elliott'
-p2779
-(lp2780
-I7300
-aS'NYG'
-p2781
-aS'DAL'
-p2782
-asS'Donald Brown'
-p2783
-(lp2784
-I3000
-aS'ARI'
-p2785
-aS'NE'
-p2786
-asS'Darrel Young'
-p2787
-(lp2788
-I3000
-aS'HOU'
-p2789
-aS'CHI'
-p2790
-asS'Joe Kerridge'
-p2791
-(lp2792
-I3000
-aS'PIT'
-p2793
-aS'WAS'
-p2794
-asS'Jeff Luc'
-p2795
-(lp2796
-I3000
-aS'NYJ'
-p2797
-aS'CIN'
-p2798
-asS'DeAndre Washington'
-p2799
-(lp2800
-I3700
-aS'NO'
-p2801
-aS'OAK'
-p2802
-asS'Jay Prosch'
-p2803
-(lp2804
-I3000
-aS'CHI'
-p2805
-aS'HOU'
-p2806
-asS'Tra Carson'
-p2807
-(lp2808
-I3000
-aS'NYJ'
-p2809
-aS'CIN'
-p2810
-asS'C.J. Spiller'
-p2811
-(lp2812
-I3600
-aS'OAK'
-p2813
-aS'NO'
-p2814
-asS'Trey Millard'
-p2815
-(lp2816
-I3000
-aS'SD'
-p2817
-aS'KC'
-p2818
-asS'Marcus Murphy'
-p2819
-(lp2820
-I3000
-aS'OAK'
-p2821
-aS'NO'
-p2822
-asS'Matt Asiata'
-p2823
-(lp2824
-I3300
-aS'TEN'
-p2825
-aS'MIN'
-p2826
-asS'Robert Turbin'
-p2827
-(lp2828
-I3000
-aS'DET'
-p2829
-aS'IND'
-p2830
-asS'James Develin'
-p2831
-(lp2832
-I3000
-aS'ARI'
-p2833
-aS'NE'
-p2834
-asS'Zach Line'
-p2835
-(lp2836
-I3000
-aS'TEN'
-p2837
-aS'MIN'
-p2838
-asS'Thomas Rawls'
-p2839
-(lp2840
-I6000
-aS'MIA'
-p2841
-aS'SEA'
-p2842
-asS'Jamize Olawale'
-p2843
-(lp2844
-I3000
-aS'NO'
-p2845
-aS'OAK'
-p2846
-assS'TE'
-p2847
-(dp2848
-S'Brian Leonhardt'
-p2849
-(lp2850
-I2500
-aS'TEN'
-p2851
-aS'MIN'
-p2852
-asS'Ifeanyi Momah'
-p2853
-(lp2854
-I2500
-aS'NE'
-p2855
-aS'ARI'
-p2856
-asS'Eric Tomlinson'
-p2857
-(lp2858
-I2500
-aS'CHI'
-p2859
-aS'HOU'
-p2860
-asS'Will Tye'
-p2861
-(lp2862
-I3300
-aS'DAL'
-p2863
-aS'NYG'
-p2864
-asS'Lee Smith'
-p2865
-(lp2866
-I2500
-aS'NO'
-p2867
-aS'OAK'
-p2868
-asS'Maxx Williams'
-p2869
-(lp2870
-I2600
-aS'BUF'
-p2871
-aS'BAL'
-p2872
-asS'Brent Celek'
-p2873
-(lp2874
-I2700
-aS'CLE'
-p2875
-aS'PHI'
-p2876
-asS'Brian Parker'
-p2877
-(lp2878
-I2500
-aS'SD'
-p2879
-aS'KC'
-p2880
-asS'Jason Witten'
-p2881
-(lp2882
-I4100
-aS'NYG'
-p2883
-aS'DAL'
-p2884
-asS'Greg Scruggs'
-p2885
-(lp2886
-I2500
-aS'HOU'
-p2887
-aS'CHI'
-p2888
-asS'Levine Toilolo'
-p2889
-(lp2890
-I2500
-aS'TB'
-p2891
-aS'ATL'
-p2892
-asS'Konrad Reuland'
-p2893
-(lp2894
-I2500
-aS'DET'
-p2895
-aS'IND'
-p2896
-asS'Ben Koyack'
-p2897
-(lp2898
-I2500
-aS'GB'
-p2899
-ag74
-asS'Henry Krieger-Coble'
-p2900
-(lp2901
-I2500
-aS'CAR'
-p2902
-aS'DEN'
-p2903
-asS'Kyle Carter'
-p2904
-(lp2905
-I2500
-aS'TEN'
-p2906
-aS'MIN'
-p2907
-asS'E.J. Bibbs'
-p2908
-(lp2909
-I2500
-aS'PHI'
-p2910
-aS'CLE'
-p2911
-asS'Clay Harbor'
-p2912
-(lp2913
-I2500
-aS'ARI'
-p2914
-aS'NE'
-p2915
-asS'Emil Igwenagu'
-p2916
-(lp2917
-I2500
-aS'DET'
-p2918
-aS'IND'
-p2919
-asS'Larry Donnell'
-p2920
-(lp2921
-I2900
-aS'DAL'
-p2922
-aS'NYG'
-p2923
-asS'Garrett Celek'
-p2924
-(lp2925
-I2700
-ag101
-aS'SF'
-p2926
-asS'Bear Pascoe'
-p2927
-(lp2928
-I2500
-aS'ARI'
-p2929
-aS'NE'
-p2930
-asS'Casey Pierce'
-p2931
-(lp2932
-I2500
-ag74
-aS'GB'
-p2933
-asS'John Phillips'
-p2934
-(lp2935
-I2500
-aS'CAR'
-p2936
-aS'DEN'
-p2937
-asS'Gabe Hughes'
-p2938
-(lp2939
-I2500
-aS'SEA'
-p2940
-aS'MIA'
-p2941
-asS'Garrett Griffin'
-p2942
-(lp2943
-I2500
-aS'OAK'
-p2944
-aS'NO'
-p2945
-asS'Geoff Swaim'
-p2946
-(lp2947
-I2500
-aS'NYG'
-p2948
-aS'DAL'
-p2949
-asS'Logan Paulsen'
-p2950
-(lp2951
-I2500
-aS'PIT'
-p2952
-aS'WAS'
-p2953
-asS'Jordan Reed'
-p2954
-(lp2955
-I6600
-aS'PIT'
-p2956
-aS'WAS'
-p2957
-asS"Ryan O'Malley"
-p2958
-(lp2959
-I2500
-aS'NO'
-p2960
-aS'OAK'
-p2961
-asS'Mychal Rivera'
-p2962
-(lp2963
-I2600
-aS'NO'
-p2964
-aS'OAK'
-p2965
-asS'Marcedes Lewis'
-p2966
-(lp2967
-I2700
-aS'GB'
-p2968
-ag74
-asS'J.P. Holtz'
-p2969
-(lp2970
-I2500
-aS'PHI'
-p2971
-aS'CLE'
-p2972
-asS'Hunter Henry'
-p2973
-(lp2974
-I2500
-aS'KC'
-p2975
-aS'SD'
-p2976
-asS'Trey Burton'
-p2977
-(lp2978
-I2500
-aS'CLE'
-p2979
-aS'PHI'
-p2980
-asS'Jermaine Gresham'
-p2981
-(lp2982
-I2500
-aS'NE'
-p2983
-aS'ARI'
-p2984
-asS'RaShaun Allen'
-p2985
-(lp2986
-I2500
-aS'OAK'
-p2987
-aS'NO'
-p2988
-asS'Cory Harkey'
-p2989
-(lp2990
-I2500
-aS'SF'
-p2991
-ag101
-asS'Dion Sims'
-p2992
-(lp2993
-I2500
-aS'SEA'
-p2994
-aS'MIA'
-p2995
-asS'Tyler Higbee'
-p2996
-(lp2997
-I2500
-aS'SF'
-p2998
-ag101
-asS'Jerell Adams'
-p2999
-(lp3000
-I2500
-aS'DAL'
-p3001
-aS'NYG'
-p3002
-asS'Colton Underwood'
-p3003
-(lp3004
-I2500
-aS'NO'
-p3005
-aS'OAK'
-p3006
-asS"James O'Shaughnessy"
-p3007
-(lp3008
-I2500
-aS'SD'
-p3009
-aS'KC'
-p3010
-asS'David Morgan'
-p3011
-(lp3012
-I2500
-aS'TEN'
-p3013
-aS'MIN'
-p3014
-asS'Tony Moeaki'
-p3015
-(lp3016
-I2500
-aS'HOU'
-p3017
-aS'CHI'
-p3018
-asS'Stephen Anderson'
-p3019
-(lp3020
-I2500
-aS'CHI'
-p3021
-aS'HOU'
-p3022
-asS'Vance McDonald'
-p3023
-(lp3024
-I3100
-ag101
-aS'SF'
-p3025
-asS'Zach Sudfeld'
-p3026
-(lp3027
-I2500
-aS'CIN'
-p3028
-aS'NYJ'
-p3029
-asS'Jordan Cameron'
-p3030
-(lp3031
-I3000
-aS'SEA'
-p3032
-aS'MIA'
-p3033
-asS'Temarrick Hemingway'
-p3034
-(lp3035
-I2500
-aS'SF'
-p3036
-ag101
-asS'Nic Jacobs'
-p3037
-(lp3038
-I2500
-aS'GB'
-p3039
-ag74
-asS'Ryan Malleck'
-p3040
-(lp3041
-I2500
-aS'DAL'
-p3042
-aS'NYG'
-p3043
-asS'Clark Harris'
-p3044
-(lp3045
-I2500
-aS'NYJ'
-p3046
-aS'CIN'
-p3047
-asS'John DePalma'
-p3048
-(lp3049
-I2500
-aS'CLE'
-p3050
-aS'PHI'
-p3051
-asS'Coby Fleener'
-p3052
-(lp3053
-I4900
-aS'OAK'
-p3054
-aS'NO'
-p3055
-asS'Tyler Ott'
-p3056
-(lp3057
-I2500
-aS'DAL'
-p3058
-aS'NYG'
-p3059
-asS'Braedon Bowman'
-p3060
-(lp3061
-I2500
-aS'GB'
-p3062
-ag74
-asS'Gary Barnidge'
-p3063
-(lp3064
-I4700
-aS'PHI'
-p3065
-aS'CLE'
-p3066
-asS'Arthur Lynch'
-p3067
-(lp3068
-I2500
-aS'TB'
-p3069
-aS'ATL'
-p3070
-asS'Cameron Brate'
-p3071
-(lp3072
-I2900
-aS'ATL'
-p3073
-aS'TB'
-p3074
-asS'Rico Gathers'
-p3075
-(lp3076
-I2500
-aS'NYG'
-p3077
-aS'DAL'
-p3078
-asS'Beau Brinkley'
-p3079
-(lp3080
-I2500
-aS'MIN'
-p3081
-aS'TEN'
-p3082
-asS'Marcus Lucas'
-p3083
-(lp3084
-I2500
-aS'DEN'
-p3085
-aS'CAR'
-p3086
-asS'Jared Cook'
-p3087
-(lp3088
-I2900
-ag74
-aS'GB'
-p3089
-asS'Kyle Rudolph'
-p3090
-(lp3091
-I3000
-aS'TEN'
-p3092
-aS'MIN'
-p3093
-asS'Dennis Pitta'
-p3094
-(lp3095
-I2600
-aS'BUF'
-p3096
-aS'BAL'
-p3097
-asS'Matt Weiser'
-p3098
-(lp3099
-I2500
-aS'KC'
-p3100
-aS'SD'
-p3101
-asS'Kyle Nelson'
-p3102
-(lp3103
-I2500
-ag101
-aS'SF'
-p3104
-asS'Nick Vannett'
-p3105
-(lp3106
-I2500
-aS'MIA'
-p3107
-aS'SEA'
-p3108
-asS"Je'Ron Hamm"
-p3109
-(lp3110
-I2500
-ag101
-aS'SF'
-p3111
-asS'Erik Swoope'
-p3112
-(lp3113
-I2500
-aS'DET'
-p3114
-aS'IND'
-p3115
-asS'Zach Ertz'
-p3116
-(lp3117
-I4300
-aS'CLE'
-p3118
-aS'PHI'
-p3119
-asS'Anthony Fasano'
-p3120
-(lp3121
-I2500
-aS'MIN'
-p3122
-aS'TEN'
-p3123
-asS'Phillip Supernaw'
-p3124
-(lp3125
-I2500
-aS'MIN'
-p3126
-aS'TEN'
-p3127
-asS'Orson Charles'
-p3128
-(lp3129
-I2500
-aS'IND'
-p3130
-aS'DET'
-p3131
-asS'Nick Boyle'
-p3132
-(lp3133
-I2500
-aS'BUF'
-p3134
-aS'BAL'
-p3135
-asS'Richard Rodgers'
-p3136
-(lp3137
-I3100
-ag74
-aS'GB'
-p3138
-asS'Patrick Scales'
-p3139
-(lp3140
-I2500
-aS'HOU'
-p3141
-aS'CHI'
-p3142
-asS'Darren Fells'
-p3143
-(lp3144
-I2700
-aS'NE'
-p3145
-aS'ARI'
-p3146
-asS'Martellus Bennett'
-p3147
-(lp3148
-I3400
-aS'ARI'
-p3149
-aS'NE'
-p3150
-asS'Khari Lee'
-p3151
-(lp3152
-I2500
-aS'HOU'
-p3153
-aS'CHI'
-p3154
-asS'MyCole Pruitt'
-p3155
-(lp3156
-I2500
-aS'TEN'
-p3157
-aS'MIN'
-p3158
-asS'Chris Pantale'
-p3159
-(lp3160
-I2500
-aS'CLE'
-p3161
-aS'PHI'
-p3162
-asS'Luke Stocker'
-p3163
-(lp3164
-I2500
-aS'ATL'
-p3165
-aS'TB'
-p3166
-asS'Chris Manhertz'
-p3167
-(lp3168
-I2500
-aS'OAK'
-p3169
-aS'NO'
-p3170
-asS'Clayton Echard'
-p3171
-(lp3172
-I2500
-aS'MIA'
-p3173
-aS'SEA'
-p3174
-asS'Marcel Jensen'
-p3175
-(lp3176
-I2500
-aS'PIT'
-p3177
-aS'WAS'
-p3178
-asS'Jerome Cunningham'
-p3179
-(lp3180
-I2500
-aS'MIN'
-p3181
-aS'TEN'
-p3182
-asS'MarQueis Gray'
-p3183
-(lp3184
-I2500
-aS'SEA'
-p3185
-aS'MIA'
-p3186
-asS'Asante Cleveland'
-p3187
-(lp3188
-I2500
-aS'KC'
-p3189
-aS'SD'
-p3190
-asS"Nick O'Leary"
-p3191
-(lp3192
-I2500
-aS'BAL'
-p3193
-aS'BUF'
-p3194
-asS'Demetrius Harris'
-p3195
-(lp3196
-I2500
-aS'SD'
-p3197
-aS'KC'
-p3198
-asS'James Winchester'
-p3199
-(lp3200
-I2500
-aS'SD'
-p3201
-aS'KC'
-p3202
-asS'Clive Walford'
-p3203
-(lp3204
-I3000
-aS'NO'
-p3205
-aS'OAK'
-p3206
-asS'Jesse James'
-p3207
-(lp3208
-I3400
-aS'WAS'
-p3209
-aS'PIT'
-p3210
-asS'Eric Wallace'
-p3211
-(lp3212
-I2500
-aS'DEN'
-p3213
-aS'CAR'
-p3214
-asS'Blake Annen'
-p3215
-(lp3216
-I2500
-aS'BAL'
-p3217
-aS'BUF'
-p3218
-asS'Troy Niklas'
-p3219
-(lp3220
-I2500
-aS'NE'
-p3221
-aS'ARI'
-p3222
-asS'Scott Simonson'
-p3223
-(lp3224
-I2500
-aS'DEN'
-p3225
-aS'CAR'
-p3226
-asS'Darren Waller'
-p3227
-(lp3228
-I2500
-aS'BUF'
-p3229
-aS'BAL'
-p3230
-asS'Austin Seferian-Jenkins'
-p3231
-(lp3232
-I2800
-aS'ATL'
-p3233
-aS'TB'
-p3234
-asS'Jace Amaro'
-p3235
-(lp3236
-I2700
-aS'CIN'
-p3237
-aS'NYJ'
-p3238
-asS'Ed Dickson'
-p3239
-(lp3240
-I2500
-aS'DEN'
-p3241
-aS'CAR'
-p3242
-asS'Zach Miller'
-p3243
-(lp3244
-I3700
-aS'HOU'
-p3245
-aS'CHI'
-p3246
-asS'Thomas Duarte'
-p3247
-(lp3248
-I2500
-aS'SEA'
-p3249
-aS'MIA'
-p3250
-asS'Dwayne Allen'
-p3251
-(lp3252
-I3200
-aS'DET'
-p3253
-aS'IND'
-p3254
-asS'Matthew Mulligan'
-p3255
-(lp3256
-I2500
-aS'IND'
-p3257
-aS'DET'
-p3258
-asS'Brandon Bostick'
-p3259
-(lp3260
-I2500
-aS'CIN'
-p3261
-aS'NYJ'
-p3262
-asS'A.J. Derby'
-p3263
-(lp3264
-I2500
-aS'ARI'
-p3265
-aS'NE'
-p3266
-asS'Ryan Griffin'
-p3267
-(lp3268
-I2600
-aS'CHI'
-p3269
-aS'HOU'
-p3270
-asS'Gavin Escobar'
-p3271
-(lp3272
-I2600
-aS'NYG'
-p3273
-aS'DAL'
-p3274
-asS'Gabe Holmes'
-p3275
-(lp3276
-I2500
-aS'NO'
-p3277
-aS'OAK'
-p3278
-asS'Austin Traylor'
-p3279
-(lp3280
-I2500
-aS'NYG'
-p3281
-aS'DAL'
-p3282
-asS'Jimmy Graham'
-p3283
-(lp3284
-I3800
-aS'MIA'
-p3285
-aS'SEA'
-p3286
-asS'Antonio Gates'
-p3287
-(lp3288
-I4200
-aS'KC'
-p3289
-aS'SD'
-p3290
-asS'Kellen Davis'
-p3291
-(lp3292
-I2500
-aS'CIN'
-p3293
-aS'NYJ'
-p3294
-asS'Danny Vitale'
-p3295
-(lp3296
-I2500
-aS'ATL'
-p3297
-aS'TB'
-p3298
-asS'Chris Gragg'
-p3299
-(lp3300
-I2500
-aS'BAL'
-p3301
-aS'BUF'
-p3302
-asS'Alex Ellis'
-p3303
-(lp3304
-I2500
-aS'MIN'
-p3305
-aS'TEN'
-p3306
-asS'Vernon Davis'
-p3307
-(lp3308
-I2600
-aS'PIT'
-p3309
-aS'WAS'
-p3310
-asS'David Johnson'
-p3311
-(lp3312
-I2500
-aS'WAS'
-p3313
-aS'PIT'
-p3314
-asS'Rob Gronkowski'
-p3315
-(lp3316
-I7400
-aS'ARI'
-p3317
-aS'NE'
-p3318
-asS'David Reeves'
-p3319
-(lp3320
-I2500
-aS'PHI'
-p3321
-aS'CLE'
-p3322
-asS'Blake Bell'
-p3323
-(lp3324
-I2500
-ag101
-aS'SF'
-p3325
-asS'Jack Doyle'
-p3326
-(lp3327
-I2500
-aS'DET'
-p3328
-aS'IND'
-p3329
-asS'Matt Lengel'
-p3330
-(lp3331
-I2500
-aS'NYJ'
-p3332
-aS'CIN'
-p3333
-asS'Beau Sandland'
-p3334
-(lp3335
-I2500
-aS'DEN'
-p3336
-aS'CAR'
-p3337
-asS'Kivon Cartwright'
-p3338
-(lp3339
-I2500
-aS'ATL'
-p3340
-aS'TB'
-p3341
-asS'Hakeem Valles'
-p3342
-(lp3343
-I2500
-aS'NE'
-p3344
-aS'ARI'
-p3345
-asS'Seth DeValve'
-p3346
-(lp3347
-I2500
-aS'PHI'
-p3348
-aS'CLE'
-p3349
-asS'Josh Hill'
-p3350
-(lp3351
-I2500
-aS'OAK'
-p3352
-aS'NO'
-p3353
-asS'Rob Housler'
-p3354
-(lp3355
-I2500
-aS'HOU'
-p3356
-aS'CHI'
-p3357
-asS'Julius Thomas'
-p3358
-(lp3359
-I3800
-aS'GB'
-p3360
-ag74
-asS'Sean McGrath'
-p3361
-(lp3362
-I2500
-aS'KC'
-p3363
-aS'SD'
-p3364
-asS'Daniel Dillon'
-p3365
-(lp3366
-I2500
-aS'NE'
-p3367
-aS'ARI'
-p3368
-asS'Cooper Helfet'
-p3369
-(lp3370
-I2500
-aS'MIA'
-p3371
-aS'SEA'
-p3372
-asS'Justice Cunningham'
-p3373
-(lp3374
-I2500
-aS'SF'
-p3375
-ag101
-asS'Ross Travis'
-p3376
-(lp3377
-I2500
-aS'SD'
-p3378
-aS'KC'
-p3379
-asS'Travis Kelce'
-p3380
-(lp3381
-I5000
-aS'SD'
-p3382
-aS'KC'
-p3383
-asS'Tyler Kroft'
-p3384
-(lp3385
-I2700
-aS'NYJ'
-p3386
-aS'CIN'
-p3387
-asS'Mitchell Henry'
-p3388
-(lp3389
-I2500
-ag74
-aS'GB'
-p3390
-asS'Crockett Gillmore'
-p3391
-(lp3392
-I2600
-aS'BUF'
-p3393
-aS'BAL'
-p3394
-asS'Brandon Myers'
-p3395
-(lp3396
-I2500
-aS'ATL'
-p3397
-aS'TB'
-p3398
-asS'Wes Saxton'
-p3399
-(lp3400
-I2500
-aS'CIN'
-p3401
-aS'NYJ'
-p3402
-asS'Charles Clay'
-p3403
-(lp3404
-I3400
-aS'BAL'
-p3405
-aS'BUF'
-p3406
-asS'Jim Dray'
-p3407
-(lp3408
-I2500
-aS'BAL'
-p3409
-aS'BUF'
-p3410
-asS'Craig Stevens'
-p3411
-(lp3412
-I2500
-aS'MIN'
-p3413
-aS'TEN'
-p3414
-asS'Matt LaCosse'
-p3415
-(lp3416
-I2500
-aS'DAL'
-p3417
-aS'NYG'
-p3418
-asS'C.J. Uzomah'
-p3419
-(lp3420
-I2500
-aS'NYJ'
-p3421
-aS'CIN'
-p3422
-asS'Kennard Backman'
-p3423
-(lp3424
-I2500
-ag74
-aS'GB'
-p3425
-asS'Greg Olsen'
-p3426
-(lp3427
-I5100
-aS'DEN'
-p3428
-aS'CAR'
-p3429
-asS'Gannon Sinclair'
-p3430
-(lp3431
-I2500
-aS'HOU'
-p3432
-aS'CHI'
-p3433
-asS'Rhett Ellison'
-p3434
-(lp3435
-I2500
-aS'TEN'
-p3436
-aS'MIN'
-p3437
-asS'Justin Perillo'
-p3438
-(lp3439
-I2500
-ag74
-aS'GB'
-p3440
-asS'Eric Ebron'
-p3441
-(lp3442
-I3900
-aS'IND'
-p3443
-aS'DET'
-p3444
-asS'James Hanna'
-p3445
-(lp3446
-I2500
-aS'NYG'
-p3447
-aS'DAL'
-p3448
-asS'Tim Semisch'
-p3449
-(lp3450
-I2500
-aS'KC'
-p3451
-aS'SD'
-p3452
-asS'Delanie Walker'
-p3453
-(lp3454
-I4500
-aS'MIN'
-p3455
-aS'TEN'
-p3456
-asS'Kevin McDermott'
-p3457
-(lp3458
-I2500
-aS'TEN'
-p3459
-aS'MIN'
-p3460
-asS'Tyler Eifert'
-p3461
-(lp3462
-I4700
-aS'NYJ'
-p3463
-aS'CIN'
-p3464
-asS'Tevin Westbrook'
-p3465
-(lp3466
-I2500
-aS'ATL'
-p3467
-aS'TB'
-p3468
-asS'John Peters'
-p3469
-(lp3470
-I2500
-aS'NYJ'
-p3471
-aS'CIN'
-p3472
-asS'Ryan Hewitt'
-p3473
-(lp3474
-I2500
-aS'NYJ'
-p3475
-aS'CIN'
-p3476
-asS'C.J. Fiedorowicz'
-p3477
-(lp3478
-I2500
-aS'CHI'
-p3479
-aS'HOU'
-p3480
-asS'Randall Telfer'
-p3481
-(lp3482
-I2500
-aS'PHI'
-p3483
-aS'CLE'
-p3484
-asS'Jason Vander'
-p3485
-(lp3486
-I2500
-aS'CIN'
-p3487
-aS'NYJ'
-p3488
-asS'Jeff Heuerman'
-p3489
-(lp3490
-I2500
-aS'CAR'
-p3491
-aS'DEN'
-p3492
-asS'Xavier Grimble'
-p3493
-(lp3494
-I2500
-aS'WAS'
-p3495
-aS'PIT'
-p3496
-asS'Adam Fuehne'
-p3497
-(lp3498
-I2500
-aS'IND'
-p3499
-aS'DET'
-p3500
-asS'Dominique Jones'
-p3501
-(lp3502
-I2500
-aS'SEA'
-p3503
-aS'MIA'
-p3504
-asS'Paul Lang'
-p3505
-(lp3506
-I2500
-aS'WAS'
-p3507
-aS'PIT'
-p3508
-asS'Anthony Denham'
-p3509
-(lp3510
-I2500
-aS'CHI'
-p3511
-aS'HOU'
-p3512
-asS'Benjamin Watson'
-p3513
-(lp3514
-I3500
-aS'BUF'
-p3515
-aS'BAL'
-p3516
-asS'Darion Griswold'
-p3517
-(lp3518
-I2500
-aS'DET'
-p3519
-aS'IND'
-p3520
-asS'Steven Scheu'
-p3521
-(lp3522
-I2500
-aS'ARI'
-p3523
-aS'NE'
-p3524
-asS'Gerald Christian'
-p3525
-(lp3526
-I2500
-aS'NE'
-p3527
-aS'ARI'
-p3528
-asS'Joshua Perkins'
-p3529
-(lp3530
-I2500
-aS'TB'
-p3531
-aS'ATL'
-p3532
-asS'Michael Hoomanawanui'
-p3533
-(lp3534
-I2500
-aS'OAK'
-p3535
-aS'NO'
-p3536
-asS'Andrew DePaola'
-p3537
-(lp3538
-I2500
-aS'ATL'
-p3539
-aS'TB'
-p3540
-asS'Jacob Tamme'
-p3541
-(lp3542
-I2800
-aS'TB'
-p3543
-aS'ATL'
-p3544
-asS'Lance Kendricks'
-p3545
-(lp3546
-I3200
-aS'SF'
-p3547
-ag101
-asS'Luke Willson'
-p3548
-(lp3549
-I2700
-aS'MIA'
-p3550
-aS'SEA'
-p3551
-asS'M.J. McFarland'
-p3552
-(lp3553
-I2500
-aS'CLE'
-p3554
-aS'PHI'
-p3555
-asS'Virgil Green'
-p3556
-(lp3557
-I2900
-aS'CAR'
-p3558
-aS'DEN'
-p3559
-asS'Jeff Cumberland'
-p3560
-(lp3561
-I2500
-aS'KC'
-p3562
-aS'SD'
-p3563
-asS'Bryce Williams'
-p3564
-(lp3565
-I2500
-aS'ARI'
-p3566
-aS'NE'
-p3567
-asS'Brandon Pettigrew'
-p3568
-(lp3569
-I2500
-aS'IND'
-p3570
-aS'DET'
-p3571
-asS'Austin Hooper'
-p3572
-(lp3573
-I2500
-aS'TB'
-p3574
-aS'ATL'
-p3575
-asS'Cole Wick'
-p3576
-(lp3577
-I2500
-aS'IND'
-p3578
-aS'DET'
-p3579
-asS'Ben McCord'
-p3580
-(lp3581
-I2500
-aS'IND'
-p3582
-aS'DET'
-p3583
-asS'Brandon Williams'
-p3584
-(lp3585
-I2500
-aS'MIA'
-p3586
-aS'SEA'
-p3587
-asS'Ben Braunecker'
-p3588
-(lp3589
-I2500
-aS'HOU'
-p3590
-aS'CHI'
-p3591
-asS'Ronnie Shields'
-p3592
-(lp3593
-I2500
-aS'MIA'
-p3594
-aS'SEA'
-p3595
-asS'Niles Paul'
-p3596
-(lp3597
-I2500
-aS'PIT'
-p3598
-aS'WAS'
-p3599
-asS'Connor Hamlett'
-p3600
-(lp3601
-I2500
-aS'PHI'
-p3602
-aS'CLE'
-p3603
-asS'D.J. Tialavea'
-p3604
-(lp3605
-I2500
-aS'TB'
-p3606
-aS'ATL'
-p3607
 ass.

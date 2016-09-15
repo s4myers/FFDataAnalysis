@@ -60,6 +60,20 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
 
     return r_list
 
+def cost_filter(pos,low,high):
+    """
+    Filters players according Draft Kings salary list
+    
+    Keyword Arguments:
+    pos - the position to filter as a string, e.g. "QB","RB",etc.
+    low - the lower threshold of player cost as a integer
+    high - the upper  threshold of player cost as a integer
+    """
+    player_list = [name for name in SALARIES[pos].keys()
+                   if (SALARIES[pos][name][0] > low and 
+                       SALARIES[pos][name][0] < high)]
+    return player_list
+
 def find_opponents(team,week,year):
     """
     Find all the players who participated in a game. Returns a tuple
@@ -106,43 +120,6 @@ def generate_class_list(pos,player_list):
         return "Not a proper posistion"
     return class_list
 
-def generate_rookies(pos_list):
-    """
-    Find all the rookies by position and year.  Using
-    these players we create and the average rookie profile
-    
-    Keyword Arguments:
-    pos_list - a list of positions
-    """
-    Rookies = {pos:{year:[] for year in YEAR_LIST[1:]} for pos in pos_list}
-    base_year = YEAR_LIST[0]
-    for pos in pos_list:
-        csv_name = pos+"Stats.csv"
-        csv_path = os.path.join(CSV_DIR,csv_name)
-        old_name = ''
-        old_year = ''
-        with open(csv_path) as csv_file:
-            reader = csv.DictReader(csv_file)
-            for row in reader:
-                new_name = row["Player"]
-                new_year = row["Year"]
-                if new_name == old_name and new_year == old_year:
-                    continue
-                elif new_name == old_name and new_year != old_year:
-                    old_year = row["Year"]
-                elif new_name != old_name and old_year == base_year:
-                    old_name = row["Player"]
-                    old_year = row["Year"]
-                    continue
-                elif old_name == '':
-                    old_name = row["Player"]
-                    old_year = row["Year"]
-                else:
-                    Rookies[pos][old_year].append(old_name)
-                    old_name = row["Player"]
-                    old_year = row["Year"]
-    return Rookies
-
 def generate_player_list(pos):
     """
     Create a list of all avaiable players at a desired position
@@ -164,7 +141,7 @@ def generate_player_list(pos):
 
 def join_combinations(combos_list):
     """
-    Combines the player combinations to return a lineup.
+    Combines the player combinations to return a lineup of classes.
     
     Keyword Arguments:
     combos_list - a list of player_combos list
@@ -248,6 +225,7 @@ def points_allowed(ppr = 0.0, past = True,rookies = False):
     """
     Generate a nested dictionary of all the for past points allowed to positions by team.
     """
+    csv_path = os.path.join(CSV_DIR,"QBStats.csv")
     if ppr == 0.0:
         suffix = ".p"
     elif ppr == 0.5:
@@ -263,16 +241,23 @@ def points_allowed(ppr = 0.0, past = True,rookies = False):
         rookie_file = "PastPointsAllowedRookies" + suffix
         vet_file = "PastPointsAllowed" + suffix
     else:
-        years = [y for y in YEAR_LIST[-1]]
+        years = [YEAR_LIST[-1]]
         rookie_file = "CurrentPointsAllowedRookies" + suffix
         vet_file = "CurrentPointsAllowed" + suffix
     if rookies:
         pickle_path = os.path.join(PICKLE_DIR,rookie_file)
-        rookie_dict = generate_rookies(POS_LIST)
+        rookie_dict = pickle.load(open(os.path.join(PICKLE_DIR,"RookieDict.p"),"rb"))
     else:    
         pickle_path = os.path.join(PICKLE_DIR,vet_file)
     try:
-        temp_dict = pickle.load(open(pickle_path,"rb"))
+        if past != True:
+            csvtime = os.path.getmtime(csv_path)
+            pickletime = os.path.getmtime(pickle_path)
+            delta = csvtime-pickletime
+            if delta > 0:   #checks to see if the csv data has been recently modified
+                raise IOError
+        else:        
+            temp_dict = pickle.load(open(pickle_path,"rb"))
     except IOError:
         temp_dict = {year:{pos:{team:0.0 for team in TEAM_LIST}
                        for pos in POS_LIST}
@@ -292,7 +277,7 @@ def points_allowed(ppr = 0.0, past = True,rookies = False):
                 for player in class_list:
                     player.fantasy_point_multipliers["Rec"] = ppr
                     for week in WEEK_LIST:
-                        points = player.week_points(week,year)
+                        points = player.week_points(week,year,ppr)
                         if points == "Bye" or points == "No Data":
                             continue    
                         else:
@@ -300,7 +285,23 @@ def points_allowed(ppr = 0.0, past = True,rookies = False):
                     
                             if '@' in team:
                                 team = team[1:]
+                            
+                            if team == "JAX":
+                                team = "JAC"
+
+                            if team == "LA":
+                                team = "STL"
+
+                                
                             temp_dict[year][pos][team] += points
+                
+                # average the total points
+                for team in TEAM_LIST:
+                    d = Defense(team)
+                    tot_games = d.games_played(year)
+                    p = float(temp_dict[year][pos][team])
+                    temp_dict[year][pos][team]=p/tot_games
+            
             pickle.dump(temp_dict,open(pickle_path,"wb"))
 
     return temp_dict
@@ -354,7 +355,7 @@ def player_combinations(pos,player_list,num):
     
     return player_combos
 
-def player_score(player):
+def player_score(player,ppr=0.0):
     """
     Gives a player a score based on whatever wack-a-do things we think
     are important.
@@ -363,19 +364,46 @@ def player_score(player):
     player - Player class object
     """
     last_year = YEAR_LIST[-2]
+    this_year = YEAR_LIST[-1]
     pos = player.abbr
     name = player.name
     opp = SALARIES[pos][name][1]
-    past_ppg = player.ppg_average(last_year)
-    if past_ppg == 0.0:
-        past_allowed = PAST_POINTS_ALLOWED_ROOKIES[last_year][pos][opp]/16
-        past_ppg = ROOKIE_AVERAGE["PPG"][last_year][pos]
+    weeks = 1
+    curr_ppg = player.ppg_average(this_year,ppr)
+    # If the player is a rookie, give them a past_ppg and points allowed
+    # according to last year Rookie 
+    if name in ROOKIES[pos][this_year]:
+        rookie = True
+        if ppr == 0.0:
+            #past_allowed = PAST_POINTS_ALLOWED_ROOKIES[last_year][pos][opp]/16
+            past_ppg = ROOKIE_AVERAGE["PPG"][last_year][pos]
+        if ppr == 0.5:
+            #past_allowed = PAST_POINTS_ALLOWED_ROOKIES_HALF[last_year][pos][opp]/16
+            past_ppg = ROOKIE_AVERAGE_HALF["PPG"][last_year][pos]
+        else:
+            #past_allowed = PAST_POINTS_ALLOWED_ROOKIES_FULL[last_year][pos][opp]/16
+            past_ppg = ROOKIE_AVERAGE_FULL["PPG"][last_year][pos]
     else:
+        past_ppg = player.ppg_average(last_year,ppr)
+    # Points allowed according to PPR settings
+    if ppr == 0.0:
         past_allowed = PAST_POINTS_ALLOWED[last_year][pos][opp]/16
-    score = (past_ppg + past_allowed)/2
-    return score
+        curr_allowed = CURR_POINTS_ALLOWED[this_year][pos][opp]/weeks
+    if ppr == 0.5:
+        past_allowed = PAST_POINTS_ALLOWED_HALF[last_year][pos][opp]/16
+        curr_allowed = CURR_POINTS_ALLOWED_HALF[this_year][pos][opp]/weeks
+    else:
+        past_allowed = PAST_POINTS_ALLOWED_FULL[last_year][pos][opp]/16
+        curr_allowed = CURR_POINTS_ALLOWED_FULL[this_year][pos][opp]/weeks
+    
+    scores = np.array([past_ppg,past_allowed,curr_ppg,curr_allowed])
+    if rookie:
+        weights = np.array([.1,.4,.4,.1])
+    else:
+        weights = np.array([.4,.4,.1,.1])
+    return np.sum(scores*weights)
 
-def score_lineups(lineup_list):
+def score_lineups(lineup_list,ppr=0.0,cost=True):
     """
     Scores each lineup according to player_score() function and then 
     returns a sorted list from High to low
@@ -385,9 +413,14 @@ def score_lineups(lineup_list):
     """
     lineup_scores = []
     for l in lineup_list:
+        if cost == True:
+            l_cost = lineup_cost(l)
         tot_score = 0
         for p in l:
-            tot_score += player_score(p)
+            tot_score += player_score(p,ppr)
         lineup = [p.name for p in l]
-        lineup_scores.append((tot_score,lineup))
+        if cost == True:
+            lineup_scores.append((tot_score,l_cost,lineup))
+        else:
+            lineup_scores.append((tot_score,lineup))
     return sorted(lineup_scores,reverse = True)
