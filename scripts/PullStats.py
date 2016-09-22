@@ -24,7 +24,8 @@ def main():
     positions = ["quarterback", "runningback", "widereceiver", "tightend", "kicker"]
     #scrape_current_players(positions)
     #remove_duplicates()
-    pull_game_stats_weekly(2016, 1)
+    #pull_game_stats_weekly(2016, 2)
+    scrape_teams()
 
 
 def remove_duplicates():
@@ -35,6 +36,75 @@ def remove_duplicates():
             if line in seen: continue # skip duplicate
             seen.add(line)
             out_file.write(line)
+
+
+def scrape_teams():
+    """
+    This function visits the 'Current Players' pages and pulls a list of teams and seasons those players have played
+
+    :return: Data written to csv file
+
+    """
+    url_list = []
+    name_list = []
+    pos_list = []
+    csv_path = "../CSV_data/ActivePlayerList.csv"
+    with open(csv_path) as csv_file:
+        reader = csv.reader(csv_file,skipinitialspace=True)
+        for row in reader:
+            pos_list.append(row[0])
+            name_list.append(row[1])
+            profile_url = (row[2]+"profile").replace("gamelogs?season=", "")
+            url_list.append(profile_url)
+
+        for pos,name,url in zip(pos_list,name_list,url_list):
+            file_path = "../CSV_data/Test_Team_Scraping"
+            try:
+                soup = BeautifulSoup(ul.urlopen(url).read(), "html.parser")
+                # assign field names
+                player_name = soup.find("span", {"class" : "player-name"}).string
+                print player_name, url
+                fieldNames = soup.find("tr", {"class" : "player-table-key"}).findAll("td")
+                numColumns = len(fieldNames)
+                # pull the statistics
+                #table = soup.findAll("table", {"class":"data-table1"})
+                tables = soup.find_all("table",  { "summary" : "Career Stats For %s" % (name)})
+                seasons = tables[0]
+                #print seasons
+                body = tables.find( "tbody" )
+                #body1 = body[0]
+                print body
+                print "test1"
+                rows = body.findAll("tr")
+                print "Test2"
+                rowsList = []
+                for i in range(len(rows)):
+                    if len(rows[i]) > 2:
+                        print "test3"
+                        rowsList.append(rows[i])
+                        print rows[i]
+        # remove row[0] which contains field names
+                    del rowsList[len(rowsList)-1]
+            except IOError, e:
+                print 'Failed to open url'
+                print '-------------------------------------'
+                if hasattr(e, 'code'):
+                    print 'We failed with error code - %s.' % e.code
+                elif hasattr(e, 'reason'):
+                    print "The error object has the following 'reason' attribute :"
+                    print e.reason
+                    return False
+
+            except IndexError:
+                print 'No regular season data: Index error'
+                print '-------------------------------------'
+                #return False
+
+            except AttributeError:
+                print 'No regular season data: Attribute error'
+                print '-------------------------------------'
+                #return False
+
 
 def scrape_current_players(positions):
     """
