@@ -261,7 +261,7 @@ def matchup_history(player,opp,ppr=0.0):
                 continue
     games_played = len(ppg_total)
     if games_played == 0:
-        return 0,0,0,0,0,0
+        return 0,0,0,0,0
     else:    
         ppg_total = np.array(ppg_total)            
         average = np.average(ppg_total)
@@ -544,7 +544,12 @@ def player_score(player,ppr=0.0,GAME_THRESH=4.0):
     production = production_score(player,this_year,weights,ppr)
     allowed = pa_to_pos(this_year,pos,opp,weights,ppr)
     m_avg,m_high,m_low,m_gp,m_last = matchup_history(player,opp,ppr)
-    score = np.average(np.array([production,allowed]))
+    #clean up
+    if player.abbr == "WR":
+        temp_weight = np.array([.75,.25])
+        score = np.average(np.array([production,allowed]),weights=temp_weight)
+    else:
+        score = np.average(np.array([production,allowed]))
     return score
 
 
@@ -623,7 +628,7 @@ def rookie_ppg_average(last_year,pos,ppr=0.0):
     return past_ppg
 
 
-def score_lineup(lineup,cost = True):
+def score_lineup(lineup,cost_thresh=41200,cost = True):
     """
     Gives a total score for a lineup based on our algorithm.
 
@@ -658,6 +663,10 @@ def score_lineup(lineup,cost = True):
         tot_score += score
         tot_cost += SALARIES[pos][name][0]
         players.append(name)
+        if tot_cost > cost_thresh:
+            return (0,0,0)
+        else:
+            continue    
     if cost == True:
         lineup_score = (tot_score,tot_cost,players)
     else:

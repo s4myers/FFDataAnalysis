@@ -204,7 +204,7 @@ def generate_player_list(pos,active = False):
     """
 
     if active == True:
-        csv_file = "ActivePlayersList.csv"
+        csv_file = "ActivePlayerList.csv"
     else:
         csv_file = "AllPlayers.csv"    
     name_list =[]
