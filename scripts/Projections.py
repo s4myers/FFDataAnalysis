@@ -1,3 +1,4 @@
+from __future__ import print_function
 import sys
 sys.path.append("~/Projects/FFDataAnalysis/scripts/")
 from PlayerAnalysis import *
@@ -6,14 +7,32 @@ from PlayerAnalysis import *
 def correlation(pos,year_list,var1,var2="PPG",plot=False):
     """
     Determines the correlation of the variables var1 and var2 for a given year.
-    Currently y is the points per game average as default.
+    
 
-    Keyword Arguments:
-    pos - the player position; e.g. "QB", "RB", etc.
-    year_list - a list of years to return correlation values
-    var1 - variable 1
-    var2 - variable 2 (default variable to test is points per game)
-    plot - a boolean value of whether or not to plot the data
+    Parameters
+
+    ----------
+    pos : string
+        The player position; e.g. "QB", "RB", etc.
+    year_list : list
+        a list of years
+    var1 : string
+        The first field in the correlation
+    var2 : string, optional
+        Default is `PPG`. The second field to test correlation.
+        If `var2="PPG`, then correlation between var1 and PPG is determined.
+    plot : bool, optional
+        Default is `False`. If `True` it will return a plot of correlation data
+
+
+
+    Returns
+
+    -------
+    r_list : list
+        Return a list of tuples.  With the first element being the r value
+        and the second the year
+
     """
     r_list = []
 
@@ -46,7 +65,7 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
         denominator = np.sqrt((N*xx_sum - x_sum**2)*(N*yy_sum-y_sum**2))
 
         r = numerator/denominator
-        r_list +=[r]
+        r_list +=[(r,year)]
 
         if plot == True:
             fig, ax = plt.subplots()
@@ -60,142 +79,170 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
 
     return r_list
 
-def cost_filter(pos,low,high):
+
+def weekly_filter(pos,low,high,num=10,ppr=0.0,no_touch=[]):
     """
-    Filters players according Draft Kings salary list
+    Filters players according Draft Kings salary list. Then scores the players
+    according to the algorithm
     
-    Keyword Arguments:
-    pos - the position to filter as a string, e.g. "QB","RB",etc.
-    low - the lower threshold of player cost as a integer
-    high - the upper  threshold of player cost as a integer
+    Parameters
+
+    ----------
+    pos : string
+        the position to use as a filter.
+    low : int
+        the lower threshold of player cost.
+    high : int
+        the upper threshold of player cost.
+    num : int, optional
+        Default is `10`. The number of players to return.
+    ppr : float, optional
+        Default is `0.0`. Scoring parameter for points per reception.
+    no_touch : list, optional
+        Default is an empty list. List of players to ignore when filtering
+
+
+
+    Returns
+
+    -------
+    result : list
+        Returns a sorted list of tuples. Each tuple includes (score,name,pos)
+
     """
     player_list = [name for name in SALARIES[pos].keys()
                    if (SALARIES[pos][name][0] > low and 
-                       SALARIES[pos][name][0] < high)]
-    return player_list
-
-def find_opponents(team,week,year):
-    """
-    Find all the players who participated in a game. Returns a tuple
-    of the players name and position.
-
-    Keyword Arguments:
-    team - city abbreviation as a string
-    week - the week as a string
-    year - the year as a string
-
-    """
-    opponent_list = []
-    for pos in POS_LIST:
-        csv_file_name = pos+"Stats.csv"
-        csv_path = os.path.join(CSV_DIR,csv_file_name)
-        with open(csv_path) as csv_file:
-            reader = csv.DictReader(csv_file)
-            for row in reader:
-                if (row["Year"]==year and row["WK"]==week and team in row["Opp"]):
-                    opponent_list +=[(row["Player"],pos)]
-    return opponent_list
-
-def generate_class_list(pos,player_list):
-    """
-    Create a list of all avaiable players at a desired position
-
-    Keyword Arguments:
-    pos - the position enter as a string; e.g. "QB", "RB", etc.
-
-    """
-    if pos == "QB":
-        class_list = [QuarterBack(player) for player in player_list]
-    elif pos == "RB":
-        class_list = [RunningBack(player) for player in player_list]    
-    elif pos == "WR":
-        class_list = [WideReceiver(player) for player in player_list]
-    elif pos == "TE":
-        class_list = [TightEnd(player) for player in player_list]
-    elif pos == "K":
-        class_list = [Kicker(player) for player in player_list]  
-    elif pos == "DEF":
-        class_list = [Defense(player) for player in player_list]
-    else:
-        return "Not a proper posistion"
-    return class_list
-
-def generate_player_list(pos):
-    """
-    Create a list of all avaiable players at a desired position
-
-    Keyword Arguments:
-    pos - the position enter as a string; e.g. "QB", "RB", etc.
-
-    """
-    name_list =[]
-    csv_path = os.path.join(CSV_DIR,"AllPlayers.csv")
-    with open(csv_path) as csv_file:
-        reader = csv.reader(csv_file,skipinitialspace=True)
-        for row in reader:
-            if row[0]==pos and row[1] not in name_list:
-                name_list.append(row[1])
-            else:
-                continue
-    return name_list
-
-def join_combinations(combos_list):
-    """
-    Combines the player combinations to return a lineup of classes.
+                       SALARIES[pos][name][0] < high) and name not in no_touch]
+    c_list = generate_class_list(pos,player_list)
+    score_list = [(player_score(c,ppr),c.name,c.abbr) for c in c_list]
+    result = sorted(score_list,reverse = True)[:num]
     
-    Keyword Arguments:
-    combos_list - a list of player_combos list
+    return result
+
+
+
+def score_combinations(combos_list):
+    """
+    Combines the unque positional combinations into lineups which are then
+    scored.
+    
+    Parameters
+
+    ----------
+    combos_list : list 
+        A list of postional combinations which are generated by the
+        the player_combinations function.
+
+
+
+    Returns:
+
+    --------
+    joined : list
+        Each item in the list is a result from running the score_lineup
+        function.
+
     """
     joined = []
+    #numerator = 0.0
     if len(combos_list) == 2:
+        #denominator = len(combos_list[0])*len(combos_list[1])
         for item1 in combos_list[0]:
             for item2 in combos_list[1]:
-                joined.append(item1+item2)
+                joined.append(score_lineup(item1+item2))
+                #numerator+=1
+                #percent = (numerator/denominator)*100
+                #print("{0:.2f}% complete".format(percent),end="\r")
     elif len(combos_list) == 3:
+        #denominator = len(combos_list[0])*len(combos_list[1])*len(combos_list[2])
         for item1 in combos_list[0]:
             for item2 in combos_list[1]:
                 for item3 in combos_list[2]:
-                    joined.append(item1+item2+item3)
+                    joined.append(score_lineup(item1+item2+item3))
+                    #numerator+=1
+                    #percent = (numerator/denominator)*100
+                    #print("{0:.2f}% complete".format(percent),end="\r")
     elif len(combos_list) == 4:
+        #denominator = (len(combos_list[0])*len(combos_list[1])*
+                       #len(combos_list[2])*len(combos_list[3]))
         for item1 in combos_list[0]:
             for item2 in combos_list[1]:
                 for item3 in combos_list[2]:
                     for item4 in combos_list[3]:
-                        joined.append(item1+item2+item3+item4)
+                        joined.append(score_lineup(item1+item2+item3+item4))
+                        #numerator+=1
+                        #percent = (numerator/denominator)*100
+                        #print("{} of {} lineups complete".format(numerator,denominator),end="\r")
     elif len(combos_list) == 5:
+        #denominator = (len(combos_list[0])*len(combos_list[1])*
+                       #len(combos_list[2])*len(combos_list[3])*len(combos_list[4]))
         for item1 in combos_list[0]:
             for item2 in combos_list[1]:
                 for item3 in combos_list[2]:
                     for item4 in combos_list[3]:
                         for item5 in combos_list[4]:
-                            joined.append(item1+item2+item3+item4+item5)
+                            joined.append(score_lineup(item1+item2+item3+item4+item5))
+                            #numerator+=1
+                            #percent = (numerator/denominator)*100
+                            #print("{0:.2f}% complete".format(percent),end="\r")
     else:
-        print "Invalid len of list"
+        print("Invalid len of list")
         return
     return joined
 
+
 def lineup_cost(lineup):
     """
-    The cost of the lineup according to DraftKings.com
+    Determine cost of a lineup according to DraftKings.com
     
-    Keyword Arguments:
-    lineup = a list of player classes
+    Parameters
+
+    ----------
+    lineup : list
+        A list of tuples `(score,name,pos)`. 
+
+
+
+    Returns
+
+    -------
+
+    price : int
+        The total cost of the lineup according to DraftKings.com pricing.
+
     """
     price = 0
-    for player in lineup:
-        pos = player.abbr
-        price+=SALARIES[pos][player.name][0]
+    for score,player,pos in lineup:
+        price += SALARIES[pos][player][0]
     return price
 
-def matchup_history(player,opp):
+
+def matchup_history(player,opp,ppr=0.0):
     """
-    Returns matchup history against particular a particular team. Returns
-    the Average points scored, standard deviation, max, min, and
-    last game points.
+    The matchup history against for a player against a particular team.
+
     
-    Keyword Arguments:
-    player - Player class object
-    opp - opponent as the city, e.g. CHI, IND, etc.
+    Parameters
+
+    ----------
+    player : class obect
+        The Player class object.
+    opp : string
+        The city designation of the opponent of interest, e.g. CHI, IND, etc.
+    ppr : float, optional
+        Default is `0.0`. Scoring parameter for points per reception.
+
+
+
+    Returns
+
+    -------
+    results : tuple
+        Returns a tuple whose item 1 is the average points, item 2 highest 
+        point total scored, item 3 is the lowest point total scored, 
+        item 4 is the total times played since 2010, and item 5 the last 
+        points scored against the opponent.
+
     """
     ppg_total = []
     prev_games = []
@@ -207,23 +254,107 @@ def matchup_history(player,opp):
                 opp_check = opp_check[1:]
                 
             if opp_check==opp and played == '1':
-                points = player.week_points(week,year)
+                points = player.week_points(week,year,ppr)
                 ppg_total.append(points)
                 prev_games.append((week,year))
             else:
                 continue
-    ppg_total = np.array(ppg_total)            
-    average = np.average(ppg_total)
-    std = np.std(ppg_total)
-    high = np.max(ppg_total)
-    low = np.min(ppg_total)
     games_played = len(ppg_total)
-    
-    return average,std,high,low,games_played,ppg_total[0],prev_games[0]
+    if games_played == 0:
+        return 0,0,0,0,0,0
+    else:    
+        ppg_total = np.array(ppg_total)            
+        average = np.average(ppg_total)
+        high = np.max(ppg_total)
+        low = np.min(ppg_total)
+        results = (average,high,low,games_played,ppg_total[0])
+        return results
+
+def pa_to_pos(this_year,pos,opp,wts,ppr=0.0,rookie=False):
+    """
+    Find the points allowed to a position by an opponent
+
+    Parameters
+
+    ----------
+    this_year : string
+        The current four digit year.
+    pos : string
+        The player position.
+    opp : string
+        The city designation of the opponent of interest, e.g. CHI, IND, etc.
+    wts : array_like
+        An array containing the weights for averaging the past and
+        current points allowed data.
+    ppr : float, optional
+        Default is `0.0`. Scoring parameter for points per reception.
+    rookie : bool, optional
+        Default is `False`.  If `True` it will return the points allowed 
+        specially to rookies at the given position.
+
+
+
+    Returns
+
+    -------
+    allowed_score : float
+        Returns a float value which is the weighted average of both points 
+        allowed for last year and the current year.
+
+    """
+
+    last_year = str(int(this_year)-1)
+    if rookie:
+        if ppr == 0.0:
+            past_allowed = PAST_POINTS_ALLOWED_ROOKIES[last_year][pos][opp]
+            curr_allowed = CURR_POINTS_ALLOWED[this_year][pos][opp]
+        if ppr == 0.5:
+            past_allowed = PAST_POINTS_ALLOWED_ROOKIES_HALF[last_year][pos][opp]
+            curr_allowed = CURR_POINTS_ALLOWED_HALF[this_year][pos][opp]
+        else:
+            past_allowed = PAST_POINTS_ALLOWED_ROOKIES_FULL[last_year][pos][opp]
+            curr_allowed = CURR_POINTS_ALLOWED_FULL[this_year][pos][opp]
+    if ppr == 0.0:
+        past_allowed = PAST_POINTS_ALLOWED[last_year][pos][opp]
+        curr_allowed = CURR_POINTS_ALLOWED[this_year][pos][opp]
+    if ppr == 0.5:
+        past_allowed = PAST_POINTS_ALLOWED_HALF[last_year][pos][opp]
+        curr_allowed = CURR_POINTS_ALLOWED_HALF[this_year][pos][opp]
+    else:
+        past_allowed = PAST_POINTS_ALLOWED_FULL[last_year][pos][opp]
+        curr_allowed = CURR_POINTS_ALLOWED_FULL[this_year][pos][opp]
+    allowed = np.array([past_allowed,curr_allowed])
+    allowed_score = np.average(allowed,weights=wts)
+    return allowed_score
+
 
 def points_allowed(ppr = 0.0, past = True,rookies = False):
     """
-    Generate a nested dictionary of all the for past points allowed to positions by team.
+    Generate a nested dictionary of all the for past points allowed 
+    to positions by team.
+
+    Parameters
+
+    ----------
+    ppr : float, optional
+        Default is `0.0`. Scoring parameter for points per reception.
+    past : bool, optional
+        Default is `True`.  If `past = False`, then it generates the points
+        allowed for the current year.
+    rookies : bool, optional
+        Default is `False`.  If `rookies = True`, then it generates points 
+        allowed to only rookies.
+
+
+
+    Returns
+
+    -------
+    temp_dict : dictionary
+        Temp_dict is a nested dictionary for average points allowed. The
+        average points allowed is a float value. 
+        e.g. temp_dict[year][pos][team] = float
+
     """
     csv_path = os.path.join(CSV_DIR,"QBStats.csv")
     if ppr == 0.0:
@@ -233,7 +364,7 @@ def points_allowed(ppr = 0.0, past = True,rookies = False):
     elif ppr == 1.0:
         suffix = "FullPoint.p"
     else:
-        print "Invalid PPR value"
+        print("Invalid PPR value")
         return
         
     if past == True:
@@ -303,40 +434,52 @@ def points_allowed(ppr = 0.0, past = True,rookies = False):
                     temp_dict[year][pos][team]=p/tot_games
             
             pickle.dump(temp_dict,open(pickle_path,"wb"))
-
     return temp_dict
+
 
 def player_combinations(pos,player_list,num):
     """
     Creates a list of player combinations based on the 
-    number of slots needed filled. Returns a list of tuples, where
-    each tuple contains PlayerClass objects.
+    number of slots needed filled from a list of players.
     
-    Keyword Arguments:
-    pos - the player position; e.g. "QB", "RB", etc.
-    player_list - a list of player to combine
-    num - the number of players to group into pairs,triples,quartets
+    Parameters
+
+    ----------
+    pos : string
+        The player position; e.g. "QB", "RB", etc.
+    player_list : list
+        A list of players to combine
+    num : int
+        The group size of `1`,`2`,`3`, or `4`
+
+
+    Returns
+
+    -------
+    player_combos : list
+        A nested list of lists. The inner list contains the unique combination
+        of players. The outer list contains the total combinations.
+
     """
-    player_classes = generate_class_list(pos,player_list)
     player_combos = []
     
     if num == 1:
-        player_combos = [[c] for c in player_classes]
+        player_combos = [[p] for p in player_list]
     elif num == 2:
         for l in range(len(player_list)):
             for m in range(len(player_list)):
                 if m>l:
-                    player_combos+=[[player_classes[l],
-                                     player_classes[m]]]      
+                    player_combos+=[[player_list[l],
+                                     player_list[m]]]      
     elif num == 3:
         for l in range(len(player_list)):
             for m in range(len(player_list)):
                 if m>l:
                     for n in range(len(player_list)):
                         if n>m:
-                            player_combos+=[[player_classes[l],
-                                             player_classes[m],
-                                             player_classes[n]]]      
+                            player_combos+=[[player_list[l],
+                                             player_list[m],
+                                             player_list[n]]]      
     elif num == 4:
         for l in range(len(player_list)):
             for m in range(len(player_list)):
@@ -345,82 +488,178 @@ def player_combinations(pos,player_list,num):
                         if n>m:
                             for p in range(len(player_list)):
                                 if p>n:
-                                    player_combos+=[[player_classes[l],
-                                                     player_classes[m],
-                                                     player_classes[n],
-                                                     player_classes[p]]]
+                                    player_combos+=[[player_list[l],
+                                                     player_list[m],
+                                                     player_list[n],
+                                                     player_list[p]]]
     else:
-        print "Choose a number from 2-4"
+        print("Choose a number from 2-4")
         return 
     
     return player_combos
 
-def player_score(player,ppr=0.0):
+
+def player_score(player,ppr=0.0,GAME_THRESH=4.0):
     """
     Gives a player a score based on whatever wack-a-do things we think
     are important.
     
-    Keyword Arguments:
-    player - Player class object
+    Parameters
+
+    ----------
+    player : class object
+        The Player class object.
+    ppr : float, optional
+        Default is `0.0`. Scoring parameter for points per reception.
+    GAME_THRESH : float
+        Default is `4.0`. This value is used for determining the weights
+        for finding the production and points allowed scored.
+
+
+
+    Returns
+
+    -------
+    score : float
+        The score is the average of the production score 
+        and the points allowed score
+
     """
-    last_year = YEAR_LIST[-2]
+    
     this_year = YEAR_LIST[-1]
+    last_year = str(int(this_year)-1)
     pos = player.abbr
     name = player.name
     opp = SALARIES[pos][name][1]
-    weeks = 1
-    curr_ppg = player.ppg_average(this_year,ppr)
-    # If the player is a rookie, give them a past_ppg and points allowed
-    # according to last year Rookie 
+    
+    #Determine weights
+    gp = player.games_played(this_year)
+    if gp >= GAME_THRESH:
+        weights = np.array([0.0,1.0])
+    else:
+        w1 = (GAME_THRESH - gp)/GAME_THRESH
+        w2 = gp/GAME_THRESH
+        weights = np.array([w1,w2])
+    
+    production = production_score(player,this_year,weights,ppr)
+    allowed = pa_to_pos(this_year,pos,opp,weights,ppr)
+    m_avg,m_high,m_low,m_gp,m_last = matchup_history(player,opp,ppr)
+    score = np.average(np.array([production,allowed]))
+    return score
+
+
+def production_score(player,this_year,wts,ppr=0.0):
+    """
+    Find the points allowed to a position by an opponent
+
+    Parameters
+
+    ----------
+    player : class object
+        The Player class object
+    this_year : string
+        The current four digit year.
+    wts : array_like
+        An array containing the weights for averaging the past and
+        current points allowed data.
+    ppr : float, optional
+        Default is `0.0`. Scoring parameter for points per reception.
+
+
+    Returns
+
+    -------
+    production_score : float
+        Returns a float value which is the weighted average of both average
+        points scored for last year and the current year.
+
+    """
+
+    last_year = str(int(this_year)-1)
+    pos = player.abbr
+    name = player.name
+    
     if name in ROOKIES[pos][this_year]:
-        rookie = True
-        if ppr == 0.0:
-            #past_allowed = PAST_POINTS_ALLOWED_ROOKIES[last_year][pos][opp]/16
-            past_ppg = ROOKIE_AVERAGE["PPG"][last_year][pos]
-        if ppr == 0.5:
-            #past_allowed = PAST_POINTS_ALLOWED_ROOKIES_HALF[last_year][pos][opp]/16
-            past_ppg = ROOKIE_AVERAGE_HALF["PPG"][last_year][pos]
-        else:
-            #past_allowed = PAST_POINTS_ALLOWED_ROOKIES_FULL[last_year][pos][opp]/16
-            past_ppg = ROOKIE_AVERAGE_FULL["PPG"][last_year][pos]
+        past_ppg = rookie_ppg_average(last_year,pos,ppr)
     else:
         past_ppg = player.ppg_average(last_year,ppr)
-    # Points allowed according to PPR settings
-    if ppr == 0.0:
-        past_allowed = PAST_POINTS_ALLOWED[last_year][pos][opp]/16
-        curr_allowed = CURR_POINTS_ALLOWED[this_year][pos][opp]/weeks
-    if ppr == 0.5:
-        past_allowed = PAST_POINTS_ALLOWED_HALF[last_year][pos][opp]/16
-        curr_allowed = CURR_POINTS_ALLOWED_HALF[this_year][pos][opp]/weeks
-    else:
-        past_allowed = PAST_POINTS_ALLOWED_FULL[last_year][pos][opp]/16
-        curr_allowed = CURR_POINTS_ALLOWED_FULL[this_year][pos][opp]/weeks
+        if past_ppg == 0.0:
+            y = str(int(last_year)-1)
+            past_ppg = player.ppg_average(y,ppr)
+            if past_ppg == 0.0:
+                past_ppg = rookie_ppg_average(last_year,pos,ppr)
+    curr_ppg = player.ppg_average(this_year,ppr)            
     
-    scores = np.array([past_ppg,past_allowed,curr_ppg,curr_allowed])
-    if rookie:
-        weights = np.array([.1,.4,.4,.1])
+    points = np.array([past_ppg,curr_ppg])
+    production_score = np.average(points,weights=wts)
+
+    return production_score
+
+
+
+def rookie_ppg_average(last_year,pos,ppr=0.0):
+    """
+    Gives average points scored by a rookie at a given position. It 
+    is used to assign a past points for game for rookies who we have
+    no data on.
+
+    Parameters
+
+    ----------
+    last_year : string
+        This is the previous four digit year.
+    pos : string
+        The position of the player.
+    ppr : float, optional
+        Default is `0.0`. Scoring parameter for points per reception.       
+
+    """
+    if ppr == 0.0:
+        past_ppg = ROOKIE_AVERAGE["PPG"][last_year][pos]
+    if ppr == 0.5:
+        past_ppg = ROOKIE_AVERAGE_HALF["PPG"][last_year][pos]
     else:
-        weights = np.array([.4,.4,.1,.1])
-    return np.sum(scores*weights)
+        past_ppg = ROOKIE_AVERAGE_FULL["PPG"][last_year][pos]
+    return past_ppg
 
-def score_lineups(lineup_list,ppr=0.0,cost=True):
-    """
-    Scores each lineup according to player_score() function and then 
-    returns a sorted list from High to low
 
-    Keywork Arguments:
-    lineup_list - the list of lineups to score
+def score_lineup(lineup,cost = True):
     """
-    lineup_scores = []
-    for l in lineup_list:
-        if cost == True:
-            l_cost = lineup_cost(l)
-        tot_score = 0
-        for p in l:
-            tot_score += player_score(p,ppr)
-        lineup = [p.name for p in l]
-        if cost == True:
-            lineup_scores.append((tot_score,l_cost,lineup))
-        else:
-            lineup_scores.append((tot_score,lineup))
-    return sorted(lineup_scores,reverse = True)
+    Gives a total score for a lineup based on our algorithm.
+
+    Parameters
+
+    ----------
+    lineup : list
+        A list of tuples `(score,name,pos)`.
+    cost : bool, optional
+        Default is `True`. If `True, then cost of the lineup 
+        according DraftKings.com is also included; otherwise,
+        the lineup cost is omited.
+
+
+
+    Returns
+
+    -------
+    lineup_score : tuple
+        Item 1 is the total score of the lineup.  If `cost=True`,
+        then item 2 is the total cost and item 3 is the list of
+        player names in the lineup.  If `cost = False`, then
+        item 2 is the list of player names in the lineup, and
+        there is no third item.
+
+    """
+    
+    tot_score = 0.0
+    tot_cost = 0
+    players = []
+    for score,name,pos in lineup:
+        tot_score += score
+        tot_cost += SALARIES[pos][name][0]
+        players.append(name)
+    if cost == True:
+        lineup_score = (tot_score,tot_cost,players)
+    else:
+        lineup_score = (tot_score,players)
+    return lineup_score
