@@ -15,10 +15,9 @@ TEAM_LIST =["BUF","MIA","NE","NYJ","BAL","CIN","CLE","PIT","HOU","IND","JAC",
             "TEN","DEN","KC","OAK","SD","DAL","NYG","PHI","WAS","CHI","DET",
             "GB","MIN","ATL","CAR","NO","TB","ARI","STL","SF","SEA"]
            
-YEAR_LIST = ["2010","2011","2012","2013","2014","2015","2016"]
+YEAR_LIST = [2010,2011,2012,2013,2014,2015,2016]
 
-WEEK_LIST = ["1","2","3","4","5","6","7","8","9","10",
-             "11","12","13","14","15","16","17"]
+WEEK_LIST = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
 
 POS_LIST = ["QB","RB","WR","TE","K"]
 
@@ -258,9 +257,29 @@ class Player(object):
                 reader = csv.DictReader(csv_file)
                 for row in reader:
                     if row["Player"]==self.name:
-                        week = row["WK"]
-                        year = row["Year"]
-                        self.stats[year][week]=row
+                        week = int(row["WK"])
+                        year = int(row["Year"])
+                        #trying to get away from strings
+                        row_keys = row.keys()
+                        new_row = {}
+                        for k in row_keys:
+                            if (k == 'G' or 
+                                k == 'GS' or
+                                k == "Year" or
+                                k == "WK"):
+                                try:
+                                    new_row[k]=int(row[k])
+                                except ValueError:
+                                    new_row[k]=row[k]    
+                            else:
+                                try:
+                                    new_row[k]=float(row[k])
+                                except ValueError:
+                                    if row[k]=='--':
+                                        new_row[k]=0.0
+                                    else:    
+                                        new_row[k]=row[k]
+                        self.stats[year][week]=new_row
             # removes years and weeks without data
             for year in YEAR_LIST:
                 for week in WEEK_LIST:
@@ -280,7 +299,7 @@ class Player(object):
         Parameters
 
         ----------
-        year : string
+        year : int
             The four digit year.
 
 
@@ -299,13 +318,13 @@ class Player(object):
             else:
                 try:
                     if (self.stats[year][week]["Game Date"]=="Bye" or 
-                        self.stats[year][week]["G"]=="0"):
+                        self.stats[year][week]["G"]==0):
                         continue
                     else:
                         games+=1
                 except KeyError:
                     return games        
-        if games == 0:
+        if games == 0: #for division by zero
             games = 1
         return games
             
@@ -320,7 +339,7 @@ class Player(object):
         ----------
         field : string
             The field, e.g. "PassTD","REC", etc.
-        year : string 
+        year : int 
             The four digit year
 
 
@@ -333,18 +352,26 @@ class Player(object):
             player did not participate are not included in the array. 
 
         """
-        temp_list = []
-        for week in self.stats[year].keys():
-            if (self.stats[year][week]["G"] == "0" or 
-               self.stats[year][week]["Game Date"] == "Bye"):
-                continue 
-            elif self.stats[year][week][field] == "--":
-                temp_list += [0.0]
-            else:
-                temp_list += [float(self.stats[year][week][field])]
+
+        if year not in self.stats.keys():
+            return "No Data"
+        if self.name not in TEAM_LIST:
+            temp_list = []
+            for week in self.stats[year].keys():
+                if (self.stats[year][week]["G"] == 0 or 
+                    self.stats[year][week]["Game Date"] == "Bye"):
+                    continue 
+                else:
+                    temp_list += [self.stats[year][week][field]]
+        else:
+            temp_list = []
+            for week in self.stats[year].keys():
+                if self.stats[year][week]["Home"] == []:
+                    continue 
+                else:
+                    temp_list += [self.stats[year][week][field]]       
         a = np.array(temp_list)
         return a
-
 
     def total(self,field,year,weeks=["all_weeks"]):
         """ 
@@ -355,7 +382,7 @@ class Player(object):
         ----------
         field : string
             The field to be totaled, e.g. "PassTD","REC", etc.
-        year : string
+        year : int
             The four digit year
         weeks : list, optional
             By default the entire year will be totaled. If a different week
@@ -376,27 +403,26 @@ class Player(object):
         except KeyError:
             return "No Data this year"    
         if field not in self.field_names:
-            print ("Not a valid field. Please choice from: \n%s"
-                   % self.field_names)
+            print ("Not a valid field.")
             return
         elif type(weeks)!=list or [type(item)!=str for item in weeks]==[True for i in range(len(weeks))]:
             print "Not a valid argument for weeks"
             return
         elif weeks == ["all_weeks"]:
-            week_list = self.stats[year].keys()
+            tot = np.sum(self.generate_array_stats(field,year))
+            return tot
         else:
             week_list = weeks
-        try:
-            for week in week_list:  
-                if (self.stats[year][week][field] == "--" 
-                    or self.stats[year][week][field] == ""):
-                    tot += 0.0
-                else:
-                    tot += float(self.stats[year][week][field])
-            return tot
-        except KeyError:
-            print "No data available for this year or invalid weeks"        
-            return
+            try:
+                for week in week_list:  
+                    if self.stats[year][week][field] == "":
+                        tot += 0.0
+                    else:
+                        tot += self.stats[year][week][field]
+                return tot
+            except KeyError:
+                print "No data available for this year or invalid weeks"        
+                return
 
     def field_average(self,field,year):
         """
@@ -407,7 +433,7 @@ class Player(object):
         ----------
         field : string
             The field to average, e.g. "PassTD","REC", etc.
-        year : string
+        year : int
             The four digit year.
 
 
@@ -419,10 +445,9 @@ class Player(object):
             The average of field for a particular year.
 
         """
-        try:
-            week_dict = self.stats[year][week]
-        except KeyError:
+        if year not in self.stats.keys():
             return "No Data"
+
         ary = self.generate_array_stats(field,year)
         avg = np.average(ary)
         if np.isnan(avg):
@@ -441,7 +466,7 @@ class Player(object):
         field : string
             The field to find the standard deviation, 
             e.g. "PassTD","REC", etc.
-        year : string
+        year : int
             The four digit year.
 
 
@@ -453,16 +478,16 @@ class Player(object):
             The average of field for a particular year.
 
         """
-        try:
-            week_dict = self.stats[year][week]
-        except KeyError:
+        if year not in self.stats.keys():
             return "No Data"
+
         ary = self.generate_array_stats(field,year)
         std = np.std(ary)
         if np.isnan(std):
             return 0.0
         else:   
             return std
+
 
     def outlier_games(self,year,threshold,ppr=0.0):
         """
@@ -471,7 +496,7 @@ class Player(object):
         Parameters
 
         ----------
-        year : string
+        year : int
             The four digit year.
         threshold : float 
             the percent difference from average.
@@ -492,7 +517,7 @@ class Player(object):
         print "Average PPG: " + str(ppg_avg)
         outlier_games = []
         for week in range(1,18):
-            points = self.week_points(str(week),year,ppr)
+            points = self.week_points(week,year,ppr)
             try:
                 diff = (points - ppg_avg)/ppg_avg
             except TypeError:
@@ -502,7 +527,7 @@ class Player(object):
                 outlier_games.append(str(week))
             elif diff > 0 and diff > threshold and threshold > 0:
                 print str(week) + " " + str(points)
-                outlier_games.append(str(week))
+                outlier_games.append(week)
 
         return outlier_games
 
@@ -514,9 +539,9 @@ class Player(object):
         Parameters
 
         ----------
-        week : string
+        week : int
             The week to evaluate.
-        year : string
+        year : int
             The four digit year.
         ppr : float, optional
             Default is `0.0`. Scoring parameter for points per reception.
@@ -534,10 +559,9 @@ class Player(object):
 
         """
         self.fantasy_point_multipliers["Rec"]=ppr
-        try:
-            week_dict = self.stats[year][week]
-        except KeyError:
+        if year not in self.stats.keys():
             return "No Data"
+        # Check for bye week
         try:
             if self.name not in TEAM_LIST:    
                 if self.stats[year][week]["Game Date"]=="Bye":
@@ -549,6 +573,7 @@ class Player(object):
             return "No Data"
 
         #scoring currently doesn't include kick returns or defensive TDs
+        #Find week points scored by a defense
         if self.name in TEAM_LIST:
             score = self.stats[year][week]["Score"]
             opp_score = float(score.split("-")[1])
@@ -590,15 +615,12 @@ class Player(object):
             blocks = XPB + FGB
             points = base_points + 2*blocks + sacks + 2*turnovers
             return points
-
+        #Find the week points scored by a player
         else:
             points = 0.0
             for field in self.scoring_field_names:
-                if self.stats[year][week][field] != "--":
-                    points += (float(self.stats[year][week][field])*
+                points += (self.stats[year][week][field]*
                            self.fantasy_point_multipliers[field])
-                else:
-                    continue
             return points
 
     
@@ -609,7 +631,7 @@ class Player(object):
         Parameters
 
         ----------
-        year : string
+        year : int
             The four digit year.
         ppr : float, optional
             Default is `0.0`. Scoring parameter for points per reception.
@@ -632,12 +654,17 @@ class Player(object):
             return tot
 
         for week in week_list:
-            if self.stats[year][week]["Game Date"] == "Bye":
-                continue
-            elif self.stats[year][week]['G'] != '1':
-                continue
+            if self.name not in TEAM_LIST:
+                if (self.stats[year][week]["Game Date"] == "Bye" or
+                    self.stats[year][week]['G']==0):
+                    continue
+                else:
+                    week_totals += [self.week_points(week,year,ppr)]
             else:
-                week_totals += [self.week_points(week,year,ppr)]
+                if self.stats[year][week]["Home"]==[]:
+                    continue
+                else:
+                    week_totals += [self.week_points(week,year,ppr)]
         if week_totals == []:
             return tot
         else:
@@ -652,7 +679,7 @@ class Player(object):
         Parameters
 
         ----------
-        year : string
+        year : int
             The four digit year.
         ppr : float, optional
             Default is `0.0`. Scoring parameter for points per reception.
@@ -676,9 +703,8 @@ class Player(object):
 
         for week in week_list:
             if self.name not in TEAM_LIST:
-                if self.stats[year][week]["Game Date"] == "Bye":
-                    continue
-                elif self.stats[year][week]['G'] != '1':
+                if (self.stats[year][week]["Game Date"] == "Bye" or
+                    self.stats[year][week]['G']==0):
                     continue
                 else:
                     week_totals += [self.week_points(week,year,ppr)]
@@ -718,17 +744,22 @@ class Player(object):
         try:
             week_list = self.stats[year].keys()
         except KeyError:
-            return "Did Not Play in {}"#the player didn't play this year
+            return "No Data"#the player didn't play this year
         
         average = self.ppg_average(year,ppr)
         week_variance = []
         for week in week_list:
-            if self.stats[year][week]["Game Date"] == "Bye":
-                continue
-            elif self.stats[year][week]["G"] != '1':
-                continue
+            if self.name not in TEAM_LIST:
+                if (self.stats[year][week]["Game Date"] == "Bye" or
+                    self.stats[year][week]['G']==0):
+                    continue
+                else:
+                    week_variance += [(self.week_points(week,year,ppr) - average)**2]
             else:
-                week_variance += [(self.week_points(week,year,ppr) - average)**2]
+                if self.stats[year][week]["Home"]==[]:
+                    continue
+                else:
+                    week_variance += [(self.week_points(week,year,ppr) - average)**2]
         if week_variance == []:
             return "Empty List"
         else:
@@ -787,8 +818,8 @@ class RunningBack(Player):
     """ Running back position """
 
     abbr = "RB"
-    field_names =["G","GS","RushAtt","RushYds","Avg","RushLng","RushTD","Rec",
-                  "RecYds","Avg","RecLng","RecTD","FUM","Lost"]
+    field_names =["G","GS","RushAtt","RushYds","RushAvg","RushLng","RushTD","Rec",
+                  "RecYds","RecAvg","RecLng","RecTD","FUM","Lost"]
     scoring_field_names = ["RushYds","RushTD","Rec","RecYds","RecTD","Lost"]
     csv_file_name = "RBStats.csv"
 
@@ -857,8 +888,8 @@ class Defense(Player):
                     for row in reader:
                         opponent = row["Opp"]
                         if self.name in opponent and opponent != "":
-                            year = row["Year"]
-                            week = row["WK"]
+                            year = int(row["Year"])
+                            week = int(row["WK"])
                             player = row["Player"]
                             for field in fields:
                                 value = row[field]

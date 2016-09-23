@@ -2,1274 +2,1284 @@
 S'K'
 p1
 (dp2
-S'2015'
-p3
-(lp4
-S'Andrew Franks'
-p5
-aS'Chris Boswell'
-p6
-aS'Jason Myers'
-p7
-aS'Josh Lambo'
-p8
-aS'Travis Coons'
-p9
-aS'Zach Hocker'
-p10
-asS'2014'
-p11
-(lp12
-S'Brandon McManus'
-p13
-aS'Cairo Santos'
-p14
-aS'Chandler Catanzaro'
-p15
-aS'Cody Parkey'
-p16
-aS'Jordan Gay'
-p17
-aS'Patrick Murray'
-p18
-asS'2016'
-p19
-(lp20
+I2016
+(lp3
 S'Roberto Aguayo'
-p21
+p4
 aS'Will Lutz'
-p22
-asS'2011'
-p23
-(lp24
+p5
+asI2011
+(lp6
 S'Dan Bailey'
-p25
+p7
 aS'Nick Novak'
-p26
-asS'2013'
-p27
-(lp28
-S'Caleb Sturgis'
-p29
-aS'Dustin Hopkins'
-p30
-aS'Randy Bullock'
-p31
-asS'2012'
-p32
-(lp33
+p8
+asI2012
+(lp9
 S'Blair Walsh'
-p34
+p10
 aS'Greg Zuerlein'
-p35
+p11
 aS'Justin Tucker'
-p36
+p12
 aS'Kai Forbath'
-p37
+p13
+asI2013
+(lp14
+S'Caleb Sturgis'
+p15
+aS'Dustin Hopkins'
+p16
+aS'Randy Bullock'
+p17
+asI2014
+(lp18
+S'Brandon McManus'
+p19
+aS'Cairo Santos'
+p20
+aS'Chandler Catanzaro'
+p21
+aS'Cody Parkey'
+p22
+aS'Jordan Gay'
+p23
+aS'Patrick Murray'
+p24
+asI2015
+(lp25
+S'Andrew Franks'
+p26
+aS'Chris Boswell'
+p27
+aS'Jason Myers'
+p28
+aS'Josh Lambo'
+p29
+aS'Travis Coons'
+p30
+aS'Zach Hocker'
+p31
 assS'QB'
-p38
-(dp39
-g3
-(lp40
-S'Brett Hundley'
-p41
-aS'Bryce Petty'
-p42
-aS'Dylan Thompson'
-p43
-aS'Garrett Grayson'
-p44
-aS'Jameill Showers'
-p45
-aS'Jameis Winston'
-p46
-aS'Keith Wenning'
-p47
-aS'Marcus Mariota'
-p48
-aS'Sean Mannion'
-p49
-aS'Taylor Heinicke'
-p50
-aS'Trevor Siemian'
-p51
-asg11
-(lp52
-S'Aaron Murray'
-p53
-aS'AJ McCarron'
-p54
-aS'Blake Bortles'
-p55
-aS'Connor Shaw'
-p56
-aS'David Fales'
-p57
-aS'Derek Carr'
-p58
-aS'Dustin Vaughan'
-p59
-aS'Jimmy Garoppolo'
-p60
-aS'Johnny Manziel'
-p61
-aS'Logan Thomas'
-p62
-aS'Sean Renfree'
-p63
-aS'Stephen Morris'
-p64
-aS'Teddy Bridgewater'
-p65
-aS'Tom Savage'
-p66
-aS'Zach Mettenberger'
-p67
-asg19
-(lp68
+p32
+(dp33
+I2016
+(lp34
 S'Brandon Allen'
-p69
+p35
 aS'Brandon Doughty'
-p70
+p36
 aS'Cardale Jones'
-p71
+p37
 aS'Carson Wentz'
-p72
+p38
 aS'Christian Hackenberg'
-p73
+p39
+aS'Christian Ponder'
+p40
 aS'Cody Kessler'
-p74
+p41
 aS'Connor Cook'
-p75
+p42
 aS'Dak Prescott'
-p76
+p43
 aS'Jacoby Brissett'
-p77
+p44
+aS'Jared Goff'
+p45
 aS'Jeff Driskel'
-p78
+p46
 aS'Joe Callahan'
-p79
+p47
 aS'Nate Sudfeld'
-p80
+p48
 aS'Paxton Lynch'
-p81
+p49
 aS'Trevone Boykin'
-p82
-asg23
-(lp83
+p50
+asI2011
+(lp51
 S'Andy Dalton'
-p84
+p52
 aS'Blaine Gabbert'
-p85
+p53
 aS'Cam Newton'
-p86
+p54
 aS'Colin Kaepernick'
-p87
+p55
 aS'Josh McCown'
-p88
+p56
 aS'Ryan Mallett'
-p89
+p57
 aS'Scott Tolzien'
-p90
+p58
 aS'Tyrod Taylor'
-p91
-asg27
-(lp92
-S'Alex Tanney'
-p93
-aS'Case Keenum'
-p94
-aS'EJ Manuel'
-p95
-aS'Geno Smith'
-p96
-aS'Landry Jones'
-p97
-aS'Matt Barkley'
-p98
-aS'Matt McGloin'
-p99
-aS'Matt Simms'
-p100
-aS'Mike Glennon'
-p101
-aS'Ryan Griffin'
-p102
-aS'Ryan Nassib'
-p103
-aS'Tyler Bray'
-p104
-aS'Zac Dysert'
-p105
-asg32
-(lp106
+p59
+asI2012
+(lp60
 S'Andrew Luck'
-p107
+p61
 aS'Austin Davis'
-p108
+p62
 aS'Brandon Weeden'
-p109
+p63
 aS'Brock Osweiler'
-p110
+p64
 aS'Kellen Moore'
-p111
+p65
 aS'Kirk Cousins'
-p112
+p66
 aS'Nick Foles'
-p113
+p67
 aS'Robert Griffin III'
-p114
+p68
 aS'Russell Wilson'
-p115
+p69
 aS'Ryan Tannehill'
-p116
+p70
+asI2013
+(lp71
+S'Alex Tanney'
+p72
+aS'Case Keenum'
+p73
+aS'EJ Manuel'
+p74
+aS'Geno Smith'
+p75
+aS'Landry Jones'
+p76
+aS'Matt Barkley'
+p77
+aS'Matt McGloin'
+p78
+aS'Matt Simms'
+p79
+aS'Mike Glennon'
+p80
+aS'Ryan Griffin'
+p81
+aS'Ryan Nassib'
+p82
+aS'Tyler Bray'
+p83
+aS'Zac Dysert'
+p84
+asI2014
+(lp85
+S'Aaron Murray'
+p86
+aS'AJ McCarron'
+p87
+aS'Blake Bortles'
+p88
+aS'Connor Shaw'
+p89
+aS'David Fales'
+p90
+aS'Derek Carr'
+p91
+aS'Dustin Vaughan'
+p92
+aS'Jimmy Garoppolo'
+p93
+aS'Johnny Manziel'
+p94
+aS'Logan Thomas'
+p95
+aS'Sean Renfree'
+p96
+aS'Stephen Morris'
+p97
+aS'Teddy Bridgewater'
+p98
+aS'Tom Savage'
+p99
+aS'Zach Mettenberger'
+p100
+asI2015
+(lp101
+S'Brett Hundley'
+p102
+aS'Bryce Petty'
+p103
+aS'Dylan Thompson'
+p104
+aS'Garrett Grayson'
+p105
+aS'Jameill Showers'
+p106
+aS'Jameis Winston'
+p107
+aS'Keith Wenning'
+p108
+aS'Marcus Mariota'
+p109
+aS'Sean Mannion'
+p110
+aS'Taylor Heinicke'
+p111
+aS'Trevor Siemian'
+p112
 assS'WR'
+p113
+(dp114
+I2016
+(lp115
+S'Aaron Burbridge'
+p116
+aS'Alex Erickson'
 p117
-(dp118
-g3
-(lp119
-S'Adam Humphries'
-p120
-aS'Amari Cooper'
-p121
-aS'Andrew Turzilli'
-p122
-aS'Bennie Fowler'
-p123
-aS'Bradley Marquez'
-p124
-aS'Breshad Perriman'
-p125
-aS'Cameron Meredith'
-p126
-aS'Chandler Worthy'
-p127
-aS'Chris Conley'
-p128
-aS'Chris Harper'
-p129
-aS'Daniel Brown'
-p130
-aS'Darius Jennings'
-p131
-aS'Darren Waller'
-p132
-aS'DeAndrew White'
-p133
-aS'DeVante Parker'
-p134
-aS'Devin Funchess'
-p135
-aS'Devin Smith'
-p136
-aS'Dezmin Lewis'
-p137
-aS'Dontee Dye'
-p138
-aS'Dorial Green-Beckham'
-p139
-aS'Evan Spencer'
-p140
-aS'Geremy Davis'
-p141
-aS'J.J. Nelson'
-p142
-aS'Jaelen Strong'
-p143
-aS'Jamison Crowder'
-p144
-aS'Jared Abbrederis'
-p145
-aS'Javontee Herndon'
-p146
-aS'Jeremy Butler'
-p147
-aS'Jonathan Krause'
-p148
-aS'Justin Hardy'
-p149
-aS'Kaelin Clay'
-p150
-aS'Kasen Williams'
-p151
-aS'Keith Mumphery'
-p152
-aS'Kevin Smith'
-p153
-aS'Lucky Whitehead'
-p154
-aS'Mario Alford'
-p155
-aS'Neal Sterling'
-p156
-aS'Nelson Agholor'
-p157
-aS'Phillip Dorsett'
-p158
-aS'Quan Bray'
-p159
-aS'Rannell Hall'
-p160
-aS'Rashad Greene'
-p161
-aS'Rashad Lawrence'
-p162
-aS'Sammie Coates'
-p163
-aS'Seth Roberts'
-p164
-aS'Stefon Diggs'
-p165
-aS'T.J. Jones'
-p166
-aS'Tony Washington'
-p167
-aS'Tre McBride'
-p168
-aS'Ty Montgomery'
-p169
-aS'Tyler Lockett'
-p170
-aS'Tyler Murphy'
-p171
-aS'Tyrell Williams'
-p172
-aS'Vince Mayle'
-p173
-aS'Willie Snead'
-p174
-asg11
-(lp175
-S'Adam Thielen'
-p176
-aS'Albert Wilson'
-p177
-aS'Allen Hurns'
-p178
-aS'Allen Robinson'
-p179
-aS'Brandin Cooks'
-p180
-aS'Brandon Coleman'
-p181
-aS'Brenton Bersin'
-p182
-aS'Bruce Ellington'
-p183
-aS'Chris Matthews'
-p184
-aS'Cody Latimer'
-p185
-aS'Corey Brown'
-p186
-aS'Corey Fuller'
-p187
-aS'Davante Adams'
-p188
-aS"De'Anthony Thomas"
-p189
-aS'Devin Street'
-p190
-aS'Donte Moncrief'
-p191
-aS'Dontrelle Inman'
-p192
-aS'Frankie Hammond'
-p193
-aS'Freddie Martino'
-p194
-aS'Isaiah Burse'
-p195
-aS'James Wright'
-p196
-aS'Jarvis Landry'
-p197
-aS'Jeff Janis'
-p198
-aS'John Brown'
-p199
-aS'Jordan Matthews'
-p200
-aS'Josh Huff'
-p201
-aS'Kelvin Benjamin'
-p202
-aS'Kevin Norwood'
-p203
-aS'Marqise Lee'
-p204
-aS'Martavis Bryant'
-p205
-aS'Matt Hazel'
-p206
-aS'Michael Campanaro'
-p207
-aS'Mike Evans'
-p208
-aS'Odell Beckham'
-p209
-aS'Paul Richardson'
-p210
-aS'Quincy Enunwa'
-p211
-aS'Rashad Ross'
-p212
-aS'Rico Richardson'
-p213
-aS'Ryan Grant'
-p214
-aS'Sammy Watkins'
-p215
-aS'Seantavius Jones'
-p216
-aS'Taylor Gabriel'
-p217
-aS'Walt Powell'
-p218
-asg19
-(lp219
-S'Alex Erickson'
-p220
 aS'Braxton Miller'
-p221
+p118
 aS'Bryce Treggs'
-p222
+p119
 aS'C.J. Goodwin'
-p223
+p120
 aS'Charone Peake'
-p224
+p121
 aS'Chester Rogers'
-p225
+p122
 aS'Chris Moore'
-p226
+p123
 aS'Cody Core'
-p227
+p124
 aS'Corey Coleman'
-p228
+p125
 aS'Damiere Byrd'
-p229
+p126
 aS'Demarcus Robinson'
-p230
+p127
 aS'Eli Rogers'
-p231
+p128
 aS'Jakeem Grant'
-p232
+p129
 aS'Jalin Marshall'
-p233
+p130
 aS'Johnny Holton'
-p234
+p131
 aS'Jordan Payton'
-p235
+p132
 aS'Jordan Taylor'
-p236
+p133
 aS'Josh Doctson'
-p237
+p134
 aS'Kevin White'
-p238
+p135
 aS'Laquon Treadwell'
-p239
+p136
 aS'Leonte Carroo'
-p240
+p137
 aS'Malcolm Mitchell'
-p241
+p138
 aS'Michael Thomas'
-p242
+p139
+aS'Mike Thomas'
+p140
+aS'Nelson Spruce'
+p141
+aS'Pharoh Cooper'
+p142
 aS'Rashard Higgins'
-p243
+p143
 aS'Ricardo Louis'
-p244
+p144
 aS'Robby Anderson'
-p245
+p145
 aS'Roger Lewis'
-p246
+p146
 aS'Sterling Shepard'
-p247
+p147
 aS'Tajae Sharpe'
-p248
+p148
 aS'Tommylee Lewis'
-p249
+p149
 aS'Trevor Davis'
-p250
+p150
 aS'Tyler Boyd'
-p251
+p151
 aS'Tyreek Hill'
-p252
+p152
 aS'Will Fuller'
-p253
-asg23
-(lp254
+p153
+asI2011
+(lp154
 S'A.J. Green'
-p255
+p155
 aS'Aldrick Robinson'
-p256
+p156
 aS'Andre Holmes'
-p257
+p157
 aS'Andrew Hawkins'
-p258
+p158
 aS'Bryan Walters'
-p259
+p159
 aS'Cecil Shorts'
-p260
+p160
 aS'Doug Baldwin'
-p261
+p161
 aS'Dwayne Harris'
-p262
+p162
 aS'Greg Little'
-p263
+p163
 aS'Greg Salas'
-p264
+p164
 aS'Jeremy Kerley'
-p265
+p165
 aS'Julio Jones'
-p266
+p166
 aS'Kamar Aiken'
-p267
+p167
 aS'Leonard Hankerson'
-p268
+p168
 aS'Marcus Easley'
-p269
+p169
 aS'Randall Cobb'
-p270
+p170
 aS'Ricardo Lockette'
-p271
+p171
 aS'Terrelle Pryor'
-p272
+p172
 aS'Torrey Smith'
-p273
+p173
 aS'Vincent Brown'
-p274
+p174
 aS'Vincent Jackson'
-p275
-asg27
-(lp276
-S'Aaron Dobson'
-p277
-aS'Brian Tyms'
-p278
-aS'Brice Butler'
-p279
-aS'Brittan Golden'
-p280
-aS'Charles Johnson'
-p281
-aS'Cordarrelle Patterson'
-p282
-aS'DeAndre Hopkins'
-p283
-aS'Griff Whalen'
-p284
-aS'Jaron Brown'
-p285
-aS'Josh Boyce'
-p286
-aS'Justin Hunter'
-p287
-aS'Keenan Allen'
-p288
-aS'Kenbrell Thompkins'
-p289
-aS'Kenny Stills'
-p290
-aS'Markus Wheaton'
-p291
-aS'Marquess Wilson'
-p292
-aS'Marquise Goodwin'
-p293
-aS'Myles White'
-p294
-aS'Nick Toon'
-p295
-aS'Nick Williams'
-p296
-aS'Quinton Patton'
-p297
-aS'Robert Woods'
-p298
-aS'Rodney Smith'
-p299
-aS'Russell Shepard'
-p300
-aS'Ryan Spadola'
-p301
-aS'Stedman Bailey'
-p302
-aS'Tavarres King'
-p303
-aS'Tavon Austin'
-p304
-aS'Terrance Williams'
-p305
-aS'Tobais Palmer'
-p306
-asg32
-(lp307
+p175
+asI2012
+(lp176
 S'Alshon Jeffery'
-p308
+p177
 aS'Brian Quick'
-p309
+p178
 aS'Chris Givens'
-p310
+p179
 aS'Chris Hogan'
-p311
+p180
 aS'Chris Owusu'
-p312
+p181
 aS'Cole Beasley'
-p313
+p182
 aS'Damaris Johnson'
-p314
+p183
 aS'Deonte Thompson'
-p315
+p184
 aS'DeVier Posey'
-p316
+p185
 aS'Jarius Wright'
-p317
+p186
 aS'Jarrett Boykin'
-p318
+p187
 aS'Jeremy Ross'
-p319
+p188
 aS'Jermaine Kearse'
-p320
+p189
 aS'Josh Bellamy'
-p321
+p190
 aS'Josh Gordon'
-p322
+p191
 aS'Justin Blackmon'
-p323
+p192
 aS'Kendall Wright'
-p324
+p193
 aS'Keshawn Martin'
-p325
+p194
 aS'LaRon Byrd'
-p326
+p195
 aS'Marvin Jones'
-p327
+p196
 aS'Michael Floyd'
-p328
+p197
 aS'Mohamed Sanu'
-p329
+p198
 aS'Nathan Palmer'
-p330
+p199
 aS'Rishard Matthews'
-p331
+p200
 aS'Rod Streater'
-p332
+p201
 aS'Rueben Randle'
-p333
+p202
 aS'Saalim Hakim'
-p334
+p203
 aS'Stephen Hill'
-p335
+p204
 aS'T.J. Graham'
-p336
+p205
 aS'T.Y. Hilton'
-p337
+p206
 aS'Travis Benjamin'
+p207
+asI2013
+(lp208
+S'Aaron Dobson'
+p209
+aS'Brian Tyms'
+p210
+aS'Brice Butler'
+p211
+aS'Brittan Golden'
+p212
+aS'Charles Johnson'
+p213
+aS'Cordarrelle Patterson'
+p214
+aS'DeAndre Hopkins'
+p215
+aS'Griff Whalen'
+p216
+aS'Jaron Brown'
+p217
+aS'Josh Boyce'
+p218
+aS'Justin Hunter'
+p219
+aS'Keenan Allen'
+p220
+aS'Kenbrell Thompkins'
+p221
+aS'Kenny Stills'
+p222
+aS'Markus Wheaton'
+p223
+aS'Marquess Wilson'
+p224
+aS'Marquise Goodwin'
+p225
+aS'Myles White'
+p226
+aS'Nick Toon'
+p227
+aS'Nick Williams'
+p228
+aS'Quinton Patton'
+p229
+aS'Robert Woods'
+p230
+aS'Rodney Smith'
+p231
+aS'Russell Shepard'
+p232
+aS'Ryan Spadola'
+p233
+aS'Stedman Bailey'
+p234
+aS'Tavarres King'
+p235
+aS'Tavon Austin'
+p236
+aS'Terrance Williams'
+p237
+aS'Tobais Palmer'
+p238
+asI2014
+(lp239
+S'Adam Thielen'
+p240
+aS'Albert Wilson'
+p241
+aS'Allen Hurns'
+p242
+aS'Allen Robinson'
+p243
+aS'Brandin Cooks'
+p244
+aS'Brandon Coleman'
+p245
+aS'Brenton Bersin'
+p246
+aS'Bruce Ellington'
+p247
+aS'Chris Matthews'
+p248
+aS'Cody Latimer'
+p249
+aS'Corey Brown'
+p250
+aS'Corey Fuller'
+p251
+aS'Davante Adams'
+p252
+aS"De'Anthony Thomas"
+p253
+aS'Devin Street'
+p254
+aS'Donte Moncrief'
+p255
+aS'Dontrelle Inman'
+p256
+aS'Frankie Hammond'
+p257
+aS'Freddie Martino'
+p258
+aS'Isaiah Burse'
+p259
+aS'James Wright'
+p260
+aS'Jarvis Landry'
+p261
+aS'Jeff Janis'
+p262
+aS'John Brown'
+p263
+aS'Jordan Matthews'
+p264
+aS'Josh Huff'
+p265
+aS'Kelvin Benjamin'
+p266
+aS'Kevin Norwood'
+p267
+aS'Marqise Lee'
+p268
+aS'Martavis Bryant'
+p269
+aS'Matt Hazel'
+p270
+aS'Michael Campanaro'
+p271
+aS'Mike Evans'
+p272
+aS'Odell Beckham'
+p273
+aS'Paul Richardson'
+p274
+aS'Quincy Enunwa'
+p275
+aS'Rashad Ross'
+p276
+aS'Rico Richardson'
+p277
+aS'Ryan Grant'
+p278
+aS'Sammy Watkins'
+p279
+aS'Seantavius Jones'
+p280
+aS'Taylor Gabriel'
+p281
+aS'Walt Powell'
+p282
+asI2015
+(lp283
+S'Adam Humphries'
+p284
+aS'Amari Cooper'
+p285
+aS'Andrew Turzilli'
+p286
+aS'Bennie Fowler'
+p287
+aS'Bradley Marquez'
+p288
+aS'Breshad Perriman'
+p289
+aS'Cameron Meredith'
+p290
+aS'Chandler Worthy'
+p291
+aS'Chris Conley'
+p292
+aS'Chris Harper'
+p293
+aS'Daniel Brown'
+p294
+aS'Darius Jennings'
+p295
+aS'Darren Waller'
+p296
+aS'DeAndrew White'
+p297
+aS'DeVante Parker'
+p298
+aS'Devin Funchess'
+p299
+aS'Devin Smith'
+p300
+aS'Dezmin Lewis'
+p301
+aS'Dontee Dye'
+p302
+aS'Dorial Green-Beckham'
+p303
+aS'Evan Spencer'
+p304
+aS'Geremy Davis'
+p305
+aS'J.J. Nelson'
+p306
+aS'Jaelen Strong'
+p307
+aS'Jamison Crowder'
+p308
+aS'Jared Abbrederis'
+p309
+aS'Javontee Herndon'
+p310
+aS'Jeremy Butler'
+p311
+aS'Jonathan Krause'
+p312
+aS'Justin Hardy'
+p313
+aS'Kaelin Clay'
+p314
+aS'Kasen Williams'
+p315
+aS'Keith Mumphery'
+p316
+aS'Kevin Smith'
+p317
+aS'Lucky Whitehead'
+p318
+aS'Mario Alford'
+p319
+aS'Neal Sterling'
+p320
+aS'Nelson Agholor'
+p321
+aS'Phillip Dorsett'
+p322
+aS'Quan Bray'
+p323
+aS'Rannell Hall'
+p324
+aS'Rashad Greene'
+p325
+aS'Rashad Lawrence'
+p326
+aS'Sammie Coates'
+p327
+aS'Seth Roberts'
+p328
+aS'Stefon Diggs'
+p329
+aS'T.J. Jones'
+p330
+aS'Tony Washington'
+p331
+aS'Tre McBride'
+p332
+aS'Ty Montgomery'
+p333
+aS'Tyler Lockett'
+p334
+aS'Tyler Murphy'
+p335
+aS'Tyrell Williams'
+p336
+aS'Vince Mayle'
+p337
+aS'Willie Snead'
 p338
 assS'RB'
 p339
 (dp340
-g3
+I2016
 (lp341
-S'Aaron Ripkowski'
-p342
-aS'Akeem Hunt'
-p343
-aS'Ameer Abdullah'
-p344
-aS'Brandon Wegher'
-p345
-aS'Cameron Artis-Payne'
-p346
-aS'Corey Grant'
-p347
-aS'David Cobb'
-p348
-aS'David Johnson'
-p349
-aS'Dreamius Smith'
-p350
-aS'Duke Johnson'
-p351
-aS'Jalston Fowler'
-p352
-aS'Javorius Allen'
-p353
-aS'Jay Ajayi'
-p354
-aS'Jeremy Langford'
-p355
-aS'Joey Iosefa'
-p356
-aS'John Crockett'
-p357
-aS'Karlos Williams'
-p358
-aS'Kendall Gaskins'
-p359
-aS'Malcolm Brown'
-p360
-aS'Malcolm Johnson'
-p361
-aS'Marcus Murphy'
-p362
-aS'Melvin Gordon'
-p363
-aS'Michael Burton'
-p364
-aS'Mike Davis'
-p365
-aS'Nikit Whitlock'
-p366
-aS'Raheem Mostert'
-p367
-aS'Rod Smith'
-p368
-aS'Roosevelt Nix-Jones'
-p369
-aS'T.J. Yeldon'
-p370
-aS'Terrence Magee'
-p371
-aS'Terron Ward'
-p372
-aS'Tevin Coleman'
-p373
-aS'Thomas Rawls'
-p374
-aS'Todd Gurley'
-p375
-aS'Trey Williams'
-p376
-aS'Tyler Varga'
-p377
-aS'Zach Zenner'
-p378
-asg11
-(lp379
-S'Alfred Blue'
-p380
-aS'Andre Williams'
-p381
-aS'Antonio Andrews'
-p382
-aS'Austin Johnson'
-p383
-aS'Bishop Sankey'
-p384
-aS'Branden Oliver'
-p385
-aS'Carlos Hyde'
-p386
-aS'Charcandrick West'
-p387
-aS'Charles Sims'
-p388
-aS'Damien Williams'
-p389
-aS'Darrin Reaves'
-p390
-aS'Devont Freeman'
-p391
-aS'Dri Archer'
-p392
-aS'Fitzgerald Toussaint'
-p393
-aS'George Atkinson'
-p394
-aS'George Winn'
-p395
-aS'Glenn Winston'
-p396
-aS'Isaiah Crowell'
-p397
-aS'James White'
-p398
-aS'Jay Prosch'
-p399
-aS'Jeremy Hill'
-p400
-aS'Jerick McKinnon'
-p401
-aS'Jonas Gray'
-p402
-aS'Juwan Thompson'
-p403
-aS"Ka'Deem Carey"
-p404
-aS'Kapri Bibbs'
-p405
-aS'Latavius Murray'
-p406
-aS'Lorenzo Taliaferro'
-p407
-aS'Orleans Darkwa'
-p408
-aS'Senorise Perry'
-p409
-aS'Silas Redd'
-p410
-aS'Storm Johnson'
-p411
-aS'Terrance West'
-p412
-aS'Tre Mason'
-p413
-asg19
-(lp414
 S'Alex Collins'
-p415
+p342
 aS'Andy Janovich'
-p416
+p343
 aS'C.J. Prosise'
-p417
+p344
 aS'D.J. Foster'
-p418
+p345
 aS'Daniel Lasco'
-p419
+p346
 aS'Darius Jackson'
-p420
+p347
 aS'DeAndre Washington'
-p421
+p348
 aS'Derek Watt'
-p422
+p349
 aS'Derrick Henry'
-p423
+p350
 aS'Devontae Booker'
-p424
+p351
 aS'Dwayne Washington'
-p425
+p352
 aS'Ezekiel Elliott'
-p426
+p353
 aS'Glenn Gronkowski'
-p427
+p354
 aS'Jalen Richard'
-p428
+p355
 aS'Jhurrell Pressley'
-p429
+p356
 aS'Jonathan Williams'
-p430
+p357
 aS'Jordan Howard'
-p431
+p358
 aS'Josh Ferguson'
-p432
+p359
 aS'Julian Howsare'
-p433
+p360
 aS'Keith Smith'
-p434
+p361
 aS'Kenneth Dixon'
-p435
+p362
 aS'Kenneth Farrow'
-p436
+p363
 aS'Kenyan Drake'
-p437
+p364
 aS'Matt Jones'
-p438
+p365
 aS'Paul Lasike'
-p439
+p366
 aS'Paul Perkins'
-p440
+p367
 aS'Peyton Barber'
-p441
+p368
 aS'Rob Kelley'
-p442
+p369
 aS'Roosevelt Nix'
-p443
+p370
 aS'Troymaine Pope'
-p444
+p371
 aS'Tyler Ervin'
-p445
+p372
 aS'Wendell Smallwood'
-p446
-asg23
-(lp447
+p373
+asI2011
+(lp374
 S'Anthony Sherman'
-p448
+p375
 aS'Bilal Powell'
-p449
+p376
 aS'Bruce Miller'
-p450
+p377
 aS'Daniel Thomas'
-p451
+p378
 aS'DeMarco Murray'
-p452
+p379
 aS'Dion Lewis'
-p453
+p380
 aS'DuJuan Harris'
-p454
+p381
 aS'Jacquizz Rodgers'
-p455
+p382
 aS'Jordan Todman'
-p456
+p383
 aS'Kendall Hunter'
-p457
+p384
 aS'Mark Ingram'
-p458
+p385
 aS'Roy Helu'
-p459
+p386
 aS'Shane Vereen'
-p460
+p387
 aS'Shaun Draughn'
-p461
+p388
 aS'Stevan Ridley'
-p462
+p389
 aS'Taiwan Jones'
-p463
+p390
 aS'Tyler Clutts'
-p464
-asg27
-(lp465
-S'Andre Ellington'
-p466
-aS'Benny Cunningham'
-p467
-aS'C.J. Anderson'
-p468
-aS'Chase Reynolds'
-p469
-aS'Chris Thompson'
-p470
-aS'Christine Michael'
-p471
-aS'Denard Robinson'
-p472
-aS'Derrick Coleman'
-p473
-aS'Eddie Lacy'
-p474
-aS'Fozzy Whittaker'
-p475
-aS'Giovani Bernard'
-p476
-aS'Joe Banyard'
-p477
-aS'Kenjon Barner'
-p478
-aS'Kerwynn Williams'
-p479
-aS'Khiry Robinson'
-p480
-aS'Knile Davis'
-p481
-aS'Kyle Juszczyk'
-p482
-aS"Le'Veon Bell"
-p483
-aS'Mike Gillislee'
-p484
-aS'Mike James'
-p485
-aS'Rex Burkhead'
-p486
-aS'Spencer Ware'
-p487
-aS'Stepfan Taylor'
-p488
-aS'Theo Riddick'
-p489
-aS'Tommy Bohanon'
-p490
-aS'Zac Stacy'
-p491
-aS'Zach Line'
-p492
-asg32
-(lp493
+p391
+asI2012
+(lp392
 S'Alfred Morris'
-p494
+p393
 aS'Bernard Pierce'
-p495
+p394
 aS'Bobby Rainey'
-p496
+p395
 aS'Brandon Bolden'
-p497
+p396
 aS'Bryce Brown'
-p498
+p397
 aS'Chris Polk'
-p499
+p398
 aS'Cyrus Gray'
-p500
+p399
 aS'Dan Herron'
-p501
+p400
 aS'Daryl Richardson'
-p502
+p401
 aS'Doug Martin'
-p503
+p402
 aS'Isaiah Pead'
-p504
+p403
 aS'James Develin'
-p505
+p404
 aS'Jamize Olawale'
-p506
+p405
 aS'Jonathan Grimes'
-p507
+p406
 aS'Jorvorskie Lane'
-p508
+p407
 aS'Lamar Miller'
-p509
+p408
 aS'Lance Dunbar'
-p510
+p409
 aS'Matt Asiata'
-p511
+p410
 aS'Patrick DiMarco'
-p512
+p411
 aS'Robert Turbin'
-p513
+p412
 aS'Ronnie Hillman'
-p514
+p413
 aS'Travaris Cadet'
-p515
+p414
 aS'Trent Richardson'
-p516
+p415
 aS'Vick Ballard'
-p517
+p416
 aS'Will Johnson'
+p417
+asI2013
+(lp418
+S'Andre Ellington'
+p419
+aS'Benny Cunningham'
+p420
+aS'C.J. Anderson'
+p421
+aS'Chase Reynolds'
+p422
+aS'Chris Thompson'
+p423
+aS'Christine Michael'
+p424
+aS'Denard Robinson'
+p425
+aS'Derrick Coleman'
+p426
+aS'Eddie Lacy'
+p427
+aS'Fozzy Whittaker'
+p428
+aS'Giovani Bernard'
+p429
+aS'Joe Banyard'
+p430
+aS'Kenjon Barner'
+p431
+aS'Kerwynn Williams'
+p432
+aS'Khiry Robinson'
+p433
+aS'Knile Davis'
+p434
+aS'Kyle Juszczyk'
+p435
+aS"Le'Veon Bell"
+p436
+aS'Mike Gillislee'
+p437
+aS'Mike James'
+p438
+aS'Rex Burkhead'
+p439
+aS'Spencer Ware'
+p440
+aS'Stepfan Taylor'
+p441
+aS'Theo Riddick'
+p442
+aS'Tommy Bohanon'
+p443
+aS'Zac Stacy'
+p444
+aS'Zach Line'
+p445
+asI2014
+(lp446
+S'Alfred Blue'
+p447
+aS'Andre Williams'
+p448
+aS'Antonio Andrews'
+p449
+aS'Austin Johnson'
+p450
+aS'Bishop Sankey'
+p451
+aS'Branden Oliver'
+p452
+aS'Carlos Hyde'
+p453
+aS'Charcandrick West'
+p454
+aS'Charles Sims'
+p455
+aS'Damien Williams'
+p456
+aS'Darrin Reaves'
+p457
+aS'Devont Freeman'
+p458
+aS'Dri Archer'
+p459
+aS'Fitzgerald Toussaint'
+p460
+aS'George Atkinson'
+p461
+aS'George Winn'
+p462
+aS'Glenn Winston'
+p463
+aS'Isaiah Crowell'
+p464
+aS'James White'
+p465
+aS'Jay Prosch'
+p466
+aS'Jeremy Hill'
+p467
+aS'Jerick McKinnon'
+p468
+aS'Jonas Gray'
+p469
+aS'Juwan Thompson'
+p470
+aS"Ka'Deem Carey"
+p471
+aS'Kapri Bibbs'
+p472
+aS'Latavius Murray'
+p473
+aS'Lorenzo Taliaferro'
+p474
+aS'Orleans Darkwa'
+p475
+aS'Senorise Perry'
+p476
+aS'Silas Redd'
+p477
+aS'Storm Johnson'
+p478
+aS'Terrance West'
+p479
+aS'Tre Mason'
+p480
+asI2015
+(lp481
+S'Aaron Ripkowski'
+p482
+aS'Akeem Hunt'
+p483
+aS'Ameer Abdullah'
+p484
+aS'Brandon Wegher'
+p485
+aS'Cameron Artis-Payne'
+p486
+aS'Corey Grant'
+p487
+aS'David Cobb'
+p488
+aS'David Johnson'
+p489
+aS'Dreamius Smith'
+p490
+aS'Duke Johnson'
+p491
+aS'Jalston Fowler'
+p492
+aS'Javorius Allen'
+p493
+aS'Jay Ajayi'
+p494
+aS'Jeremy Langford'
+p495
+aS'Joey Iosefa'
+p496
+aS'John Crockett'
+p497
+aS'Karlos Williams'
+p498
+aS'Kendall Gaskins'
+p499
+aS'Malcolm Brown'
+p500
+aS'Malcolm Johnson'
+p501
+aS'Marcus Murphy'
+p502
+aS'Melvin Gordon'
+p503
+aS'Michael Burton'
+p504
+aS'Mike Davis'
+p505
+aS'Nikit Whitlock'
+p506
+aS'Raheem Mostert'
+p507
+aS'Rod Smith'
+p508
+aS'Roosevelt Nix-Jones'
+p509
+aS'T.J. Yeldon'
+p510
+aS'Terrence Magee'
+p511
+aS'Terron Ward'
+p512
+aS'Tevin Coleman'
+p513
+aS'Thomas Rawls'
+p514
+aS'Todd Gurley'
+p515
+aS'Trey Williams'
+p516
+aS'Tyler Varga'
+p517
+aS'Zach Zenner'
 p518
 assS'TE'
 p519
 (dp520
-g3
+I2016
 (lp521
-S'Blake Bell'
-p522
-aS'Brian Parker'
-p523
-aS'C.J. Uzomah'
-p524
-aS'Clive Walford'
-p525
-aS'D.J. Tialavea'
-p526
-aS'E.J. Bibbs'
-p527
-aS'Erik Swoope'
-p528
-aS'Gabe Holmes'
-p529
-aS'Geoff Swaim'
-p530
-aS"James O'Shaughnessy"
-p531
-aS"Je'Ron Hamm"
-p532
-aS'Jesse James'
-p533
-aS'Kennard Backman'
-p534
-aS'Khari Lee'
-p535
-aS'Matt LaCosse'
-p536
-aS'Maxx Williams'
-p537
-aS'Michael Williams'
-p538
-aS'Mitchell Henry'
-p539
-aS'MyCole Pruitt'
-p540
-aS'Nick Boyle'
-p541
-aS"Nick O'Leary"
-p542
-aS'Tevin Westbrook'
-p543
-aS'Tyler Kroft'
-p544
-aS'Wes Saxton'
-p545
-aS'Will Tye'
-p546
-asg11
-(lp547
-S'Anthony Denham'
-p548
-aS'Asante Cleveland'
-p549
-aS'Austin Seferian-Jenkins'
-p550
-aS'Blake Annen'
-p551
-aS'Brian Leonhardt'
-p552
-aS'C.J. Fiedorowicz'
-p553
-aS'Cameron Brate'
-p554
-aS'Cooper Helfet'
-p555
-aS'Crockett Gillmore'
-p556
-aS'Darren Fells'
-p557
-aS'Demetrius Harris'
-p558
-aS'Eric Ebron'
-p559
-aS'Jace Amaro'
-p560
-aS'Jerome Cunningham'
-p561
-aS'Justin Perillo'
-p562
-aS'Marcel Jensen'
-p563
-aS'Nic Jacobs'
-p564
-aS'Phillip Supernaw'
-p565
-aS'RaShaun Allen'
-p566
-aS'Richard Rodgers'
-p567
-aS'Ryan Hewitt'
-p568
-aS'Scott Simonson'
-p569
-aS'Trey Burton'
-p570
-aS'Troy Niklas'
-p571
-asg19
-(lp572
 S'A.J. Derby'
-p573
+p522
 aS'Austin Hooper'
-p574
+p523
 aS'Ben Koyack'
-p575
+p524
 aS'Braedon Bowman'
-p576
+p525
 aS'Chris Manhertz'
-p577
+p526
 aS'Cole Wick'
-p578
+p527
 aS'David Morgan'
-p579
+p528
 aS'Greg Scruggs'
-p580
+p529
 aS'Hunter Henry'
-p581
+p530
 aS'Jeff Heuerman'
-p582
+p531
 aS'Jerell Adams'
-p583
+p532
 aS'Josh Perkins'
-p584
+p533
 aS'Neal Sterling'
-p585
+p534
 aS'Nick Vannett'
-p586
+p535
 aS'Randall Telfer'
-p587
+p536
 aS'Ross Travis'
-p588
+p537
 aS'Seth Devalve'
-p589
+p538
 aS'Stephen Anderson'
-p590
+p539
+aS'Temarrick Hemingway'
+p540
+aS'Tyler Higbee'
+p541
 aS'Xavier Grimble'
-p591
-asg23
-(lp592
+p542
+asI2011
+(lp543
 S'Allen Reisner'
-p593
+p544
 aS'Charles Clay'
-p594
+p545
 aS'John Phillips'
-p595
+p546
 aS'Jordan Cameron'
-p596
+p547
 aS'Julius Thomas'
-p597
+p548
 aS'Kyle Rudolph'
-p598
+p549
 aS'Lance Kendricks'
-p599
+p550
 aS'Lee Smith'
-p600
+p551
 aS'Luke Stocker'
-p601
+p552
 aS'Niles Paul'
-p602
+p553
 aS'Richard Gordon'
-p603
+p554
 aS'Rob Housler'
-p604
+p555
 aS'Virgil Green'
-p605
-asg27
-(lp606
-S'Brandon Bostick'
-p607
-aS'Brandon Williams'
-p608
-aS'Chris Gragg'
-p609
-aS'Chris Pantale'
-p610
-aS'Derek Carrier'
-p611
-aS'Dion Sims'
-p612
-aS'Gavin Escobar'
-p613
-aS'Jack Doyle'
-p614
-aS'Jake Stoneburner'
-p615
-aS'Jordan Reed'
-p616
-aS'Josh Hill'
-p617
-aS'Justice Cunningham'
-p618
-aS'Larry Donnell'
-p619
-aS'Levine Toilolo'
-p620
-aS'Luke Willson'
-p621
-aS'MarQueis Gray'
-p622
-aS'Mychal Rivera'
-p623
-aS'Ryan Griffin'
-p624
-aS'Timothy Wright'
-p625
-aS'Travis Kelce'
-p626
-aS'Tyler Eifert'
-p627
-aS'Vance McDonald'
-p628
-aS'Zach Ertz'
-p629
-aS'Zach Sudfeld'
-p630
-asg32
-(lp631
+p556
+asI2012
+(lp557
 S'Coby Fleener'
-p632
+p558
 aS'Cory Harkey'
-p633
+p559
 aS'Dominique Jones'
-p634
+p560
 aS'Dwayne Allen'
-p635
+p561
 aS'Garrett Celek'
-p636
+p562
 aS'James Hanna'
-p637
+p563
 aS'Konrad Reuland'
-p638
+p564
 aS'Ladarius Green'
-p639
+p565
 aS'Orson Charles'
-p640
+p566
 aS'Rhett Ellison'
-p641
+p567
 aS'Sean McGrath'
+p568
+asI2013
+(lp569
+S'Brandon Bostick'
+p570
+aS'Brandon Williams'
+p571
+aS'Chris Gragg'
+p572
+aS'Chris Pantale'
+p573
+aS'Derek Carrier'
+p574
+aS'Dion Sims'
+p575
+aS'Gavin Escobar'
+p576
+aS'Jack Doyle'
+p577
+aS'Jake Stoneburner'
+p578
+aS'Jordan Reed'
+p579
+aS'Josh Hill'
+p580
+aS'Justice Cunningham'
+p581
+aS'Larry Donnell'
+p582
+aS'Levine Toilolo'
+p583
+aS'Luke Willson'
+p584
+aS'MarQueis Gray'
+p585
+aS'Mychal Rivera'
+p586
+aS'Ryan Griffin'
+p587
+aS'Timothy Wright'
+p588
+aS'Travis Kelce'
+p589
+aS'Tyler Eifert'
+p590
+aS'Vance McDonald'
+p591
+aS'Zach Ertz'
+p592
+aS'Zach Sudfeld'
+p593
+asI2014
+(lp594
+S'Anthony Denham'
+p595
+aS'Asante Cleveland'
+p596
+aS'Austin Seferian-Jenkins'
+p597
+aS'Blake Annen'
+p598
+aS'Brian Leonhardt'
+p599
+aS'C.J. Fiedorowicz'
+p600
+aS'Cameron Brate'
+p601
+aS'Cooper Helfet'
+p602
+aS'Crockett Gillmore'
+p603
+aS'Darren Fells'
+p604
+aS'Demetrius Harris'
+p605
+aS'Eric Ebron'
+p606
+aS'Jace Amaro'
+p607
+aS'Jerome Cunningham'
+p608
+aS'Justin Perillo'
+p609
+aS'Marcel Jensen'
+p610
+aS'Nic Jacobs'
+p611
+aS'Phillip Supernaw'
+p612
+aS'RaShaun Allen'
+p613
+aS'Richard Rodgers'
+p614
+aS'Ryan Hewitt'
+p615
+aS'Scott Simonson'
+p616
+aS'Trey Burton'
+p617
+aS'Troy Niklas'
+p618
+asI2015
+(lp619
+S'Blake Bell'
+p620
+aS'Brian Parker'
+p621
+aS'C.J. Uzomah'
+p622
+aS'Clive Walford'
+p623
+aS'D.J. Tialavea'
+p624
+aS'E.J. Bibbs'
+p625
+aS'Erik Swoope'
+p626
+aS'Gabe Holmes'
+p627
+aS'Geoff Swaim'
+p628
+aS"James O'Shaughnessy"
+p629
+aS"Je'Ron Hamm"
+p630
+aS'Jesse James'
+p631
+aS'Kennard Backman'
+p632
+aS'Khari Lee'
+p633
+aS'Matt LaCosse'
+p634
+aS'Maxx Williams'
+p635
+aS'Michael Williams'
+p636
+aS'Mitchell Henry'
+p637
+aS'MyCole Pruitt'
+p638
+aS'Nick Boyle'
+p639
+aS"Nick O'Leary"
+p640
+aS'Tevin Westbrook'
+p641
+aS'Tyler Kroft'
 p642
+aS'Wes Saxton'
+p643
+aS'Will Tye'
+p644
 ass.

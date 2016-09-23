@@ -15,7 +15,7 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
     pos : string
         The player position; e.g. "QB", "RB", etc.
     year_list : list
-        a list of years
+        a list of int
     var1 : string
         The first field in the correlation
     var2 : string, optional
@@ -253,7 +253,7 @@ def matchup_history(player,opp,ppr=0.0):
             if '@' in opp_check:
                 opp_check = opp_check[1:]
                 
-            if opp_check==opp and played == '1':
+            if opp_check==opp and played:
                 points = player.week_points(week,year,ppr)
                 ppg_total.append(points)
                 prev_games.append((week,year))
@@ -277,7 +277,7 @@ def pa_to_pos(this_year,pos,opp,wts,ppr=0.0,rookie=False):
     Parameters
 
     ----------
-    this_year : string
+    this_year : int
         The current four digit year.
     pos : string
         The player position.
@@ -303,7 +303,7 @@ def pa_to_pos(this_year,pos,opp,wts,ppr=0.0,rookie=False):
 
     """
 
-    last_year = str(int(this_year)-1)
+    last_year = this_year-1
     if rookie:
         if ppr == 0.0:
             past_allowed = PAST_POINTS_ALLOWED_ROOKIES[last_year][pos][opp]
@@ -386,10 +386,9 @@ def points_allowed(ppr = 0.0, past = True,rookies = False):
             pickletime = os.path.getmtime(pickle_path)
             delta = csvtime-pickletime
             if delta > 0:   #checks to see if the csv data has been recently modified
-                raise IOError
-        else:        
-            temp_dict = pickle.load(open(pickle_path,"rb"))
-    except IOError:
+                raise IOError        
+        temp_dict = pickle.load(open(pickle_path,"rb"))
+    except (IOError,OSError):
         temp_dict = {year:{pos:{team:0.0 for team in TEAM_LIST}
                        for pos in POS_LIST}
                        for year in years}
@@ -544,7 +543,7 @@ def player_score(player,ppr=0.0,GAME_THRESH=4.0):
     production = production_score(player,this_year,weights,ppr)
     allowed = pa_to_pos(this_year,pos,opp,weights,ppr)
     m_avg,m_high,m_low,m_gp,m_last = matchup_history(player,opp,ppr)
-    #clean up
+    #####Lower the influence to points allowed to WR#####
     if player.abbr == "WR":
         temp_weight = np.array([.75,.25])
         score = np.average(np.array([production,allowed]),weights=temp_weight)
@@ -562,7 +561,7 @@ def production_score(player,this_year,wts,ppr=0.0):
     ----------
     player : class object
         The Player class object
-    this_year : string
+    this_year : int
         The current four digit year.
     wts : array_like
         An array containing the weights for averaging the past and
@@ -580,7 +579,7 @@ def production_score(player,this_year,wts,ppr=0.0):
 
     """
 
-    last_year = str(int(this_year)-1)
+    last_year = this_year-1
     pos = player.abbr
     name = player.name
     
