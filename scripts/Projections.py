@@ -411,27 +411,19 @@ def points_allowed(ppr = 0.0, past = True,rookies = False):
                         if points == "Bye" or points == "No Data":
                             continue    
                         else:
-                            team = player.stats[year][week]["Opp"]    
-                    
+                            team = player.stats[year][week]["Opp"]
                             if '@' in team:
                                 team = team[1:]
-                            
-                            if team == "JAX":
-                                team = "JAC"
 
-                            if team == "LA":
-                                team = "STL"
-
-                                
                             temp_dict[year][pos][team] += points
                 
                 # average the total points
                 for team in TEAM_LIST:
                     d = Defense(team)
                     tot_games = d.games_played(year)
-                    p = float(temp_dict[year][pos][team])
+                    p = temp_dict[year][pos][team]
                     temp_dict[year][pos][team]=p/tot_games
-            
+        
             pickle.dump(temp_dict,open(pickle_path,"wb"))
     return temp_dict
 

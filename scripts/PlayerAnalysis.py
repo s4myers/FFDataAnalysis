@@ -11,9 +11,6 @@ CSV_DIR = "../CSV_data/"
 #CSV_DIR = "C:/Users/justin/Documents/GitHub/FFDataAnalysis/CSV_data/"
 PICKLE_DIR = "../pickle_files/"
 
-TEAM_LIST =["BUF","MIA","NE","NYJ","BAL","CIN","CLE","PIT","HOU","IND","JAC",
-            "TEN","DEN","KC","OAK","SD","DAL","NYG","PHI","WAS","CHI","DET",
-            "GB","MIN","ATL","CAR","NO","TB","ARI","STL","SF","SEA"]
            
 YEAR_LIST = [2010,2011,2012,2013,2014,2015,2016]
 
@@ -106,39 +103,17 @@ try:
 except IOError:
     pass
 
-TEAM_NAME_DICT = {
- 'Broncos':'DEN',
- 'Vikings':'MIN',
- 'Bears':'CHI',
- 'Falcons':'ATL',
- 'Saints':'NO',
- 'Chargers':'SD',
- 'Raiders':'OAK',
- 'Lions':'DET',
- 'Browns':'CLE',
- 'Eagles':'PHI',
- 'Steelers':'PIT',
- 'Giants':'NYG',
- 'Buccaneers':'TB',
- 'Cardinals':'ARI',
- 'Bengals':'CIN',
- 'Chiefs':'KC',
- 'Jaguars':'JAC',
- 'Seahawks':'SEA',
- 'Jets':'NYJ',
- 'Ravens':'BAL',
- 'Colts':'IND',
- 'Packers':'GB',
- 'Dolphins':'MIA',
- 'Rams':'STL',
- 'Bills':'BUF',
- 'Panthers':'CAR',
- 'Texans':'HOU',
- '49ers':'SF',
- 'Patriots':'NE',
- 'Cowboys':'DAL',
- 'Titans':'TEN',
- 'Redskins':'WAS'}
+try:
+    TEAM_NAME_CONV = pickle.load(open(os.path.join(
+                                PICKLE_DIR,"CityConversion.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    TEAM_LIST = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"TeamList.p"),"rb"))
+except IOError:
+    pass
 
 #Global Functions
 def generate_class_list(pos,player_list):
@@ -270,7 +245,14 @@ class Player(object):
                                 try:
                                     new_row[k]=int(row[k])
                                 except ValueError:
-                                    new_row[k]=row[k]    
+                                    new_row[k]=row[k]
+                            elif k=='Opp' and row[k]!='':
+                                try:
+                                    opponent = TEAM_NAME_CONV[row[k]]
+                                except KeyError:
+                                    opponent = TEAM_NAME_CONV[row[k][1:]]
+                                    opponent = '@'+opponent
+                                new_row[k]=opponent    
                             else:
                                 try:
                                     new_row[k]=float(row[k])
@@ -603,14 +585,16 @@ class Player(object):
 
             turnovers = 0.0
             turnover_fields = ["Int","Lost"]
-            p = [i for i in self.stats[year][week]["Players"]]
-            for (player,pos) in p:
-                a = generate_class_list(pos,[player])[0]
-                for b in turnover_fields:
-                    try:
-                        turnovers += float(a.stats[year][week][b])
-                    except (KeyError, ValueError):
-                        continue
+            for x in turnover_fields:
+                turnovers+=self.stats[year][week][x]
+            #p = [i for i in self.stats[year][week]["Players"]]
+            #for (player,pos) in p:
+            #    a = generate_class_list(pos,[player])[0]
+            #    for b in turnover_fields:
+            #        try:
+            #            turnovers += float(a.stats[year][week][b])
+            #        except (KeyError, ValueError):
+            #            continue
             
             blocks = XPB + FGB
             points = base_points + 2*blocks + sacks + 2*turnovers
@@ -853,7 +837,7 @@ class Kicker(Player):
 class Defense(Player):
     """ Defensive Matchup """
     abbr = "DEF"
-    field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt",
+    field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt","Lost","Int"
                    "PassYds","PassTD","FGBlk","FGAtt","FGM","XPM","XPBlk","Sck",
                    "Home","Won","Score"]
     csv_file_name = "QBStats.csv" #uses QBStats.csv to look for updates
@@ -874,9 +858,9 @@ class Defense(Player):
 
         except (IOError, OSError):
             self.stats = {year:{week:{"Players":[],"Home":[],"Won":[],"Score":[],
-                          "RushAtt":0.0,"RushYds":0.0,"RushTD":0.0,
-                          "PassAtt":0.0,"PassYds":0.0,"PassTD":0.0,
-                          "FGBlk":0.0,"FGAtt":0.0,"FGM":0.0,"XPM":0.0,"XPBlk":0.0,"Sck":0.0}
+                          "RushAtt":0.0,"RushYds":0.0,"RushTD":0.0,"Lost":0.0,"Int":0.0,
+                          "PassAtt":0.0,"PassYds":0.0,"PassTD":0.0,"Sck":0.0,
+                          "FGBlk":0.0,"FGAtt":0.0,"FGM":0.0,"XPM":0.0,"XPBlk":0.0}
                             for week in WEEK_LIST} 
                             for year in YEAR_LIST}
             for pos in POS_LIST:
@@ -887,7 +871,16 @@ class Defense(Player):
                     fields = [x for x in temp_field if x in self.field_names]
                     for row in reader:
                         opponent = row["Opp"]
-                        if self.name in opponent and opponent != "":
+                        if opponent == '':
+                            continue
+                        elif '@' in opponent:
+                            opponent = TEAM_NAME_CONV[opponent[1:]]
+                            opponent = '@'+opponent
+                        else:
+                            opponent = TEAM_NAME_CONV[opponent]
+
+
+                        if self.name in opponent:
                             year = int(row["Year"])
                             week = int(row["WK"])
                             player = row["Player"]
