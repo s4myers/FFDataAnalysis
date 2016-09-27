@@ -6,3320 +6,3868 @@ S'Broncos'
 p3
 (lp4
 I3500
-aS'Broncos'
+aS'Bengals'
 p5
-ag5
-asS'Vikings'
+aS'Away'
 p6
-(lp7
-I3100
-aS'Vikings'
+aS'Broncos'
+p7
+asS'Vikings'
 p8
-ag8
-asS'Bears'
-p9
-(lp10
-I2700
-aS'Bears'
+(lp9
+I3100
+aS'Panthers'
+p10
+ag6
+aS'Vikings'
 p11
-ag11
-asS'Falcons'
+asS'Bears'
 p12
 (lp13
-I2000
-aS'Falcons'
+I2700
+aS'Cowboys'
 p14
-ag14
-asS'Saints'
+ag6
+aS'Bears'
 p15
-(lp16
-I2200
-ag14
+asS'Falcons'
+p16
+(lp17
+I2000
 aS'Saints'
-p17
-asS'Chargers'
 p18
-(lp19
-I2300
-aS'Chargers'
+ag6
+aS'Falcons'
+p19
+asS'Saints'
 p20
-ag20
-asS'Raiders'
-p21
-(lp22
-I2600
-aS'Raiders'
+(lp21
+I2200
+ag19
+aS'Home'
+p22
+ag18
+asS'Chargers'
 p23
-ag23
-asS'Lions'
-p24
-(lp25
-I2400
-aS'Lions'
+(lp24
+I2300
+aS'Colts'
+p25
+ag6
+aS'Chargers'
 p26
-ag26
-asS'Browns'
+asS'Raiders'
 p27
 (lp28
-I2300
-aS'Browns'
+I2600
+aS'Titans'
 p29
-ag29
-asS'Eagles'
+ag6
+aS'Raiders'
 p30
-(lp31
+asS'Lions'
+p31
+(lp32
+I2400
+aS'Packers'
+p33
+ag6
+aS'Lions'
+p34
+asS'Browns'
+p35
+(lp36
+I2300
+aS'Dolphins'
+p37
+ag6
+aS'Browns'
+p38
+asS'Eagles'
+p39
+(lp40
 I2800
 aS'Steelers'
-p32
+p41
+ag22
 aS'Eagles'
-p33
+p42
 asS'Steelers'
-p34
-(lp35
+p43
+(lp44
 I2900
-ag32
-ag32
+ag42
+ag6
+ag41
 asS'Giants'
-p36
-(lp37
+p45
+(lp46
 I3300
 aS'Redskins'
-p38
+p47
+ag22
 aS'Giants'
-p39
+p48
 asS'Buccaneers'
-p40
-(lp41
+p49
+(lp50
 I3100
 aS'Rams'
-p42
+p51
+ag22
 aS'Buccaneers'
-p43
-asS'Cardinals'
-p44
-(lp45
-I3600
-aS'Cardinals'
-p46
-ag46
-asS'Bengals'
-p47
-(lp48
-I2800
-ag5
-aS'Bengals'
-p49
-asS'Chiefs'
-p50
-(lp51
-I3200
-aS'Jets'
 p52
-aS'Chiefs'
+asS'Cardinals'
 p53
-asS'Dolphins'
-p54
-(lp55
-I3000
-ag29
-aS'Dolphins'
+(lp54
+I3600
+aS'Bills'
+p55
+ag6
+aS'Cardinals'
 p56
-asS'Jaguars'
+asS'Bengals'
 p57
 (lp58
-I2600
-aS'Ravens'
+I2800
+ag7
+ag22
+ag5
+asS'Chiefs'
 p59
-aS'Jaguars'
-p60
-asS'Seahawks'
+(lp60
+I3200
+aS'Jets'
 p61
-(lp62
-I4100
-aS'49ers'
+ag22
+aS'Chiefs'
+p62
+asS'Dolphins'
 p63
-aS'Seahawks'
-p64
-asS'Jets'
+(lp64
+I3000
+ag38
+ag22
+ag37
+asS'Jaguars'
 p65
 (lp66
-I2900
-ag52
-ag52
-asS'Ravens'
+I2600
+aS'Ravens'
 p67
-(lp68
-I2500
-ag59
-ag59
-asS'Colts'
+ag22
+aS'Jaguars'
+p68
+asS'Seahawks'
 p69
 (lp70
-I2400
-ag20
-aS'Colts'
+I4100
+aS'49ers'
 p71
-asS'Packers'
+ag22
+aS'Seahawks'
 p72
-(lp73
-I3000
-ag26
-aS'Packers'
-p74
-asS'Titans'
+asS'Jets'
+p73
+(lp74
+I2900
+ag62
+ag6
+ag61
+asS'Ravens'
 p75
 (lp76
 I2500
-ag23
-aS'Titans'
+ag68
+ag6
+ag67
+asS'Colts'
 p77
-asS'Rams'
-p78
-(lp79
+(lp78
+I2400
+ag26
+ag22
+ag25
+asS'Packers'
+p79
+(lp80
 I3000
-ag42
-ag42
-asS'Bills'
-p80
-(lp81
-I2700
-ag46
-aS'Bills'
-p82
-asS'Texans'
+ag34
+ag22
+ag33
+asS'Titans'
+p81
+(lp82
+I2500
+ag30
+ag22
+ag29
+asS'Rams'
 p83
 (lp84
 I3000
-aS'Texans'
+ag52
+ag6
+ag51
+asS'Bills'
 p85
-ag85
-asS'49ers'
-p86
-(lp87
-I2400
-ag63
-ag63
-asS'Patriots'
-p88
-(lp89
-I3200
-ag85
+(lp86
+I2700
+ag56
+ag22
+ag55
+asS'Texans'
+p87
+(lp88
+I3000
 aS'Patriots'
+p89
+ag6
+aS'Texans'
 p90
-asS'Cowboys'
+asS'49ers'
 p91
 (lp92
-I2500
-ag11
-aS'Cowboys'
+I2400
+ag72
+ag6
+ag71
+asS'Patriots'
 p93
+(lp94
+I3200
+ag90
+ag22
+ag89
+asS'Cowboys'
+p95
+(lp96
+I2500
+ag15
+ag22
+ag14
 asS'Panthers'
-p94
-(lp95
-I3800
-ag8
-aS'Panthers'
-p96
-asS'Redskins'
 p97
 (lp98
-I2400
-ag38
-ag38
-assS'QB'
+I3800
+ag11
+ag22
+ag10
+asS'Redskins'
 p99
-(dp100
-S'Ryan Tannehill'
+(lp100
+I2400
+ag48
+ag6
+ag47
+assS'QB'
 p101
-(lp102
-I6200
-ag29
-ag56
-asS'Carson Wentz'
+(dp102
+S'Ryan Tannehill'
 p103
 (lp104
-I5500
-ag32
-ag33
-asS'Tom Savage'
+I6200
+ag38
+ag22
+ag37
+asS'Carson Wentz'
 p105
 (lp106
-I5000
-ag85
-ag85
-asS'Landry Jones'
+I5500
+ag41
+ag22
+ag42
+asS'Tom Savage'
 p107
 (lp108
 I5000
-ag32
-ag32
-asS'Colt McCoy'
+ag89
+ag6
+ag90
+asS'Landry Jones'
 p109
 (lp110
 I5000
-ag38
-ag38
-asS'Cam Newton'
+ag42
+ag6
+ag41
+asS'Colt McCoy'
 p111
 (lp112
-I7800
-ag8
-ag96
-asS'Josh McCown'
+I5000
+ag48
+ag6
+ag47
+asS'Cam Newton'
 p113
 (lp114
-I5600
-ag29
-ag29
-asS'Chase Daniel'
+I7800
+ag11
+ag22
+ag10
+asS'Josh McCown'
 p115
 (lp116
-I5000
-ag32
-ag33
-asS'Mark Sanchez'
+I5600
+ag37
+ag6
+ag38
+asS'Chase Daniel'
 p117
 (lp118
 I5000
-ag11
-ag93
-asS'Jared Goff'
+ag41
+ag22
+ag42
+asS'Mark Sanchez'
 p119
 (lp120
 I5000
-ag42
-ag42
-asS'Mike Glennon'
+ag15
+ag22
+ag14
+asS'Jared Goff'
 p121
 (lp122
 I5000
-ag42
-ag43
-asS'Colin Kaepernick'
+ag52
+ag6
+ag51
+asS'Mike Glennon'
 p123
 (lp124
 I5000
-ag63
-ag63
-asS'Blake Bortles'
+ag51
+ag22
+ag52
+asS'Colin Kaepernick'
 p125
 (lp126
-I6500
-ag59
-ag60
-asS'Connor Cook'
+I5000
+ag72
+ag6
+ag71
+asS'Blake Bortles'
 p127
 (lp128
-I5000
-ag23
-ag23
-asS'Brett Hundley'
+I6500
+ag67
+ag22
+ag68
+asS'Connor Cook'
 p129
 (lp130
 I5000
-ag26
-ag74
-asS'Ryan Mallett'
+ag29
+ag6
+ag30
+asS'Brett Hundley'
 p131
 (lp132
 I5000
-ag59
-ag59
-asS'Christian Hackenberg'
+ag34
+ag22
+ag33
+asS'Ryan Mallett'
 p133
 (lp134
 I5000
-ag52
-ag52
-asS'Philip Rivers'
+ag68
+ag6
+ag67
+asS'Christian Hackenberg'
 p135
 (lp136
-I6700
-ag20
-ag20
-asS'Jimmy Garoppolo'
+I5000
+ag62
+ag6
+ag61
+asS'Philip Rivers'
 p137
 (lp138
-I5600
-ag85
-ag90
-asS'Alex Smith'
+I6700
+ag25
+ag6
+ag26
+asS'Jimmy Garoppolo'
 p139
 (lp140
-I5800
-ag52
-ag53
-asS'Chad Henne'
+I5600
+ag90
+ag22
+ag89
+asS'Alex Smith'
 p141
 (lp142
-I5000
-ag59
-ag60
-asS'Dan Orlovsky'
+I5800
+ag61
+ag22
+ag62
+asS'Chad Henne'
 p143
 (lp144
 I5000
-ag26
-ag26
-asS'Matt Schaub'
+ag67
+ag22
+ag68
+asS'Dan Orlovsky'
 p145
 (lp146
 I5000
-ag14
-ag14
-asS'Joe Callahan'
+ag33
+ag6
+ag34
+asS'Matt Schaub'
 p147
 (lp148
 I5000
-ag26
-ag74
-asS'Jeff Driskel'
+ag18
+ag6
+ag19
+asS'Joe Callahan'
 p149
 (lp150
 I5000
-ag5
-ag49
-asS'AJ McCarron'
+ag34
+ag22
+ag33
+asS'Jeff Driskel'
 p151
 (lp152
 I5000
+ag7
+ag22
 ag5
-ag49
-asS'Tyrod Taylor'
+asS'AJ McCarron'
 p153
 (lp154
-I5800
-ag46
-ag82
-asS'Matt Ryan'
+I5000
+ag7
+ag22
+ag5
+asS'Tyrod Taylor'
 p155
 (lp156
-I7400
-ag14
-ag14
-asS'Matt Moore'
+I5800
+ag56
+ag22
+ag55
+asS'Matt Ryan'
 p157
 (lp158
-I5000
-ag29
-ag56
-asS'Kirk Cousins'
+I7400
+ag18
+ag6
+ag19
+asS'Matt Moore'
 p159
 (lp160
-I6400
+I5000
 ag38
-ag38
-asS'Nick Foles'
+ag22
+ag37
+asS'Kirk Cousins'
 p161
 (lp162
-I5000
-ag52
-ag53
-asS'Nate Sudfeld'
+I6400
+ag48
+ag6
+ag47
+asS'Nick Foles'
 p163
 (lp164
 I5000
-ag38
-ag38
-asS'Jameis Winston'
+ag61
+ag22
+ag62
+asS'Nate Sudfeld'
 p165
 (lp166
-I6000
-ag42
-ag43
-asS'Brandon Allen'
+I5000
+ag48
+ag6
+ag47
+asS'Jameis Winston'
 p167
 (lp168
-I5000
-ag59
-ag60
-asS'Ben Roethlisberger'
+I6000
+ag51
+ag22
+ag52
+asS'Brandon Allen'
 p169
 (lp170
-I7300
-ag32
-ag32
-asS'Matt McGloin'
+I5000
+ag67
+ag22
+ag68
+asS'Ben Roethlisberger'
 p171
 (lp172
-I5000
-ag23
-ag23
-asS'Russell Wilson'
+I7300
+ag42
+ag6
+ag41
+asS'Matt McGloin'
 p173
 (lp174
-I7100
-ag63
-ag64
-asS'Joe Webb'
+I5000
+ag29
+ag6
+ag30
+asS'Russell Wilson'
 p175
 (lp176
-I5000
-ag8
-ag96
-asS'Shaun Hill'
+I7100
+ag71
+ag22
+ag72
+asS'Joe Webb'
 p177
 (lp178
 I5000
-ag8
-ag8
-asS'Matthew Stafford'
+ag11
+ag22
+ag10
+asS'Shaun Hill'
 p179
 (lp180
-I6800
-ag26
-ag26
-asS'Andrew Luck'
+I5000
+ag10
+ag6
+ag11
+asS'Matthew Stafford'
 p181
 (lp182
-I7600
-ag20
-ag71
-asS'Tyler Bray'
+I6800
+ag33
+ag6
+ag34
+asS'Andrew Luck'
 p183
 (lp184
-I5000
-ag52
-ag53
-asS'Josh Johnson'
+I7600
+ag26
+ag22
+ag25
+asS'Tyler Bray'
 p185
 (lp186
 I5000
-ag38
-ag39
-asS'Brandon Weeden'
+ag61
+ag22
+ag62
+asS'Josh Johnson'
 p187
 (lp188
 I5000
-ag85
-ag85
-asS'Trevone Boykin'
+ag47
+ag22
+ag48
+asS'Brandon Weeden'
 p189
 (lp190
 I5000
-ag63
-ag64
-asS'Jay Cutler'
+ag89
+ag6
+ag90
+asS'Trevone Boykin'
 p191
 (lp192
-I5600
-ag11
-ag11
-asS'Dak Prescott'
+I5000
+ag71
+ag22
+ag72
+asS'Jay Cutler'
 p193
 (lp194
-I5700
-ag11
-ag93
-asS'Brock Osweiler'
+I5600
+ag14
+ag6
+ag15
+asS'Dak Prescott'
 p195
 (lp196
-I6000
-ag85
-ag85
-asS'Paxton Lynch'
+I5700
+ag15
+ag22
+ag14
+asS'Brock Osweiler'
 p197
 (lp198
-I5000
-ag5
-ag5
-asS'Case Keenum'
+I6000
+ag89
+ag6
+ag90
+asS'Paxton Lynch'
 p199
 (lp200
 I5000
-ag42
-ag42
-asS'Trevor Siemian'
+ag5
+ag6
+ag7
+asS'Case Keenum'
 p201
 (lp202
-I5100
-ag5
-ag5
-asS'Geno Smith'
-p203
-(lp204
 I5000
 ag52
-ag52
-asS'Brian Hoyer'
+ag6
+ag51
+asS'Trevor Siemian'
+p203
+(lp204
+I5100
+ag5
+ag6
+ag7
+asS'Geno Smith'
 p205
 (lp206
 I5000
-ag11
-ag11
-asS'Marcus Mariota'
+ag62
+ag6
+ag61
+asS'Brian Hoyer'
 p207
 (lp208
-I5900
-ag23
-ag77
-asS'Sean Mannion'
+I5000
+ag14
+ag6
+ag15
+asS'Marcus Mariota'
 p209
 (lp210
-I5000
-ag42
-ag42
-asS'Jacoby Brissett'
+I5900
+ag30
+ag22
+ag29
+asS'Sean Mannion'
 p211
 (lp212
 I5000
-ag85
-ag90
-asS'Carson Palmer'
+ag52
+ag6
+ag51
+asS'Jacoby Brissett'
 p213
 (lp214
-I7200
-ag46
-ag46
-asS'Sam Bradford'
+I5000
+ag90
+ag22
+ag89
+asS'Carson Palmer'
 p215
 (lp216
-I5300
-ag8
-ag8
-asS'Derek Anderson'
+I7200
+ag55
+ag6
+ag56
+asS'Sam Bradford'
 p217
 (lp218
-I5000
-ag8
-ag96
-asS'Christian Ponder'
+I5300
+ag10
+ag6
+ag11
+asS'Derek Anderson'
 p219
 (lp220
 I5000
-ag63
-ag63
-asS'EJ Manuel'
+ag11
+ag22
+ag10
+asS'Christian Ponder'
 p221
 (lp222
 I5000
-ag46
-ag82
-asS'Eli Manning'
+ag72
+ag6
+ag71
+asS'EJ Manuel'
 p223
 (lp224
-I7000
-ag38
-ag39
-asS'Blaine Gabbert'
+I5000
+ag56
+ag22
+ag55
+asS'Eli Manning'
 p225
 (lp226
-I5000
-ag63
-ag63
-asS'Andy Dalton'
+I7000
+ag47
+ag22
+ag48
+asS'Blaine Gabbert'
 p227
 (lp228
-I5700
-ag5
-ag49
-asS'Tony Romo'
+I5000
+ag72
+ag6
+ag71
+asS'Andy Dalton'
 p229
 (lp230
-I6000
-ag11
-ag93
-asS'Matt Cassel'
+I5700
+ag7
+ag22
+ag5
+asS'Tony Romo'
 p231
 (lp232
-I5000
-ag23
-ag77
-asS'Austin Davis'
+I6000
+ag15
+ag22
+ag14
+asS'Matt Cassel'
 p233
 (lp234
 I5000
-ag5
-ag5
-asS'Derek Carr'
+ag30
+ag22
+ag29
+asS'Austin Davis'
 p235
 (lp236
-I6900
-ag23
-ag23
-asS'Ryan Griffin'
+I5000
+ag5
+ag6
+ag7
+asS'Derek Carr'
 p237
 (lp238
-I5000
-ag42
-ag43
-asS'Ryan Fitzpatrick'
+I6900
+ag29
+ag6
+ag30
+asS'Ryan Griffin'
 p239
 (lp240
-I5900
+I5000
+ag51
+ag22
 ag52
-ag52
-asS'Kellen Clemens'
+asS'Ryan Fitzpatrick'
 p241
 (lp242
-I5000
-ag20
-ag20
-asS'Aaron Rodgers'
+I5900
+ag62
+ag6
+ag61
+asS'Kellen Clemens'
 p243
 (lp244
-I7700
+I5000
+ag25
+ag6
 ag26
-ag74
-asS'Joe Flacco'
+asS'Aaron Rodgers'
 p245
 (lp246
-I6100
-ag59
-ag59
-asS'Drew Stanton'
+I7700
+ag34
+ag22
+ag33
+asS'Joe Flacco'
 p247
 (lp248
-I5000
-ag46
-ag46
-asS'Zach Mettenberger'
+I6100
+ag68
+ag6
+ag67
+asS'Drew Stanton'
 p249
 (lp250
 I5000
-ag32
-ag32
-asS'Drew Brees'
+ag55
+ag6
+ag56
+asS'Zach Mettenberger'
 p251
 (lp252
-I7900
-ag14
-ag17
-asS'Cardale Jones'
+I5000
+ag42
+ag6
+ag41
+asS'Drew Brees'
 p253
 (lp254
-I5000
-ag46
-ag82
-asS'Bryce Petty'
+I7900
+ag19
+ag22
+ag18
+asS'Cardale Jones'
 p255
 (lp256
 I5000
-ag52
-ag52
-asS'Luke McCown'
+ag56
+ag22
+ag55
+asS'Bryce Petty'
 p257
 (lp258
 I5000
-ag14
-ag17
-asS'Scott Tolzien'
+ag62
+ag6
+ag61
+asS'Luke McCown'
 p259
 (lp260
 I5000
-ag20
-ag71
-asS'Cody Kessler'
+ag19
+ag22
+ag18
+asS'Scott Tolzien'
 p261
 (lp262
 I5000
-ag29
-ag29
-asS'Ryan Nassib'
+ag26
+ag22
+ag25
+asS'Cody Kessler'
 p263
 (lp264
 I5000
+ag37
+ag6
 ag38
-ag39
-assS'WR'
+asS'Ryan Nassib'
 p265
-(dp266
-S'Tyler Lockett'
+(lp266
+I5000
+ag47
+ag22
+ag48
+assS'WR'
 p267
-(lp268
-I4200
-ag63
-ag64
-asS'Chester Rogers'
+(dp268
+S'Tyler Lockett'
 p269
 (lp270
-I3000
-ag20
+I4200
 ag71
-asS'Deonte Thompson'
+ag22
+ag72
+asS'Chester Rogers'
 p271
 (lp272
 I3000
-ag11
-ag11
-asS'Andre Holmes'
+ag26
+ag22
+ag25
+asS'Deonte Thompson'
 p273
 (lp274
 I3000
-ag23
-ag23
-asS'Jalin Marshall'
+ag14
+ag6
+ag15
+asS'Andre Holmes'
 p275
 (lp276
 I3000
-ag52
-ag52
-asS'Dwayne Harris'
+ag29
+ag6
+ag30
+asS'Jalin Marshall'
 p277
 (lp278
 I3000
-ag38
-ag39
-asS'Lucky Whitehead'
+ag62
+ag6
+ag61
+asS'Dwayne Harris'
 p279
 (lp280
 I3000
-ag11
-ag93
-asS'Golden Tate'
+ag47
+ag22
+ag48
+asS'Lucky Whitehead'
 p281
 (lp282
-I5900
-ag26
-ag26
-asS'Ty Montgomery'
+I3000
+ag15
+ag22
+ag14
+asS'Golden Tate'
 p283
 (lp284
-I3000
-ag26
-ag74
-asS'Braxton Miller'
+I5900
+ag33
+ag6
+ag34
+asS'Ty Montgomery'
 p285
 (lp286
 I3000
-ag85
-ag85
-asS'Tajae Sharpe'
+ag34
+ag22
+ag33
+asS'Braxton Miller'
 p287
 (lp288
-I4700
-ag23
-ag77
-asS'Bryan Walters'
+I3000
+ag89
+ag6
+ag90
+asS'Tajae Sharpe'
 p289
 (lp290
-I3000
-ag59
-ag60
-asS'Josh Huff'
+I4700
+ag30
+ag22
+ag29
+asS'Bryan Walters'
 p291
 (lp292
 I3000
-ag32
-ag33
-asS'Anquan Boldin'
+ag67
+ag22
+ag68
+asS'Josh Huff'
 p293
 (lp294
-I4200
-ag26
-ag26
-asS'Kenny Stills'
+I3000
+ag41
+ag22
+ag42
+asS'Anquan Boldin'
 p295
 (lp296
-I3600
-ag29
-ag56
-asS'Dorial Green-Beckham'
+I4200
+ag33
+ag6
+ag34
+asS'Kenny Stills'
 p297
 (lp298
-I3200
-ag32
-ag33
-asS'Brandon Coleman'
+I3600
+ag38
+ag22
+ag37
+asS'Dorial Green-Beckham'
 p299
 (lp300
-I3000
-ag14
-ag17
-asS'Kendall Wright'
+I3200
+ag41
+ag22
+ag42
+asS'Brandon Coleman'
 p301
 (lp302
 I3000
-ag23
-ag77
-asS'DeSean Jackson'
+ag19
+ag22
+ag18
+asS'Kendall Wright'
 p303
 (lp304
-I5900
-ag38
-ag38
-asS'Jamison Crowder'
+I3000
+ag30
+ag22
+ag29
+asS'DeSean Jackson'
 p305
 (lp306
-I3800
-ag38
-ag38
-asS'Tavon Austin'
+I5900
+ag48
+ag6
+ag47
+asS'Jamison Crowder'
 p307
 (lp308
-I4100
-ag42
-ag42
-asS'Markus Wheaton'
+I3800
+ag48
+ag6
+ag47
+asS'Tavon Austin'
 p309
 (lp310
-I4600
-ag32
-ag32
-asS'Amari Cooper'
+I4100
+ag52
+ag6
+ag51
+asS'Markus Wheaton'
 p311
 (lp312
-I7700
-ag23
-ag23
-asS'Josh Doctson'
+I4600
+ag42
+ag6
+ag41
+asS'Amari Cooper'
 p313
 (lp314
-I3000
-ag38
-ag38
-asS'Justin Hardy'
+I7700
+ag29
+ag6
+ag30
+asS'Josh Doctson'
 p315
 (lp316
 I3000
-ag14
-ag14
-asS'Albert Wilson'
+ag48
+ag6
+ag47
+asS'Justin Hardy'
 p317
 (lp318
 I3000
-ag52
-ag53
-asS'Sterling Shepard'
+ag18
+ag6
+ag19
+asS'Albert Wilson'
 p319
 (lp320
-I5500
-ag38
-ag39
-asS'Doug Baldwin'
+I3000
+ag61
+ag22
+ag62
+asS'Sterling Shepard'
 p321
 (lp322
-I6300
-ag63
-ag64
-asS'Justin Hunter'
+I5500
+ag47
+ag22
+ag48
+asS'Doug Baldwin'
 p323
 (lp324
-I3000
-ag29
-ag56
-asS'Jarvis Landry'
+I6300
+ag71
+ag22
+ag72
+asS'Justin Hunter'
 p325
 (lp326
-I6600
-ag29
-ag56
-asS'Danny Amendola'
+I3000
+ag38
+ag22
+ag37
+asS'Jarvis Landry'
 p327
 (lp328
-I3700
-ag85
-ag90
-asS'Travis Benjamin'
+I6600
+ag38
+ag22
+ag37
+asS'Danny Amendola'
 p329
 (lp330
-I5200
-ag20
-ag20
-asS'Allen Robinson'
+I3700
+ag90
+ag22
+ag89
+asS'Travis Benjamin'
 p331
 (lp332
-I7500
-ag59
-ag60
-asS'Mohamed Sanu'
+I5200
+ag25
+ag6
+ag26
+asS'Allen Robinson'
 p333
 (lp334
-I5700
-ag14
-ag14
-asS'Harry Douglas'
+I7500
+ag67
+ag22
+ag68
+asS'Mohamed Sanu'
 p335
 (lp336
-I3000
-ag23
-ag77
-asS'Quan Bray'
+I5700
+ag18
+ag6
+ag19
+asS'Harry Douglas'
 p337
 (lp338
 I3000
-ag20
-ag71
-asS'Mike Thomas'
+ag30
+ag22
+ag29
+asS'Quan Bray'
 p339
 (lp340
 I3000
-ag42
-ag42
-asS'Jeremy Maclin'
+ag26
+ag22
+ag25
+asS'Mike Thomas'
 p341
 (lp342
-I6000
+I3000
 ag52
-ag53
-asS'Adam Humphries'
+ag6
+ag51
+asS'Jeremy Maclin'
 p343
 (lp344
-I3000
-ag42
-ag43
-asS'Bradley Marquez'
+I6000
+ag61
+ag22
+ag62
+asS'Adam Humphries'
 p345
 (lp346
 I3000
-ag42
-ag42
-asS'Chris Moore'
+ag51
+ag22
+ag52
+asS'Bradley Marquez'
 p347
 (lp348
 I3000
-ag59
-ag59
-asS'Laquon Treadwell'
+ag52
+ag6
+ag51
+asS'Chris Moore'
 p349
 (lp350
-I3100
-ag8
-ag8
-asS'Cody Latimer'
+I3000
+ag68
+ag6
+ag67
+asS'Laquon Treadwell'
 p351
 (lp352
-I3000
-ag5
-ag5
-asS'Brandon Tate'
+I3100
+ag10
+ag6
+ag11
+asS'Cody Latimer'
 p353
 (lp354
 I3000
-ag46
-ag82
-asS'Eric Weems'
+ag5
+ag6
+ag7
+asS'Brandon Tate'
 p355
 (lp356
 I3000
-ag14
-ag14
-asS'Charone Peake'
+ag56
+ag22
+ag55
+asS'Eric Weems'
 p357
 (lp358
 I3000
-ag52
-ag52
-asS'Kevin White'
+ag18
+ag6
+ag19
+asS'Charone Peake'
 p359
 (lp360
-I4000
-ag11
-ag11
-asS'Marquise Goodwin'
+I3000
+ag62
+ag6
+ag61
+asS'Kevin White'
 p361
 (lp362
-I3000
-ag46
-ag82
-asS'Julian Edelman'
+I4000
+ag14
+ag6
+ag15
+asS'Marquise Goodwin'
 p363
 (lp364
-I6400
-ag85
-ag90
-asS'Tanner McEvoy'
+I3000
+ag56
+ag22
+ag55
+asS'Julian Edelman'
 p365
 (lp366
-I3000
-ag63
-ag64
-asS'Ted Ginn'
+I6400
+ag90
+ag22
+ag89
+asS'Tanner McEvoy'
 p367
 (lp368
-I3700
-ag8
-ag96
-asS'Malcolm Mitchell'
+I3000
+ag71
+ag22
+ag72
+asS'Ted Ginn'
 p369
 (lp370
-I3000
-ag85
-ag90
-asS'Andre Roberts'
+I3700
+ag11
+ag22
+ag10
+asS'Malcolm Mitchell'
 p371
 (lp372
 I3000
-ag26
-ag26
-asS'Brice Butler'
+ag90
+ag22
+ag89
+asS'Andre Roberts'
 p373
 (lp374
 I3000
-ag11
-ag93
-asS'Breshad Perriman'
+ag33
+ag6
+ag34
+asS'Brice Butler'
 p375
 (lp376
 I3000
-ag59
-ag59
-asS'Jermaine Kearse'
+ag15
+ag22
+ag14
+asS'Breshad Perriman'
 p377
 (lp378
-I3400
-ag63
-ag64
-asS'Allen Hurns'
+I3000
+ag68
+ag6
+ag67
+asS'Jermaine Kearse'
 p379
 (lp380
-I5200
-ag59
-ag60
-asS'Phillip Dorsett'
+I3400
+ag71
+ag22
+ag72
+asS'Allen Hurns'
 p381
 (lp382
-I4400
-ag20
-ag71
-asS'Sammy Watkins'
+I5200
+ag67
+ag22
+ag68
+asS'Phillip Dorsett'
 p383
 (lp384
-I6100
-ag46
-ag82
-asS'Jakeem Grant'
+I4400
+ag26
+ag22
+ag25
+asS'Sammy Watkins'
 p385
 (lp386
-I3000
-ag29
+I6100
 ag56
-asS'Matthew Slater'
+ag22
+ag55
+asS'Jakeem Grant'
 p387
 (lp388
 I3000
-ag85
-ag90
-asS'Demaryius Thomas'
+ag38
+ag22
+ag37
+asS'Matthew Slater'
 p389
 (lp390
-I6400
-ag5
-ag5
-asS'Davante Adams'
+I3000
+ag90
+ag22
+ag89
+asS'Demaryius Thomas'
 p391
 (lp392
-I4100
-ag26
-ag74
-asS'Tyreek Hill'
+I6400
+ag5
+ag6
+ag7
+asS'Davante Adams'
 p393
 (lp394
-I3000
-ag52
-ag53
-asS'Will Fuller'
+I4100
+ag34
+ag22
+ag33
+asS'Tyreek Hill'
 p395
 (lp396
-I4800
-ag85
-ag85
-asS'Rishard Matthews'
+I3000
+ag61
+ag22
+ag62
+asS'Will Fuller'
 p397
 (lp398
-I3300
-ag23
-ag77
-asS'Marqise Lee'
+I4800
+ag89
+ag6
+ag90
+asS'Rishard Matthews'
 p399
 (lp400
-I3000
-ag59
-ag60
-asS'Jaron Brown'
+I3300
+ag30
+ag22
+ag29
+asS'Marqise Lee'
 p401
 (lp402
-I3300
-ag46
-ag46
-asS'Devin Funchess'
+I3000
+ag67
+ag22
+ag68
+asS'Jaron Brown'
 p403
 (lp404
-I4100
-ag8
-ag96
-asS'Tommylee Lewis'
+I3300
+ag55
+ag6
+ag56
+asS'Devin Funchess'
 p405
 (lp406
-I3000
-ag14
-ag17
-asS'Brandin Cooks'
+I4100
+ag11
+ag22
+ag10
+asS'Tommylee Lewis'
 p407
 (lp408
-I7900
-ag14
-ag17
-asS'Ryan Grant'
+I3000
+ag19
+ag22
+ag18
+asS'Brandin Cooks'
 p409
 (lp410
-I3000
-ag38
-ag38
-asS'Damiere Byrd'
+I7900
+ag19
+ag22
+ag18
+asS'Ryan Grant'
 p411
 (lp412
 I3000
-ag8
-ag96
-asS'J.J. Nelson'
+ag48
+ag6
+ag47
+asS'Damiere Byrd'
 p413
 (lp414
 I3000
-ag46
-ag46
-asS"De'Anthony Thomas"
+ag11
+ag22
+ag10
+asS'J.J. Nelson'
 p415
 (lp416
 I3000
-ag52
-ag53
-asS'Terrelle Pryor'
+ag55
+ag6
+ag56
+asS"De'Anthony Thomas"
 p417
 (lp418
-I3400
-ag29
-ag29
-asS'Antonio Brown'
+I3000
+ag61
+ag22
+ag62
+asS'Terrelle Pryor'
 p419
 (lp420
-I9600
-ag32
-ag32
-asS'Bryce Treggs'
+I3400
+ag37
+ag6
+ag38
+asS'Antonio Brown'
 p421
 (lp422
-I3000
-ag32
-ag33
-asS'Michael Thomas'
+I9600
+ag42
+ag6
+ag41
+asS'Bryce Treggs'
 p423
 (lp424
-I4200
-ag14
-ag17
-asS'Andrew Hawkins'
+I3000
+ag41
+ag22
+ag42
+asS'Michael Thomas'
 p425
 (lp426
-I3000
-ag29
-ag29
-asS'Jordan Norwood'
+I4200
+ag19
+ag22
+ag18
+asS'Andrew Hawkins'
 p427
 (lp428
 I3000
-ag5
-ag5
-asS'Rashad Ross'
+ag37
+ag6
+ag38
+asS'Jordan Norwood'
 p429
 (lp430
 I3000
-ag38
-ag38
-asS'James Wright'
+ag5
+ag6
+ag7
+asS'Rashad Ross'
 p431
 (lp432
 I3000
-ag5
-ag49
-asS'Sammie Coates'
+ag48
+ag6
+ag47
+asS'James Wright'
 p433
 (lp434
-I3800
-ag32
-ag32
-asS'Charles Johnson'
+I3000
+ag7
+ag22
+ag5
+asS'Sammie Coates'
 p435
 (lp436
-I3000
-ag8
-ag8
-asS'Michael Crabtree'
+I3800
+ag42
+ag6
+ag41
+asS'Charles Johnson'
 p437
 (lp438
-I6000
-ag23
-ag23
-asS'Terrance Williams'
+I3000
+ag10
+ag6
+ag11
+asS'Michael Crabtree'
 p439
 (lp440
-I3300
-ag11
-ag93
-asS'Eric Decker'
+I6000
+ag29
+ag6
+ag30
+asS'Terrance Williams'
 p441
 (lp442
-I6900
-ag52
-ag52
-asS'Arrelious Benn'
+I3300
+ag15
+ag22
+ag14
+asS'Eric Decker'
 p443
 (lp444
-I3000
-ag59
-ag60
-asS'Aldrick Robinson'
+I6900
+ag62
+ag6
+ag61
+asS'Arrelious Benn'
 p445
 (lp446
 I3000
-ag14
-ag14
-asS'Keith Mumphery'
+ag67
+ag22
+ag68
+asS'Aldrick Robinson'
 p447
 (lp448
 I3000
-ag85
-ag85
-asS'Chris Conley'
+ag18
+ag6
+ag19
+asS'Keith Mumphery'
 p449
 (lp450
-I3100
-ag52
-ag53
-asS'Jaelen Strong'
+I3000
+ag89
+ag6
+ag90
+asS'Chris Conley'
 p451
 (lp452
-I3300
-ag85
-ag85
-asS'Rashad Greene'
+I3100
+ag61
+ag22
+ag62
+asS'Jaelen Strong'
 p453
 (lp454
-I3000
-ag59
-ag60
-asS'Jarius Wright'
+I3300
+ag89
+ag6
+ag90
+asS'Rashad Greene'
 p455
 (lp456
 I3000
-ag8
-ag8
-asS'Seth Roberts'
+ag67
+ag22
+ag68
+asS'Jarius Wright'
 p457
 (lp458
-I3500
-ag23
-ag23
-asS'Brandon LaFell'
+I3000
+ag10
+ag6
+ag11
+asS'Seth Roberts'
 p459
 (lp460
-I3400
-ag5
-ag49
-asS'Pharoh Cooper'
+I3500
+ag29
+ag6
+ag30
+asS'Brandon LaFell'
 p461
 (lp462
-I3000
-ag42
-ag42
-asS'Cameron Meredith'
+I3400
+ag7
+ag22
+ag5
+asS'Pharoh Cooper'
 p463
 (lp464
 I3000
-ag11
-ag11
-asS'Rod Streater'
+ag52
+ag6
+ag51
+asS'Cameron Meredith'
 p465
 (lp466
 I3000
-ag63
-ag63
-asS'A.J. Green'
+ag14
+ag6
+ag15
+asS'Rod Streater'
 p467
 (lp468
-I8100
-ag5
-ag49
-asS'Bennie Fowler'
+I3000
+ag72
+ag6
+ag71
+asS'A.J. Green'
 p469
 (lp470
-I3000
+I8100
+ag7
+ag22
 ag5
-ag5
-asS'Robert Woods'
+asS'Bennie Fowler'
 p471
 (lp472
-I3200
-ag46
-ag82
-asS'Vincent Jackson'
+I3000
+ag5
+ag6
+ag7
+asS'Robert Woods'
 p473
 (lp474
-I3900
-ag42
-ag43
-asS'Alex Erickson'
+I3200
+ag56
+ag22
+ag55
+asS'Vincent Jackson'
 p475
 (lp476
-I3000
-ag5
-ag49
-asS'Julio Jones'
+I3900
+ag51
+ag22
+ag52
+asS'Alex Erickson'
 p477
 (lp478
-I9500
-ag14
-ag14
-asS'Kelvin Benjamin'
+I3000
+ag7
+ag22
+ag5
+asS'Julio Jones'
 p479
 (lp480
-I7200
-ag8
-ag96
-asS'Cole Beasley'
+I9500
+ag18
+ag6
+ag19
+asS'Kelvin Benjamin'
 p481
 (lp482
-I3200
+I7200
 ag11
-ag93
-asS'Cody Core'
+ag22
+ag10
+asS'Cole Beasley'
 p483
 (lp484
-I3000
-ag5
-ag49
-asS'Corey Coleman'
+I3200
+ag15
+ag22
+ag14
+asS'Cody Core'
 p485
 (lp486
-I5300
-ag29
-ag29
-asS'Cecil Shorts'
+I3000
+ag7
+ag22
+ag5
+asS'Corey Coleman'
 p487
 (lp488
-I3000
-ag42
-ag43
-asS'Mike Evans'
+I5300
+ag37
+ag6
+ag38
+asS'Cecil Shorts'
 p489
 (lp490
-I7000
-ag42
-ag43
-asS'Russell Shepard'
+I3000
+ag51
+ag22
+ag52
+asS'Mike Evans'
 p491
 (lp492
-I3000
-ag42
-ag43
-asS'Eddie Royal'
+I7000
+ag51
+ag22
+ag52
+asS'Russell Shepard'
 p493
 (lp494
-I3500
-ag11
-ag11
-asS'Jared Abbrederis'
+I3000
+ag51
+ag22
+ag52
+asS'Eddie Royal'
 p495
 (lp496
-I3000
-ag26
-ag74
-asS'Willie Snead'
+I3500
+ag14
+ag6
+ag15
+asS'Jared Abbrederis'
 p497
 (lp498
-I6500
-ag14
-ag17
-asS'Trevor Davis'
+I3000
+ag34
+ag22
+ag33
+asS'Willie Snead'
 p499
 (lp500
-I3000
-ag26
-ag74
-asS'Jeff Janis'
+I6500
+ag19
+ag22
+ag18
+asS'Trevor Davis'
 p501
 (lp502
-I3200
-ag26
-ag74
-asS'Nelson Spruce'
+I3000
+ag34
+ag22
+ag33
+asS'Jeff Janis'
 p503
 (lp504
-I3000
-ag42
-ag42
-asS'DeVante Parker'
+I3200
+ag34
+ag22
+ag33
+asS'Nelson Spruce'
 p505
 (lp506
-I4900
-ag29
-ag56
-asS'Adam Thielen'
-p507
-(lp508
-I3200
-ag8
-ag8
-asS'DeAndre Hopkins'
-p509
-(lp510
-I8600
-ag85
-ag85
-asS'Demarcus Robinson'
-p511
-(lp512
 I3000
 ag52
-ag53
-asS'Victor Cruz'
+ag6
+ag51
+asS'DeVante Parker'
+p507
+(lp508
+I4900
+ag38
+ag22
+ag37
+asS'Adam Thielen'
+p509
+(lp510
+I3200
+ag10
+ag6
+ag11
+asS'DeAndre Hopkins'
+p511
+(lp512
+I8600
+ag89
+ag6
+ag90
+asS'Demarcus Robinson'
 p513
 (lp514
-I4700
-ag38
-ag39
-asS'Jordan Taylor'
+I3000
+ag61
+ag22
+ag62
+asS'Victor Cruz'
 p515
 (lp516
-I3000
-ag5
-ag5
-asS'Jeremy Kerley'
+I4700
+ag47
+ag22
+ag48
+asS'Jordan Taylor'
 p517
 (lp518
-I3400
-ag63
-ag63
-asS'Greg Salas'
+I3000
+ag5
+ag6
+ag7
+asS'Jeremy Kerley'
 p519
 (lp520
-I3000
-ag46
-ag82
-asS'Emmanuel Sanders'
+I3400
+ag72
+ag6
+ag71
+asS'Greg Salas'
 p521
 (lp522
-I6000
-ag5
-ag5
-asS'Kenny Britt'
+I3000
+ag56
+ag22
+ag55
+asS'Emmanuel Sanders'
 p523
 (lp524
-I3900
-ag42
-ag42
-asS'Odell Beckham'
+I6000
+ag5
+ag6
+ag7
+asS'Kenny Britt'
 p525
 (lp526
-I9100
-ag38
-ag39
-asS'Cordarrelle Patterson'
+I3900
+ag52
+ag6
+ag51
+asS'Odell Beckham'
 p527
 (lp528
-I3000
-ag8
-ag8
-asS'Paul Richardson'
+I9100
+ag47
+ag22
+ag48
+asS'Cordarrelle Patterson'
 p529
 (lp530
 I3000
-ag63
-ag64
-asS'Tavarres King'
+ag10
+ag6
+ag11
+asS'Paul Richardson'
 p531
 (lp532
 I3000
-ag38
-ag39
-asS'Dontrelle Inman'
+ag71
+ag22
+ag72
+asS'Tavarres King'
 p533
 (lp534
-I3600
-ag20
-ag20
-asS'Randall Cobb'
+I3000
+ag47
+ag22
+ag48
+asS'Dontrelle Inman'
 p535
 (lp536
-I7300
+I3600
+ag25
+ag6
 ag26
-ag74
-asS'Brian Quick'
+asS'Randall Cobb'
 p537
 (lp538
-I3000
-ag42
-ag42
-asS'Steve Smith'
+I7300
+ag34
+ag22
+ag33
+asS'Brian Quick'
 p539
 (lp540
-I4100
-ag59
-ag59
-asS'Johnny Holton'
+I3000
+ag52
+ag6
+ag51
+asS'Steve Smith'
 p541
 (lp542
-I3000
-ag23
-ag23
-asS'T.Y. Hilton'
+I4100
+ag68
+ag6
+ag67
+asS'Johnny Holton'
 p543
 (lp544
-I6800
-ag20
-ag71
-asS'John Brown'
+I3000
+ag29
+ag6
+ag30
+asS'T.Y. Hilton'
 p545
 (lp546
-I4800
-ag46
-ag46
-asS'Jordan Payton'
+I6800
+ag26
+ag22
+ag25
+asS'John Brown'
 p547
 (lp548
-I3000
-ag29
-ag29
-asS'Jordy Nelson'
+I4800
+ag55
+ag6
+ag56
+asS'Jordan Payton'
 p549
 (lp550
-I7400
-ag26
-ag74
-asS'Quincy Enunwa'
+I3000
+ag37
+ag6
+ag38
+asS'Jordy Nelson'
 p551
 (lp552
-I4800
-ag52
-ag52
-asS'Joshua Bellamy'
+I7400
+ag34
+ag22
+ag33
+asS'Quincy Enunwa'
 p553
 (lp554
-I3000
-ag11
-ag11
-asS'Jordan Matthews'
+I4800
+ag62
+ag6
+ag61
+asS'Joshua Bellamy'
 p555
 (lp556
-I7100
-ag32
-ag33
-asS'Taylor Gabriel'
-p557
-(lp558
 I3000
 ag14
-ag14
-asS'Marc Mariani'
+ag6
+ag15
+asS'Jordan Matthews'
+p557
+(lp558
+I7100
+ag41
+ag22
+ag42
+asS'Taylor Gabriel'
 p559
 (lp560
 I3000
-ag23
-ag77
-asS'Mike Wallace'
+ag18
+ag6
+ag19
+asS'Marc Mariani'
 p561
 (lp562
-I5000
-ag59
-ag59
-asS'Torrey Smith'
+I3000
+ag30
+ag22
+ag29
+asS'Mike Wallace'
 p563
 (lp564
-I4300
-ag63
-ag63
-asS'Corey Brown'
+I5000
+ag68
+ag6
+ag67
+asS'Torrey Smith'
 p565
 (lp566
-I3000
-ag8
-ag96
-asS'Roger Lewis'
+I4300
+ag72
+ag6
+ag71
+asS'Corey Brown'
 p567
 (lp568
 I3000
-ag38
-ag39
-asS'Nelson Agholor'
+ag11
+ag22
+ag10
+asS'Roger Lewis'
 p569
 (lp570
-I3500
-ag32
-ag33
-asS'Michael Floyd'
+I3000
+ag47
+ag22
+ag48
+asS'Nelson Agholor'
 p571
 (lp572
-I5800
-ag46
-ag46
-asS'Quinton Patton'
+I3500
+ag41
+ag22
+ag42
+asS'Michael Floyd'
 p573
 (lp574
-I3100
-ag63
-ag63
-asS'Walt Powell'
+I5800
+ag55
+ag6
+ag56
+asS'Quinton Patton'
 p575
 (lp576
-I3000
-ag46
-ag82
-asS'Tyler Boyd'
+I3100
+ag72
+ag6
+ag71
+asS'Walt Powell'
 p577
 (lp578
-I3500
-ag5
-ag49
-asS'Rashard Higgins'
+I3000
+ag56
+ag22
+ag55
+asS'Tyler Boyd'
 p579
 (lp580
-I3000
-ag29
-ag29
-asS'Leonte Carroo'
+I3500
+ag7
+ag22
+ag5
+asS'Rashard Higgins'
 p581
 (lp582
 I3000
-ag29
-ag56
-asS'Andre Johnson'
+ag37
+ag6
+ag38
+asS'Leonte Carroo'
 p583
 (lp584
-I3400
-ag23
-ag77
-asS'Alshon Jeffery'
+I3000
+ag38
+ag22
+ag37
+asS'Andre Johnson'
 p585
 (lp586
-I8000
-ag11
-ag11
-asS'Brandon Marshall'
+I3400
+ag30
+ag22
+ag29
+asS'Alshon Jeffery'
 p587
 (lp588
-I7300
-ag52
-ag52
-asS'Kamar Aiken'
+I8000
+ag14
+ag6
+ag15
+asS'Brandon Marshall'
 p589
 (lp590
-I3100
-ag59
-ag59
-asS'Robby Anderson'
+I7300
+ag62
+ag6
+ag61
+asS'Kamar Aiken'
 p591
 (lp592
-I3000
-ag52
-ag52
-asS'Stefon Diggs'
+I3100
+ag68
+ag6
+ag67
+asS'Robby Anderson'
 p593
 (lp594
-I5100
-ag8
-ag8
-asS'Larry Fitzgerald'
+I3000
+ag62
+ag6
+ag61
+asS'Stefon Diggs'
 p595
 (lp596
-I6900
-ag46
-ag46
-asS'Devin Hester'
+I5100
+ag10
+ag6
+ag11
+asS'Larry Fitzgerald'
 p597
 (lp598
-I3000
-ag59
-ag59
-asS'Isaiah Burse'
+I6900
+ag55
+ag6
+ag56
+asS'Devin Hester'
 p599
 (lp600
 I3000
-ag20
-ag20
-asS'Brenton Bersin'
+ag68
+ag6
+ag67
+asS'Isaiah Burse'
 p601
 (lp602
 I3000
-ag8
-ag96
-asS'Ricardo Louis'
+ag25
+ag6
+ag26
+asS'Brenton Bersin'
 p603
 (lp604
 I3000
-ag29
-ag29
-asS'Marvin Jones'
+ag11
+ag22
+ag10
+asS'Ricardo Louis'
 p605
 (lp606
-I6200
-ag26
-ag26
-asS'Pierre Garcon'
+I3000
+ag37
+ag6
+ag38
+asS'Marvin Jones'
 p607
 (lp608
-I3900
-ag38
-ag38
-asS'Chris Hogan'
+I6200
+ag33
+ag6
+ag34
+asS'Pierre Garcon'
 p609
 (lp610
 I3900
-ag85
-ag90
-asS'Donte Moncrief'
+ag48
+ag6
+ag47
+asS'Chris Hogan'
 p611
 (lp612
-I6700
-ag20
-ag71
-asS'Darrius Heyward-Bey'
+I3900
+ag90
+ag22
+ag89
+asS'Donte Moncrief'
 p613
 (lp614
-I3200
-ag32
-ag32
-asS'Dez Bryant'
+I6700
+ag26
+ag22
+ag25
+asS'Darrius Heyward-Bey'
 p615
 (lp616
-I8400
-ag11
-ag93
-asS'Tyrell Williams'
+I3200
+ag42
+ag6
+ag41
+asS'Dez Bryant'
 p617
 (lp618
-I4300
-ag20
-ag20
-asS'Aaron Burbridge'
+I8400
+ag15
+ag22
+ag14
+asS'Tyrell Williams'
 p619
 (lp620
-I3000
-ag63
-ag63
-asS'Eli Rogers'
+I4300
+ag25
+ag6
+ag26
+asS'Aaron Burbridge'
 p621
 (lp622
-I3900
-ag32
-ag32
-assS'RB'
-p623
-(dp624
-S'Will Tukuafu'
-p625
-(lp626
 I3000
-ag63
-ag64
-asS'Taiwan Jones'
+ag72
+ag6
+ag71
+asS'Eli Rogers'
+p623
+(lp624
+I3900
+ag42
+ag6
+ag41
+assS'RB'
+p625
+(dp626
+S'Will Tukuafu'
 p627
 (lp628
 I3000
-ag23
-ag23
-asS'Frank Gore'
+ag71
+ag22
+ag72
+asS'Taiwan Jones'
 p629
 (lp630
-I5000
-ag20
-ag71
-asS'Jay Ajayi'
+I3000
+ag29
+ag6
+ag30
+asS'Frank Gore'
 p631
 (lp632
-I4000
-ag29
-ag56
-asS'Rashad Jennings'
+I5000
+ag26
+ag22
+ag25
+asS'Jay Ajayi'
 p633
 (lp634
-I5100
+I4000
 ag38
-ag39
-asS'Jerick McKinnon'
+ag22
+ag37
+asS'Rashad Jennings'
 p635
 (lp636
-I3800
-ag8
-ag8
-asS'Terrance West'
+I5100
+ag47
+ag22
+ag48
+asS'Jerick McKinnon'
 p637
 (lp638
-I3500
-ag59
-ag59
-asS'Jalston Fowler'
+I3800
+ag10
+ag6
+ag11
+asS'Terrance West'
 p639
 (lp640
-I3000
-ag23
-ag77
-asS'Bilal Powell'
+I3500
+ag68
+ag6
+ag67
+asS'Jalston Fowler'
 p641
 (lp642
-I3400
-ag52
-ag52
-asS'D.J. Foster'
+I3000
+ag30
+ag22
+ag29
+asS'Bilal Powell'
 p643
 (lp644
-I3000
-ag85
-ag90
-asS'Fozzy Whittaker'
+I3400
+ag62
+ag6
+ag61
+asS'D.J. Foster'
 p645
 (lp646
-I3800
-ag8
-ag96
-asS'Terron Ward'
+I3000
+ag90
+ag22
+ag89
+asS'Fozzy Whittaker'
 p647
 (lp648
-I3000
-ag14
-ag14
-asS'Kenneth Dixon'
+I3800
+ag11
+ag22
+ag10
+asS'Terron Ward'
 p649
 (lp650
 I3000
-ag59
-ag59
-asS'Tyler Ervin'
+ag18
+ag6
+ag19
+asS'Kenneth Dixon'
 p651
 (lp652
 I3000
-ag85
-ag85
-asS'Alex Collins'
+ag68
+ag6
+ag67
+asS'Tyler Ervin'
 p653
 (lp654
 I3000
-ag63
-ag64
-asS'Theo Riddick'
+ag89
+ag6
+ag90
+asS'Alex Collins'
 p655
 (lp656
-I4900
-ag26
-ag26
-asS'Corey Grant'
+I3000
+ag71
+ag22
+ag72
+asS'Theo Riddick'
 p657
 (lp658
-I3000
-ag59
-ag60
-asS'Malcolm Brown'
+I4900
+ag33
+ag6
+ag34
+asS'Corey Grant'
 p659
 (lp660
 I3000
-ag42
-ag42
-asS'Darren Sproles'
+ag67
+ag22
+ag68
+asS'Malcolm Brown'
 p661
 (lp662
-I3700
-ag32
-ag33
-asS'Christine Michael'
+I3000
+ag52
+ag6
+ag51
+asS'Darren Sproles'
 p663
 (lp664
-I5000
-ag63
-ag64
-asS'Charles Sims'
+I3700
+ag41
+ag22
+ag42
+asS'Christine Michael'
 p665
 (lp666
-I4900
-ag42
-ag43
-asS'Jeremy Hill'
+I5000
+ag71
+ag22
+ag72
+asS'Charles Sims'
 p667
 (lp668
-I3700
-ag5
-ag49
-asS'Ezekiel Elliott'
+I4900
+ag51
+ag22
+ag52
+asS'Jeremy Hill'
 p669
 (lp670
-I6900
-ag11
-ag93
-asS'Tevin Coleman'
+I3700
+ag7
+ag22
+ag5
+asS'Ezekiel Elliott'
 p671
 (lp672
-I4500
+I6900
+ag15
+ag22
 ag14
-ag14
-asS'Shaun Draughn'
+asS'Tevin Coleman'
 p673
 (lp674
-I3400
-ag63
-ag63
-asS'Mike Tolbert'
+I4500
+ag18
+ag6
+ag19
+asS'Shaun Draughn'
 p675
 (lp676
-I3000
-ag8
-ag96
-asS'Jonathan Grimes'
+I3400
+ag72
+ag6
+ag71
+asS'Mike Tolbert'
 p677
 (lp678
 I3000
-ag85
-ag85
-asS'Paul Perkins'
+ag11
+ag22
+ag10
+asS'Jonathan Grimes'
 p679
 (lp680
 I3000
-ag38
-ag39
-asS'Roosevelt Nix'
+ag89
+ag6
+ag90
+asS'Paul Perkins'
 p681
 (lp682
 I3000
-ag32
-ag32
-asS'Reggie Bush'
+ag47
+ag22
+ag48
+asS'Roosevelt Nix'
 p683
 (lp684
-I3200
-ag46
-ag82
-asS'Devontae Booker'
+I3000
+ag42
+ag6
+ag41
+asS'Reggie Bush'
 p685
 (lp686
-I3000
-ag5
-ag5
-asS'Jamaal Charles'
+I3200
+ag56
+ag22
+ag55
+asS'Devontae Booker'
 p687
 (lp688
-I5600
-ag52
-ag53
-asS'C.J. Anderson'
+I3000
+ag5
+ag6
+ag7
+asS'Jamaal Charles'
 p689
 (lp690
-I7300
-ag5
-ag5
-asS'Denard Robinson'
+I5600
+ag61
+ag22
+ag62
+asS'C.J. Anderson'
 p691
 (lp692
-I3000
-ag59
-ag60
-asS'Julian Howsare'
+I7300
+ag5
+ag6
+ag7
+asS'Denard Robinson'
 p693
 (lp694
 I3000
-ag52
-ag52
-asS'Danny Woodhead'
+ag67
+ag22
+ag68
+asS'Julian Howsare'
 p695
 (lp696
-I5400
-ag20
-ag20
-asS'Derrick Henry'
+I3000
+ag62
+ag6
+ag61
+asS'Danny Woodhead'
 p697
 (lp698
-I3700
-ag23
-ag77
-asS'Ameer Abdullah'
+I5400
+ag25
+ag6
+ag26
+asS'Derrick Henry'
 p699
 (lp700
-I4600
-ag26
-ag26
-asS'Fitzgerald Toussaint'
+I3700
+ag30
+ag22
+ag29
+asS'Ameer Abdullah'
 p701
 (lp702
-I3000
-ag32
-ag32
-asS'Michael Burton'
+I4600
+ag33
+ag6
+ag34
+asS'Fitzgerald Toussaint'
 p703
 (lp704
 I3000
-ag26
-ag26
-asS'Bobby Rainey'
+ag42
+ag6
+ag41
+asS'Michael Burton'
 p705
 (lp706
 I3000
-ag38
-ag39
-asS'Melvin Gordon'
+ag33
+ag6
+ag34
+asS'Bobby Rainey'
 p707
 (lp708
-I5800
-ag20
-ag20
-asS'George Atkinson'
+I3000
+ag47
+ag22
+ag48
+asS'Melvin Gordon'
 p709
 (lp710
-I3000
-ag29
-ag29
-asS'Kenneth Farrow'
+I5800
+ag25
+ag6
+ag26
+asS'George Atkinson'
 p711
 (lp712
 I3000
-ag20
-ag20
-asS'DeAngelo Williams'
+ag37
+ag6
+ag38
+asS'Kenneth Farrow'
 p713
 (lp714
-I7500
-ag32
-ag32
-asS'James Starks'
+I3000
+ag25
+ag6
+ag26
+asS'DeAngelo Williams'
 p715
 (lp716
-I4000
-ag26
-ag74
-asS'Zach Zenner'
+I7500
+ag42
+ag6
+ag41
+asS'James Starks'
 p717
 (lp718
-I3000
-ag26
-ag26
-asS'Kapri Bibbs'
+I4000
+ag34
+ag22
+ag33
+asS'Zach Zenner'
 p719
 (lp720
 I3000
-ag5
-ag5
-asS'Chris Johnson'
+ag33
+ag6
+ag34
+asS'Kapri Bibbs'
 p721
 (lp722
-I3500
-ag46
-ag46
-asS'LeGarrette Blount'
+I3000
+ag5
+ag6
+ag7
+asS'Chris Johnson'
 p723
 (lp724
-I4400
-ag85
-ag90
-asS'Rob Kelley'
+I3500
+ag55
+ag6
+ag56
+asS'LeGarrette Blount'
 p725
 (lp726
-I3000
-ag38
-ag38
-asS'Lance Dunbar'
+I4400
+ag90
+ag22
+ag89
+asS'Rob Kelley'
 p727
 (lp728
 I3000
-ag11
-ag93
-asS'Andy Janovich'
+ag48
+ag6
+ag47
+asS'Lance Dunbar'
 p729
 (lp730
 I3000
-ag5
-ag5
-asS'Wendell Smallwood'
+ag15
+ag22
+ag14
+asS'Andy Janovich'
 p731
 (lp732
 I3000
-ag32
-ag33
-asS'Antonio Andrews'
+ag5
+ag6
+ag7
+asS'Wendell Smallwood'
 p733
 (lp734
 I3000
-ag23
-ag77
-asS'Keith Smith'
+ag41
+ag22
+ag42
+asS'Antonio Andrews'
 p735
 (lp736
 I3000
-ag11
-ag93
-asS'Chris Ivory'
+ag30
+ag22
+ag29
+asS'Keith Smith'
 p737
 (lp738
-I3900
-ag59
-ag60
-asS'DeMarco Murray'
+I3000
+ag15
+ag22
+ag14
+asS'Chris Ivory'
 p739
 (lp740
-I6300
-ag23
-ag77
-asS'Eddie Lacy'
+I3900
+ag67
+ag22
+ag68
+asS'DeMarco Murray'
 p741
 (lp742
-I6100
-ag26
-ag74
-asS'Isaiah Crowell'
+I6300
+ag30
+ag22
+ag29
+asS'Eddie Lacy'
 p743
 (lp744
-I4700
-ag29
-ag29
-asS'John Kuhn'
+I6100
+ag34
+ag22
+ag33
+asS'Isaiah Crowell'
 p745
 (lp746
-I3000
-ag14
-ag17
-asS'Darius Jackson'
+I4700
+ag37
+ag6
+ag38
+asS'John Kuhn'
 p747
 (lp748
 I3000
-ag11
-ag93
-asS'Todd Gurley'
+ag19
+ag22
+ag18
+asS'Darius Jackson'
 p749
 (lp750
-I7100
-ag42
-ag42
-asS'Daniel Lasco'
+I3000
+ag15
+ag22
+ag14
+asS'Todd Gurley'
 p751
 (lp752
-I3000
-ag14
-ag17
-asS'Duke Johnson'
+I7100
+ag52
+ag6
+ag51
+asS'Daniel Lasco'
 p753
 (lp754
-I4200
-ag29
-ag29
-asS'Adrian Peterson'
+I3000
+ag19
+ag22
+ag18
+asS'Duke Johnson'
 p755
 (lp756
-I6700
-ag8
-ag8
-asS'Giovani Bernard'
+I4200
+ag37
+ag6
+ag38
+asS'Adrian Peterson'
 p757
 (lp758
-I4300
-ag5
-ag49
-asS'James White'
+I6700
+ag10
+ag6
+ag11
+asS'Giovani Bernard'
 p759
 (lp760
-I4200
-ag85
-ag90
-asS'T.J. Yeldon'
+I4300
+ag7
+ag22
+ag5
+asS'James White'
 p761
 (lp762
-I5600
-ag59
-ag60
-asS'Andre Ellington'
+I4200
+ag90
+ag22
+ag89
+asS'T.J. Yeldon'
 p763
 (lp764
-I3600
-ag46
-ag46
-asS'Alfred Morris'
+I5600
+ag67
+ag22
+ag68
+asS'Andre Ellington'
 p765
 (lp766
-I3700
-ag11
-ag93
-asS'Mark Ingram'
+I3600
+ag55
+ag6
+ag56
+asS'Alfred Morris'
 p767
 (lp768
-I5900
+I3700
+ag15
+ag22
 ag14
-ag17
-asS'Chase Reynolds'
+asS'Mark Ingram'
 p769
 (lp770
-I3000
-ag42
-ag42
-asS'Rod Smith'
+I5900
+ag19
+ag22
+ag18
+asS'Chase Reynolds'
 p771
 (lp772
 I3000
-ag11
-ag93
-asS'Benny Cunningham'
+ag52
+ag6
+ag51
+asS'Rod Smith'
 p773
 (lp774
-I3400
-ag42
-ag42
-asS'Kenyan Drake'
+I3000
+ag15
+ag22
+ag14
+asS'Benny Cunningham'
 p775
 (lp776
-I3600
-ag29
-ag56
-asS'Derek Watt'
+I3400
+ag52
+ag6
+ag51
+asS'Kenyan Drake'
 p777
 (lp778
-I3000
-ag20
-ag20
-asS'Isaiah Pead'
+I3600
+ag38
+ag22
+ag37
+asS'Derek Watt'
 p779
 (lp780
 I3000
-ag29
-ag56
-asS'Doug Martin'
+ag25
+ag6
+ag26
+asS'Isaiah Pead'
 p781
 (lp782
-I5700
-ag42
-ag43
-asS'David Johnson'
+I3000
+ag38
+ag22
+ag37
+asS'Doug Martin'
 p783
 (lp784
-I7700
-ag46
-ag46
-asS'Rex Burkhead'
+I5700
+ag51
+ag22
+ag52
+asS'David Johnson'
 p785
 (lp786
-I3000
-ag5
-ag49
-asS'Ryan Mathews'
+I7700
+ag55
+ag6
+ag56
+asS'Rex Burkhead'
 p787
 (lp788
-I5800
-ag32
-ag33
-asS'Jonathan Stewart'
+I3000
+ag7
+ag22
+ag5
+asS'Ryan Mathews'
 p789
 (lp790
-I4800
-ag8
-ag96
-asS'Damien Williams'
+I5800
+ag41
+ag22
+ag42
+asS'Jonathan Stewart'
 p791
 (lp792
-I3000
-ag29
-ag56
-asS'Tim Hightower'
+I4800
+ag11
+ag22
+ag10
+asS'Damien Williams'
 p793
 (lp794
-I3300
-ag14
-ag17
-asS'Brandon Bolden'
+I3000
+ag38
+ag22
+ag37
+asS'Tim Hightower'
 p795
 (lp796
-I3000
-ag85
-ag90
-asS'Jeremy Langford'
+I3300
+ag19
+ag22
+ag18
+asS'Brandon Bolden'
 p797
 (lp798
-I5200
-ag11
-ag11
-asS'Daryl Richardson'
+I3000
+ag90
+ag22
+ag89
+asS'Jeremy Langford'
 p799
 (lp800
-I3000
-ag32
-ag32
-asS'Knile Davis'
+I5200
+ag14
+ag6
+ag15
+asS'Daryl Richardson'
 p801
 (lp802
 I3000
-ag52
-ag53
-asS'Anthony Sherman'
+ag42
+ag6
+ag41
+asS'Knile Davis'
 p803
 (lp804
 I3000
-ag52
-ag53
-asS'Troymaine Pope'
+ag61
+ag22
+ag62
+asS'Anthony Sherman'
 p805
 (lp806
 I3000
-ag52
-ag52
-asS'Patrick DiMarco'
+ag61
+ag22
+ag62
+asS'Troymaine Pope'
 p807
 (lp808
 I3000
-ag14
-ag14
-asS'Peyton Barber'
+ag62
+ag6
+ag61
+asS'Patrick DiMarco'
 p809
 (lp810
 I3000
-ag42
-ag43
-asS'Stepfan Taylor'
+ag18
+ag6
+ag19
+asS'Peyton Barber'
 p811
 (lp812
 I3000
-ag46
-ag46
-asS'Aaron Ripkowski'
+ag51
+ag22
+ag52
+asS'Stepfan Taylor'
 p813
 (lp814
 I3000
-ag26
-ag74
-asS'Carlos Hyde'
+ag55
+ag6
+ag56
+asS'Aaron Ripkowski'
 p815
 (lp816
-I4400
-ag63
-ag63
-asS'Orleans Darkwa'
+I3000
+ag34
+ag22
+ag33
+asS'Carlos Hyde'
 p817
 (lp818
-I3000
-ag38
-ag39
-asS'Kenjon Barner'
+I4400
+ag72
+ag6
+ag71
+asS'Orleans Darkwa'
 p819
 (lp820
 I3000
-ag32
-ag33
-asS'Arian Foster'
+ag47
+ag22
+ag48
+asS'Kenjon Barner'
 p821
 (lp822
-I5500
-ag29
-ag56
-asS'Jordan Todman'
+I3000
+ag41
+ag22
+ag42
+asS'Arian Foster'
 p823
 (lp824
-I3000
-ag20
-ag71
-asS'Latavius Murray'
+I5500
+ag38
+ag22
+ag37
+asS'Jordan Todman'
 p825
 (lp826
-I5700
-ag23
-ag23
-asS'Cameron Artis-Payne'
+I3000
+ag26
+ag22
+ag25
+asS'Latavius Murray'
 p827
 (lp828
-I3000
-ag8
-ag96
-asS'DuJuan Harris'
+I5700
+ag29
+ag6
+ag30
+asS'Cameron Artis-Payne'
 p829
 (lp830
 I3000
-ag63
-ag63
-asS'Shane Vereen'
+ag11
+ag22
+ag10
+asS'DuJuan Harris'
 p831
 (lp832
-I3700
-ag38
-ag39
-asS'C.J. Prosise'
+I3000
+ag72
+ag6
+ag71
+asS'Shane Vereen'
 p833
 (lp834
-I3300
-ag63
-ag64
-asS'Josh Ferguson'
+I3700
+ag47
+ag22
+ag48
+asS'C.J. Prosise'
 p835
 (lp836
-I3000
-ag20
+I3300
 ag71
-asS'Spencer Ware'
+ag22
+ag72
+asS'Josh Ferguson'
 p837
 (lp838
-I5700
-ag52
-ag53
-asS'Javorius Allen'
+I3000
+ag26
+ag22
+ag25
+asS'Spencer Ware'
 p839
 (lp840
-I3000
-ag59
-ag59
-asS'Justin Forsett'
+I5700
+ag61
+ag22
+ag62
+asS'Javorius Allen'
 p841
 (lp842
-I3900
-ag59
-ag59
-asS'Paul Lasike'
+I3000
+ag68
+ag6
+ag67
+asS'Justin Forsett'
 p843
 (lp844
-I3000
-ag11
-ag11
-asS'Chris Thompson'
+I3900
+ag68
+ag6
+ag67
+asS'Paul Lasike'
 p845
 (lp846
-I3400
-ag38
-ag38
-asS'Jacquizz Rodgers'
+I3000
+ag14
+ag6
+ag15
+asS'Chris Thompson'
 p847
 (lp848
-I3000
-ag42
-ag43
-asS'Charcandrick West'
+I3400
+ag48
+ag6
+ag47
+asS'Jacquizz Rodgers'
 p849
 (lp850
-I3500
+I3000
+ag51
+ag22
 ag52
-ag53
-asS'Mike Davis'
+asS'Charcandrick West'
 p851
 (lp852
-I3000
-ag63
-ag63
-asS'Kyle Juszczyk'
+I3500
+ag61
+ag22
+ag62
+asS'Mike Davis'
 p853
 (lp854
 I3000
-ag59
-ag59
-asS'Jordan Howard'
+ag72
+ag6
+ag71
+asS'Kyle Juszczyk'
 p855
 (lp856
-I3300
-ag11
-ag11
-asS'Travaris Cadet'
+I3000
+ag68
+ag6
+ag67
+asS'Jordan Howard'
 p857
 (lp858
-I3100
+I3300
 ag14
-ag17
-asS"Ka'Deem Carey"
+ag6
+ag15
+asS'Travaris Cadet'
 p859
 (lp860
 I3100
-ag11
-ag11
-asS'Devonta Freeman'
+ag19
+ag22
+ag18
+asS"Ka'Deem Carey"
 p861
 (lp862
-I5800
+I3100
 ag14
-ag14
-asS'Alfred Blue'
+ag6
+ag15
+asS'Devonta Freeman'
 p863
 (lp864
-I3400
-ag85
-ag85
-asS'Matt Forte'
+I5800
+ag18
+ag6
+ag19
+asS'Alfred Blue'
 p865
 (lp866
-I7000
-ag52
-ag52
-asS'Matt Asiata'
+I3400
+ag89
+ag6
+ag90
+asS'Matt Forte'
 p867
 (lp868
-I3000
-ag8
-ag8
-asS'Mike Gillislee'
+I7000
+ag62
+ag6
+ag61
+asS'Matt Asiata'
 p869
 (lp870
-I3300
-ag46
-ag82
-asS'Malcolm Johnson'
+I3000
+ag10
+ag6
+ag11
+asS'Mike Gillislee'
 p871
 (lp872
-I3000
-ag29
-ag29
-asS'Jalen Richard'
+I3300
+ag56
+ag22
+ag55
+asS'Malcolm Johnson'
 p873
 (lp874
-I3600
-ag23
-ag23
-asS'Jerome Felton'
+I3000
+ag37
+ag6
+ag38
+asS'Jalen Richard'
 p875
 (lp876
-I3000
-ag46
-ag82
-asS'Matt Jones'
+I3600
+ag29
+ag6
+ag30
+asS'Jerome Felton'
 p877
 (lp878
-I4100
-ag38
-ag38
-asS'Dwayne Washington'
+I3000
+ag56
+ag22
+ag55
+asS'Matt Jones'
 p879
 (lp880
-I3600
-ag26
-ag26
-asS'Lamar Miller'
+I4100
+ag48
+ag6
+ag47
+asS'Dwayne Washington'
 p881
 (lp882
-I7200
-ag85
-ag85
-asS'LeSean McCoy'
+I3600
+ag33
+ag6
+ag34
+asS'Lamar Miller'
 p883
 (lp884
-I6500
-ag46
-ag82
-asS'DeAndre Washington'
+I7200
+ag89
+ag6
+ag90
+asS'LeSean McCoy'
 p885
 (lp886
-I3400
-ag23
-ag23
-asS'Jay Prosch'
+I6500
+ag56
+ag22
+ag55
+asS'DeAndre Washington'
 p887
 (lp888
-I3000
-ag85
-ag85
-asS'Andre Williams'
+I3400
+ag29
+ag6
+ag30
+asS'Jay Prosch'
 p889
 (lp890
 I3000
-ag20
-ag20
-asS'Marcus Murphy'
+ag89
+ag6
+ag90
+asS'Andre Williams'
 p891
 (lp892
 I3000
-ag14
-ag17
-asS'Jonathan Williams'
+ag25
+ag6
+ag26
+asS'Marcus Murphy'
 p893
 (lp894
 I3000
-ag46
-ag82
-asS'Robert Turbin'
+ag19
+ag22
+ag18
+asS'Jonathan Williams'
 p895
 (lp896
 I3000
-ag20
-ag71
-asS'James Develin'
+ag56
+ag22
+ag55
+asS'Robert Turbin'
 p897
 (lp898
 I3000
-ag85
-ag90
-asS'Zach Line'
+ag26
+ag22
+ag25
+asS'James Develin'
 p899
 (lp900
 I3000
-ag8
-ag8
-asS'Thomas Rawls'
+ag90
+ag22
+ag89
+asS'Zach Line'
 p901
 (lp902
-I5500
-ag63
-ag64
-asS'Jamize Olawale'
+I3000
+ag10
+ag6
+ag11
+asS'Thomas Rawls'
 p903
 (lp904
-I3000
-ag23
-ag23
-assS'TE'
+I5500
+ag71
+ag22
+ag72
+asS'Jamize Olawale'
 p905
-(dp906
-S'Will Tye'
+(lp906
+I3000
+ag29
+ag6
+ag30
+assS'TE'
 p907
-(lp908
-I2600
-ag38
-ag39
-asS'Lee Smith'
+(dp908
+S'Will Tye'
 p909
 (lp910
-I2500
-ag23
-ag23
-asS'Maxx Williams'
+I2600
+ag47
+ag22
+ag48
+asS'Lee Smith'
 p911
 (lp912
 I2500
-ag59
-ag59
-asS'Brent Celek'
+ag29
+ag6
+ag30
+asS'Maxx Williams'
 p913
 (lp914
-I2800
-ag32
-ag33
-asS'Jason Witten'
+I2500
+ag68
+ag6
+ag67
+asS'Brent Celek'
 p915
 (lp916
-I4300
-ag11
-ag93
-asS'Greg Scruggs'
+I2800
+ag41
+ag22
+ag42
+asS'Jason Witten'
 p917
 (lp918
-I2500
-ag11
-ag11
-asS'Neal Sterling'
+I4300
+ag15
+ag22
+ag14
+asS'Greg Scruggs'
 p919
 (lp920
 I2500
-ag59
-ag60
-asS'Levine Toilolo'
+ag14
+ag6
+ag15
+asS'Neal Sterling'
 p921
 (lp922
 I2500
-ag14
-ag14
-asS'Ben Koyack'
+ag67
+ag22
+ag68
+asS'Levine Toilolo'
 p923
 (lp924
 I2500
-ag59
-ag60
-asS'Clay Harbor'
+ag18
+ag6
+ag19
+asS'Ben Koyack'
 p925
 (lp926
 I2500
-ag85
-ag90
-asS'Scott Simonson'
+ag67
+ag22
+ag68
+asS'Clay Harbor'
 p927
 (lp928
 I2500
-ag8
-ag96
-asS'Garrett Celek'
+ag90
+ag22
+ag89
+asS'Scott Simonson'
 p929
 (lp930
 I2500
-ag63
-ag63
-asS'Seth DeValve'
+ag11
+ag22
+ag10
+asS'Garrett Celek'
 p931
 (lp932
 I2500
-ag29
-ag29
-asS'Geoff Swaim'
+ag72
+ag6
+ag71
+asS'Seth DeValve'
 p933
 (lp934
 I2500
-ag11
-ag93
-asS'Logan Paulsen'
+ag37
+ag6
+ag38
+asS'Geoff Swaim'
 p935
 (lp936
 I2500
-ag11
-ag11
-asS'Jordan Reed'
+ag15
+ag22
+ag14
+asS'Logan Paulsen'
 p937
 (lp938
-I6500
-ag38
-ag38
-asS'Mychal Rivera'
+I2500
+ag14
+ag6
+ag15
+asS'Jordan Reed'
 p939
 (lp940
-I2500
-ag23
-ag23
-asS'Marcedes Lewis'
+I6500
+ag48
+ag6
+ag47
+asS'Mychal Rivera'
 p941
 (lp942
 I2500
-ag59
-ag60
-asS'Hunter Henry'
+ag29
+ag6
+ag30
+asS'Marcedes Lewis'
 p943
 (lp944
 I2500
-ag20
-ag20
-asS'Trey Burton'
+ag67
+ag22
+ag68
+asS'Hunter Henry'
 p945
 (lp946
 I2500
-ag32
-ag33
-asS'Jermaine Gresham'
+ag25
+ag6
+ag26
+asS'Trey Burton'
 p947
 (lp948
 I2500
-ag46
-ag46
-asS'Cory Harkey'
+ag41
+ag22
+ag42
+asS'Jermaine Gresham'
 p949
 (lp950
 I2500
-ag42
-ag42
-asS'Tyler Higbee'
+ag55
+ag6
+ag56
+asS'Cory Harkey'
 p951
 (lp952
 I2500
-ag42
-ag42
-asS"James O'Shaughnessy"
+ag52
+ag6
+ag51
+asS'Tyler Higbee'
 p953
 (lp954
 I2500
 ag52
-ag53
-asS'Erik Swoope'
+ag6
+ag51
+asS"James O'Shaughnessy"
 p955
 (lp956
 I2500
-ag20
-ag71
-asS'Stephen Anderson'
+ag61
+ag22
+ag62
+asS'Erik Swoope'
 p957
 (lp958
 I2500
-ag85
-ag85
-asS'Vance McDonald'
+ag26
+ag22
+ag25
+asS'Stephen Anderson'
 p959
 (lp960
-I2900
-ag63
-ag63
-asS'Jordan Cameron'
+I2500
+ag89
+ag6
+ag90
+asS'Vance McDonald'
 p961
 (lp962
 I2900
-ag29
-ag56
-asS'Temarrick Hemingway'
+ag72
+ag6
+ag71
+asS'Jordan Cameron'
 p963
 (lp964
-I2500
-ag42
-ag42
-asS'Clark Harris'
+I2900
+ag38
+ag22
+ag37
+asS'Temarrick Hemingway'
 p965
 (lp966
 I2500
-ag5
-ag49
-asS'Coby Fleener'
+ag52
+ag6
+ag51
+asS'Clark Harris'
 p967
 (lp968
-I3300
-ag14
-ag17
-asS'Gary Barnidge'
+I2500
+ag7
+ag22
+ag5
+asS'Coby Fleener'
 p969
 (lp970
-I4000
-ag29
-ag29
-asS'Cameron Brate'
+I3300
+ag19
+ag22
+ag18
+asS'Gary Barnidge'
 p971
 (lp972
-I2500
-ag42
-ag43
-asS'Beau Brinkley'
+I4000
+ag37
+ag6
+ag38
+asS'Cameron Brate'
 p973
 (lp974
 I2500
-ag23
-ag77
-asS'Jared Cook'
+ag51
+ag22
+ag52
+asS'Beau Brinkley'
 p975
 (lp976
-I2900
-ag26
-ag74
-asS'Kyle Rudolph'
+I2500
+ag30
+ag22
+ag29
+asS'Jared Cook'
 p977
 (lp978
-I3100
-ag8
-ag8
-asS'Dennis Pitta'
+I2900
+ag34
+ag22
+ag33
+asS'Kyle Rudolph'
 p979
 (lp980
-I3400
-ag59
-ag59
-asS'Kyle Nelson'
+I3100
+ag10
+ag6
+ag11
+asS'Dennis Pitta'
 p981
 (lp982
-I2500
-ag63
-ag63
-asS'Nick Vannett'
+I3400
+ag68
+ag6
+ag67
+asS'Kyle Nelson'
 p983
 (lp984
 I2500
-ag63
-ag64
-asS'Zach Ertz'
+ag72
+ag6
+ag71
+asS'Nick Vannett'
 p985
 (lp986
-I3900
-ag32
-ag33
-asS'Anthony Fasano'
+I2500
+ag71
+ag22
+ag72
+asS'Zach Ertz'
 p987
 (lp988
-I2500
-ag23
-ag77
-asS'Phillip Supernaw'
+I3900
+ag41
+ag22
+ag42
+asS'Anthony Fasano'
 p989
 (lp990
 I2500
-ag23
-ag77
-asS'Orson Charles'
+ag30
+ag22
+ag29
+asS'Phillip Supernaw'
 p991
 (lp992
 I2500
-ag26
-ag26
-asS'Richard Rodgers'
+ag30
+ag22
+ag29
+asS'Orson Charles'
 p993
 (lp994
-I2700
-ag26
-ag74
-asS'Jim Dray'
+I2500
+ag33
+ag6
+ag34
+asS'Richard Rodgers'
 p995
 (lp996
-I2500
-ag46
-ag82
-asS'Darren Fells'
+I2700
+ag34
+ag22
+ag33
+asS'Jim Dray'
 p997
 (lp998
 I2500
-ag46
-ag46
-asS'Martellus Bennett'
+ag56
+ag22
+ag55
+asS'Darren Fells'
 p999
 (lp1000
-I4700
-ag85
-ag90
-asS'Khari Lee'
+I2500
+ag55
+ag6
+ag56
+asS'Martellus Bennett'
 p1001
 (lp1002
-I2500
-ag26
-ag26
-asS'MyCole Pruitt'
+I4700
+ag90
+ag22
+ag89
+asS'Khari Lee'
 p1003
 (lp1004
 I2500
-ag8
-ag8
-asS'Rob Gronkowski'
+ag33
+ag6
+ag34
+asS'MyCole Pruitt'
 p1005
 (lp1006
-I6800
-ag85
-ag90
-asS'Luke Stocker'
+I2500
+ag10
+ag6
+ag11
+asS'Rob Gronkowski'
 p1007
 (lp1008
-I2500
-ag42
-ag43
-asS'Chris Manhertz'
+I6800
+ag90
+ag22
+ag89
+asS'Luke Stocker'
 p1009
 (lp1010
 I2500
-ag14
-ag17
-asS'Patrick Scales'
+ag51
+ag22
+ag52
+asS'Chris Manhertz'
 p1011
 (lp1012
 I2500
-ag11
-ag11
-asS'MarQueis Gray'
+ag19
+ag22
+ag18
+asS'Patrick Scales'
 p1013
 (lp1014
 I2500
-ag29
-ag56
-asS"Nick O'Leary"
+ag14
+ag6
+ag15
+asS'MarQueis Gray'
 p1015
 (lp1016
 I2500
-ag46
-ag82
-asS'Demetrius Harris'
+ag38
+ag22
+ag37
+asS"Nick O'Leary"
 p1017
 (lp1018
 I2500
-ag52
-ag53
-asS'James Winchester'
+ag56
+ag22
+ag55
+asS'Demetrius Harris'
 p1019
 (lp1020
 I2500
-ag52
-ag53
-asS'Clive Walford'
+ag61
+ag22
+ag62
+asS'James Winchester'
 p1021
 (lp1022
-I2800
-ag23
-ag23
-asS'Jesse James'
+I2500
+ag61
+ag22
+ag62
+asS'Clive Walford'
 p1023
 (lp1024
-I3500
-ag32
-ag32
-asS'Austin Hooper'
+I2800
+ag29
+ag6
+ag30
+asS'Jesse James'
 p1025
 (lp1026
-I2500
-ag14
-ag14
-asS'Troy Niklas'
+I3500
+ag42
+ag6
+ag41
+asS'Austin Hooper'
 p1027
 (lp1028
 I2500
-ag46
-ag46
-asS'Larry Donnell'
+ag18
+ag6
+ag19
+asS'Troy Niklas'
 p1029
 (lp1030
-I2700
-ag38
-ag39
-asS'Austin Seferian-Jenkins'
+I2500
+ag55
+ag6
+ag56
+asS'Larry Donnell'
 p1031
 (lp1032
-I2900
-ag42
-ag43
-asS'Jace Amaro'
+I2700
+ag47
+ag22
+ag48
+asS'Austin Seferian-Jenkins'
 p1033
 (lp1034
-I2500
-ag23
-ag77
-asS'Ed Dickson'
+I2900
+ag51
+ag22
+ag52
+asS'Jace Amaro'
 p1035
 (lp1036
 I2500
-ag8
-ag96
-asS'Zach Miller'
+ag30
+ag22
+ag29
+asS'Ed Dickson'
 p1037
 (lp1038
-I2900
+I2500
 ag11
-ag11
-asS'Dwayne Allen'
+ag22
+ag10
+asS'Zach Miller'
 p1039
 (lp1040
-I3800
-ag20
-ag71
-asS'Dion Sims'
+I2900
+ag14
+ag6
+ag15
+asS'Dwayne Allen'
 p1041
 (lp1042
-I2500
-ag29
-ag56
-asS'Brandon Bostick'
+I3800
+ag26
+ag22
+ag25
+asS'Dion Sims'
 p1043
 (lp1044
 I2500
-ag52
-ag52
-asS'A.J. Derby'
+ag38
+ag22
+ag37
+asS'Brandon Bostick'
 p1045
 (lp1046
 I2500
-ag85
-ag90
-asS'Ryan Griffin'
+ag62
+ag6
+ag61
+asS'A.J. Derby'
 p1047
 (lp1048
 I2500
-ag85
-ag85
-asS'Gavin Escobar'
+ag90
+ag22
+ag89
+asS'Ryan Griffin'
 p1049
 (lp1050
 I2500
-ag11
-ag93
-asS'Jimmy Graham'
+ag89
+ag6
+ag90
+asS'Gavin Escobar'
 p1051
 (lp1052
-I3000
-ag63
-ag64
-asS'Antonio Gates'
+I2500
+ag15
+ag22
+ag14
+asS'Jimmy Graham'
 p1053
 (lp1054
-I4600
-ag20
-ag20
-asS'Kellen Davis'
+I3000
+ag71
+ag22
+ag72
+asS'Antonio Gates'
 p1055
 (lp1056
-I2500
-ag52
-ag52
-asS'Vernon Davis'
+I4600
+ag25
+ag6
+ag26
+asS'Kellen Davis'
 p1057
 (lp1058
-I2700
-ag38
-ag38
-asS'David Johnson'
+I2500
+ag62
+ag6
+ag61
+asS'Vernon Davis'
 p1059
 (lp1060
-I2500
-ag32
-ag32
-asS'Ross Travis'
+I2700
+ag48
+ag6
+ag47
+asS'David Johnson'
 p1061
 (lp1062
 I2500
-ag52
-ag53
-asS'Blake Bell'
+ag42
+ag6
+ag41
+asS'Ross Travis'
 p1063
 (lp1064
 I2500
-ag63
-ag63
-asS'Jack Doyle'
+ag61
+ag22
+ag62
+asS'Blake Bell'
 p1065
 (lp1066
 I2500
-ag20
+ag72
+ag6
 ag71
-asS'David Morgan'
+asS'Jack Doyle'
 p1067
 (lp1068
 I2500
-ag8
-ag8
-asS'John Phillips'
+ag26
+ag22
+ag25
+asS'David Morgan'
 p1069
 (lp1070
 I2500
-ag5
-ag5
-asS'Josh Hill'
+ag10
+ag6
+ag11
+asS'John Phillips'
 p1071
 (lp1072
 I2500
-ag14
-ag17
-asS'Julius Thomas'
+ag5
+ag6
+ag7
+asS'Josh Hill'
 p1073
 (lp1074
-I4600
-ag59
-ag60
-asS'Sean McGrath'
+I2500
+ag19
+ag22
+ag18
+asS'Julius Thomas'
 p1075
 (lp1076
-I2500
-ag20
-ag20
-asS'Jerell Adams'
+I4600
+ag67
+ag22
+ag68
+asS'Sean McGrath'
 p1077
 (lp1078
 I2500
-ag38
-ag39
-asS'Travis Kelce'
+ag25
+ag6
+ag26
+asS'Jerell Adams'
 p1079
 (lp1080
-I4700
-ag52
-ag53
-asS'Tyler Kroft'
+I2500
+ag47
+ag22
+ag48
+asS'Travis Kelce'
 p1081
 (lp1082
-I2500
-ag5
-ag49
-asS'Eric Ebron'
+I4700
+ag61
+ag22
+ag62
+asS'Tyler Kroft'
 p1083
 (lp1084
-I3700
-ag26
-ag26
-asS'Brandon Myers'
+I2500
+ag7
+ag22
+ag5
+asS'Eric Ebron'
 p1085
 (lp1086
-I2500
-ag42
-ag43
-asS'Charles Clay'
+I3700
+ag33
+ag6
+ag34
+asS'Brandon Myers'
 p1087
 (lp1088
-I2900
-ag46
-ag82
-asS'Justin Perillo'
+I2500
+ag51
+ag22
+ag52
+asS'Charles Clay'
 p1089
 (lp1090
-I2500
-ag26
-ag74
-asS'Joshua Perkins'
+I2900
+ag56
+ag22
+ag55
+asS'Justin Perillo'
 p1091
 (lp1092
 I2500
-ag14
-ag14
-asS'C.J. Uzomah'
+ag34
+ag22
+ag33
+asS'Joshua Perkins'
 p1093
 (lp1094
 I2500
-ag5
-ag49
-asS'Greg Olsen'
+ag18
+ag6
+ag19
+asS'C.J. Uzomah'
 p1095
 (lp1096
-I5800
-ag8
-ag96
-asS'Rhett Ellison'
+I2500
+ag7
+ag22
+ag5
+asS'Greg Olsen'
 p1097
 (lp1098
-I2500
-ag8
-ag8
-asS'Crockett Gillmore'
+I5800
+ag11
+ag22
+ag10
+asS'Rhett Ellison'
 p1099
 (lp1100
 I2500
-ag59
-ag59
-asS'Delanie Walker'
+ag10
+ag6
+ag11
+asS'Crockett Gillmore'
 p1101
 (lp1102
-I5000
-ag23
-ag77
-asS'Kevin McDermott'
+I2500
+ag68
+ag6
+ag67
+asS'Delanie Walker'
 p1103
 (lp1104
-I2500
-ag8
-ag8
-asS'Tyler Eifert'
+I5000
+ag30
+ag22
+ag29
+asS'Kevin McDermott'
 p1105
 (lp1106
-I4500
-ag5
-ag49
-asS'Ryan Hewitt'
+I2500
+ag10
+ag6
+ag11
+asS'Tyler Eifert'
 p1107
 (lp1108
-I2500
+I4500
+ag7
+ag22
 ag5
-ag49
-asS'C.J. Fiedorowicz'
+asS'Ryan Hewitt'
 p1109
 (lp1110
 I2500
-ag85
-ag85
-asS'Randall Telfer'
+ag7
+ag22
+ag5
+asS'C.J. Fiedorowicz'
 p1111
 (lp1112
 I2500
-ag29
-ag29
-asS'Jeff Heuerman'
+ag89
+ag6
+ag90
+asS'Randall Telfer'
 p1113
 (lp1114
 I2500
-ag5
-ag5
-asS'Xavier Grimble'
+ag37
+ag6
+ag38
+asS'Jeff Heuerman'
 p1115
 (lp1116
 I2500
-ag32
-ag32
-asS'Andrew DePaola'
+ag5
+ag6
+ag7
+asS'Xavier Grimble'
 p1117
 (lp1118
 I2500
 ag42
-ag43
-asS'Jacob Tamme'
+ag6
+ag41
+asS'Andrew DePaola'
 p1119
 (lp1120
-I3200
-ag14
-ag14
-asS'Lance Kendricks'
+I2500
+ag51
+ag22
+ag52
+asS'Jacob Tamme'
 p1121
 (lp1122
-I2700
-ag42
-ag42
-asS'Luke Willson'
+I3200
+ag18
+ag6
+ag19
+asS'Lance Kendricks'
 p1123
 (lp1124
-I2500
-ag63
-ag64
-asS'Virgil Green'
+I2700
+ag52
+ag6
+ag51
+asS'Luke Willson'
 p1125
 (lp1126
-I3000
-ag5
-ag5
-asS'Andrew Quarless'
+I2500
+ag71
+ag22
+ag72
+asS'Virgil Green'
 p1127
 (lp1128
-I2500
-ag26
-ag26
-asS'Cole Wick'
+I3000
+ag5
+ag6
+ag7
+asS'Andrew Quarless'
 p1129
 (lp1130
 I2500
-ag26
-ag26
-asS'Brandon Williams'
+ag33
+ag6
+ag34
+asS'Cole Wick'
 p1131
 (lp1132
 I2500
-ag63
-ag64
-asS'Niles Paul'
+ag33
+ag6
+ag34
+asS'Brandon Williams'
 p1133
 (lp1134
 I2500
-ag38
-ag38
+ag71
+ag22
+ag72
+asS'Niles Paul'
+p1135
+(lp1136
+I2500
+ag48
+ag6
+ag47
 ass.

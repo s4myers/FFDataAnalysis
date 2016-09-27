@@ -3,6 +3,7 @@ import os
 import datetime
 import time
 import numpy as np
+import math
 import matplotlib.pyplot as plt
 import pickle
 from numbers import Number
@@ -22,6 +23,18 @@ POS_LIST = ["QB","RB","WR","TE","K"]
 try:
     SALARIES = pickle.load(open(os.path.join(
                         PICKLE_DIR,"dksalaries.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    DEF_AVERAGES = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"DefenseAverages.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    ROSTERS = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"TeamRosters.p"),"rb"))
 except IOError:
     pass
 
@@ -273,6 +286,28 @@ class Player(object):
             pickle.dump(self.stats,open(self.pickle_path,"wb"))
 
 
+    def find_home_games(self,year):
+        """
+        Finds the weeks corresponding to the home games
+
+        Parameters
+
+        ----------
+        year : int
+            The four digit year
+
+
+
+        Returns
+
+        -------
+        home : list
+            A list of weeks corresponding to home games
+        """
+        weeks = self.stats[year].keys()
+        home = [x for x in weeks if ('@' not in self.stats[year][x]['Opp'] and 
+                                          self.stats[year][x]["Game Date"]!="Bye")]
+        return home
 
     def games_played(self,year):
         """
@@ -311,7 +346,7 @@ class Player(object):
         return games
             
 
-    def generate_array_stats(self,field,year):
+    def generate_array_stats(self,field,year,weeks="ALL"):
         """
         Creates an array of float values of a particular field for a 
         requested year.
@@ -323,6 +358,11 @@ class Player(object):
             The field, e.g. "PassTD","REC", etc.
         year : int 
             The four digit year
+        weeks : string or list, optional
+            By default the string "ALL" means to generate an array for
+            all the weeks in a year.  If a list of integers ranging from 1-17
+            is given, then only the stats corresponding to those weeks
+            will be added to the array.
 
 
 
@@ -334,12 +374,14 @@ class Player(object):
             player did not participate are not included in the array. 
 
         """
-
+        
         if year not in self.stats.keys():
             return "No Data"
+        if weeks == "ALL":
+           weeks = self.stats[year].keys()
         if self.name not in TEAM_LIST:
             temp_list = []
-            for week in self.stats[year].keys():
+            for week in weeks:
                 if (self.stats[year][week]["G"] == 0 or 
                     self.stats[year][week]["Game Date"] == "Bye"):
                     continue 
@@ -347,15 +389,18 @@ class Player(object):
                     temp_list += [self.stats[year][week][field]]
         else:
             temp_list = []
-            for week in self.stats[year].keys():
+            for week in weeks:
                 if self.stats[year][week]["Home"] == []:
                     continue 
                 else:
-                    temp_list += [self.stats[year][week][field]]       
-        a = np.array(temp_list)
+                    temp_list += [self.stats[year][week][field]]
+        if temp_list == []:
+            a = np.array([0.0])
+        else:                 
+            a = np.array(temp_list)
         return a
 
-    def total(self,field,year,weeks=["all_weeks"]):
+    def total(self,field,year,weeks="ALL"):
         """ 
         Totals the value of a field by week or by entire year.
         
@@ -366,9 +411,11 @@ class Player(object):
             The field to be totaled, e.g. "PassTD","REC", etc.
         year : int
             The four digit year
-        weeks : list, optional
-            By default the entire year will be totaled. If a different week
-            list is supplied, only the those weeks will be totaled.
+        weeks : string or list, optional
+            By default the string "ALL" means to generate an array for
+            all the weeks in a year.  If a list of integers ranging from 1-17
+            is given, then only the stats corresponding to those weeks
+            will be added to the array.
 
 
 
@@ -383,30 +430,28 @@ class Player(object):
         try:
             self.stats[year]
         except KeyError:
-            return "No Data this year"    
+            return tot   
         if field not in self.field_names:
             print ("Not a valid field.")
             return
-        elif type(weeks)!=list or [type(item)!=str for item in weeks]==[True for i in range(len(weeks))]:
-            print "Not a valid argument for weeks"
-            return
-        elif weeks == ["all_weeks"]:
-            tot = np.sum(self.generate_array_stats(field,year))
-            return tot
+       
         else:
-            week_list = weeks
-            try:
-                for week in week_list:  
-                    if self.stats[year][week][field] == "":
-                        tot += 0.0
-                    else:
-                        tot += self.stats[year][week][field]
-                return tot
-            except KeyError:
-                print "No data available for this year or invalid weeks"        
-                return
+            tot = np.sum(self.generate_array_stats(field,year,weeks))
+            return tot
+        #else:
+        #    week_list = weeks
+        #    try:
+        #        for week in week_list:  
+        #            if self.stats[year][week][field] == "":
+        #                tot += 0.0
+        #          else:
+        #                tot += self.stats[year][week][field]
+        #        return tot
+        #    except KeyError:
+        #        print "No data available for this year or invalid weeks"        
+        #        return
 
-    def field_average(self,field,year):
+    def field_average(self,field,year,weeks="ALL"):
         """
         Returns the weekly average of a field for the particular year.
 
@@ -417,7 +462,11 @@ class Player(object):
             The field to average, e.g. "PassTD","REC", etc.
         year : int
             The four digit year.
-
+        weeks : string or list, optional
+            By default the string "ALL" means to generate an array for
+            all the weeks in a year.  If a list of integers ranging from 1-17
+            is given, then only the stats corresponding to those weeks
+            will be added to the array.
 
 
         Returns
@@ -427,17 +476,18 @@ class Player(object):
             The average of field for a particular year.
 
         """
+        avg=0.0
         if year not in self.stats.keys():
-            return "No Data"
+            return avg
 
-        ary = self.generate_array_stats(field,year)
+        ary = self.generate_array_stats(field,year,weeks)
         avg = np.average(ary)
         if np.isnan(avg):
             return 0.0
         else:   
             return avg
 
-    def field_std(self,field,year):
+    def field_std(self,field,year,weeks="ALL"):
         """
         Returns the weekly standard deviation of a field 
         for the particular year.
@@ -450,7 +500,11 @@ class Player(object):
             e.g. "PassTD","REC", etc.
         year : int
             The four digit year.
-
+        weeks : string or list, optional
+            By default the string "ALL" means to generate an array for
+            all the weeks in a year.  If a list of integers ranging from 1-17
+            is given, then only the stats corresponding to those weeks
+            will be added to the array.
 
 
         Returns
@@ -460,13 +514,15 @@ class Player(object):
             The average of field for a particular year.
 
         """
+        std = 0.0
         if year not in self.stats.keys():
-            return "No Data"
+            return std
 
-        ary = self.generate_array_stats(field,year)
+        ary = self.generate_array_stats(field,year,weeks)
         std = np.std(ary)
         if np.isnan(std):
-            return 0.0
+            std=0.0
+            return std
         else:   
             return std
 
@@ -750,7 +806,7 @@ class Player(object):
             var = np.average(week_variance)
             return var
 
-    def field_ratio(self,field1,field2,year,weeks=["all_weeks"]):
+    def field_ratio(self,field1,field2,year,weeks="ALL"):
         """
         Returns the ratio of two stats for a particular week, weeks, or the year
 
@@ -763,10 +819,11 @@ class Player(object):
             The second field.
         year : string
             The four digit year.
-        weeks : list, optional
-            By default the entire year will be used for field totals. If a 
-            different week list is supplied, only the those weeks will 
-            be totaled.
+        weeks : string or list, optional
+            By default the string "ALL" means to generate an array for
+            all the weeks in a year.  If a list of integers ranging from 1-17
+            is given, then only the stats corresponding to those weeks
+            will be added to the array.
 
 
 
@@ -796,6 +853,9 @@ class QuarterBack(Player):
     field_names = ["G","GS","Comp","PassAtt","Pct","PassYds","PassTD","Int",
                    "Sck","Rate","RushAtt","RushYds","RushTD","FUM","Lost"]
     scoring_field_names = ["PassYds","PassTD","RushYds","RushTD","Int","Lost"]
+    proj_field_names = ["PassYds","PassAtt","PassTD",
+                        "RushYds","RushAtt","RushTD",
+                        "Int","Lost"]
     csv_file_name ="QBStats.csv"
 
 class RunningBack(Player):
@@ -805,6 +865,9 @@ class RunningBack(Player):
     field_names =["G","GS","RushAtt","RushYds","RushAvg","RushLng","RushTD","Rec",
                   "RecYds","RecAvg","RecLng","RecTD","FUM","Lost"]
     scoring_field_names = ["RushYds","RushTD","Rec","RecYds","RecTD","Lost"]
+    proj_field_names = ["RecYds","Rec","RecTD",
+                        "RushYds","RushAtt","RushTD",
+                        "Lost"]
     csv_file_name = "RBStats.csv"
 
 class WideReceiver(Player):
@@ -814,6 +877,9 @@ class WideReceiver(Player):
     field_names =["G","GS","RushAtt","RushYds","RushAvg","RushLng","RushTD",
                   "Rec","RecYds","RecAvg","RecLng","RecTD","FUM","Lost"]
     scoring_field_names = ["RushYds","RushTD","Rec","RecYds","RecTD","Lost"]
+    proj_field_names = ["RecYds","Rec","RecTD",
+                        "RushYds","RushAtt","RushTD",
+                        "Lost"]
     csv_file_name = "WRStats.csv"
 
 class TightEnd(Player):
@@ -823,6 +889,9 @@ class TightEnd(Player):
     field_names =["G","GS","RushAtt","RushYds","RushAvg","RushLng","RushTD",
                   "Rec","RecYds","RecAvg","RecLng","RecTD","FUM","Lost"]
     scoring_field_names = ["RushYds","RushTD","Rec","RecYds","RecTD","Lost"]
+    proj_field_names = ["RecYds","Rec","RecTD",
+                        "RushYds","RushAtt","RushTD",
+                        "Lost"]
     csv_file_name = "TEStats.csv"
 
 class Kicker(Player):
@@ -835,9 +904,9 @@ class Kicker(Player):
     csv_file_name = "KStats.csv"
 
 class Defense(Player):
-    """ Defensive Matchup """
-    abbr = "DEF"
-    field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt","Lost","Int"
+    """ Defensive / Special Team"""
+    abbr = "DST"
+    field_names = ["Players","RushAtt","RushYds","RushTD","PassAtt","Lost","Int",
                    "PassYds","PassTD","FGBlk","FGAtt","FGM","XPM","XPBlk","Sck",
                    "Home","Won","Score"]
     csv_file_name = "QBStats.csv" #uses QBStats.csv to look for updates

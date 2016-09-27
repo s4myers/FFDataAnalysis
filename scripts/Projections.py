@@ -654,12 +654,404 @@ def score_lineup(lineup,cost_thresh=41200,cost = True):
         tot_score += score
         tot_cost += SALARIES[pos][name][0]
         players.append(name)
-        if tot_cost > cost_thresh:
-            return (0,0,0)
-        else:
-            continue    
+        #if tot_cost > cost_thresh:
+        #    return (0,0,0)
+        #else:
+        #    continue    
     if cost == True:
         lineup_score = (tot_score,tot_cost,players)
     else:
         lineup_score = (tot_score,players)
     return lineup_score
+
+################## Functions related to new Projection #########################
+def compare_and_return(player_val,opponent_val,thresh=.3):
+    """
+    Compares two values to find a percentage difference.
+
+    Parameters
+
+    ----------
+    player_val : float
+        A player's average value of some field.
+    opponent_value : float
+        The opponent's average value of the same field.
+    thresh : float, optional
+        The threshold for the percent difference
+
+
+
+    Returns
+
+    -------
+    result : float
+        The result value is dependant on the percentage difference of
+        the field value. If percent differnce is less than the `thresh`,
+        the mean of the two values is returned.  If greater than the
+        thresh a weighted average is returned.
+
+    """
+    numer = abs(player_val - opponent_val)
+    denom = (player_val + opponent_val)/2
+    percent_diff = numer/denom
+    
+    ary = np.array([player_val,opponent_val])
+    x = .5*(1+percent_diff)
+    y = 1-x
+    if percent_diff < thresh:
+        wt = np.array([.5,.5]) #equal weight
+    elif percent_diff >=1.0:
+        x = 1.0
+        y = 0.0
+
+    if player_val < opponent_val:
+        wt = np.array([x,y])
+    else:
+        wt = np.array([y,x])
+    result = np.average(ary,weights=wt)
+    return result
+
+
+def points_from_projection(player,proj,ppr=0.0):
+    """
+    Determine points from projected statistics.
+
+    Parameters
+
+    ----------
+    player : class object
+        The Player class object.
+    proj : dictionary
+        A dictionary contain the projected statistics.
+    ppr : float, optional
+        Default is `0.0`. Scoring parameter for points per reception.
+
+
+
+    Return
+
+    ------
+    points : float
+        The fantasy point total based on the projection.
+
+    """
+    points = 0.0
+    pos = player.abbr
+    player.fantasy_point_multipliers["ppr"]=ppr
+    
+    for field,value in proj.items():
+        points+=player.fantasy_point_multipliers[field]*value
+    return points
+
+
+def field_percentage(player,field,year):
+    """
+    Compares field totals by pos to get a percentage breakdown.
+
+    Parameters
+
+    ----------
+    player : class object
+        The player class object.
+    field : string
+        The field of interest, e.g. "PassTD","Rec", etc.
+    year : string
+        The four digit year.
+
+
+
+    Return
+
+    ------
+    percent : float
+        The return value ranges from 0.0 to 1.0. The purpose of the
+        function is to properly distribute a field total allowed by
+        the opponent to each player of a particular position.
+            
+    """
+    team = find_team(player,year)
+    pos = player.abbr
+    others = []
+    for n,p in ROSTERS[year][team]:
+        if p == pos and n != player.name:
+            others.append(n)
+    if others == []:
+        percent = 1.0
+    else:
+        c_list = generate_class_list(pos,others)
+        other_tot = 0.0
+        for c in c_list:
+            other_tot+=c.total(field,year)
+        p_tot = player.total(field,year)
+        denom = other_tot+p_tot
+        if denom == 0.0:
+            percent = 0.0
+            return percent
+        
+        percent = p_tot/denom
+    
+    return percent
+
+
+def find_team(player,year):
+    """
+    Find a player's team.  
+    *Currently only works for 2015,2016 and players not on suspension.
+    *I manually added some players to ROSTERS.
+
+    Parameters
+
+    ----------
+
+    player : class object
+        The Player class object.
+    year : string
+        The four digit year *Currently only works for 2015, 2016.
+
+
+
+    Return
+
+    ------
+    team : string
+        The player's team name.
+
+    """
+    name = player.name
+    pos = player.abbr
+    
+    for team in TEAM_LIST:
+        if (name,pos) in ROSTERS[year][team]:
+            return team
+        else:
+            continue
+    return "Free Agent or Suspended"
+
+
+def player_field_averages(player,year,weeks="ALL"):
+    """
+    Finds the average values for the below fields.
+
+    Parameters
+
+    ----------
+    player : class object
+        The Player class object.
+    year : string
+        The four digit year.
+    weeks : string or list, optional
+            By default the string "ALL" means to average a field for
+            all the weeks in a year.  If a list of integers ranging from 1-17
+            is given, then only the stats corresponding to those weeks
+            will be added to the array.
+
+
+
+    Returns
+
+    -------
+    avg : dictionary
+        A dictionary containing a player's average field values for 
+        a specified year and week interval. 
+
+    """
+    avg = {}
+    pos = player.abbr
+    passing = ["PassAvg","PassAtt","PassYds","PassTD","Int","Sck"]
+    rushing = ["RushAvg","RushAtt","RushYds","RushTD","Lost"]
+    receiving = ["RecAvg","Rec","RecYds","RecTD"]
+    if pos == "QB":
+        fields = [x for x in passing +rushing]
+    else:
+        fields = [x for x in receiving+rushing]
+    avg = {x:player.field_average(x,year,weeks) for x in fields}
+    return avg
+
+
+def opp_field_averages(p_avg,pos,opp,year):
+    """
+    Finds the average values for the below fields.
+
+    Parameters
+
+    ----------
+    p_avg : dictionary
+        A dictionary containing a player's average field values for 
+        a specified year and week interval.
+    pos : string
+        The position of the player, e.g. "QB", "RB", etc.
+    opp : string
+        The opponent's team name, e.g. "Bears","Colts",etc.
+    year : string
+        The four digit year.
+
+
+
+    Returns
+
+    -------
+    opp_avg : dictionary
+        A dictionary containing the opponent's average allowed values 
+        which correspond to the player's field.  
+        
+    """
+    opp_avg={}
+    for field in p_avg.keys():
+        try:
+            val = DEF_AVERAGES[year][pos][opp][field]
+            opp_avg[field]=val
+        except KeyError:
+            continue
+    return opp_avg
+
+
+def projected_stats(player,player_avg,opp_avg,year,printout=False):
+    """
+    Creates projected stats for the week depending on the opponent's
+    allowed averages and the player's performance throughout the 
+    season.
+
+    Parameters
+
+    ----------
+    player : class object
+        The player class object.
+    player_avg : dictionary
+        A dictionary containing a player's average field values for 
+        a specified year and week interval.
+    opp_avg : dictionary
+        A dictionary containing the opponent's average allowed values 
+        which correspond to the player's field.
+    year : string
+        The four digit year.
+    printout : bool, optional
+        Default value is `False`. If `True`, then the function 
+        will print the field modifiers.
+
+
+
+    Return
+
+    ------
+    player_avg : dictionary
+        A dictionary containing a player's projected game stats.
+
+    """
+    pos = player.abbr
+    proj_stats ={}
+    if player.abbr == "QB":
+        qbf1 = "PassAtt"
+        qbf2 = "PassTD"
+        qbf3 = "Int"
+        
+        pass_att = np.mean([player_avg[qbf1],opp_avg[qbf1]])
+        
+        player_pass_avg = player_avg["PassAvg"]
+        opp_pass_avg = opp_avg["PassYds"]/opp_avg[qbf1]
+        
+        pass_avg = np.mean([player_pass_avg,opp_pass_avg])
+        #pass_avg = compare_and_return(player_pass_avg,opp_pass_avg)
+        
+        pass_yards = pass_att*pass_avg
+        pass_td = np.mean([player_avg[qbf2],opp_avg[qbf2]])
+        intercept = np.mean([player_avg[qbf3],opp_avg[qbf3]])
+        #pass_td = compare_and_return(player_avg[qbf2],opp_avg[qbf2])
+        #intercept = compare_and_return(player_avg[qbf3],opp_avg[qbf3])
+        
+        proj_stats["PassYds"] = pass_yards
+        proj_stats[qbf2] = pass_td
+        proj_stats[qbf3] = intercept
+         
+    else:
+        f1 = "Rec"
+        f2 = "RecTD"
+        mod1 = field_percentage(player,f1,year)
+        mod2 = field_percentage(player,f2,year)
+        
+        rec = mod1*opp_avg[f1]
+        rec_avg = player_avg["RecAvg"]
+        rec_yards = rec*rec_avg
+        if mod2 != 0.0:
+            rec_td = mod2*opp_avg[f2]
+        else:
+            rec_td = mod1*opp_avg[f2]
+        
+        if printout:
+            print("rec modifier ",mod1)
+            print("rectd modifier ",mod2)
+        
+        proj_stats["RecYds"] = rec_yards
+        proj_stats[f1] = rec
+        proj_stats[f2] = rec_td
+        
+    f3 = "RushAtt"
+    f4 = "RushTD"
+    
+    mod3 = field_percentage(player,f3,year)
+    mod4 = field_percentage(player,f4,year)
+    w = np.array([1.0,1.0-mod3])
+    rush_att = np.average([player_avg[f3],opp_avg[f3]],weights=w)
+    rush_avg = player_avg["RushAvg"]
+    rush_yds = rush_att*rush_avg
+    
+    if mod4 != 0.0:
+        rush_td = mod4*opp_avg[f4]
+    else:
+        rush_td = mod3*opp_avg[f4]
+    
+    if printout:
+            print("rush att modifier ",mod3)
+            print("rush td modifier ",mod4)
+            
+    proj_stats["RushYds"]=rush_yds
+    proj_stats[f4] = rush_td
+    
+    return proj_stats
+
+
+def projected_points(player,year,ppr=0.0,
+                     player_weeks="ALL",printout=False):
+    """
+    Find a player's projected week score.
+
+    Parameters
+
+    ----------
+    player : class object
+        The Player class object.
+    year : string
+        The four digit year.
+    ppr : float, optional
+        Default is `0.0`. Scoring parameter for points per reception.
+    weeks : string or list, optional
+            By default the string "ALL" means to average a field for
+            all the weeks in a year.  If a list of integers ranging from 1-17
+            is given, then only the stats corresponding to those weeks
+            will be added to the array.
+    printout : bool, optional
+        Default value is `False`. If `True`, then the function 
+        will print the field modifiers.
+
+
+
+    Return
+
+    ------
+    projected_points : float
+        The player's projected point total.
+
+    """
+    
+    #home = player.find_home_games(year)
+    #away = [x for x in player.stats[year].keys() if x not in home]
+    pos = player.abbr
+    name = player.name
+    opp = SALARIES[pos][name][1]
+    where = SALARIES[pos][name][2]
+    
+    p_avg = player_field_averages(player,year,player_weeks)
+    opp_avg = opp_field_averages(p_avg,pos,opp,year)
+    projection = projected_stats(player,p_avg,opp_avg,year,printout)
+    projected_points = points_from_projection(player,projection,ppr)
+    
+    return projected_points
