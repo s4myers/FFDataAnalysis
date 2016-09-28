@@ -80,7 +80,7 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
     return r_list
 
 
-def weekly_filter(pos,low,high,num=10,ppr=0.0,no_touch=[]):
+def weekly_filter(week,pos,low,high,num=10,ppr=0.0,no_touch=[]):
     """
     Filters players according Draft Kings salary list. Then scores the players
     according to the algorithm
@@ -88,6 +88,8 @@ def weekly_filter(pos,low,high,num=10,ppr=0.0,no_touch=[]):
     Parameters
 
     ----------
+    week : int
+        the week of interest
     pos : string
         the position to use as a filter.
     low : int
@@ -110,9 +112,9 @@ def weekly_filter(pos,low,high,num=10,ppr=0.0,no_touch=[]):
         Returns a sorted list of tuples. Each tuple includes (score,name,pos)
 
     """
-    player_list = [name for name in SALARIES[pos].keys()
-                   if (SALARIES[pos][name][0] > low and 
-                       SALARIES[pos][name][0] < high) and name not in no_touch]
+    player_list = [name for name in SALARIES[week][pos].keys()
+                   if (SALARIES[week][pos][name] > low and 
+                       SALARIES[week][pos][name] < high) and name not in no_touch]
     c_list = generate_class_list(pos,player_list)
     score_list = [(player_score(c,ppr),c.name,c.abbr) for c in c_list]
     result = sorted(score_list,reverse = True)[:num]
@@ -191,7 +193,7 @@ def score_combinations(combos_list):
     return joined
 
 
-def lineup_cost(lineup):
+def lineup_cost(week,lineup):
     """
     Determine cost of a lineup according to DraftKings.com
     
@@ -206,14 +208,15 @@ def lineup_cost(lineup):
     Returns
 
     -------
-
+    week : int
+        The week of interest.
     price : int
         The total cost of the lineup according to DraftKings.com pricing.
 
     """
     price = 0
     for score,player,pos in lineup:
-        price += SALARIES[pos][player][0]
+        price += SALARIES[week][pos][player]
     return price
 
 
@@ -490,7 +493,7 @@ def player_combinations(pos,player_list,num):
     return player_combos
 
 
-def player_score(player,ppr=0.0,GAME_THRESH=4.0):
+def player_score(player,week,ppr=0.0,GAME_THRESH=4.0):
     """
     Gives a player a score based on whatever wack-a-do things we think
     are important.
@@ -518,13 +521,13 @@ def player_score(player,ppr=0.0,GAME_THRESH=4.0):
     """
     
     this_year = YEAR_LIST[-1]
-    last_year = str(int(this_year)-1)
+    last_year = this_year-1
     pos = player.abbr
-    name = player.name
-    opp = SALARIES[pos][name][1]
+    team = find_team(player,this_year)
+    opp,where = SCHEDULE[team][week]
     
     #Determine weights
-    gp = player.games_played(this_year)
+    gp = player.games_played(week,this_year)
     if gp >= GAME_THRESH:
         weights = np.array([0.0,1.0])
     else:
@@ -619,13 +622,15 @@ def rookie_ppg_average(last_year,pos,ppr=0.0):
     return past_ppg
 
 
-def score_lineup(lineup,cost_thresh=41200,cost = True):
+def score_lineup(week,lineup,cost_thresh=41200,cost = True):
     """
     Gives a total score for a lineup based on our algorithm.
 
     Parameters
 
     ----------
+    week : int
+        The week of interest.
     lineup : list
         A list of tuples `(score,name,pos)`.
     cost : bool, optional
@@ -652,7 +657,7 @@ def score_lineup(lineup,cost_thresh=41200,cost = True):
     players = []
     for score,name,pos in lineup:
         tot_score += score
-        tot_cost += SALARIES[pos][name][0]
+        tot_cost += SALARIES[week][pos][name]
         players.append(name)
         #if tot_cost > cost_thresh:
         #    return (0,0,0)
@@ -737,14 +742,14 @@ def points_from_projection(player,proj,ppr=0.0):
     """
     points = 0.0
     pos = player.abbr
-    player.fantasy_point_multipliers["ppr"]=ppr
+    player.fantasy_point_multipliers["Rec"]=ppr
     
     for field,value in proj.items():
         points+=player.fantasy_point_multipliers[field]*value
     return points
 
 
-def field_percentage(player,field,year):
+def field_percentage(player,field,week,year):
     """
     Compares field totals by pos to get a percentage breakdown.
 
@@ -755,7 +760,9 @@ def field_percentage(player,field,year):
         The player class object.
     field : string
         The field of interest, e.g. "PassTD","Rec", etc.
-    year : string
+    week : int
+        Determines the last week in the week range.
+    year : int
         The four digit year.
 
 
@@ -769,6 +776,7 @@ def field_percentage(player,field,year):
         the opponent to each player of a particular position.
             
     """
+    w_list  = range(1,week+1)
     team = find_team(player,year)
     pos = player.abbr
     others = []
@@ -781,8 +789,12 @@ def field_percentage(player,field,year):
         c_list = generate_class_list(pos,others)
         other_tot = 0.0
         for c in c_list:
-            other_tot+=c.total(field,year)
-        p_tot = player.total(field,year)
+            try:
+                other_tot+=c.total(field,year,weeks=w_list)
+            except KeyError:
+                continue
+                
+        p_tot = player.total(field,year,weeks=w_list)
         denom = other_tot+p_tot
         if denom == 0.0:
             percent = 0.0
@@ -828,7 +840,7 @@ def find_team(player,year):
     return "Free Agent or Suspended"
 
 
-def player_field_averages(player,year,weeks="ALL"):
+def player_field_averages(player,week,year):
     """
     Finds the average values for the below fields.
 
@@ -837,13 +849,10 @@ def player_field_averages(player,year,weeks="ALL"):
     ----------
     player : class object
         The Player class object.
+    week : int
+        Determines the last week in the week range.
     year : string
         The four digit year.
-    weeks : string or list, optional
-            By default the string "ALL" means to average a field for
-            all the weeks in a year.  If a list of integers ranging from 1-17
-            is given, then only the stats corresponding to those weeks
-            will be added to the array.
 
 
 
@@ -855,6 +864,7 @@ def player_field_averages(player,year,weeks="ALL"):
         a specified year and week interval. 
 
     """
+    w_list = range(1,week+1)
     avg = {}
     pos = player.abbr
     passing = ["PassAvg","PassAtt","PassYds","PassTD","Int","Sck"]
@@ -864,11 +874,11 @@ def player_field_averages(player,year,weeks="ALL"):
         fields = [x for x in passing +rushing]
     else:
         fields = [x for x in receiving+rushing]
-    avg = {x:player.field_average(x,year,weeks) for x in fields}
+    avg = {x:player.field_average(x,year,weeks=w_list) for x in fields}
     return avg
 
 
-def opp_field_averages(p_avg,pos,opp,year):
+def opp_field_averages(p_avg,week,pos,opp,year):
     """
     Finds the average values for the below fields.
 
@@ -878,6 +888,8 @@ def opp_field_averages(p_avg,pos,opp,year):
     p_avg : dictionary
         A dictionary containing a player's average field values for 
         a specified year and week interval.
+    week : int
+        The defense averages up to the week parameter.
     pos : string
         The position of the player, e.g. "QB", "RB", etc.
     opp : string
@@ -898,14 +910,14 @@ def opp_field_averages(p_avg,pos,opp,year):
     opp_avg={}
     for field in p_avg.keys():
         try:
-            val = DEF_AVERAGES[year][pos][opp][field]
+            val = DEF_AVERAGES[year][week][pos][opp][field]
             opp_avg[field]=val
         except KeyError:
             continue
     return opp_avg
 
 
-def projected_stats(player,player_avg,opp_avg,year,printout=False):
+def projected_stats(player,player_avg,opp_avg,week,year,printout=False):
     """
     Creates projected stats for the week depending on the opponent's
     allowed averages and the player's performance throughout the 
@@ -965,8 +977,8 @@ def projected_stats(player,player_avg,opp_avg,year,printout=False):
     else:
         f1 = "Rec"
         f2 = "RecTD"
-        mod1 = field_percentage(player,f1,year)
-        mod2 = field_percentage(player,f2,year)
+        mod1 = field_percentage(player,f1,week-1,year)
+        mod2 = field_percentage(player,f2,week-1,year)
         
         rec = mod1*opp_avg[f1]
         rec_avg = player_avg["RecAvg"]
@@ -987,11 +999,17 @@ def projected_stats(player,player_avg,opp_avg,year,printout=False):
     f3 = "RushAtt"
     f4 = "RushTD"
     
-    mod3 = field_percentage(player,f3,year)
-    mod4 = field_percentage(player,f4,year)
-    w = np.array([1.0,1.0-mod3])
-    rush_att = np.average([player_avg[f3],opp_avg[f3]],weights=w)
-    rush_avg = player_avg["RushAvg"]
+    mod3 = field_percentage(player,f3,week-1,year)
+    mod4 = field_percentage(player,f4,week-1,year)
+    #w = np.array([1.0,1.0-mod3])
+    rush_att = player_avg[f3]
+    player_rush_avg = player_avg["RushAvg"]
+    try:
+        opp_rush_avg = opp_avg["RushYds"]/opp_avg[f3]
+    except ZeroDivisionError:
+        opp_rush_avg = 0.0
+
+    rush_avg = np.average([player_rush_avg,opp_rush_avg])
     rush_yds = rush_att*rush_avg
     
     if mod4 != 0.0:
@@ -1009,8 +1027,8 @@ def projected_stats(player,player_avg,opp_avg,year,printout=False):
     return proj_stats
 
 
-def projected_points(player,year,ppr=0.0,
-                     player_weeks="ALL",printout=False):
+def projected_points(player,week,year,ppr=0.0,
+                     printout=False):
     """
     Find a player's projected week score.
 
@@ -1019,8 +1037,10 @@ def projected_points(player,year,ppr=0.0,
     ----------
     player : class object
         The Player class object.
-    year : string
+    year : int
         The four digit year.
+    week : int
+        Integer value of the week number from 1 - 17
     ppr : float, optional
         Default is `0.0`. Scoring parameter for points per reception.
     weeks : string or list, optional
@@ -1046,12 +1066,13 @@ def projected_points(player,year,ppr=0.0,
     #away = [x for x in player.stats[year].keys() if x not in home]
     pos = player.abbr
     name = player.name
-    opp = SALARIES[pos][name][1]
-    where = SALARIES[pos][name][2]
+    team = find_team(player,year)
+    opp,where = SCHEDULE[team][week]
     
-    p_avg = player_field_averages(player,year,player_weeks)
-    opp_avg = opp_field_averages(p_avg,pos,opp,year)
-    projection = projected_stats(player,p_avg,opp_avg,year,printout)
+    
+    p_avg = player_field_averages(player,week-1,year)
+    opp_avg = opp_field_averages(p_avg,week-1,pos,opp,year)
+    projection = projected_stats(player,p_avg,opp_avg,week,year,printout)
     projected_points = points_from_projection(player,projection,ppr)
     
     return projected_points

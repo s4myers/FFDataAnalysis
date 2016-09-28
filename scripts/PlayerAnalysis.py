@@ -22,7 +22,13 @@ POS_LIST = ["QB","RB","WR","TE","K"]
 # Load all available pickle files
 try:
     SALARIES = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"dksalaries.p"),"rb"))
+                        PICKLE_DIR,"Salaries","DKsalaries.p"),"rb"))
+except IOError:
+    pass
+
+try:
+    SCHEDULE = pickle.load(open(os.path.join(
+                        PICKLE_DIR,"Schedule.p"),"rb"))
 except IOError:
     pass
 
@@ -40,73 +46,84 @@ except IOError:
 
 try:
     PAST_POINTS_ALLOWED = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"PastPointsAllowed.p"),"rb"))
+                        PICKLE_DIR,"PointsAllowed","PastPointsAllowed.p"),"rb"))
 except IOError:
     pass
 
 try:
     PAST_POINTS_ALLOWED_HALF = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"PastPointsAllowedHalfPoint.p"),"rb"))
+                        PICKLE_DIR,"PointsAllowed",
+                        "PastPointsAllowedHalfPoint.p"),"rb"))
 except IOError:
     pass
 
 try:
     PAST_POINTS_ALLOWED_FULL = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"PastPointsAllowedFullPoint.p"),"rb"))
+                        PICKLE_DIR,"PointsAllowed",
+                        "PastPointsAllowedFullPoint.p"),"rb"))
 except IOError:
     pass
 
 try:
     CURR_POINTS_ALLOWED = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"CurrentPointsAllowed.p"),"rb"))
+                        PICKLE_DIR,"PointsAllowed",
+                        "CurrentPointsAllowed.p"),"rb"))
 except IOError:
     pass
 
 try:
     CURR_POINTS_ALLOWED_HALF = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"CurrentPointsAllowedHalfPoint.p"),"rb"))
+                        PICKLE_DIR,"PointsAllowed",
+                        "CurrentPointsAllowedHalfPoint.p"),"rb"))
 except IOError:
     pass
 
 try:
     CURR_POINTS_ALLOWED_FULL = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"CurrentPointsAllowedFullPoint.p"),"rb"))
+                        PICKLE_DIR,"PointsAllowed",
+                        "CurrentPointsAllowedFullPoint.p"),"rb"))
 except IOError:
     pass
 
 try:
     PAST_POINTS_ALLOWED_ROOKIES= pickle.load(open(os.path.join(
-                        PICKLE_DIR,"PastPointsAllowedRookies.p"),"rb"))
+                        PICKLE_DIR,"PointsAllowed",
+                        "PastPointsAllowedRookies.p"),"rb"))
 except IOError:
     pass
 
 try:
     PAST_POINTS_ALLOWED_ROOKIES_HALF = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"PastPointsAllowedRookiesHalfPoint.p"),"rb"))
+                        PICKLE_DIR,"PointsAllowed",
+                        "PastPointsAllowedRookiesHalfPoint.p"),"rb"))
 except IOError:
     pass
 
 try:
     PAST_POINTS_ALLOWED_ROOKIES_FULL = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"PastPointsAllowedRookiesFullPoint.p"),"rb"))
+                        PICKLE_DIR,"PointsAllowed",
+                        "PastPointsAllowedRookiesFullPoint.p"),"rb"))
 except IOError:
     pass
 
 try:
     ROOKIE_AVERAGE = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"RookieAverage.p"),"rb"))
+                        PICKLE_DIR,"Averages",
+                        "RookieAverage.p"),"rb"))
 except IOError:
     pass
 
 try:
     ROOKIE_AVERAGE_HALF = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"RookieAverageHalfPoint.p"),"rb"))
+                        PICKLE_DIR,"Averages",
+                        "RookieAverageHalfPoint.p"),"rb"))
 except IOError:
     pass
 
 try:
     ROOKIE_AVERAGE_FULL = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"RookieAverageFullPoint.p"),"rb"))
+                        PICKLE_DIR,"Averages",
+                        "RookieAverageFullPoint.p"),"rb"))
 except IOError:
     pass
 
@@ -309,13 +326,16 @@ class Player(object):
                                           self.stats[year][x]["Game Date"]!="Bye")]
         return home
 
-    def games_played(self,year):
+    def games_played(self,week,year):
         """
         Gives the games played in a year.
 
         Parameters
 
         ----------
+        week : int
+            An integer which determines the range for the list
+            of weeks.
         year : int
             The four digit year.
 
@@ -327,8 +347,9 @@ class Player(object):
             The number of games played throughout the course of a year.
 
         """
+        weeks = range(1,week+1)
         games = 0
-        for week in WEEK_LIST:
+        for week in weeks:
             if self.name in TEAM_LIST:
                 if self.stats[year][week]["Home"]!=[]:
                     games+=1
