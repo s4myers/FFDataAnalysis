@@ -24,8 +24,8 @@ def main():
     positions = ["quarterback", "runningback", "widereceiver", "tightend", "kicker"]
     #scrape_current_players(positions)
     #remove_duplicates()
-    #pull_game_stats_weekly(2016, 2)
-    scrape_teams()
+    pull_game_stats_weekly(2016, 3)
+    #scrape_teams()
 
 
 def remove_duplicates():
