@@ -80,7 +80,10 @@ def correlation(pos,year_list,var1,var2="PPG",plot=False):
     return r_list
 
 
-def weekly_filter(week,year,pos,low,high,num=10,ppr=0.0,no_touch=[]):
+def weekly_filter(week,year,pos,
+                  low=1,high=9000,
+                  num=10,ppr=0.0,
+                  bonus_yards = False,no_touch=[]):
     """
     Filters players according Draft Kings salary list. Then scores the players
     according to the algorithm
@@ -94,10 +97,12 @@ def weekly_filter(week,year,pos,low,high,num=10,ppr=0.0,no_touch=[]):
         the current year.
     pos : string
         the position to use as a filter.
-    low : int
-        the lower threshold of player cost.
-    high : int
-        the upper threshold of player cost.
+    low : int, optional
+        Default is `1` which includes all players. 
+        The lower threshold of player cost.
+    high : int,optional
+        Default is `9999` which includes all players.
+        The upper threshold of player cost.
     num : int, optional
         Default is `10`. The number of players to return.
     ppr : float, optional
@@ -118,14 +123,15 @@ def weekly_filter(week,year,pos,low,high,num=10,ppr=0.0,no_touch=[]):
                    if (SALARIES[week][pos][name] > low and 
                        SALARIES[week][pos][name] < high) and name not in no_touch]
     c_list = generate_class_list(pos,player_list)
-    score_list = [(projected_points(c,week,year,ppr),c.name,c.abbr) for c in c_list]
+    score_list = [(projected_points(c,week,year,ppr,bonus_yards),c.name,c.abbr) 
+                  for c in c_list]
     result = sorted(score_list,reverse = True)[:num]
     
     return result
 
 
 
-def score_combinations(week,combos_list):
+def score_combinations(week,combos_list,cost_thresh = 50000,cost = True):
     """
     Combines the unque positional combinations into lineups which are then
     scored.
@@ -155,7 +161,9 @@ def score_combinations(week,combos_list):
         #denominator = len(combos_list[0])*len(combos_list[1])
         for item1 in combos_list[0]:
             for item2 in combos_list[1]:
-                joined.append(score_lineup(week,item1+item2))
+                joined.append(score_lineup(week,item1+item2,
+                                           cost_thresh,
+                                           cost))
                 #numerator+=1
                 #percent = (numerator/denominator)*100
                 #print("{0:.2f}% complete".format(percent),end="\r")
@@ -164,7 +172,9 @@ def score_combinations(week,combos_list):
         for item1 in combos_list[0]:
             for item2 in combos_list[1]:
                 for item3 in combos_list[2]:
-                    joined.append(score_lineup(week,item1+item2+item3))
+                    joined.append(score_lineup(week,item1+item2+item3,
+                                               cost_thresh,
+                                               cost))
                     #numerator+=1
                     #percent = (numerator/denominator)*100
                     #print("{0:.2f}% complete".format(percent),end="\r")
@@ -175,7 +185,9 @@ def score_combinations(week,combos_list):
             for item2 in combos_list[1]:
                 for item3 in combos_list[2]:
                     for item4 in combos_list[3]:
-                        joined.append(score_lineup(week,item1+item2+item3+item4))
+                        joined.append(score_lineup(week,item1+item2+item3+item4,
+                                                   cost_thresh,
+                                                   cost))
                         #numerator+=1
                         #percent = (numerator/denominator)*100
                         #print("{} of {} lineups complete".format(numerator,denominator),end="\r")
@@ -187,7 +199,9 @@ def score_combinations(week,combos_list):
                 for item3 in combos_list[2]:
                     for item4 in combos_list[3]:
                         for item5 in combos_list[4]:
-                            joined.append(score_lineup(week,item1+item2+item3+item4+item5))
+                            joined.append(score_lineup(week,item1+item2+item3+item4+item5,
+                                                       cost_thresh,
+                                                       cost))
                             #numerator+=1
                             #percent = (numerator/denominator)*100
                             #print("{0:.2f}% complete".format(percent),end="\r")
@@ -626,7 +640,7 @@ def rookie_ppg_average(last_year,pos,ppr=0.0):
     return past_ppg
 
 
-def score_lineup(week,lineup,cost_thresh=41200,cost = True):
+def score_lineup(week,lineup,cost_thresh=50000,cost = True):
     """
     Gives a total score for a lineup based on our algorithm.
 
@@ -659,18 +673,22 @@ def score_lineup(week,lineup,cost_thresh=41200,cost = True):
     tot_score = 0.0
     tot_cost = 0
     players = []
-    for score,name,pos in lineup:
-        tot_score += score
-        tot_cost += SALARIES[week][pos][name]
-        players.append(name)
-        #if tot_cost > cost_thresh:
-        #    return (0,0,0)
-        #else:
-        #    continue    
     if cost == True:
+        for score,name,pos in lineup:
+            tot_score += score
+            tot_cost += SALARIES[week][pos][name]
+            players.append(name)
+            if tot_cost > cost_thresh:
+                return (0,0,0)
+            else:
+                continue    
+    
         lineup_score = (tot_score,tot_cost,players)
     else:
-        lineup_score = (tot_score,players)
+        for score,name,pos in lineup:
+            tot_score += score
+            players.append(name)
+            lineup_score = (tot_score,players)
     return lineup_score
 
 ################## Functions related to new Projection #########################
@@ -721,7 +739,7 @@ def compare_and_return(player_val,opponent_val,thresh=.3):
     return result
 
 
-def points_from_projection(player,proj,ppr=0.0):
+def points_from_projection(player,proj,ppr=0.0,bonus_yards=False):
     """
     Determine points from projected statistics.
 
@@ -747,9 +765,17 @@ def points_from_projection(player,proj,ppr=0.0):
     points = 0.0
     pos = player.abbr
     player.fantasy_point_multipliers["Rec"]=ppr
+    bonus = 0
     
     for field,value in proj.items():
+        if bonus_yards:
+            if field == "PassYds" and value >= 300.00:
+                bonus+=1
+            elif (field == "RecYds" or field == "RushYds") and value >= 100.0:
+                bonus+=1
+
         points+=player.fantasy_point_multipliers[field]*value
+    points = points + (3.0*bonus)
     return points
 
 
@@ -881,25 +907,20 @@ def player_field_averages(player,week,year):
     avg = {x:player.field_average(x,year,weeks=w_list) for x in fields}
     return avg
 
-
-def opp_field_averages(p_avg,week,pos,opp,year):
+#### WRONG
+def opp_field_averages(week,pos,opp):
     """
     Finds the average values for the below fields.
 
     Parameters
 
     ----------
-    p_avg : dictionary
-        A dictionary containing a player's average field values for 
-        a specified year and week interval.
     week : int
         The defense averages up to the week parameter.
     pos : string
         The position of the player, e.g. "QB", "RB", etc.
     opp : string
         The opponent's team name, e.g. "Bears","Colts",etc.
-    year : string
-        The four digit year.
 
 
 
@@ -911,13 +932,7 @@ def opp_field_averages(p_avg,week,pos,opp,year):
         which correspond to the player's field.  
         
     """
-    opp_avg={}
-    for field in p_avg.keys():
-        try:
-            val = DEF_AVERAGES[year][week][pos][opp][field]
-            opp_avg[field]=val
-        except KeyError:
-            continue
+    opp_avg=DEF_AVERAGES[week][pos][opp].copy()
     return opp_avg
 
 
@@ -1031,8 +1046,8 @@ def projected_stats(player,player_avg,opp_avg,week,year,printout=False):
     return proj_stats
 
 
-def projected_points(player,week,year,ppr=0.0,
-                     printout=False):
+def projected_points(player,week,year,
+                     ppr=0.0,bonus_yards=False,printout=False):
     """
     Find a player's projected week score.
 
@@ -1071,12 +1086,15 @@ def projected_points(player,week,year,ppr=0.0,
     pos = player.abbr
     name = player.name
     team = find_team(player,year)
-    opp,where = SCHEDULE[team][week]
+    try:
+        opp,where = SCHEDULE[team][week]
+    except (KeyError,ValueError):
+        return 0.0
     
     
     p_avg = player_field_averages(player,week-1,year)
-    opp_avg = opp_field_averages(p_avg,week-1,pos,opp,year)
+    opp_avg = opp_field_averages(week-1,pos,opp)
     projection = projected_stats(player,p_avg,opp_avg,week,year,printout)
-    projected_points = points_from_projection(player,projection,ppr)
+    projected_points = points_from_projection(player,projection,ppr,bonus_yards)
     
     return projected_points

@@ -13,9 +13,9 @@ CSV_DIR = "../CSV_data/"
 PICKLE_DIR = "../pickle_files/"
 
            
-YEAR_LIST = [2010,2011,2012,2013,2014,2015,2016]
+YEAR_LIST = range(2010,2017)
 
-WEEK_LIST = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+WEEK_LIST = range(1,18)
 
 POS_LIST = ["QB","RB","WR","TE","K"]
 
@@ -40,7 +40,7 @@ except IOError:
 
 try:
     ROSTERS = pickle.load(open(os.path.join(
-                        PICKLE_DIR,"TeamRosters.p"),"rb"))
+                        PICKLE_DIR,"DKTeamRosters.p"),"rb"))
 except IOError:
     pass
 
@@ -183,7 +183,8 @@ def generate_class_list(pos,player_list):
         return "Not a proper posistion"
     return class_list
 
-def generate_player_list(pos,active = False):
+def generate_player_list(pos,active = False,
+                         draftkings=False,year='',week=''):
     """
     Create a list of players at a desired position.
 
@@ -209,10 +210,16 @@ def generate_player_list(pos,active = False):
 
     if active == True:
         csv_file = "ActivePlayerList.csv"
+        csv_path = os.path.join(CSV_DIR,csv_file)
+    elif draftkings == True:
+        SUB_DIR = "Salaries"
+        fname = '_'.join(("DKSalaries",str(year),str(week).zfill(2)+".csv"))
+        csv_path = os.path.join(CSV_DIR,SUB_DIR,fname)
     else:
-        csv_file = "AllPlayers.csv"    
+        csv_file = "AllPlayers.csv"
+        csv_path = os.path.join(CSV_DIR,csv_file)
+
     name_list =[]
-    csv_path = os.path.join(CSV_DIR,csv_file)
     with open(csv_path) as csv_file:
         reader = csv.reader(csv_file,skipinitialspace=True)
         for row in reader:
@@ -241,7 +248,8 @@ class Player(object):
     csv_file_name = ""
     fantasy_point_multipliers = {"PassYds":0.04,"PassTD":4.0,"RecYds":0.1,
                                 "RecTD":6.0,"Rec":0.0,"RushYds":0.1,
-                                "RushTD":6.0,"FGM":3.0,"XPM":1.0,"Int":-2.0,"Lost":-2.0}
+                                "RushTD":6.0,"FGM":3.0,"XPM":1.0,
+                                "Int":-1.0,"Lost":-1.0}
 
     def __init__(self,name):
         self.name = name
@@ -403,11 +411,15 @@ class Player(object):
         if self.name not in TEAM_LIST:
             temp_list = []
             for week in weeks:
-                if (self.stats[year][week]["G"] == 0 or 
-                    self.stats[year][week]["Game Date"] == "Bye"):
-                    continue 
-                else:
-                    temp_list += [self.stats[year][week][field]]
+                try:
+                    if (self.stats[year][week]["G"] == 0 or 
+                        self.stats[year][week]["Game Date"] == "Bye"):
+                        continue 
+                    else:
+                        temp_list += [self.stats[year][week][field]]
+                except KeyError:
+                    print self.name
+                    return [0.0]
         else:
             temp_list = []
             for week in weeks:
@@ -591,7 +603,7 @@ class Player(object):
         return outlier_games
 
 
-    def week_points(self,week,year,ppr=0.0):
+    def week_points(self,week,year,ppr=0.0,yd_bonus=False):
         """
         The fantasy points scored during a week and particular year.
 
@@ -618,6 +630,7 @@ class Player(object):
 
         """
         self.fantasy_point_multipliers["Rec"]=ppr
+        bonus = 0
         if year not in self.stats.keys():
             return "No Data"
         # Check for bye week
@@ -628,8 +641,8 @@ class Player(object):
             else:
                 if self.stats[year][week]["Home"]==[]:
                     return "Bye"        
-        except KeyError:
-            return "No Data"
+        except (KeyError,TypeError):
+            return 0.0
 
         #scoring currently doesn't include kick returns or defensive TDs
         #Find week points scored by a defense
@@ -680,8 +693,14 @@ class Player(object):
         else:
             points = 0.0
             for field in self.scoring_field_names:
-                points += (self.stats[year][week][field]*
-                           self.fantasy_point_multipliers[field])
+                value = self.stats[year][week][field]
+                if yard_bonus:
+                    if field == "PassYds" and value >= 300.00:
+                        bonus+=1
+                    elif (field == "RecYds" or field == "RushYds") and value >= 100.0:
+                        bonus+=1
+                points += value*self.fantasy_point_multipliers[field]
+            points = points + 3*bonus
             return points
 
     
