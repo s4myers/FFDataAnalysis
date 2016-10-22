@@ -999,17 +999,16 @@ def projected_stats(player,player_avg,opp_avg,week,year,printout=False):
         mod1 = field_percentage(player,f1,week-1,year)
         mod2 = field_percentage(player,f2,week-1,year)
         
-        rec = mod1*opp_avg[f1]
+        opp_rec = mod1*opp_avg[f1]
+        rec = np.mean([opp_rec,player_avg[f1]])
         rec_avg = player_avg["RecAvg"]
         rec_yards = rec*rec_avg
         if mod2 != 0.0:
             rec_td = mod2*opp_avg[f2]
         else:
-            rec_td = mod1*opp_avg[f2]
+            rec_td = (mod1/3)*opp_avg[f2] #one third of rec modifier
         
-        if printout:
-            print("rec modifier ",mod1)
-            print("rectd modifier ",mod2)
+
         
         proj_stats["RecYds"] = rec_yards
         proj_stats[f1] = rec
@@ -1021,7 +1020,9 @@ def projected_stats(player,player_avg,opp_avg,week,year,printout=False):
     mod3 = field_percentage(player,f3,week-1,year)
     mod4 = field_percentage(player,f4,week-1,year)
     #w = np.array([1.0,1.0-mod3])
-    rush_att = player_avg[f3]
+    player_rush_att = player_avg[f3]
+    opp_rush_att = mod3*opp_avg[f3]
+    rush_att = np.average([player_rush_att,opp_rush_att])
     player_rush_avg = player_avg["RushAvg"]
     try:
         opp_rush_avg = opp_avg["RushYds"]/opp_avg[f3]
@@ -1034,14 +1035,29 @@ def projected_stats(player,player_avg,opp_avg,week,year,printout=False):
     if mod4 != 0.0:
         rush_td = mod4*opp_avg[f4]
     else:
-        rush_td = mod3*opp_avg[f4]
+        rush_td = (mod3/3)*opp_avg[f4]   #one third of rush modifier
     
-    if printout:
-            print("rush att modifier ",mod3)
-            print("rush td modifier ",mod4)
             
     proj_stats["RushYds"]=rush_yds
     proj_stats[f4] = rush_td
+
+    if printout:
+        print("rec modifier ",mod1)
+        print("rectd modifier ",mod2)
+        print("rush att modifier ",mod3)
+        print("rush td modifier ",mod4)
+        print("\n{} Averages".format(player.name))
+        for f in player_avg.keys():
+            print("{} : {}".format(f,player_avg[f]))
+        print("\nOpponent Averages")
+        for f in opp_avg.keys():
+            print("{} : {}".format(f,opp_avg[f]))
+        print("\nProjected Stats")
+        for f in proj_stats.keys():
+            print("{} : {}".format(f,proj_stats[f]))
+
+
+
     
     return proj_stats
 

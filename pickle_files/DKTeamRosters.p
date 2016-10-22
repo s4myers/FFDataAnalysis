@@ -4,9 +4,9 @@ I2016
 S'Broncos'
 p2
 (lp3
-(S'C.J. Anderson'
+(S'Emmanuel Sanders'
 p4
-S'RB'
+S'WR'
 p5
 tp6
 a(S'Demaryius Thomas'
@@ -14,9 +14,9 @@ p7
 S'WR'
 p8
 tp9
-a(S'Emmanuel Sanders'
+a(S'C.J. Anderson'
 p10
-S'WR'
+S'RB'
 p11
 tp12
 a(S'Trevor Siemian'
@@ -24,12 +24,12 @@ p13
 S'QB'
 p14
 tp15
-a(S'Paxton Lynch'
+a(S'Austin Davis'
 p16
 S'QB'
 p17
 tp18
-a(S'Austin Davis'
+a(S'Paxton Lynch'
 p19
 S'QB'
 p20
@@ -39,17 +39,17 @@ p22
 S'DST'
 p23
 tp24
-a(S'Kapri Bibbs'
+a(S'Devontae Booker'
 p25
 S'RB'
 p26
 tp27
-a(S'Andy Janovich'
+a(S'Kapri Bibbs'
 p28
 S'RB'
 p29
 tp30
-a(S'Devontae Booker'
+a(S'Andy Janovich'
 p31
 S'RB'
 p32
@@ -112,47 +112,47 @@ p66
 S'RB'
 p67
 tp68
-a(S'Kyle Rudolph'
+a(S'Adam Thielen'
 p69
-S'TE'
+S'WR'
 p70
 tp71
-a(S'Matt Asiata'
+a(S'Vikings'
 p72
-S'RB'
+S'DST'
 p73
 tp74
-a(S'Vikings'
+a(S'Matt Asiata'
 p75
-S'DST'
+S'RB'
 p76
 tp77
-a(S'Adam Thielen'
+a(S'Kyle Rudolph'
 p78
-S'WR'
+S'TE'
 p79
 tp80
-a(S'Zach Line'
+a(S'Cordarrelle Patterson'
 p81
-S'RB'
+S'WR'
 p82
 tp83
-a(S'Ronnie Hillman'
+a(S'Zach Line'
 p84
 S'RB'
 p85
 tp86
-a(S'Charles Johnson'
+a(S'Ronnie Hillman'
 p87
-S'WR'
+S'RB'
 p88
 tp89
-a(S'Jarius Wright'
+a(S'Charles Johnson'
 p90
 S'WR'
 p91
 tp92
-a(S'Cordarrelle Patterson'
+a(S'Jarius Wright'
 p93
 S'WR'
 p94
@@ -190,19 +190,19 @@ p113
 S'WR'
 p114
 tp115
-a(S'Brian Hoyer'
+a(S'Jordan Howard'
 p116
-S'QB'
+S'RB'
 p117
 tp118
-a(S'Jay Cutler'
+a(S'Brian Hoyer'
 p119
 S'QB'
 p120
 tp121
-a(S'Jordan Howard'
+a(S'Jay Cutler'
 p122
-S'RB'
+S'QB'
 p123
 tp124
 a(S'Matt Barkley'
@@ -210,9 +210,9 @@ p125
 S'QB'
 p126
 tp127
-a(S'Jeremy Langford'
+a(S'Cameron Meredith'
 p128
-S'RB'
+S'WR'
 p129
 tp130
 a(S'Eddie Royal'
@@ -220,9 +220,9 @@ p131
 S'WR'
 p132
 tp133
-a(S'Kevin White'
+a(S'Jeremy Langford'
 p134
-S'WR'
+S'RB'
 p135
 tp136
 a(S'Zach Miller'
@@ -240,7 +240,7 @@ p143
 S'RB'
 p144
 tp145
-a(S'Raheem Mostert'
+a(S'Paul Lasike'
 p146
 S'RB'
 p147
@@ -255,7 +255,7 @@ p152
 S'WR'
 p153
 tp154
-a(S'Cameron Meredith'
+a(S'Marquess Wilson'
 p155
 S'WR'
 p156
@@ -293,24 +293,24 @@ p175
 S'QB'
 p176
 tp177
-a(S'Matt Schaub'
+a(S'Devonta Freeman'
 p178
-S'QB'
+S'RB'
 p179
 tp180
-a(S'Devonta Freeman'
+a(S'Matt Schaub'
 p181
-S'RB'
+S'QB'
 p182
 tp183
-a(S'Mohamed Sanu'
+a(S'Tevin Coleman'
 p184
-S'WR'
+S'RB'
 p185
 tp186
-a(S'Tevin Coleman'
+a(S'Mohamed Sanu'
 p187
-S'RB'
+S'WR'
 p188
 tp189
 a(S'Patrick DiMarco'
@@ -343,2158 +343,2353 @@ p205
 S'TE'
 p206
 tp207
-a(S'Levine Toilolo'
+a(S'Falcons'
 p208
-S'TE'
+S'DST'
 p209
 tp210
-a(S'Joshua Perkins'
+a(S'Levine Toilolo'
 p211
 S'TE'
 p212
 tp213
-a(S'Austin Hooper'
+a(S'Joshua Perkins'
 p214
 S'TE'
 p215
 tp216
-a(S'Falcons'
+a(S'Austin Hooper'
 p217
-S'DST'
+S'TE'
 p218
 tp219
 asS'Saints'
 p220
 (lp221
-sS'Chargers'
+(S'Brandin Cooks'
 p222
-(lp223
-(S'Melvin Gordon'
-p224
-S'RB'
+S'WR'
+p223
+tp224
+a(S'Drew Brees'
 p225
-tp226
-a(S'Philip Rivers'
-p227
 S'QB'
+p226
+tp227
+a(S'Willie Snead'
 p228
-tp229
-a(S'Travis Benjamin'
-p230
 S'WR'
+p229
+tp230
+a(S'Mark Ingram'
 p231
-tp232
-a(S'Kellen Clemens'
-p233
-S'QB'
+S'RB'
+p232
+tp233
+a(S'Luke McCown'
 p234
-tp235
-a(S'Tyrell Williams'
-p236
-S'WR'
+S'QB'
+p235
+tp236
+a(S'Michael Thomas'
 p237
-tp238
-a(S'Dontrelle Inman'
-p239
 S'WR'
+p238
+tp239
+a(S'Coby Fleener'
 p240
-tp241
-a(S'Antonio Gates'
-p242
 S'TE'
+p241
+tp242
+a(S'Tim Hightower'
 p243
-tp244
-a(S'Dexter McCluster'
-p245
 S'RB'
+p244
+tp245
+a(S'John Kuhn'
 p246
-tp247
-a(S'Hunter Henry'
-p248
-S'TE'
+S'RB'
+p247
+tp248
+a(S'Travaris Cadet'
 p249
-tp250
-a(S'Derek Watt'
-p251
 S'RB'
+p250
+tp251
+a(S'Marcus Murphy'
 p252
-tp253
-a(S'Kenneth Farrow'
-p254
 S'RB'
+p253
+tp254
+a(S'Daniel Lasco'
 p255
-tp256
-a(S'Griff Whalen'
-p257
-S'WR'
+S'RB'
+p256
+tp257
+a(S'Brandon Coleman'
 p258
-tp259
-a(S'Sean McGrath'
-p260
-S'TE'
+S'WR'
+p259
+tp260
+a(S'Tommylee Lewis'
 p261
-tp262
-a(S'Asante Cleveland'
-p263
-S'TE'
+S'WR'
+p262
+tp263
+a(S'Jake Lampman'
 p264
-tp265
-a(S'Chargers'
-p266
-S'DST'
+S'WR'
+p265
+tp266
+a(S'Josh Hill'
 p267
-tp268
-asS'Raiders'
-p269
-(lp270
-(S'Amari Cooper'
+S'TE'
+p268
+tp269
+a(S'Saints'
+p270
+S'DST'
 p271
-S'WR'
-p272
-tp273
-a(S'Michael Crabtree'
-p274
-S'WR'
+tp272
+asS'Chargers'
+p273
+(lp274
+(S'Philip Rivers'
 p275
-tp276
-a(S'Derek Carr'
-p277
 S'QB'
+p276
+tp277
+a(S'Melvin Gordon'
 p278
-tp279
-a(S'Matt McGloin'
-p280
-S'QB'
+S'RB'
+p279
+tp280
+a(S'Travis Benjamin'
 p281
-tp282
-a(S'Connor Cook'
-p283
-S'QB'
+S'WR'
+p282
+tp283
+a(S'Kellen Clemens'
 p284
-tp285
-a(S'Latavius Murray'
-p286
-S'RB'
+S'QB'
+p285
+tp286
+a(S'Tyrell Williams'
 p287
-tp288
-a(S'DeAndre Washington'
-p289
-S'RB'
+S'WR'
+p288
+tp289
+a(S'Hunter Henry'
 p290
-tp291
-a(S'Seth Roberts'
-p292
-S'WR'
+S'TE'
+p291
+tp292
+a(S'Dontrelle Inman'
 p293
-tp294
-a(S'Jalen Richard'
-p295
-S'RB'
+S'WR'
+p294
+tp295
+a(S'Dexter McCluster'
 p296
-tp297
-a(S'Taiwan Jones'
-p298
 S'RB'
+p297
+tp298
+a(S'Derek Watt'
 p299
-tp300
-a(S'Jamize Olawale'
-p301
 S'RB'
+p300
+tp301
+a(S'Kenneth Farrow'
 p302
-tp303
-a(S'Andre Holmes'
-p304
-S'WR'
+S'RB'
+p303
+tp304
+a(S'Griff Whalen'
 p305
-tp306
-a(S'Johnny Holton'
-p307
 S'WR'
+p306
+tp307
+a(S'Antonio Gates'
 p308
-tp309
-a(S'Clive Walford'
-p310
 S'TE'
+p309
+tp310
+a(S'Sean McGrath'
 p311
-tp312
-a(S'Lee Smith'
-p313
 S'TE'
+p312
+tp313
+a(S'Asante Cleveland'
 p314
-tp315
-a(S'Mychal Rivera'
-p316
 S'TE'
+p315
+tp316
+a(S'Chargers'
 p317
-tp318
-a(S'Raiders'
-p319
 S'DST'
+p318
+tp319
+asS'Raiders'
 p320
-tp321
-asS'Lions'
+(lp321
+(S'Amari Cooper'
 p322
-(lp323
-(S'Marvin Jones'
-p324
 S'WR'
+p323
+tp324
+a(S'Michael Crabtree'
 p325
-tp326
-a(S'Matthew Stafford'
-p327
-S'QB'
+S'WR'
+p326
+tp327
+a(S'Derek Carr'
 p328
-tp329
-a(S'Dan Orlovsky'
-p330
 S'QB'
+p329
+tp330
+a(S'Matt McGloin'
 p331
-tp332
-a(S'Theo Riddick'
-p333
-S'RB'
+S'QB'
+p332
+tp333
+a(S'Connor Cook'
 p334
-tp335
-a(S'Golden Tate'
-p336
-S'WR'
+S'QB'
+p335
+tp336
+a(S'Latavius Murray'
 p337
-tp338
-a(S'Anquan Boldin'
-p339
-S'WR'
+S'RB'
+p338
+tp339
+a(S'DeAndre Washington'
 p340
-tp341
-a(S'Dwayne Washington'
-p342
 S'RB'
+p341
+tp342
+a(S'Jalen Richard'
 p343
-tp344
-a(S'Eric Ebron'
-p345
-S'TE'
+S'RB'
+p344
+tp345
+a(S'Taiwan Jones'
 p346
-tp347
-a(S'Michael Burton'
-p348
 S'RB'
+p347
+tp348
+a(S'Jamize Olawale'
 p349
-tp350
-a(S'Zach Zenner'
-p351
 S'RB'
+p350
+tp351
+a(S'Andre Holmes'
 p352
-tp353
-a(S'Andre Roberts'
-p354
 S'WR'
+p353
+tp354
+a(S'Seth Roberts'
 p355
-tp356
-a(S'Aaron Dobson'
-p357
 S'WR'
+p356
+tp357
+a(S'Johnny Holton'
 p358
-tp359
-a(S'Orson Charles'
-p360
-S'TE'
+S'WR'
+p359
+tp360
+a(S'Mychal Rivera'
 p361
-tp362
-a(S'Cole Wick'
-p363
 S'TE'
+p362
+tp363
+a(S'Clive Walford'
 p364
-tp365
-a(S'Khari Lee'
-p366
 S'TE'
+p365
+tp366
+a(S"Ryan O'Malley"
 p367
-tp368
-a(S'Lions'
-p369
-S'DST'
+S'TE'
+p368
+tp369
+a(S'Raiders'
 p370
-tp371
-asS'Eagles'
-p372
-(lp373
-(S'Jordan Matthews'
-p374
-S'WR'
+S'DST'
+p371
+tp372
+asS'Lions'
+p373
+(lp374
+(S'Marvin Jones'
 p375
-tp376
-a(S'Carson Wentz'
-p377
-S'QB'
+S'WR'
+p376
+tp377
+a(S'Matthew Stafford'
 p378
-tp379
-a(S'Chase Daniel'
-p380
 S'QB'
+p379
+tp380
+a(S'Theo Riddick'
 p381
-tp382
-a(S'Ryan Mathews'
-p383
 S'RB'
+p382
+tp383
+a(S'Dan Orlovsky'
 p384
-tp385
-a(S'Darren Sproles'
-p386
-S'RB'
+S'QB'
+p385
+tp386
+a(S'Golden Tate'
 p387
-tp388
-a(S'Nelson Agholor'
-p389
 S'WR'
+p388
+tp389
+a(S'Anquan Boldin'
 p390
-tp391
-a(S'Zach Ertz'
-p392
-S'TE'
+S'WR'
+p391
+tp392
+a(S'Dwayne Washington'
 p393
-tp394
-a(S'Wendell Smallwood'
-p395
 S'RB'
+p394
+tp395
+a(S'Zach Zenner'
 p396
-tp397
-a(S'Dorial Green-Beckham'
-p398
-S'WR'
+S'RB'
+p397
+tp398
+a(S'Justin Forsett'
 p399
-tp400
-a(S'Kenjon Barner'
-p401
 S'RB'
+p400
+tp401
+a(S'Michael Burton'
 p402
-tp403
-a(S'Josh Huff'
-p404
-S'WR'
+S'RB'
+p403
+tp404
+a(S'Andre Roberts'
 p405
-tp406
-a(S'Bryce Treggs'
-p407
 S'WR'
+p406
+tp407
+a(S'Eric Ebron'
 p408
-tp409
-a(S'Eagles'
-p410
-S'DST'
+S'TE'
+p409
+tp410
+a(S'Lions'
 p411
-tp412
-a(S'Brent Celek'
-p413
-S'TE'
+S'DST'
+p412
+tp413
+a(S'Clay Harbor'
 p414
-tp415
-a(S'Trey Burton'
-p416
 S'TE'
+p415
+tp416
+a(S'Cole Wick'
 p417
-tp418
-asS'Browns'
-p419
-(lp420
-(S'Terrelle Pryor'
+S'TE'
+p418
+tp419
+a(S'Khari Lee'
+p420
+S'TE'
 p421
-S'WR'
-p422
-tp423
-a(S'Josh McCown'
-p424
-S'QB'
+tp422
+asS'Eagles'
+p423
+(lp424
+(S'Jordan Matthews'
 p425
-tp426
-a(S'Charlie Whitehurst'
-p427
-S'QB'
+S'WR'
+p426
+tp427
+a(S'Carson Wentz'
 p428
-tp429
-a(S'Cody Kessler'
-p430
 S'QB'
+p429
+tp430
+a(S'Chase Daniel'
 p431
-tp432
-a(S'Isaiah Crowell'
-p433
-S'RB'
+S'QB'
+p432
+tp433
+a(S'Ryan Mathews'
 p434
-tp435
-a(S'Corey Coleman'
-p436
-S'WR'
+S'RB'
+p435
+tp436
+a(S'Darren Sproles'
 p437
-tp438
-a(S'Duke Johnson'
-p439
 S'RB'
+p438
+tp439
+a(S'Zach Ertz'
 p440
-tp441
-a(S'Gary Barnidge'
-p442
 S'TE'
+p441
+tp442
+a(S'Nelson Agholor'
 p443
-tp444
-a(S'Malcolm Johnson'
-p445
-S'RB'
+S'WR'
+p444
+tp445
+a(S'Eagles'
 p446
-tp447
-a(S'George Atkinson'
-p448
-S'RB'
+S'DST'
+p447
+tp448
+a(S'Kenjon Barner'
 p449
-tp450
-a(S'Andrew Hawkins'
-p451
-S'WR'
+S'RB'
+p450
+tp451
+a(S'Wendell Smallwood'
 p452
-tp453
-a(S'Jordan Payton'
-p454
-S'WR'
+S'RB'
+p453
+tp454
+a(S'Josh Huff'
 p455
-tp456
-a(S'Ricardo Louis'
-p457
 S'WR'
+p456
+tp457
+a(S'Dorial Green-Beckham'
 p458
-tp459
-a(S'Rashard Higgins'
-p460
 S'WR'
+p459
+tp460
+a(S'Bryce Treggs'
 p461
-tp462
-a(S'Randall Telfer'
-p463
-S'TE'
+S'WR'
+p462
+tp463
+a(S'Brent Celek'
 p464
-tp465
-a(S'Seth DeValve'
-p466
 S'TE'
+p465
+tp466
+a(S'Trey Burton'
 p467
-tp468
-a(S'Browns'
-p469
-S'DST'
+S'TE'
+p468
+tp469
+asS'Browns'
 p470
-tp471
-asS'Steelers'
+(lp471
+(S'Terrelle Pryor'
 p472
-(lp473
-(S'Antonio Brown'
-p474
 S'WR'
+p473
+tp474
+a(S'Josh McCown'
 p475
-tp476
-a(S"Le'Veon Bell"
-p477
-S'RB'
+S'QB'
+p476
+tp477
+a(S'Cody Kessler'
 p478
-tp479
-a(S'Ben Roethlisberger'
-p480
 S'QB'
+p479
+tp480
+a(S'Kevin Hogan'
 p481
-tp482
-a(S'DeAngelo Williams'
-p483
-S'RB'
+S'QB'
+p482
+tp483
+a(S'Corey Coleman'
 p484
-tp485
-a(S'Landry Jones'
-p486
-S'QB'
+S'WR'
+p485
+tp486
+a(S'Isaiah Crowell'
 p487
-tp488
-a(S'Zach Mettenberger'
-p489
-S'QB'
+S'RB'
+p488
+tp489
+a(S'Duke Johnson'
 p490
-tp491
-a(S'Markus Wheaton'
-p492
-S'WR'
+S'RB'
+p491
+tp492
+a(S'Gary Barnidge'
 p493
-tp494
-a(S'Sammie Coates'
-p495
-S'WR'
+S'TE'
+p494
+tp495
+a(S'Malcolm Johnson'
 p496
-tp497
-a(S'Steelers'
-p498
-S'DST'
+S'RB'
+p497
+tp498
+a(S'George Atkinson'
 p499
-tp500
-a(S'Eli Rogers'
-p501
-S'WR'
+S'RB'
+p500
+tp501
+a(S'Andrew Hawkins'
 p502
-tp503
-a(S'Fitzgerald Toussaint'
-p504
-S'RB'
+S'WR'
+p503
+tp504
+a(S'Jordan Payton'
 p505
-tp506
-a(S'Roosevelt Nix'
-p507
-S'RB'
+S'WR'
+p506
+tp507
+a(S'Ricardo Louis'
 p508
-tp509
-a(S'Darrius Heyward-Bey'
-p510
 S'WR'
+p509
+tp510
+a(S'Rashard Higgins'
 p511
-tp512
-a(S'Jesse James'
-p513
-S'TE'
+S'WR'
+p512
+tp513
+a(S'Randall Telfer'
 p514
-tp515
-a(S'David Johnson'
-p516
 S'TE'
+p515
+tp516
+a(S'Connor Hamlett'
 p517
-tp518
-a(S'Xavier Grimble'
-p519
 S'TE'
+p518
+tp519
+a(S'Seth DeValve'
 p520
-tp521
-asS'Giants'
-p522
-(lp523
-(S'Odell Beckham'
+S'TE'
+p521
+tp522
+a(S'Danny Vitale'
+p523
+S'TE'
 p524
-S'WR'
-p525
-tp526
-a(S'Eli Manning'
+tp525
+a(S'Browns'
+p526
+S'DST'
 p527
-S'QB'
-p528
-tp529
-a(S'Sterling Shepard'
-p530
-S'WR'
+tp528
+asS'Steelers'
+p529
+(lp530
+(S'Antonio Brown'
 p531
-tp532
-a(S'Josh Johnson'
-p533
-S'QB'
+S'WR'
+p532
+tp533
+a(S"Le'Veon Bell"
 p534
-tp535
-a(S'Ryan Nassib'
-p536
-S'QB'
+S'RB'
+p535
+tp536
+a(S'Ben Roethlisberger'
 p537
-tp538
-a(S'Rashad Jennings'
-p539
-S'RB'
+S'QB'
+p538
+tp539
+a(S'Sammie Coates'
 p540
-tp541
-a(S'Victor Cruz'
-p542
 S'WR'
+p541
+tp542
+a(S'Bruce Gradkowski'
 p543
-tp544
-a(S'Orleans Darkwa'
-p545
-S'RB'
+S'QB'
+p544
+tp545
+a(S'Landry Jones'
 p546
-tp547
-a(S'Bobby Rainey'
-p548
-S'RB'
+S'QB'
+p547
+tp548
+a(S'Zach Mettenberger'
 p549
-tp550
-a(S'Paul Perkins'
-p551
-S'RB'
+S'QB'
+p550
+tp551
+a(S'DeAngelo Williams'
 p552
-tp553
-a(S'Dwayne Harris'
-p554
-S'WR'
+S'RB'
+p553
+tp554
+a(S'Eli Rogers'
 p555
-tp556
-a(S'Tavarres King'
-p557
 S'WR'
+p556
+tp557
+a(S'Markus Wheaton'
 p558
-tp559
-a(S'Roger Lewis'
-p560
 S'WR'
+p559
+tp560
+a(S'Jesse James'
 p561
-tp562
-a(S'Larry Donnell'
-p563
 S'TE'
+p562
+tp563
+a(S'Fitzgerald Toussaint'
 p564
-tp565
-a(S'Will Tye'
-p566
-S'TE'
+S'RB'
+p565
+tp566
+a(S'Roosevelt Nix'
 p567
-tp568
-a(S'Giants'
-p569
-S'DST'
+S'RB'
+p568
+tp569
+a(S'Darrius Heyward-Bey'
 p570
-tp571
-a(S'Jerell Adams'
-p572
-S'TE'
+S'WR'
+p571
+tp572
+a(S'Cobi Hamilton'
 p573
-tp574
-asS'Buccaneers'
-p575
-(lp576
-(S'Mike Evans'
+S'WR'
+p574
+tp575
+a(S'Steelers'
+p576
+S'DST'
 p577
-S'WR'
-p578
-tp579
-a(S'Jameis Winston'
+tp578
+a(S'David Johnson'
+p579
+S'TE'
 p580
-S'QB'
-p581
-tp582
-a(S'Charles Sims'
+tp581
+a(S'Ladarius Green'
+p582
+S'TE'
 p583
-S'RB'
-p584
-tp585
-a(S'Doug Martin'
+tp584
+a(S'Xavier Grimble'
+p585
+S'TE'
 p586
-S'RB'
-p587
-tp588
-a(S'Mike Glennon'
-p589
-S'QB'
+tp587
+asS'Giants'
+p588
+(lp589
+(S'Odell Beckham'
 p590
-tp591
-a(S'Ryan Griffin'
-p592
-S'QB'
+S'WR'
+p591
+tp592
+a(S'Eli Manning'
 p593
-tp594
-a(S'Vincent Jackson'
-p595
-S'WR'
+S'QB'
+p594
+tp595
+a(S'Sterling Shepard'
 p596
-tp597
-a(S'Jacquizz Rodgers'
-p598
-S'RB'
+S'WR'
+p597
+tp598
+a(S'Josh Johnson'
 p599
-tp600
-a(S'Peyton Barber'
-p601
-S'RB'
+S'QB'
+p600
+tp601
+a(S'Ryan Nassib'
 p602
-tp603
-a(S'Russell Shepard'
-p604
-S'WR'
+S'QB'
+p603
+tp604
+a(S'Rashad Jennings'
 p605
-tp606
-a(S'Cecil Shorts'
-p607
-S'WR'
+S'RB'
+p606
+tp607
+a(S'Victor Cruz'
 p608
-tp609
-a(S'Freddie Martino'
-p610
 S'WR'
+p609
+tp610
+a(S'Bobby Rainey'
 p611
-tp612
-a(S'Adam Humphries'
-p613
-S'WR'
+S'RB'
+p612
+tp613
+a(S'Orleans Darkwa'
 p614
-tp615
-a(S'Cameron Brate'
-p616
-S'TE'
+S'RB'
+p615
+tp616
+a(S'Paul Perkins'
 p617
-tp618
-a(S'Brandon Myers'
-p619
-S'TE'
+S'RB'
+p618
+tp619
+a(S'Dwayne Harris'
 p620
-tp621
-a(S'Andrew DePaola'
-p622
-S'TE'
+S'WR'
+p621
+tp622
+a(S'Tavarres King'
 p623
-tp624
-a(S'Luke Stocker'
-p625
-S'TE'
+S'WR'
+p624
+tp625
+a(S'Roger Lewis'
 p626
-tp627
-a(S'Alan Cross'
-p628
-S'TE'
+S'WR'
+p627
+tp628
+a(S'Giants'
 p629
-tp630
-a(S'Buccaneers'
-p631
 S'DST'
+p630
+tp631
+a(S'Larry Donnell'
 p632
-tp633
-asS'Cardinals'
-p634
-(lp635
-(S'David Johnson'
+S'TE'
+p633
+tp634
+a(S'Will Tye'
+p635
+S'TE'
 p636
-S'RB'
-p637
-tp638
-a(S'Larry Fitzgerald'
+tp637
+a(S'Jerell Adams'
+p638
+S'TE'
 p639
-S'WR'
-p640
-tp641
-a(S'Carson Palmer'
-p642
-S'QB'
+tp640
+asS'Buccaneers'
+p641
+(lp642
+(S'Mike Evans'
 p643
-tp644
-a(S'Drew Stanton'
-p645
-S'QB'
+S'WR'
+p644
+tp645
+a(S'Doug Martin'
 p646
-tp647
-a(S'Michael Floyd'
-p648
-S'WR'
+S'RB'
+p647
+tp648
+a(S'Jameis Winston'
 p649
-tp650
-a(S'John Brown'
-p651
-S'WR'
+S'QB'
+p650
+tp651
+a(S'Mike Glennon'
 p652
-tp653
-a(S'Chris Johnson'
-p654
-S'RB'
+S'QB'
+p653
+tp654
+a(S'Ryan Griffin'
 p655
-tp656
-a(S'Cardinals'
-p657
-S'DST'
+S'QB'
+p656
+tp657
+a(S'Jacquizz Rodgers'
 p658
-tp659
-a(S'Jaron Brown'
-p660
-S'WR'
+S'RB'
+p659
+tp660
+a(S'Buccaneers'
 p661
-tp662
-a(S'Andre Ellington'
-p663
-S'RB'
-p664
-tp665
-a(S'Stepfan Taylor'
-p666
-S'RB'
-p667
-tp668
-a(S'J.J. Nelson'
-p669
-S'WR'
-p670
-tp671
-a(S'Darren Fells'
-p672
-S'TE'
-p673
-tp674
-a(S'Jermaine Gresham'
-p675
-S'TE'
-p676
-tp677
-a(S'Ifeanyi Momah'
-p678
-S'TE'
-p679
-tp680
-asS'Bengals'
-p681
-(lp682
-(S'A.J. Green'
-p683
-S'WR'
-p684
-tp685
-a(S'Andy Dalton'
-p686
-S'QB'
-p687
-tp688
-a(S'AJ McCarron'
-p689
-S'QB'
-p690
-tp691
-a(S'Jeff Driskel'
-p692
-S'QB'
-p693
-tp694
-a(S'Giovani Bernard'
-p695
-S'RB'
-p696
-tp697
-a(S'Jeremy Hill'
-p698
-S'RB'
-p699
-tp700
-a(S'Tyler Eifert'
-p701
-S'TE'
-p702
-tp703
-a(S'Brandon LaFell'
-p704
-S'WR'
-p705
-tp706
-a(S'Tyler Boyd'
-p707
-S'WR'
-p708
-tp709
-a(S'Rex Burkhead'
-p710
-S'RB'
-p711
-tp712
-a(S'James Wright'
-p713
-S'WR'
-p714
-tp715
-a(S'Alex Erickson'
-p716
-S'WR'
-p717
-tp718
-a(S'Cody Core'
-p719
-S'WR'
-p720
-tp721
-a(S'Bengals'
-p722
 S'DST'
-p723
-tp724
-a(S'Clark Harris'
-p725
-S'TE'
-p726
-tp727
-a(S'Ryan Hewitt'
-p728
-S'TE'
-p729
-tp730
-a(S'Tyler Kroft'
-p731
-S'TE'
-p732
-tp733
-a(S'C.J. Uzomah'
-p734
-S'TE'
-p735
-tp736
-asS'Chiefs'
-p737
-(lp738
-sS'Dolphins'
-p739
-(lp740
-(S'Jarvis Landry'
-p741
+p662
+tp663
+a(S'Vincent Jackson'
+p664
 S'WR'
+p665
+tp666
+a(S'Russell Hansbrough'
+p667
+S'RB'
+p668
+tp669
+a(S'Peyton Barber'
+p670
+S'RB'
+p671
+tp672
+a(S'Russell Shepard'
+p673
+S'WR'
+p674
+tp675
+a(S'Cecil Shorts'
+p676
+S'WR'
+p677
+tp678
+a(S'Adam Humphries'
+p679
+S'WR'
+p680
+tp681
+a(S'Cameron Brate'
+p682
+S'TE'
+p683
+tp684
+a(S'Brandon Myers'
+p685
+S'TE'
+p686
+tp687
+a(S'Andrew DePaola'
+p688
+S'TE'
+p689
+tp690
+a(S'Luke Stocker'
+p691
+S'TE'
+p692
+tp693
+a(S'Alan Cross'
+p694
+S'TE'
+p695
+tp696
+asS'Cardinals'
+p697
+(lp698
+(S'David Johnson'
+p699
+S'RB'
+p700
+tp701
+a(S'Larry Fitzgerald'
+p702
+S'WR'
+p703
+tp704
+a(S'Carson Palmer'
+p705
+S'QB'
+p706
+tp707
+a(S'Drew Stanton'
+p708
+S'QB'
+p709
+tp710
+a(S'John Brown'
+p711
+S'WR'
+p712
+tp713
+a(S'Michael Floyd'
+p714
+S'WR'
+p715
+tp716
+a(S'Jaron Brown'
+p717
+S'WR'
+p718
+tp719
+a(S'Andre Ellington'
+p720
+S'RB'
+p721
+tp722
+a(S'Stepfan Taylor'
+p723
+S'RB'
+p724
+tp725
+a(S'Kerwynn Williams'
+p726
+S'RB'
+p727
+tp728
+a(S'J.J. Nelson'
+p729
+S'WR'
+p730
+tp731
+a(S'Brittan Golden'
+p732
+S'WR'
+p733
+tp734
+a(S'Cardinals'
+p735
+S'DST'
+p736
+tp737
+a(S'Darren Fells'
+p738
+S'TE'
+p739
+tp740
+a(S'Jermaine Gresham'
+p741
+S'TE'
 p742
 tp743
-a(S'Ryan Tannehill'
+a(S'Ifeanyi Momah'
 p744
-S'QB'
+S'TE'
 p745
 tp746
-a(S'Matt Moore'
+a(S'Hakeem Valles'
 p747
-S'QB'
+S'TE'
 p748
 tp749
-a(S'DeVante Parker'
+asS'Bengals'
 p750
+(lp751
+(S'A.J. Green'
+p752
 S'WR'
-p751
-tp752
-a(S'Arian Foster'
 p753
-S'RB'
-p754
-tp755
-a(S'Kenny Stills'
+tp754
+a(S'Andy Dalton'
+p755
+S'QB'
 p756
-S'WR'
-p757
-tp758
-a(S'Jay Ajayi'
+tp757
+a(S'AJ McCarron'
+p758
+S'QB'
 p759
-S'RB'
-p760
-tp761
-a(S'Kenyan Drake'
+tp760
+a(S'Jeff Driskel'
+p761
+S'QB'
 p762
+tp763
+a(S'Giovani Bernard'
+p764
 S'RB'
-p763
-tp764
-a(S'Isaiah Pead'
 p765
-S'RB'
-p766
-tp767
-a(S'Damien Williams'
+tp766
+a(S'Tyler Eifert'
+p767
+S'TE'
 p768
+tp769
+a(S'Jeremy Hill'
+p770
 S'RB'
-p769
-tp770
-a(S'Jakeem Grant'
 p771
+tp772
+a(S'Brandon LaFell'
+p773
 S'WR'
-p772
-tp773
-a(S'Leonte Carroo'
 p774
-S'WR'
-p775
-tp776
-a(S'Jordan Cameron'
+tp775
+a(S'Bengals'
+p776
+S'DST'
 p777
-S'TE'
-p778
-tp779
-a(S'Dolphins'
+tp778
+a(S'Rex Burkhead'
+p779
+S'RB'
 p780
-S'DST'
-p781
-tp782
-a(S'MarQueis Gray'
+tp781
+a(S'James Wright'
+p782
+S'WR'
 p783
-S'TE'
-p784
-tp785
-a(S'Dion Sims'
+tp784
+a(S'Alex Erickson'
+p785
+S'WR'
 p786
-S'TE'
-p787
-tp788
-asS'Jaguars'
+tp787
+a(S'Cody Core'
+p788
+S'WR'
 p789
-(lp790
-sS'Seahawks'
+tp790
+a(S'Tyler Boyd'
 p791
-(lp792
-sS'Jets'
-p793
-(lp794
-(S'Brandon Marshall'
+S'WR'
+p792
+tp793
+a(S'Clark Harris'
+p794
+S'TE'
 p795
-S'WR'
-p796
-tp797
-a(S'Matt Forte'
+tp796
+a(S'Ryan Hewitt'
+p797
+S'TE'
 p798
-S'RB'
-p799
-tp800
-a(S'Eric Decker'
+tp799
+a(S'Tyler Kroft'
+p800
+S'TE'
 p801
-S'WR'
-p802
-tp803
-a(S'Ryan Fitzpatrick'
+tp802
+a(S'C.J. Uzomah'
+p803
+S'TE'
 p804
-S'QB'
-p805
-tp806
-a(S'Bryce Petty'
-p807
-S'QB'
+tp805
+asS'Chiefs'
+p806
+(lp807
+(S'Jeremy Maclin'
 p808
-tp809
-a(S'Geno Smith'
-p810
-S'QB'
+S'WR'
+p809
+tp810
+a(S'Alex Smith'
 p811
-tp812
-a(S'Christian Hackenberg'
-p813
 S'QB'
+p812
+tp813
+a(S'Spencer Ware'
 p814
-tp815
-a(S'Quincy Enunwa'
-p816
-S'WR'
+S'RB'
+p815
+tp816
+a(S'Jamaal Charles'
 p817
-tp818
-a(S'Bilal Powell'
-p819
 S'RB'
+p818
+tp819
+a(S'Travis Kelce'
 p820
-tp821
-a(S'Robby Anderson'
-p822
-S'WR'
+S'TE'
+p821
+tp822
+a(S'Nick Foles'
 p823
-tp824
-a(S'Jalin Marshall'
-p825
-S'WR'
+S'QB'
+p824
+tp825
+a(S'Tyler Bray'
 p826
-tp827
-a(S'Troymaine Pope'
-p828
-S'RB'
+S'QB'
+p827
+tp828
+a(S'Chris Conley'
 p829
-tp830
-a(S'Jeremy Ross'
-p831
 S'WR'
+p830
+tp831
+a(S'Anthony Sherman'
 p832
-tp833
-a(S'Charone Peake'
-p834
-S'WR'
+S'RB'
+p833
+tp834
+a(S'Knile Davis'
 p835
-tp836
-a(S'Jets'
-p837
-S'DST'
+S'RB'
+p836
+tp837
+a(S'Charcandrick West'
 p838
-tp839
-a(S'Kellen Davis'
-p840
-S'TE'
+S'RB'
+p839
+tp840
+a(S'Albert Wilson'
 p841
-tp842
-a(S'Brandon Bostick'
-p843
-S'TE'
+S'WR'
+p842
+tp843
+a(S"De'Anthony Thomas"
 p844
-tp845
-a(S'Austin Seferian-Jenkins'
-p846
-S'TE'
+S'WR'
+p845
+tp846
+a(S'Demarcus Robinson'
 p847
-tp848
-a(S'Braedon Bowman'
-p849
-S'TE'
+S'WR'
+p848
+tp849
+a(S'Tyreek Hill'
 p850
-tp851
-asS'Ravens'
-p852
-(lp853
-(S'Joe Flacco'
+S'WR'
+p851
+tp852
+a(S'Chiefs'
+p853
+S'DST'
 p854
-S'QB'
-p855
-tp856
-a(S'Steve Smith'
+tp855
+a(S'James Winchester'
+p856
+S'TE'
 p857
-S'WR'
-p858
-tp859
-a(S'Mike Wallace'
+tp858
+a(S"James O'Shaughnessy"
+p859
+S'TE'
 p860
-S'WR'
-p861
-tp862
-a(S'Ryan Mallett'
+tp861
+a(S'Ross Travis'
+p862
+S'TE'
 p863
-S'QB'
-p864
-tp865
-a(S'Terrance West'
+tp864
+a(S'Demetrius Harris'
+p865
+S'TE'
 p866
-S'RB'
-p867
-tp868
-a(S'Dennis Pitta'
-p869
-S'TE'
+tp867
+asS'Dolphins'
+p868
+(lp869
+(S'Jarvis Landry'
 p870
-tp871
-a(S'Kenneth Dixon'
-p872
-S'RB'
+S'WR'
+p871
+tp872
+a(S'Ryan Tannehill'
 p873
-tp874
-a(S'Justin Forsett'
-p875
-S'RB'
+S'QB'
+p874
+tp875
+a(S'Matt Moore'
 p876
-tp877
-a(S'Kyle Juszczyk'
-p878
-S'RB'
+S'QB'
+p877
+tp878
+a(S'Jay Ajayi'
 p879
-tp880
-a(S'Javorius Allen'
-p881
 S'RB'
+p880
+tp881
+a(S'DeVante Parker'
 p882
-tp883
-a(S'Devin Hester'
-p884
 S'WR'
+p883
+tp884
+a(S'Arian Foster'
 p885
-tp886
-a(S'Kamar Aiken'
-p887
-S'WR'
+S'RB'
+p886
+tp887
+a(S'Kenny Stills'
 p888
-tp889
-a(S'Chris Moore'
-p890
 S'WR'
+p889
+tp890
+a(S'Damien Williams'
 p891
-tp892
-a(S'Breshad Perriman'
-p893
-S'WR'
+S'RB'
+p892
+tp893
+a(S'Kenyan Drake'
 p894
-tp895
-a(S'Ravens'
-p896
-S'DST'
+S'RB'
+p895
+tp896
+a(S'Jakeem Grant'
 p897
-tp898
-a(S'Crockett Gillmore'
-p899
-S'TE'
+S'WR'
+p898
+tp899
+a(S'Leonte Carroo'
 p900
-tp901
-a(S'Darren Waller'
-p902
-S'TE'
+S'WR'
+p901
+tp902
+a(S'Jordan Cameron'
 p903
-tp904
-a(S'Maxx Williams'
-p905
 S'TE'
+p904
+tp905
+a(S'MarQueis Gray'
 p906
-tp907
-asS'Colts'
-p908
-(lp909
-(S'T.Y. Hilton'
+S'TE'
+p907
+tp908
+a(S'Dion Sims'
+p909
+S'TE'
 p910
-S'WR'
-p911
-tp912
-a(S'Andrew Luck'
+tp911
+a(S'Dominique Jones'
+p912
+S'TE'
 p913
-S'QB'
-p914
-tp915
-a(S'Frank Gore'
+tp914
+a(S'Dolphins'
+p915
+S'DST'
 p916
-S'RB'
-p917
-tp918
-a(S'Donte Moncrief'
-p919
-S'WR'
+tp917
+asS'Jaguars'
+p918
+(lp919
+(S'Allen Robinson'
 p920
-tp921
-a(S'Scott Tolzien'
-p922
-S'QB'
+S'WR'
+p921
+tp922
+a(S'Blake Bortles'
 p923
-tp924
-a(S'Phillip Dorsett'
-p925
-S'WR'
+S'QB'
+p924
+tp925
+a(S'Chad Henne'
 p926
-tp927
-a(S'Dwayne Allen'
-p928
-S'TE'
+S'QB'
+p927
+tp928
+a(S'Brandon Allen'
 p929
-tp930
-a(S'Robert Turbin'
-p931
-S'RB'
+S'QB'
+p930
+tp931
+a(S'Allen Hurns'
 p932
-tp933
-a(S'Jordan Todman'
-p934
-S'RB'
+S'WR'
+p933
+tp934
+a(S'T.J. Yeldon'
 p935
-tp936
-a(S'Josh Ferguson'
-p937
 S'RB'
+p936
+tp937
+a(S'Julius Thomas'
 p938
-tp939
-a(S'Devin Street'
-p940
-S'WR'
+S'TE'
+p939
+tp940
+a(S'Chris Ivory'
 p941
-tp942
-a(S'Quan Bray'
-p943
-S'WR'
+S'RB'
+p942
+tp943
+a(S'Marqise Lee'
 p944
-tp945
-a(S'Chester Rogers'
-p946
 S'WR'
+p945
+tp946
+a(S'Denard Robinson'
 p947
-tp948
-a(S'Jack Doyle'
-p949
-S'TE'
+S'RB'
+p948
+tp949
+a(S'Corey Grant'
 p950
-tp951
-a(S'Colts'
-p952
-S'DST'
+S'RB'
+p951
+tp952
+a(S'Bryan Walters'
 p953
-tp954
-a(S'Erik Swoope'
-p955
-S'TE'
+S'WR'
+p954
+tp955
+a(S'Arrelious Benn'
 p956
-tp957
-asS'Packers'
-p958
-(lp959
-(S'Jordy Nelson'
+S'WR'
+p957
+tp958
+a(S'Rashad Greene'
+p959
+S'WR'
 p960
-S'WR'
-p961
-tp962
-a(S'Aaron Rodgers'
+tp961
+a(S'Marcedes Lewis'
+p962
+S'TE'
 p963
-S'QB'
-p964
-tp965
-a(S'Randall Cobb'
+tp964
+a(S'Neal Sterling'
+p965
+S'TE'
 p966
-S'WR'
-p967
-tp968
-a(S'Eddie Lacy'
+tp967
+a(S'Ben Koyack'
+p968
+S'TE'
 p969
-S'RB'
-p970
-tp971
-a(S'Brett Hundley'
+tp970
+a(S'Jaguars'
+p971
+S'DST'
 p972
-S'QB'
-p973
-tp974
-a(S'Joe Callahan'
-p975
-S'QB'
+tp973
+asS'Seahawks'
+p974
+(lp975
+(S'Russell Wilson'
 p976
-tp977
-a(S'Davante Adams'
-p978
-S'WR'
+S'QB'
+p977
+tp978
+a(S'Christine Michael'
 p979
-tp980
-a(S'James Starks'
-p981
 S'RB'
+p980
+tp981
+a(S'Doug Baldwin'
 p982
-tp983
-a(S'Packers'
-p984
-S'DST'
+S'WR'
+p983
+tp984
+a(S'Jimmy Graham'
 p985
-tp986
-a(S'Aaron Ripkowski'
-p987
-S'RB'
+S'TE'
+p986
+tp987
+a(S'Trevone Boykin'
 p988
-tp989
-a(S'Jared Abbrederis'
-p990
-S'WR'
+S'QB'
+p989
+tp990
+a(S'Thomas Rawls'
 p991
-tp992
-a(S'Ty Montgomery'
-p993
-S'WR'
+S'RB'
+p992
+tp993
+a(S'C.J. Spiller'
 p994
-tp995
-a(S'Trevor Davis'
-p996
-S'WR'
+S'RB'
+p995
+tp996
+a(S'Tyler Lockett'
 p997
-tp998
-a(S'Jeff Janis'
-p999
 S'WR'
+p998
+tp999
+a(S'Seahawks'
 p1000
-tp1001
-a(S'Richard Rodgers'
-p1002
-S'TE'
+S'DST'
+p1001
+tp1002
+a(S'C.J. Prosise'
 p1003
-tp1004
-a(S'Jared Cook'
-p1005
-S'TE'
+S'RB'
+p1004
+tp1005
+a(S'Alex Collins'
 p1006
-tp1007
-a(S'Justin Perillo'
-p1008
-S'TE'
+S'RB'
+p1007
+tp1008
+a(S'Jermaine Kearse'
 p1009
-tp1010
-asS'Titans'
-p1011
-(lp1012
-(S'DeMarco Murray'
+S'WR'
+p1010
+tp1011
+a(S'Paul Richardson'
+p1012
+S'WR'
 p1013
-S'RB'
-p1014
-tp1015
-a(S'Marcus Mariota'
+tp1014
+a(S'Tanner McEvoy'
+p1015
+S'WR'
 p1016
-S'QB'
-p1017
-tp1018
-a(S'Matt Cassel'
+tp1017
+a(S'Luke Willson'
+p1018
+S'TE'
 p1019
-S'QB'
-p1020
-tp1021
-a(S'Delanie Walker'
+tp1020
+a(S'Brandon Williams'
+p1021
+S'TE'
 p1022
+tp1023
+a(S'Nick Vannett'
+p1024
 S'TE'
-p1023
-tp1024
-a(S'Tajae Sharpe'
 p1025
-S'WR'
-p1026
-tp1027
-a(S'Derrick Henry'
-p1028
-S'RB'
+tp1026
+asS'Jets'
+p1027
+(lp1028
+(S'Brandon Marshall'
 p1029
-tp1030
-a(S'Rishard Matthews'
-p1031
 S'WR'
+p1030
+tp1031
+a(S'Ryan Fitzpatrick'
 p1032
-tp1033
-a(S'Andre Johnson'
-p1034
-S'WR'
+S'QB'
+p1033
+tp1034
+a(S'Bryce Petty'
 p1035
-tp1036
-a(S'Jalston Fowler'
-p1037
-S'RB'
+S'QB'
+p1036
+tp1037
+a(S'Geno Smith'
 p1038
-tp1039
-a(S'Antonio Andrews'
-p1040
-S'RB'
+S'QB'
+p1039
+tp1040
+a(S'Christian Hackenberg'
 p1041
-tp1042
-a(S'Harry Douglas'
-p1043
-S'WR'
+S'QB'
+p1042
+tp1043
+a(S'Matt Forte'
 p1044
-tp1045
-a(S'Marc Mariani'
-p1046
-S'WR'
+S'RB'
+p1045
+tp1046
+a(S'Quincy Enunwa'
 p1047
-tp1048
-a(S'Kendall Wright'
-p1049
 S'WR'
+p1048
+tp1049
+a(S'Bilal Powell'
 p1050
-tp1051
-a(S'Anthony Fasano'
-p1052
-S'TE'
+S'RB'
+p1051
+tp1052
+a(S'Troymaine Pope'
 p1053
-tp1054
-a(S'Beau Brinkley'
-p1055
-S'TE'
+S'RB'
+p1054
+tp1055
+a(S'Charone Peake'
 p1056
-tp1057
-a(S'Jace Amaro'
-p1058
-S'TE'
+S'WR'
+p1057
+tp1058
+a(S'Jeremy Butler'
 p1059
-tp1060
-a(S'Phillip Supernaw'
-p1061
-S'TE'
+S'WR'
+p1060
+tp1061
+a(S'Robby Anderson'
 p1062
-tp1063
-a(S'Titans'
-p1064
-S'DST'
+S'WR'
+p1063
+tp1064
+a(S'Jalin Marshall'
 p1065
-tp1066
-asS'Rams'
-p1067
-(lp1068
-(S'Todd Gurley'
+S'WR'
+p1066
+tp1067
+a(S'Jets'
+p1068
+S'DST'
 p1069
-S'RB'
-p1070
-tp1071
-a(S'Case Keenum'
+tp1070
+a(S'Kellen Davis'
+p1071
+S'TE'
 p1072
-S'QB'
-p1073
-tp1074
-a(S'Sean Mannion'
+tp1073
+a(S'Brandon Bostick'
+p1074
+S'TE'
 p1075
-S'QB'
-p1076
-tp1077
-a(S'Jared Goff'
+tp1076
+a(S'Austin Seferian-Jenkins'
+p1077
+S'TE'
 p1078
-S'QB'
-p1079
-tp1080
-a(S'Kenny Britt'
+tp1079
+a(S'Braedon Bowman'
+p1080
+S'TE'
 p1081
-S'WR'
-p1082
-tp1083
-a(S'Tavon Austin'
-p1084
-S'WR'
+tp1082
+asS'Ravens'
+p1083
+(lp1084
+(S'Joe Flacco'
 p1085
-tp1086
-a(S'Benny Cunningham'
-p1087
-S'RB'
+S'QB'
+p1086
+tp1087
+a(S'Mike Wallace'
 p1088
-tp1089
-a(S'Brian Quick'
-p1090
 S'WR'
+p1089
+tp1090
+a(S'Steve Smith'
 p1091
-tp1092
-a(S'Rams'
-p1093
-S'DST'
+S'WR'
+p1092
+tp1093
+a(S'Ryan Mallett'
 p1094
-tp1095
-a(S'Chase Reynolds'
-p1096
-S'RB'
+S'QB'
+p1095
+tp1096
+a(S'Terrance West'
 p1097
-tp1098
-a(S'Malcolm Brown'
-p1099
 S'RB'
+p1098
+tp1099
+a(S'Dennis Pitta'
 p1100
-tp1101
-a(S'Bradley Marquez'
-p1102
-S'WR'
+S'TE'
+p1101
+tp1102
+a(S'Kamar Aiken'
 p1103
-tp1104
-a(S'Nelson Spruce'
-p1105
 S'WR'
+p1104
+tp1105
+a(S'Breshad Perriman'
 p1106
-tp1107
-a(S'Pharoh Cooper'
-p1108
 S'WR'
+p1107
+tp1108
+a(S'Kyle Juszczyk'
 p1109
-tp1110
-a(S'Mike Thomas'
-p1111
-S'WR'
+S'RB'
+p1110
+tp1111
+a(S'Javorius Allen'
 p1112
-tp1113
-a(S'Lance Kendricks'
-p1114
-S'TE'
+S'RB'
+p1113
+tp1114
+a(S'Kenneth Dixon'
 p1115
-tp1116
-a(S'Cory Harkey'
-p1117
-S'TE'
+S'RB'
+p1116
+tp1117
+a(S'Devin Hester'
 p1118
-tp1119
-a(S'Tyler Higbee'
-p1120
-S'TE'
+S'WR'
+p1119
+tp1120
+a(S'Chris Moore'
 p1121
-tp1122
-a(S'Temarrick Hemingway'
-p1123
-S'TE'
+S'WR'
+p1122
+tp1123
+a(S'Ravens'
 p1124
-tp1125
-asS'Bills'
-p1126
-(lp1127
-(S'LeSean McCoy'
+S'DST'
+p1125
+tp1126
+a(S'Crockett Gillmore'
+p1127
+S'TE'
 p1128
-S'RB'
-p1129
-tp1130
-a(S'Tyrod Taylor'
+tp1129
+a(S'Daniel Brown'
+p1130
+S'TE'
 p1131
-S'QB'
-p1132
-tp1133
-a(S'EJ Manuel'
+tp1132
+a(S'Darren Waller'
+p1133
+S'TE'
 p1134
-S'QB'
-p1135
-tp1136
-a(S'Cardale Jones'
-p1137
-S'QB'
+tp1135
+asS'Colts'
+p1136
+(lp1137
+(S'T.Y. Hilton'
 p1138
-tp1139
-a(S'Robert Woods'
-p1140
 S'WR'
+p1139
+tp1140
+a(S'Andrew Luck'
 p1141
-tp1142
-a(S'Bills'
-p1143
-S'DST'
+S'QB'
+p1142
+tp1143
+a(S'Donte Moncrief'
 p1144
-tp1145
-a(S'Reggie Bush'
-p1146
-S'RB'
+S'WR'
+p1145
+tp1146
+a(S'Scott Tolzien'
 p1147
-tp1148
-a(S'Jerome Felton'
-p1149
-S'RB'
+S'QB'
+p1148
+tp1149
+a(S'Frank Gore'
 p1150
-tp1151
-a(S'Mike Gillislee'
-p1152
 S'RB'
+p1151
+tp1152
+a(S'Phillip Dorsett'
 p1153
-tp1154
-a(S'Jonathan Williams'
-p1155
-S'RB'
+S'WR'
+p1154
+tp1155
+a(S'Robert Turbin'
 p1156
-tp1157
-a(S'Brandon Tate'
-p1158
-S'WR'
+S'RB'
+p1157
+tp1158
+a(S'Jordan Todman'
 p1159
-tp1160
-a(S'Greg Salas'
-p1161
-S'WR'
+S'RB'
+p1160
+tp1161
+a(S'Josh Ferguson'
 p1162
-tp1163
-a(S'Marquise Goodwin'
-p1164
-S'WR'
+S'RB'
+p1163
+tp1164
+a(S'Devin Street'
 p1165
-tp1166
-a(S'Justin Hunter'
-p1167
 S'WR'
+p1166
+tp1167
+a(S'Quan Bray'
 p1168
-tp1169
-a(S'Walt Powell'
-p1170
 S'WR'
+p1169
+tp1170
+a(S'Chester Rogers'
 p1171
-tp1172
-a(S'Charles Clay'
-p1173
-S'TE'
+S'WR'
+p1172
+tp1173
+a(S'Dwayne Allen'
 p1174
-tp1175
-a(S'Jim Dray'
-p1176
 S'TE'
+p1175
+tp1176
+a(S'Jack Doyle'
 p1177
-tp1178
-a(S"Nick O'Leary"
-p1179
 S'TE'
+p1178
+tp1179
+a(S'Erik Swoope'
 p1180
-tp1181
-asS'Texans'
-p1182
-(lp1183
-(S'DeAndre Hopkins'
+S'TE'
+p1181
+tp1182
+a(S'Colts'
+p1183
+S'DST'
 p1184
-S'WR'
-p1185
-tp1186
-a(S'Lamar Miller'
-p1187
-S'RB'
+tp1185
+asS'Packers'
+p1186
+(lp1187
+(S'Jordy Nelson'
 p1188
-tp1189
-a(S'Will Fuller'
-p1190
 S'WR'
+p1189
+tp1190
+a(S'Aaron Rodgers'
 p1191
-tp1192
-a(S'Brock Osweiler'
-p1193
 S'QB'
+p1192
+tp1193
+a(S'Randall Cobb'
 p1194
-tp1195
-a(S'Brandon Weeden'
-p1196
-S'QB'
+S'WR'
+p1195
+tp1196
+a(S'Eddie Lacy'
 p1197
-tp1198
-a(S'Tom Savage'
-p1199
-S'QB'
+S'RB'
+p1198
+tp1199
+a(S'Brett Hundley'
 p1200
-tp1201
-a(S'Alfred Blue'
-p1202
-S'RB'
+S'QB'
+p1201
+tp1202
+a(S'Joe Callahan'
 p1203
-tp1204
-a(S'Jaelen Strong'
-p1205
-S'WR'
+S'QB'
+p1204
+tp1205
+a(S'Davante Adams'
 p1206
-tp1207
-a(S'Jonathan Grimes'
-p1208
-S'RB'
+S'WR'
+p1207
+tp1208
+a(S'James Starks'
 p1209
-tp1210
-a(S'Jay Prosch'
-p1211
 S'RB'
+p1210
+tp1211
+a(S'Packers'
 p1212
-tp1213
-a(S'Tyler Ervin'
-p1214
-S'RB'
+S'DST'
+p1213
+tp1214
+a(S'Aaron Ripkowski'
 p1215
-tp1216
-a(S'Keith Mumphery'
-p1217
-S'WR'
+S'RB'
+p1216
+tp1217
+a(S'Jared Abbrederis'
 p1218
-tp1219
-a(S'Braxton Miller'
-p1220
 S'WR'
+p1219
+tp1220
+a(S'Ty Montgomery'
 p1221
-tp1222
-a(S'Texans'
-p1223
-S'DST'
+S'WR'
+p1222
+tp1223
+a(S'Trevor Davis'
 p1224
-tp1225
-a(S'Ryan Griffin'
-p1226
-S'TE'
+S'WR'
+p1225
+tp1226
+a(S'Jeff Janis'
 p1227
-tp1228
-a(S'C.J. Fiedorowicz'
-p1229
-S'TE'
+S'WR'
+p1228
+tp1229
+a(S'Richard Rodgers'
 p1230
-tp1231
-a(S'Stephen Anderson'
-p1232
 S'TE'
+p1231
+tp1232
+a(S'Jared Cook'
 p1233
-tp1234
-asS'49ers'
-p1235
-(lp1236
-(S'Colin Kaepernick'
+S'TE'
+p1234
+tp1235
+a(S'Justin Perillo'
+p1236
+S'TE'
 p1237
-S'QB'
-p1238
-tp1239
-a(S'Christian Ponder'
-p1240
-S'QB'
+tp1238
+asS'Titans'
+p1239
+(lp1240
+(S'DeMarco Murray'
 p1241
-tp1242
-a(S'Blaine Gabbert'
-p1243
-S'QB'
+S'RB'
+p1242
+tp1243
+a(S'Marcus Mariota'
 p1244
-tp1245
-a(S'Carlos Hyde'
-p1246
-S'RB'
+S'QB'
+p1245
+tp1246
+a(S'Matt Cassel'
 p1247
-tp1248
-a(S'Torrey Smith'
-p1249
-S'WR'
+S'QB'
+p1248
+tp1249
+a(S'Delanie Walker'
 p1250
-tp1251
-a(S'Jeremy Kerley'
-p1252
-S'WR'
+S'TE'
+p1251
+tp1252
+a(S'Kendall Wright'
 p1253
-tp1254
-a(S'Shaun Draughn'
-p1255
-S'RB'
+S'WR'
+p1254
+tp1255
+a(S'Rishard Matthews'
 p1256
-tp1257
-a(S'DuJuan Harris'
-p1258
-S'RB'
+S'WR'
+p1257
+tp1258
+a(S'Tajae Sharpe'
 p1259
-tp1260
-a(S'Mike Davis'
-p1261
-S'RB'
+S'WR'
+p1260
+tp1261
+a(S'Derrick Henry'
 p1262
-tp1263
-a(S'Keshawn Martin'
-p1264
-S'WR'
+S'RB'
+p1263
+tp1264
+a(S'Andre Johnson'
 p1265
-tp1266
-a(S'Rod Streater'
-p1267
 S'WR'
+p1266
+tp1267
+a(S'Jalston Fowler'
 p1268
-tp1269
-a(S'Quinton Patton'
-p1270
-S'WR'
+S'RB'
+p1269
+tp1270
+a(S'Antonio Andrews'
 p1271
-tp1272
-a(S'Aaron Burbridge'
-p1273
-S'WR'
+S'RB'
+p1272
+tp1273
+a(S'Harry Douglas'
 p1274
-tp1275
-a(S'Vance McDonald'
-p1276
-S'TE'
+S'WR'
+p1275
+tp1276
+a(S'Marc Mariani'
 p1277
-tp1278
-a(S'Garrett Celek'
-p1279
-S'TE'
+S'WR'
+p1278
+tp1279
+a(S'Anthony Fasano'
 p1280
-tp1281
-a(S'49ers'
-p1282
-S'DST'
+S'TE'
+p1281
+tp1282
+a(S'Beau Brinkley'
 p1283
-tp1284
-a(S'Kyle Nelson'
-p1285
 S'TE'
+p1284
+tp1285
+a(S'Jace Amaro'
 p1286
-tp1287
-a(S'Blake Bell'
-p1288
 S'TE'
+p1287
+tp1288
+a(S'Phillip Supernaw'
 p1289
-tp1290
-asS'Patriots'
-p1291
-(lp1292
-(S'Tom Brady'
+S'TE'
+p1290
+tp1291
+a(S'Titans'
+p1292
+S'DST'
 p1293
-S'QB'
-p1294
-tp1295
-a(S'Julian Edelman'
-p1296
-S'WR'
+tp1294
+asS'Rams'
+p1295
+(lp1296
+(S'Todd Gurley'
 p1297
-tp1298
-a(S'Rob Gronkowski'
-p1299
-S'TE'
+S'RB'
+p1298
+tp1299
+a(S'Case Keenum'
 p1300
-tp1301
-a(S'LeGarrette Blount'
-p1302
-S'RB'
+S'QB'
+p1301
+tp1302
+a(S'Sean Mannion'
 p1303
-tp1304
-a(S'Jimmy Garoppolo'
-p1305
 S'QB'
+p1304
+tp1305
+a(S'Jared Goff'
 p1306
-tp1307
-a(S'Jacoby Brissett'
-p1308
 S'QB'
+p1307
+tp1308
+a(S'Kenny Britt'
 p1309
-tp1310
-a(S'Chris Hogan'
-p1311
 S'WR'
+p1310
+tp1311
+a(S'Tavon Austin'
 p1312
-tp1313
-a(S'James White'
-p1314
-S'RB'
+S'WR'
+p1313
+tp1314
+a(S'Brian Quick'
 p1315
-tp1316
-a(S'Danny Amendola'
-p1317
 S'WR'
+p1316
+tp1317
+a(S'Chase Reynolds'
 p1318
-tp1319
-a(S'Martellus Bennett'
-p1320
-S'TE'
+S'RB'
+p1319
+tp1320
+a(S'Benny Cunningham'
 p1321
-tp1322
-a(S'Patriots'
-p1323
-S'DST'
+S'RB'
+p1322
+tp1323
+a(S'Malcolm Brown'
 p1324
-tp1325
-a(S'James Develin'
-p1326
 S'RB'
+p1325
+tp1326
+a(S'Bradley Marquez'
 p1327
-tp1328
-a(S'Brandon Bolden'
-p1329
-S'RB'
+S'WR'
+p1328
+tp1329
+a(S'Nelson Spruce'
 p1330
-tp1331
-a(S'D.J. Foster'
-p1332
-S'RB'
+S'WR'
+p1331
+tp1332
+a(S'Pharoh Cooper'
 p1333
-tp1334
-a(S'Matthew Slater'
-p1335
 S'WR'
+p1334
+tp1335
+a(S'Mike Thomas'
 p1336
-tp1337
-a(S'Malcolm Mitchell'
-p1338
 S'WR'
+p1337
+tp1338
+a(S'Lance Kendricks'
 p1339
-tp1340
-a(S'Clay Harbor'
-p1341
 S'TE'
+p1340
+tp1341
+a(S'Rams'
 p1342
-tp1343
-a(S'Greg Scruggs'
-p1344
-S'TE'
+S'DST'
+p1343
+tp1344
+a(S'Cory Harkey'
 p1345
-tp1346
-a(S'A.J. Derby'
-p1347
 S'TE'
+p1346
+tp1347
+a(S'Tyler Higbee'
 p1348
-tp1349
-asS'Cowboys'
-p1350
-(lp1351
-(S'Dez Bryant'
+S'TE'
+p1349
+tp1350
+a(S'Temarrick Hemingway'
+p1351
+S'TE'
 p1352
-S'WR'
-p1353
-tp1354
-a(S'Ezekiel Elliott'
-p1355
-S'RB'
+tp1353
+asS'Bills'
+p1354
+(lp1355
+(S'LeSean McCoy'
 p1356
-tp1357
-a(S'Tony Romo'
-p1358
-S'QB'
+S'RB'
+p1357
+tp1358
+a(S'Tyrod Taylor'
 p1359
-tp1360
-a(S'Dak Prescott'
-p1361
 S'QB'
+p1360
+tp1361
+a(S'EJ Manuel'
 p1362
-tp1363
-a(S'Mark Sanchez'
-p1364
 S'QB'
+p1363
+tp1364
+a(S'Cardale Jones'
 p1365
-tp1366
-a(S'Jason Witten'
-p1367
-S'TE'
+S'QB'
+p1366
+tp1367
+a(S'Robert Woods'
 p1368
-tp1369
-a(S'Cole Beasley'
-p1370
 S'WR'
+p1369
+tp1370
+a(S'Bills'
 p1371
-tp1372
-a(S'Terrance Williams'
-p1373
-S'WR'
+S'DST'
+p1372
+tp1373
+a(S'Reggie Bush'
 p1374
-tp1375
-a(S'Alfred Morris'
-p1376
 S'RB'
+p1375
+tp1376
+a(S'Jerome Felton'
 p1377
-tp1378
-a(S'Brice Butler'
-p1379
-S'WR'
+S'RB'
+p1378
+tp1379
+a(S'Mike Gillislee'
 p1380
-tp1381
-a(S'Lance Dunbar'
-p1382
 S'RB'
+p1381
+tp1382
+a(S'Jonathan Williams'
 p1383
-tp1384
-a(S'Rod Smith'
-p1385
 S'RB'
+p1384
+tp1385
+a(S'Brandon Tate'
 p1386
-tp1387
-a(S'Keith Smith'
-p1388
-S'RB'
+S'WR'
+p1387
+tp1388
+a(S'Marquise Goodwin'
 p1389
-tp1390
-a(S'Darius Jackson'
-p1391
-S'RB'
+S'WR'
+p1390
+tp1391
+a(S'Justin Hunter'
 p1392
-tp1393
-a(S'Lucky Whitehead'
-p1394
 S'WR'
+p1393
+tp1394
+a(S'Walt Powell'
 p1395
-tp1396
-a(S'Cowboys'
-p1397
-S'DST'
+S'WR'
+p1396
+tp1397
+a(S'Charles Clay'
 p1398
-tp1399
-a(S'Gavin Escobar'
-p1400
 S'TE'
+p1399
+tp1400
+a(S'Gerald Christian'
 p1401
-tp1402
-a(S'Geoff Swaim'
-p1403
 S'TE'
+p1402
+tp1403
+a(S"Nick O'Leary"
 p1404
-tp1405
-asS'Panthers'
-p1406
-(lp1407
-(S'Cam Newton'
-p1408
-S'QB'
+S'TE'
+p1405
+tp1406
+asS'Texans'
+p1407
+(lp1408
+(S'DeAndre Hopkins'
 p1409
-tp1410
-a(S'Kelvin Benjamin'
-p1411
 S'WR'
+p1410
+tp1411
+a(S'Lamar Miller'
 p1412
-tp1413
-a(S'Greg Olsen'
-p1414
-S'TE'
+S'RB'
+p1413
+tp1414
+a(S'Will Fuller'
 p1415
-tp1416
-a(S'Derek Anderson'
-p1417
-S'QB'
+S'WR'
+p1416
+tp1417
+a(S'Brock Osweiler'
 p1418
-tp1419
-a(S'Joe Webb'
-p1420
 S'QB'
+p1419
+tp1420
+a(S'Brandon Weeden'
 p1421
-tp1422
-a(S'Jonathan Stewart'
-p1423
-S'RB'
+S'QB'
+p1422
+tp1423
+a(S'Tom Savage'
 p1424
-tp1425
-a(S'Fozzy Whittaker'
-p1426
-S'RB'
+S'QB'
+p1425
+tp1426
+a(S'Jonathan Grimes'
 p1427
-tp1428
-a(S'Ted Ginn'
-p1429
-S'WR'
+S'RB'
+p1428
+tp1429
+a(S'Alfred Blue'
 p1430
-tp1431
-a(S'Devin Funchess'
-p1432
-S'WR'
+S'RB'
+p1431
+tp1432
+a(S'Jay Prosch'
 p1433
-tp1434
-a(S'Cameron Artis-Payne'
-p1435
 S'RB'
+p1434
+tp1435
+a(S'Tyler Ervin'
 p1436
-tp1437
-a(S'Panthers'
-p1438
-S'DST'
+S'RB'
+p1437
+tp1438
+a(S'Keith Mumphery'
 p1439
-tp1440
-a(S'Corey Brown'
-p1441
 S'WR'
+p1440
+tp1441
+a(S'Braxton Miller'
 p1442
-tp1443
-a(S'Mike Tolbert'
-p1444
-S'RB'
+S'WR'
+p1443
+tp1444
+a(S'Jaelen Strong'
 p1445
-tp1446
-a(S'Damiere Byrd'
-p1447
 S'WR'
+p1446
+tp1447
+a(S'Texans'
 p1448
-tp1449
-a(S'Ed Dickson'
-p1450
-S'TE'
-p1451
-tp1452
-a(S'Scott Simonson'
-p1453
-S'TE'
-p1454
-tp1455
-asS'Redskins'
-p1456
-(lp1457
-(S'Jordan Reed'
-p1458
-S'TE'
-p1459
-tp1460
-a(S'Kirk Cousins'
-p1461
-S'QB'
-p1462
-tp1463
-a(S'DeSean Jackson'
-p1464
-S'WR'
-p1465
-tp1466
-a(S'Colt McCoy'
-p1467
-S'QB'
-p1468
-tp1469
-a(S'Nate Sudfeld'
-p1470
-S'QB'
-p1471
-tp1472
-a(S'Jamison Crowder'
-p1473
-S'WR'
-p1474
-tp1475
-a(S'Matt Jones'
-p1476
-S'RB'
-p1477
-tp1478
-a(S'Pierre Garcon'
-p1479
-S'WR'
-p1480
-tp1481
-a(S'Chris Thompson'
-p1482
-S'RB'
-p1483
-tp1484
-a(S'Rob Kelley'
-p1485
-S'RB'
-p1486
-tp1487
-a(S'Ryan Grant'
-p1488
-S'WR'
-p1489
-tp1490
-a(S'Josh Doctson'
-p1491
-S'WR'
-p1492
-tp1493
-a(S'Rashad Ross'
-p1494
-S'WR'
-p1495
-tp1496
-a(S'Redskins'
-p1497
 S'DST'
+p1449
+tp1450
+a(S'Ryan Griffin'
+p1451
+S'TE'
+p1452
+tp1453
+a(S'C.J. Fiedorowicz'
+p1454
+S'TE'
+p1455
+tp1456
+a(S'Stephen Anderson'
+p1457
+S'TE'
+p1458
+tp1459
+asS'49ers'
+p1460
+(lp1461
+(S'Carlos Hyde'
+p1462
+S'RB'
+p1463
+tp1464
+a(S'Colin Kaepernick'
+p1465
+S'QB'
+p1466
+tp1467
+a(S'Christian Ponder'
+p1468
+S'QB'
+p1469
+tp1470
+a(S'Blaine Gabbert'
+p1471
+S'QB'
+p1472
+tp1473
+a(S'Jeremy Kerley'
+p1474
+S'WR'
+p1475
+tp1476
+a(S'Torrey Smith'
+p1477
+S'WR'
+p1478
+tp1479
+a(S'Shaun Draughn'
+p1480
+S'RB'
+p1481
+tp1482
+a(S'Mike Davis'
+p1483
+S'RB'
+p1484
+tp1485
+a(S'Keshawn Martin'
+p1486
+S'WR'
+p1487
+tp1488
+a(S'Rod Streater'
+p1489
+S'WR'
+p1490
+tp1491
+a(S'Quinton Patton'
+p1492
+S'WR'
+p1493
+tp1494
+a(S'Aaron Burbridge'
+p1495
+S'WR'
+p1496
+tp1497
+a(S'Kyle Nelson'
 p1498
-tp1499
-a(S'Vernon Davis'
-p1500
 S'TE'
+p1499
+tp1500
+a(S'Garrett Celek'
 p1501
-tp1502
-a(S'Niles Paul'
-p1503
 S'TE'
+p1502
+tp1503
+a(S'Vance McDonald'
 p1504
-tp1505
+S'TE'
+p1505
+tp1506
+a(S'Blake Bell'
+p1507
+S'TE'
+p1508
+tp1509
+a(S"Je'Ron Hamm"
+p1510
+S'TE'
+p1511
+tp1512
+a(S'49ers'
+p1513
+S'DST'
+p1514
+tp1515
+asS'Patriots'
+p1516
+(lp1517
+(S'Tom Brady'
+p1518
+S'QB'
+p1519
+tp1520
+a(S'Rob Gronkowski'
+p1521
+S'TE'
+p1522
+tp1523
+a(S'Julian Edelman'
+p1524
+S'WR'
+p1525
+tp1526
+a(S'Jimmy Garoppolo'
+p1527
+S'QB'
+p1528
+tp1529
+a(S'LeGarrette Blount'
+p1530
+S'RB'
+p1531
+tp1532
+a(S'Chris Hogan'
+p1533
+S'WR'
+p1534
+tp1535
+a(S'James White'
+p1536
+S'RB'
+p1537
+tp1538
+a(S'Martellus Bennett'
+p1539
+S'TE'
+p1540
+tp1541
+a(S'Danny Amendola'
+p1542
+S'WR'
+p1543
+tp1544
+a(S'James Develin'
+p1545
+S'RB'
+p1546
+tp1547
+a(S'Brandon Bolden'
+p1548
+S'RB'
+p1549
+tp1550
+a(S'Dion Lewis'
+p1551
+S'RB'
+p1552
+tp1553
+a(S'D.J. Foster'
+p1554
+S'RB'
+p1555
+tp1556
+a(S'Matthew Slater'
+p1557
+S'WR'
+p1558
+tp1559
+a(S'Malcolm Mitchell'
+p1560
+S'WR'
+p1561
+tp1562
+a(S'Patriots'
+p1563
+S'DST'
+p1564
+tp1565
+a(S'A.J. Derby'
+p1566
+S'TE'
+p1567
+tp1568
+asS'Cowboys'
+p1569
+(lp1570
+sS'Panthers'
+p1571
+(lp1572
+sS'Redskins'
+p1573
+(lp1574
+(S'Jordan Reed'
+p1575
+S'TE'
+p1576
+tp1577
+a(S'Kirk Cousins'
+p1578
+S'QB'
+p1579
+tp1580
+a(S'DeSean Jackson'
+p1581
+S'WR'
+p1582
+tp1583
+a(S'Colt McCoy'
+p1584
+S'QB'
+p1585
+tp1586
+a(S'Nate Sudfeld'
+p1587
+S'QB'
+p1588
+tp1589
+a(S'Jamison Crowder'
+p1590
+S'WR'
+p1591
+tp1592
+a(S'Matt Jones'
+p1593
+S'RB'
+p1594
+tp1595
+a(S'Pierre Garcon'
+p1596
+S'WR'
+p1597
+tp1598
+a(S'Chris Thompson'
+p1599
+S'RB'
+p1600
+tp1601
+a(S'Rob Kelley'
+p1602
+S'RB'
+p1603
+tp1604
+a(S'Ryan Grant'
+p1605
+S'WR'
+p1606
+tp1607
+a(S'Josh Doctson'
+p1608
+S'WR'
+p1609
+tp1610
+a(S'Rashad Ross'
+p1611
+S'WR'
+p1612
+tp1613
+a(S'Vernon Davis'
+p1614
+S'TE'
+p1615
+tp1616
+a(S'Niles Paul'
+p1617
+S'TE'
+p1618
+tp1619
+a(S'Redskins'
+p1620
+S'DST'
+p1621
+tp1622
 ass.

@@ -334,16 +334,14 @@ class Player(object):
                                           self.stats[year][x]["Game Date"]!="Bye")]
         return home
 
-    def games_played(self,week,year):
+    def games_played(self,year):
         """
         Gives the games played in a year.
 
         Parameters
 
         ----------
-        week : int
-            An integer which determines the range for the list
-            of weeks.
+    
         year : int
             The four digit year.
 
@@ -355,23 +353,24 @@ class Player(object):
             The number of games played throughout the course of a year.
 
         """
-        weeks = range(1,week+1)
+        try:
+            weeks = self.stats[year].keys()
+        except KeyError:
+            games = 0
+            return games
+        
         games = 0
         for week in weeks:
             if self.name in TEAM_LIST:
                 if self.stats[year][week]["Home"]!=[]:
                     games+=1
             else:
-                try:
-                    if (self.stats[year][week]["Game Date"]=="Bye" or 
-                        self.stats[year][week]["G"]==0):
-                        continue
-                    else:
-                        games+=1
-                except KeyError:
-                    return games        
-        if games == 0: #for division by zero
-            games = 1
+                if (self.stats[year][week]["Game Date"]=="Bye" or 
+                    self.stats[year][week]["G"]==0):
+                    continue
+                else:
+                    games+=1       
+        
         return games
             
 
@@ -418,8 +417,7 @@ class Player(object):
                     else:
                         temp_list += [self.stats[year][week][field]]
                 except KeyError:
-                    print self.name
-                    return [0.0]
+                    continue
         else:
             temp_list = []
             for week in weeks:
@@ -603,7 +601,7 @@ class Player(object):
         return outlier_games
 
 
-    def week_points(self,week,year,ppr=0.0,yd_bonus=False):
+    def week_points(self,week,year,ppr=0.0,bonus_yards=False):
         """
         The fantasy points scored during a week and particular year.
 
@@ -694,7 +692,7 @@ class Player(object):
             points = 0.0
             for field in self.scoring_field_names:
                 value = self.stats[year][week][field]
-                if yard_bonus:
+                if bonus_yards:
                     if field == "PassYds" and value >= 300.00:
                         bonus+=1
                     elif (field == "RecYds" or field == "RushYds") and value >= 100.0:
